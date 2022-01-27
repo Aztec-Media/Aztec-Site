@@ -1,0 +1,374 @@
+:root {
+  --orange: #f69321;
+  --blue: #38505d;
+  --light-grey: #f3f3f3;
+  --text-white: #fff;
+  --body-font: 'Space Grotesk', sans-serif;
+  --title-font: neue-haas-unica, sans-serif;
+  --font-light: 300;
+  --font-med: 400;
+  --font-bold: 600;
+  --font-xbold: 700;
+  --fast-speed: all 0.3s ease;
+  --mid-speed: all 0.7s ease;
+  --slow-speed: all 1s ease;
+  --bg-col: #f69321;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+a:focus {
+  outline: 1px solid var(--blue);
+}
+
+span {
+  display: inline-block;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+input,
+textarea,
+select {
+  font-size: 1rem;
+  font-weight: var(--font-med);
+  font-family: var(--body-font);
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img,
+figure {
+  width: 100%;
+  height: 100%;
+}
+
+figure {
+  overflow: hidden;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.wrapper {
+  background-color: var(--bg-col);
+}
+
+.header {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.header .burger {
+  cursor: pointer;
+  position: relative;
+}
+
+.header .burger .line {
+  height: 1px;
+  width: 2rem;
+  margin: 6px 0 6px auto;
+  background-color: var(--text-white);
+}
+
+.header .burger .line:nth-of-type(2) {
+  width: 1.5rem;
+}
+
+.header .burger .line:nth-of-type(3) {
+  width: 1rem;
+}
+
+.header .navbar {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--orange);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.25fr 1.5fr;
+      grid-template-columns: 2.25fr 1.5fr;
+  z-index: 100;
+}
+
+.header .navbar .navbar__burger {
+  position: absolute;
+  padding: 1rem;
+  top: 3rem;
+  right: 4rem;
+  z-index: 110;
+  cursor: pointer;
+}
+
+.header .navbar .navbar__burger .line {
+  height: 1px;
+  width: 2rem;
+  background-color: var(--text-white);
+}
+
+.header .navbar .navbar__burger .line:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .navbar .navbar__burger .line:nth-of-type(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .navbar .navbar__left {
+  background-color: var(--light-grey);
+  color: var(--blue);
+  position: relative;
+}
+
+.header .navbar .navbar__left .navbar__left__logo {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 4rem;
+  bottom: 4rem;
+  height: 24rem;
+  width: 24rem;
+}
+
+.header .navbar .navbar__left .navbar__left__logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header .navbar .navbar__left .navbar__left__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: auto;
+  height: 100%;
+  padding: 12rem 4rem 4rem 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.header .navbar .navbar__left .navbar__left__menu li {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-xbold);
+  font-family: var(--title-font);
+}
+
+.header .navbar .navbar__left .navbar__left__menu li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .navbar .navbar__left .navbar__left__menu li a span {
+  color: var(--blue);
+  font-size: 0.7rem;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  font-weight: var(--font-bold);
+}
+
+.header .navbar .navbar__left .navbar__left__sectors h4 {
+  padding-bottom: 1rem;
+  font-weight: var(--font-bold);
+  font-family: var(--title-font);
+}
+
+.header .navbar .navbar__left .navbar__left__sectors ul {
+  font-weight: var(--font-light);
+}
+
+.header .navbar .navbar__left .navbar__left__sectors ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 0.25rem;
+}
+
+.header .navbar .navbar__left .navbar__left__sectors ul li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.5rem;
+}
+
+.header .navbar .navbar__left .navbar__left__sectors ul li span svg {
+  width: 100%;
+}
+
+.header .navbar .navbar__right {
+  background-color: var(--orange);
+  position: relative;
+  color: #fff;
+  padding: 12rem 0 4rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.header .navbar .navbar__right .navbar__right__contact {
+  position: absolute;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+}
+
+.header .navbar .navbar__right .navbar__right__contact a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.9rem;
+}
+
+.header .navbar .navbar__right .navbar__right__contact a.email {
+  margin-right: 2rem;
+}
+
+.header .navbar .navbar__right .navbar__right__contact a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.5rem;
+  color: var(--blue);
+}
+
+.header .navbar .navbar__right .navbar__right__menu li {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-xbold);
+  font-family: var(--title-font);
+}
+
+.header .navbar .navbar__right .navbar__right__menu li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .navbar .navbar__right .navbar__right__menu li a span {
+  color: var(--blue);
+  font-size: 0.7rem;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  font-weight: var(--font-bold);
+}
+
+.header .navbar .navbar__right .navbar__right__details {
+  color: var(--blue);
+  font-weight: var(--font-light);
+}
+
+.header .navbar .navbar__right .navbar__right__details h5 {
+  font-weight: var(--font-bold);
+  padding-bottom: 1.5rem;
+  font-family: var(--title-font);
+}
+
+.header .navbar .navbar__right .navbar__right__details h5 a {
+  border-bottom: 1px solid var(--blue);
+}
+
+.header .navbar .navbar__right .navbar__right__details address {
+  padding-bottom: 1.5rem;
+}
+
+.header .navbar .navbar__right .navbar__right__details .directions {
+  color: #fff;
+  font-weight: var(--font-bold);
+  border-bottom: 1px solid #fff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: var(--title-font);
+}
+/*# sourceMappingURL=style.css.map */
