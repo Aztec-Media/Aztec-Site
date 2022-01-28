@@ -112,19 +112,38 @@ img {
   .burger {
     cursor: pointer;
     position: relative;
+    z-index: 110;
+    overflow: hidden;
 
     .line {
       height: 1px;
       width: 2rem;
       margin: 6px 0 6px auto;
       background-color: var(--text-white);
+      transition: var(--fast-speed);
 
-      &:nth-of-type(2) {
+      &.line2 {
         width: 1.5rem;
       }
 
-      &:nth-of-type(3) {
+      &.line3 {
         width: 1rem;
+      }
+    }
+
+    &.nav--open {
+      .line1 {
+        transform: rotate(45deg) translateY(8.5px);
+      }
+
+      .line2 {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+
+      .line3 {
+        width: 2rem;
+        transform: rotate(-45deg) translateY(-8.5px);
       }
     }
   }
@@ -135,37 +154,16 @@ img {
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: var(--orange);
     display: grid;
     grid-template-columns: 2.25fr 1.5fr;
     z-index: 100;
-
-    .navbar__burger {
-      position: absolute;
-      padding: 1rem;
-      top: 3rem;
-      right: 4rem;
-      z-index: 110;
-      cursor: pointer;
-
-      .line {
-        height: 1px;
-        width: 2rem;
-        background-color: var(--text-white);
-
-        &:nth-of-type(1) {
-          transform: rotate(45deg);
-        }
-        &:nth-of-type(2) {
-          transform: rotate(-45deg);
-        }
-      }
-    }
+    transform-origin: right;
 
     .navbar__left {
       background-color: var(--light-grey);
       color: var(--blue);
       position: relative;
+      transform-origin: right;
 
       .navbar__left__logo {
         position: absolute;
@@ -175,8 +173,8 @@ img {
         left: 4rem;
         bottom: 4rem;
 
-        height: 24rem;
-        width: 24rem;
+        height: 16rem;
+        width: 16rem;
 
         svg {
           width: 100%;
@@ -327,6 +325,134 @@ img {
           border-bottom: 1px solid #fff;
           width: max-content;
           font-family: var(--title-font);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .header {
+    .navbar {
+      .navbar__left {
+        .navbar__left__logo {
+          width: 12rem;
+          height: 12rem;
+          left: 2rem;
+          bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    .navbar {
+      grid-template-columns: 1fr 1fr;
+
+      .navbar__left {
+        .navbar__left__logo {
+          display: none;
+        }
+      }
+
+      .navbar__right {
+        .navbar__right__contact {
+          flex-direction: column;
+          align-items: start;
+
+          a {
+            &.email {
+              margin-right: 0;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    .navbar {
+      grid-template-columns: 1fr;
+
+      .navbar__left {
+        display: none;
+      }
+
+      .navbar__right {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+        .navbar__right__details {
+          display: none;
+        }
+
+        .navbar__right__contact {
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          a {
+            margin: 0 1rem;
+
+            &.email {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .navbar__right__menu {
+          li {
+            margin-bottom: 0;
+            margin: 1.5rem 0;
+
+            a {
+              text-align: center;
+              justify-content: center;
+
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    .navbar {
+      .navbar__right {
+        .navbar__right__contact {
+          flex-direction: column;
+
+          a {
+            margin: 0;
+
+            &.email {
+              margin: 1rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-height: 800px) {
+    .header {
+      .navbar {
+        .navbar__right {
+          .navbar__right__contact {
+            display: none;
+          }
         }
       }
     }

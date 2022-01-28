@@ -4,7 +4,7 @@ export default function NavbarRight() {
   return (
     <section className='navbar__right'>
       <div className='navbar__right__contact'>
-        <a href='mailto:hello@aztec.media' className='email'>
+        <a href='mailto:hello@aztec.media' className='email nav--anim'>
           <span>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -18,7 +18,7 @@ export default function NavbarRight() {
           </span>
           hello@aztec.media
         </a>
-        <a href='tel:01935477073' className='phone'>
+        <a href='tel:01935477073' className='phone nav--anim'>
           <span>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -34,7 +34,7 @@ export default function NavbarRight() {
         </a>
       </div>
       <ul className='navbar__right__menu'>
-        <li className='navbar__right__menu__item'>
+        <li className='navbar__right__menu__item nav--anim'>
           <Link href='/about'>
             <a>
               <span>06</span>
@@ -42,7 +42,7 @@ export default function NavbarRight() {
             </a>
           </Link>
         </li>
-        <li className='navbar__right__menu__item'>
+        <li className='navbar__right__menu__item nav--anim'>
           <Link href='/work'>
             <a>
               <span>07</span>
@@ -50,7 +50,7 @@ export default function NavbarRight() {
             </a>
           </Link>
         </li>
-        <li className='navbar__right__menu__item'>
+        <li className='navbar__right__menu__item nav--anim'>
           <Link href='/insights'>
             <a>
               <span>08</span>
@@ -58,7 +58,7 @@ export default function NavbarRight() {
             </a>
           </Link>
         </li>
-        <li className='navbar__right__menu__item'>
+        <li className='navbar__right__menu__item nav--anim'>
           <Link href='/contact'>
             <a>
               <span>09</span>
@@ -66,7 +66,7 @@ export default function NavbarRight() {
             </a>
           </Link>
         </li>
-        <li className='navbar__right__menu__item'>
+        <li className='navbar__right__menu__item nav--anim'>
           <Link href='/careers'>
             <a>
               <span>10</span>
@@ -76,18 +76,18 @@ export default function NavbarRight() {
         </li>
       </ul>
       <div className='navbar__right__details'>
-        <h5>
+        <h5 className='nav--anim'>
           Part of the{' '}
           <a href='https://yeomedia.group' target='_blank' rel='noreferrer'>
             YeoMedia Group
           </a>
         </h5>
         <address>
-          <p>8 Buckland Road,</p>
-          <p>Pen Mill Trading Estate, Yeovil</p>
-          <p>Somerset, BA21 5EA</p>
+          <p className='nav--anim'>8 Buckland Road,</p>
+          <p className='nav--anim'>Pen Mill Trading Estate, Yeovil</p>
+          <p className='nav--anim'>Somerset, BA21 5EA</p>
         </address>
-        <p className='directions'>Get Directions</p>
+        <p className='directions nav--anim'>Get Directions</p>
       </div>
     </section>
   );

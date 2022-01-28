@@ -6,12 +6,12 @@ import Line from '../../vectors/Line';
 export default function NavbarLeft() {
   return (
     <section className='navbar__left'>
-      <div className='navbar__left__logo'>
+      <div className='navbar__left__logo nav--anim'>
         <Logo />
       </div>
       <div className='navbar__left__content'>
         <ul className='navbar__left__menu'>
-          <li className='navbar__left__menu__item'>
+          <li className='navbar__left__menu__item nav--anim'>
             <Link href='/'>
               <a>
                 <span>01</span>
@@ -19,7 +19,7 @@ export default function NavbarLeft() {
               </a>
             </Link>
           </li>
-          <li className='navbar__left__menu__item'>
+          <li className='navbar__left__menu__item nav--anim'>
             <Link href='/'>
               <a>
                 <span>02</span>
@@ -27,7 +27,7 @@ export default function NavbarLeft() {
               </a>
             </Link>
           </li>
-          <li className='navbar__left__menu__item'>
+          <li className='navbar__left__menu__item nav--anim'>
             <Link href='/'>
               <a>
                 <span>03</span>
@@ -35,7 +35,7 @@ export default function NavbarLeft() {
               </a>
             </Link>
           </li>
-          <li className='navbar__left__menu__item'>
+          <li className='navbar__left__menu__item nav--anim'>
             <Link href='/'>
               <a>
                 <span>04</span>
@@ -43,7 +43,7 @@ export default function NavbarLeft() {
               </a>
             </Link>
           </li>
-          <li className='navbar__left__menu__item'>
+          <li className='navbar__left__menu__item nav--anim'>
             <Link href='/'>
               <a>
                 <span>05</span>
@@ -53,33 +53,33 @@ export default function NavbarLeft() {
           </li>
         </ul>
         <div className='navbar__left__sectors'>
-          <h4>Sectors</h4>
+          <h4 className='nav--anim'>Sectors</h4>
           <ul>
-            <li>
+            <li className='nav--anim'>
               <span>
                 <Line />
               </span>
               Commercial
             </li>
-            <li>
+            <li className='nav--anim'>
               <span>
                 <Line />
               </span>
               Hospitality
             </li>
-            <li>
+            <li className='nav--anim'>
               <span>
                 <Line />
               </span>
               Education
             </li>
-            <li>
+            <li className='nav--anim'>
               <span>
                 <Line />
               </span>
               Charities
             </li>
-            <li>
+            <li className='nav--anim'>
               <span>
                 <Line />
               </span>
