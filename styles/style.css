@@ -87,6 +87,23 @@ img {
   background-color: var(--bg-col);
 }
 
+#cursor {
+  width: 5px;
+  height: 5px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: background, width, height;
+  transition-property: background, width, height;
+  background: #000;
+  z-index: 1000;
+}
+
 .header {
   padding: 2rem;
   display: -webkit-box;
