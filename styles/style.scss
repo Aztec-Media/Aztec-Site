@@ -54,6 +54,7 @@ button {
   line-height: 1.5;
   overflow-x: hidden;
   text-align: center;
+  color: var(--blue);
 }
 
 input,
@@ -64,6 +65,7 @@ select {
   font-family: var(--body-font);
   letter-spacing: 0.5px;
   line-height: 1.5;
+  color: var(--blue);
 }
 
 body {
@@ -72,6 +74,7 @@ body {
   letter-spacing: 0.5px;
   line-height: 1.5;
   overflow-x: hidden;
+  color: var(--blue);
 }
 
 .btn {
@@ -108,6 +111,7 @@ img {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  height: 6rem;
 
   .burger {
     cursor: pointer;
@@ -144,6 +148,23 @@ img {
       .line3 {
         width: 2rem;
         transform: rotate(-45deg) translateY(-8.5px);
+      }
+    }
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 2rem;
+    width: 18rem;
+
+    svg {
+      height: 100%;
+
+      &:first-of-type {
+        width: 4rem;
       }
     }
   }
@@ -286,6 +307,7 @@ img {
           margin-bottom: 1.5rem;
           font-weight: var(--font-xbold);
           font-family: var(--title-font);
+          overflow: hidden;
 
           a {
             display: flex;
@@ -454,6 +476,37 @@ img {
             display: none;
           }
         }
+      }
+    }
+  }
+}
+
+// home hero
+.home__hero {
+  height: calc(100vh - 6rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  .home__hero__text {
+    align-self: end;
+    padding-bottom: 8rem;
+
+    h2 {
+      color: #fff;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      padding-bottom: 0.25rem;
+    }
+
+    h3 {
+      font-size: 5.5rem;
+      font-weight: var(--font-bold);
+      font-family: var(--title-font);
+      line-height: 1.25;
+
+      span {
+        display: block;
       }
     }
   }

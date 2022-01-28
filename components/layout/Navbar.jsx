@@ -8,13 +8,7 @@ import gsap from 'gsap';
 export default function Navbar({ navbarOpen }) {
   useEffect(() => {
     gsap.set(
-      [
-        '.navbar',
-        '.navbar__right',
-        '.navbar__left',
-        '.navbar__right .nav--anim',
-        '.navbar__left .nav--anim',
-      ],
+      ['.navbar', '.navbar__right', '.navbar__left', '.navbar .nav--anim'],
       { autoAlpha: 0 }
     );
   }, []);
@@ -30,29 +24,23 @@ export default function Navbar({ navbarOpen }) {
     if (navbarOpen) {
       introTl
         .to(
-          [
-            '.navbar',
-            '.navbar__right',
-            '.navbar__left',
-            '.navbar__right .nav--anim',
-            '.navbar__left .nav--anim',
-          ],
+          ['.navbar', '.navbar__right', '.navbar__left', '.navbar .nav--anim'],
           { autoAlpha: 1, duration: 0 }
         )
         .fromTo(['.navbar__right', '.navbar'], { scaleX: 0 }, { scaleX: 1 })
         .fromTo('.navbar__left', { scaleX: 0 }, { scaleX: 1 }, 0.1)
         .fromTo(
-          ['.navbar__right .nav--anim', '.navbar__left .nav--anim'],
+          ['.navbar .nav--anim'],
           { autoAlpha: 0, y: -25 },
-          { autoAlpha: 1, y: 0, stagger: 0.025 },
+          { autoAlpha: 1, y: 0, stagger: -0.025 },
           0.4
         );
     } else {
       outroTl
         .fromTo(
-          ['.navbar__right .nav--anim', '.navbar__left .nav--anim'],
+          ['.navbar .nav--anim'],
           { autoAlpha: 1, y: 0 },
-          { autoAlpha: 0, y: 15, stagger: 0.01 }
+          { autoAlpha: 0, y: 15, stagger: -0.01 }
         )
         .fromTo('.navbar__left', { scaleX: 1 }, { scaleX: 0 }, '-=0.4')
         .fromTo(

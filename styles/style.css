@@ -43,6 +43,7 @@ button {
   line-height: 1.5;
   overflow-x: hidden;
   text-align: center;
+  color: var(--blue);
 }
 
 input,
@@ -53,6 +54,7 @@ select {
   font-family: var(--body-font);
   letter-spacing: 0.5px;
   line-height: 1.5;
+  color: var(--blue);
 }
 
 body {
@@ -61,6 +63,7 @@ body {
   letter-spacing: 0.5px;
   line-height: 1.5;
   overflow-x: hidden;
+  color: var(--blue);
 }
 
 img,
@@ -96,6 +99,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  height: 6rem;
 }
 
 .header .burger {
@@ -137,6 +141,28 @@ img {
   width: 2rem;
   -webkit-transform: rotate(-45deg) translateY(-8.5px);
           transform: rotate(-45deg) translateY(-8.5px);
+}
+
+.header .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2rem;
+  width: 18rem;
+}
+
+.header .header__logo svg {
+  height: 100%;
+}
+
+.header .header__logo svg:first-of-type {
+  width: 4rem;
 }
 
 .header .navbar {
@@ -326,6 +352,7 @@ img {
   margin-bottom: 1.5rem;
   font-weight: var(--font-xbold);
   font-family: var(--title-font);
+  overflow: hidden;
 }
 
 .header .navbar .navbar__right .navbar__right__menu li a {
@@ -476,5 +503,39 @@ img {
   .header .navbar .navbar__right .navbar__right__contact {
     display: none;
   }
+}
+
+.home__hero {
+  height: calc(100vh - 6rem);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.home__hero .home__hero__text {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  padding-bottom: 8rem;
+}
+
+.home__hero .home__hero__text h2 {
+  color: #fff;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding-bottom: 0.25rem;
+}
+
+.home__hero .home__hero__text h3 {
+  font-size: 5.5rem;
+  font-weight: var(--font-bold);
+  font-family: var(--title-font);
+  line-height: 1.25;
+}
+
+.home__hero .home__hero__text h3 span {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

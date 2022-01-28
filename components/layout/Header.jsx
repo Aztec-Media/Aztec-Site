@@ -2,13 +2,18 @@ import { useState } from 'react';
 import gsap from 'gsap';
 
 import Navbar from './Navbar';
+import Logo from '../vectors/Logo';
+import LogoText from '../vectors/LogoText';
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <header className='header'>
-      <div className='logo'>aztecmedia</div>
+      <div className='header__logo'>
+        <Logo />
+        <LogoText />
+      </div>
       <button
         type='button'
         className={`burger ${navbarOpen ? 'nav--open' : ''}`}
