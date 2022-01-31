@@ -1,4 +1,5 @@
 import '../styles/reset.css';
+import '@splidejs/splide/dist/css/splide-core.min.css';
 import '../styles/style.css';
 
 import Layout from '../components/layout/Layout';

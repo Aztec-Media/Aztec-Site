@@ -4,16 +4,19 @@ import gsap from 'gsap';
 import Navbar from './Navbar';
 import Logo from '../vectors/Logo';
 import LogoText from '../vectors/LogoText';
+import Link from 'next/link';
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <header className='header'>
-      <div className='header__logo'>
-        <Logo />
-        <LogoText />
-      </div>
+      <Link href='/'>
+        <a className='header__logo'>
+          <Logo />
+          <LogoText />
+        </a>
+      </Link>
       <button
         type='button'
         className={`burger ${navbarOpen ? 'nav--open' : ''}`}

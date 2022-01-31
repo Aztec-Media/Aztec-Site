@@ -126,21 +126,19 @@ img {
 }
 
 .wrapper {
-  background-color: var(--orange);
-  -webkit-transition: var(--mid-speed);
-  transition: var(--mid-speed);
-  color: var(--blue);
   --orange: #f69321;
   --blue: #38505d;
   --light-grey: #f3f3f3;
   --white: #fff;
+  --bg-colour: var(--orange);
+  background-color: var(--bg-colour);
+  -webkit-transition: var(--mid-speed);
+  transition: var(--mid-speed);
+  color: var(--blue);
 }
 
 .wrapper.blue {
-  --orange: #38505d;
-  --blue: #f69321;
-  --light-grey: #fff;
-  --white: #f3f3f3;
+  --bg-colour: var(--blue);
 }
 
 #cursor {
@@ -655,5 +653,66 @@ img {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
+}
+
+.home__services__slider {
+  padding-bottom: 4rem;
+}
+
+.home__services__slider .home__services__splide .splide__slide .img {
+  margin-bottom: 1.5rem;
+}
+
+.home__services__slider .home__services__splide .splide__slide .img figure {
+  height: 20rem;
+  position: relative;
+}
+
+.home__services__slider .home__services__splide .splide__slide .content h3 {
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--title-font);
+  font-weight: var(--font-xbold);
+  font-size: 2rem;
+}
+
+.home__services__slider .home__services__splide .splide__slide .content h3 .number {
+  font-weight: var(--font-light);
+  font-size: 1rem;
+  color: var(--white);
+  margin-right: 2rem;
+}
+
+.home__services__slider .home__services__splide .splide__slide .content h3 .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 1rem;
+  margin-left: 2rem;
+}
+
+.home__services__slider .home__services__splide .splide__slide .content h3 .arrow svg {
+  height: 100%;
+  width: 100%;
+}
+
+.home__services__slider .home__services__splide .splide__slide .content h3 .arrow svg path {
+  fill: var(--white);
+}
+
+.home__services__slider .home__services__splide .splide__slide .content p {
+  font-size: 1rem;
+  padding: 0 10rem 0 3.25rem;
 }
 /*# sourceMappingURL=style.css.map */
