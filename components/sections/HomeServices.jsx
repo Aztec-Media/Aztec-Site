@@ -3,26 +3,24 @@ import Btn from '../layout/components/Btn';
 import { colourState } from '../../utils/colourState';
 import ServicesSplide from '../sliders/ServicesSplide';
 
+import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useEffect } from 'react';
 
 export default function HomeServices() {
   useEffect(() => {
-    if (typeof window !== undefined) {
-      gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-      ScrollTrigger.create({
-        trigger: '.home__services',
-        start: 'top 80%',
-        onEnter: () => {
-          // document.querySelector('.wrapper').classList.add('blue');
-        },
-        onLeaveBack: () => {
-          document.querySelector('.wrapper').classList.remove('blue');
-        },
-      });
-    }
+    ScrollTrigger.create({
+      trigger: '.home__services',
+      start: 'top 80%',
+      onEnter: () => {
+        // colourState.bgColour = 'blue';
+      },
+      onLeaveBack: () => {
+        // colourState.bgColour = '';
+      },
+    });
   }, []);
 
   return (

@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className='header'>
       <Link href='/'>
-        <a className='header__logo'>
+        <a className='header__logo' title='Back to the Aztec Media homepage'>
           <Logo />
           <LogoText />
         </a>
@@ -20,6 +20,8 @@ export default function Header() {
       <button
         type='button'
         className={`burger ${navbarOpen ? 'nav--open' : ''}`}
+        title='Toggle Navigation Menu'
+        aria-label='Toggle Navigation Menu'
         onClick={() => {
           if (
             !gsap.isTweening([
