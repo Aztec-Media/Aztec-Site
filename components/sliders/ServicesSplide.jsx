@@ -14,6 +14,25 @@ export default function ServicesSplide() {
         gap: '4rem',
         focus: 'center',
         trimSpace: false,
+        breakpoints: {
+          1440: {
+            perPage: 2,
+          },
+          800: {
+            perPage: 1,
+            padding: {
+              right: '8rem',
+              left: '4rem',
+            },
+            gap: '2rem',
+          },
+          500: {
+            padding: {
+              right: '4rem',
+              left: '2rem',
+            },
+          },
+        },
       }}
       className='home__services__splide'
     >
@@ -28,11 +47,13 @@ export default function ServicesSplide() {
             <a>
               <h3>
                 <span className='number'>01</span>
-                Website + Digital
+                <span className='text'>
+                  Website + Digital
+                  <div className='underline'></div>
+                </span>
                 <span className='arrow'>
                   <Arrow />
                 </span>
-                <span className='underline'></span>
               </h3>
             </a>
           </Link>
@@ -49,14 +70,20 @@ export default function ServicesSplide() {
           </figure>
         </div>
         <div className='content'>
-          <h3>
-            <span className='number'>01</span>
-            Website + Digital
-            <span className='arrow'>
-              <Arrow />
-            </span>
-            <span className='underline'></span>
-          </h3>
+          <Link href='/'>
+            <a>
+              <h3>
+                <span className='number'>01</span>
+                <span className='text'>
+                  Website + Digital
+                  <div className='underline'></div>
+                </span>
+                <span className='arrow'>
+                  <Arrow />
+                </span>
+              </h3>
+            </a>
+          </Link>
           <p>
             Revenue-driven, customer-centric, creating strategic solutions based
             in technology, we help brands.
@@ -70,14 +97,47 @@ export default function ServicesSplide() {
           </figure>
         </div>
         <div className='content'>
-          <h3>
-            <span className='number'>01</span>
-            Website + Digital
-            <span className='arrow'>
-              <Arrow />
-            </span>
-            <span className='underline'></span>
-          </h3>
+          <Link href='/'>
+            <a>
+              <h3>
+                <span className='number'>01</span>
+                <span className='text'>
+                  Website + Digital
+                  <div className='underline'></div>
+                </span>
+                <span className='arrow'>
+                  <Arrow />
+                </span>
+              </h3>
+            </a>
+          </Link>
+          <p>
+            Revenue-driven, customer-centric, creating strategic solutions based
+            in technology, we help brands.
+          </p>
+        </div>
+      </SplideSlide>
+      <SplideSlide>
+        <div className='img'>
+          <figure>
+            <Image src='/img.jpg' layout='fill' alt='Aztec Media' />
+          </figure>
+        </div>
+        <div className='content'>
+          <Link href='/'>
+            <a>
+              <h3>
+                <span className='number'>01</span>
+                <span className='text'>
+                  Website + Digital
+                  <div className='underline'></div>
+                </span>
+                <span className='arrow'>
+                  <Arrow />
+                </span>
+              </h3>
+            </a>
+          </Link>
           <p>
             Revenue-driven, customer-centric, creating strategic solutions based
             in technology, we help brands.

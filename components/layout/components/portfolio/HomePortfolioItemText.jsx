@@ -1,10 +1,8 @@
-import Link from 'next/link';
-
-import Arrow from '../../../vectors/Arrow';
+import Btn from '../Btn';
 
 export default function HomePortfolioItemText() {
   return (
-    <article className='home__portfolio__item home__portfolio__item--text'>
+    <article className='home__portfolio__item__text'>
       <h3>
         Bute Motorsport
         <span className='underline'></span>
@@ -13,14 +11,7 @@ export default function HomePortfolioItemText() {
         Revenue-driven, customer-centric, creating strategic solutions based in
         technology, we help brands.
       </p>
-      <Link href='/'>
-        <a>
-          <span>Case Study</span>
-          <div className='arrow'>
-            <Arrow />
-          </div>
-        </a>
-      </Link>
+      <Btn href='/' text='Case Study' />
     </article>
   );
 }

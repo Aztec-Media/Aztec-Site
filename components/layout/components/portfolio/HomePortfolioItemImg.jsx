@@ -10,10 +10,10 @@ export default function HomePortfolioItemImg() {
 
   const figureVariants = {
     initial: {
-      y: '100%',
+      x: '-100%',
     },
     finish: {
-      y: '0%',
+      x: '0%',
       transition: {
         duration: 1,
       },
@@ -22,10 +22,10 @@ export default function HomePortfolioItemImg() {
 
   const wrapperVariants = {
     initial: {
-      y: '100%',
+      x: '-100%',
     },
     finish: {
-      y: '0%',
+      x: '0%',
       transition: {
         duration: 0.8,
       },
@@ -39,18 +39,18 @@ export default function HomePortfolioItemImg() {
   }, [controls, inView]);
 
   return (
-    <div className='home__portfolio__item home__portfolio__item--img'>
+    <div className='home__portfolio__item__img'>
       <motion.div
-        ref={ref}
         className='img__wrapper'
-        variants={wrapperVariants}
-        initial='initial'
-        animate={controls}
+        // ref={ref}
+        // variants={wrapperVariants}
+        // initial='initial'
+        // animate={controls}
       >
         <motion.figure
-          variants={figureVariants}
-          initial='initial'
-          animate={controls}
+        // variants={figureVariants}
+        // initial='initial'
+        // animate={controls}
         >
           <Image src='/img.jpg' layout='fill' alt='#' />
         </motion.figure>

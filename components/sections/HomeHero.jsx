@@ -6,8 +6,6 @@ export default function HomeHero() {
         <h2>Headline goes here</h2>
         <h3>
           <span>Building brands </span>
-        </h3>
-        <h3>
           <span>for the future</span>
         </h3>
       </div>
