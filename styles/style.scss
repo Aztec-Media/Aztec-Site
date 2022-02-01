@@ -990,18 +990,6 @@ img {
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .home__portfolio__grid {
-    column-gap: 8rem;
-
-    .home__portfolio__item__img {
-    }
-
-    .home__portfolio__item__text {
-    }
-  }
-}
-
 @media only screen and (max-width: 1024px) {
   .home__portfolio__grid {
     padding: 10rem 2rem;
@@ -1031,6 +1019,10 @@ img {
     .home__portfolio__item__text {
       grid-row: span 1 / auto;
       padding-bottom: 4rem;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
 
       &:nth-of-type(odd) {
         padding-left: 8rem;
@@ -1119,6 +1111,63 @@ img {
 
       h3 {
         font-size: 2rem;
+      }
+    }
+  }
+}
+
+// view work banner
+.view__all__work {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background-color: var(--blue);
+  color: var(--white);
+
+  .view__all__work__btns {
+    display: flex;
+
+    a {
+      margin-right: 1rem;
+      padding: 0.5rem 2rem;
+      border: 1px solid var(--white);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .view__all__work {
+    flex-direction: column;
+
+    .view__all__work__btns {
+      margin-top: 2rem;
+
+      a {
+        margin: 0 0.5rem;
+
+        &:last-of-type {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .view__all__work {
+    .view__all__work__btns {
+      display: none;
+    }
+
+    .btn {
+      .arrow {
+        width: 4rem;
+        height: 4rem;
       }
     }
   }

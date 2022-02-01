@@ -1,3 +1,4 @@
+import ViewALlWork from '../components/layout/components/portfolio/ViewAllWork';
 import Seo from '../components/layout/Seo';
 import HomeHero from '../components/sections/HomeHero';
 import HomePortfolio from '../components/sections/HomePortfolio';
@@ -10,6 +11,7 @@ export default function Home() {
       <HomeHero />
       <HomeServices />
       <HomePortfolio />
+      <ViewALlWork />
     </main>
   );
 }
