@@ -19,6 +19,18 @@ export default function TeamSplide({ direction }) {
           speed: 2,
         },
         direction,
+        breakpoints: {
+          1100: {
+            perPage: 3,
+          },
+          750: {
+            perPage: 2,
+          },
+          525: {
+            perPage: 1,
+            gap: '6rem',
+          },
+        },
       }}
       Extensions={{ AutoScroll }}
     >

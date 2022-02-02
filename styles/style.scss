@@ -84,8 +84,8 @@ body {
   }
 
   .arrow {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     border: 1px solid var(--white);
     border-radius: 50%;
     display: flex;
@@ -783,7 +783,7 @@ img {
             bottom: 0.25rem;
             left: -2.5%;
             z-index: -1;
-            box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
           }
 
           .number {
@@ -947,7 +947,7 @@ img {
         bottom: 0.25rem;
         left: -2.5%;
         z-index: -1;
-        box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
       }
     }
 
@@ -1216,7 +1216,6 @@ img {
       }
 
       .slide__content {
-        background-color: lightcoral;
         height: 100%;
         position: relative;
         display: flex;
@@ -1259,6 +1258,215 @@ img {
             font-weight: var(--font-bold);
           }
         }
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  min-height: 100vh;
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 8rem 8rem 4rem 8rem;
+
+  .footer__cta {
+    padding: 4rem 0;
+
+    h5 {
+      font-size: 3.75rem;
+      font-family: var(--title-font);
+      font-weight: var(--font-xbold);
+      padding-bottom: 2rem;
+
+      span {
+        position: relative;
+        z-index: 10;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 105%;
+          background-color: #fff;
+          height: 1rem;
+          opacity: 0.35;
+          bottom: 0.45rem;
+          left: -2.5%;
+          z-index: 1;
+          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+
+    .btn {
+      justify-content: flex-start;
+
+      .arrow {
+        svg {
+          path {
+            fill: var(--orange);
+          }
+        }
+      }
+    }
+  }
+
+  .footer__details {
+    padding-top: 4rem;
+    font-weight: var(--font-xlight);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+
+    .footer__contact {
+      display: flex;
+      padding-bottom: 2rem;
+
+      ul {
+        padding-right: 6rem;
+
+        li {
+          &:first-of-type {
+            font-weight: var(--font-med);
+          }
+        }
+      }
+
+      div {
+        a {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.75rem;
+          letter-spacing: 1px;
+          font-weight: var(--font-med);
+
+          svg {
+            margin-right: 1rem;
+            fill: var(--orange);
+          }
+        }
+      }
+    }
+
+    .footer__furniture {
+      h6 {
+        padding-bottom: 0.15rem;
+
+        &:first-of-type {
+          font-weight: var(--font-med);
+          opacity: 0.5;
+        }
+
+        &:last-of-type {
+          padding-bottom: 2rem;
+        }
+      }
+
+      p {
+        span {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    .footer__cta {
+      padding-top: 0;
+
+      h5 {
+        font-size: 3rem;
+      }
+    }
+
+    .footer__details {
+      flex-direction: column;
+
+      .footer__furniture {
+        padding-top: 4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .footer {
+    .footer__cta {
+      h5 {
+        font-size: 2.5rem;
+
+        span {
+          &::after {
+            height: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .footer {
+    text-align: center;
+    padding: 6rem 2rem 2rem 2rem;
+
+    .footer__cta {
+      .btn {
+        justify-content: center;
+      }
+    }
+
+    .footer__details {
+      .footer__contact {
+        justify-content: center;
+
+        div {
+          a {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    .footer__cta {
+      h5 {
+        font-size: 1.75rem;
+
+        span {
+          display: inline;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .footer__details {
+      padding-top: 2rem;
+
+      .footer__contact {
+        flex-direction: column;
+
+        ul {
+          padding: 0 0 2rem 0;
+        }
+      }
+
+      .footer__furniture {
+        padding-top: 2rem;
       }
     }
   }

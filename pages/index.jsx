@@ -1,5 +1,6 @@
 import ViewALlWork from '../components/layout/components/portfolio/ViewAllWork';
 import Seo from '../components/layout/Seo';
+import Footer from '../components/sections/Footer';
 import HomeHero from '../components/sections/HomeHero';
 import HomePortfolio from '../components/sections/HomePortfolio';
 import HomeServices from '../components/sections/HomeServices';
@@ -14,6 +15,7 @@ export default function Home() {
       <HomePortfolio />
       <ViewALlWork />
       <MeetTheTeam />
+      <Footer />
     </main>
   );
 }
