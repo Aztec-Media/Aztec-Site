@@ -1172,3 +1172,94 @@ img {
     }
   }
 }
+
+// meet the team
+.meet__the__team {
+  padding: 6rem 0;
+
+  .team__splide {
+    padding: 2rem 0;
+
+    .splide__slide {
+      height: 26rem;
+
+      .slide__spacer {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+
+        p {
+          font-family: var(--title-font);
+          font-weight: var(--font-bold);
+          font-size: 1.25rem;
+          padding-bottom: 1.5rem;
+        }
+
+        .arrows {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 5rem;
+
+          svg {
+            width: 100%;
+            height: 100%;
+
+            &:first-of-type {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .slide__content {
+        background-color: lightcoral;
+        height: 100%;
+        position: relative;
+        display: flex;
+
+        .img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+
+        .overlay {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0)
+          );
+        }
+
+        .text {
+          position: relative;
+          z-index: 2;
+          padding: 1rem;
+          margin-top: auto;
+          color: #fff;
+
+          h4 {
+            z-index: 1;
+            position: relative;
+            font-size: 2rem;
+            font-family: var(--title-font);
+            font-weight: var(--font-bold);
+          }
+        }
+      }
+    }
+  }
+}

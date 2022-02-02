@@ -3,6 +3,7 @@ import Seo from '../components/layout/Seo';
 import HomeHero from '../components/sections/HomeHero';
 import HomePortfolio from '../components/sections/HomePortfolio';
 import HomeServices from '../components/sections/HomeServices';
+import MeetTheTeam from '../components/sections/MeetTheTeam';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeServices />
       <HomePortfolio />
       <ViewALlWork />
+      <MeetTheTeam />
     </main>
   );
 }
