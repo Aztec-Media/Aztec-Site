@@ -7,7 +7,11 @@ export default function NavbarLeft() {
   return (
     <section className='navbar__left'>
       <div className='navbar__left__logo nav--anim'>
-        <Logo />
+        <Link href='/'>
+          <a>
+            <Logo />
+          </a>
+        </Link>
       </div>
       <div className='navbar__left__content'>
         <ul className='navbar__left__menu'>

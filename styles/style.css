@@ -278,6 +278,11 @@ img {
   width: 16rem;
 }
 
+.header .navbar .navbar__left .navbar__left__logo a {
+  width: 100%;
+  height: 100%;
+}
+
 .header .navbar .navbar__left .navbar__left__logo svg {
   width: 100%;
   height: 100%;
