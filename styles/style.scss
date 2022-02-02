@@ -842,7 +842,11 @@ img {
       .splide__slide {
         .content {
           h3 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
+
+            .underline {
+              height: 0.75rem;
+            }
           }
 
           p {
@@ -867,6 +871,10 @@ img {
         .content {
           h3 {
             font-size: 1.5rem;
+
+            .underline {
+              height: 0.5rem;
+            }
 
             .number {
               display: none;
@@ -897,8 +905,8 @@ img {
     grid-row: span 3 / auto;
 
     .img__wrapper {
-      background-color: lightslategray;
       height: 100%;
+      overflow: hidden;
     }
 
     figure {
@@ -961,6 +969,7 @@ img {
     a {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
 
       span {
         margin-right: 3rem;
@@ -972,8 +981,6 @@ img {
         justify-content: center;
         border: 1px solid var(--light-grey);
         border-radius: 50%;
-        width: 6rem;
-        height: 6rem;
 
         svg {
           width: 25%;
@@ -1265,10 +1272,13 @@ img {
 
 // footer
 .footer {
-  min-height: 100vh;
+  min-height: 60rem;
   background-color: var(--blue);
   color: var(--white);
   padding: 8rem 8rem 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .footer__cta {
     padding: 4rem 0;
@@ -1366,6 +1376,10 @@ img {
       p {
         span {
           margin: 0 0.5rem;
+
+          &:first-of-type {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -1432,6 +1446,16 @@ img {
         div {
           a {
             justify-content: center;
+          }
+        }
+      }
+
+      .footer__furniture {
+        p {
+          span {
+            &:first-of-type {
+              margin-left: 0.5rem;
+            }
           }
         }
       }

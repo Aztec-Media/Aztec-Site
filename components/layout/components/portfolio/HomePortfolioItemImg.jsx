@@ -1,60 +1,40 @@
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePortfolioItemImg() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({});
-
-  const figureVariants = {
-    initial: {
-      x: '-100%',
-    },
-    finish: {
-      x: '0%',
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
-  const wrapperVariants = {
-    initial: {
-      x: '-100%',
-    },
-    finish: {
-      x: '0%',
-      transition: {
-        duration: 0.8,
-      },
-    },
-  };
+  const imageRef = useRef(null);
 
   useEffect(() => {
-    if (inView) {
-      controls.start('finish');
-    }
-  }, [controls, inView]);
+    gsap.fromTo(
+      [
+        imageRef.current.querySelector('figure'),
+        imageRef.current.querySelector('img'),
+      ],
+      { xPercent: -102 },
+      {
+        xPercent: 0,
+        duration: 1,
+        ease: 'power1.inOut',
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: 'top center',
+        },
+      }
+    );
+  }, [imageRef]);
 
   return (
-    <div className='home__portfolio__item__img'>
-      <motion.div
-        className='img__wrapper'
-        // ref={ref}
-        // variants={wrapperVariants}
-        // initial='initial'
-        // animate={controls}
-      >
-        <motion.figure
-        // variants={figureVariants}
-        // initial='initial'
-        // animate={controls}
-        >
+    <div className='home__portfolio__item__img' ref={imageRef}>
+      <div className='img__wrapper'>
+        <figure>
           <Image src='/img.jpg' layout='fill' alt='#' />
-        </motion.figure>
-      </motion.div>
+        </figure>
+      </div>
     </div>
   );
 }

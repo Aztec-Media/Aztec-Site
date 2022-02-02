@@ -27,10 +27,12 @@ export default function ServicesSplide() {
             gap: '2rem',
           },
           500: {
+            perPage: 1,
             padding: {
               right: '4rem',
               left: '2rem',
             },
+            gap: '2rem',
           },
         },
       }}

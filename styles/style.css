@@ -866,7 +866,10 @@ img {
 
 @media only screen and (max-width: 875px) {
   .home__services__slider .home__services__splide .splide__slide .content h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+  .home__services__slider .home__services__splide .splide__slide .content h3 .underline {
+    height: 0.75rem;
   }
   .home__services__slider .home__services__splide .splide__slide .content p {
     padding: 0 0.5rem 0 3.25rem;
@@ -879,6 +882,9 @@ img {
   }
   .home__services__slider .home__services__splide .splide__slide .content h3 {
     font-size: 1.5rem;
+  }
+  .home__services__slider .home__services__splide .splide__slide .content h3 .underline {
+    height: 0.5rem;
   }
   .home__services__slider .home__services__splide .splide__slide .content h3 .number {
     display: none;
@@ -906,8 +912,8 @@ img {
 }
 
 .home__portfolio__grid .home__portfolio__item__img .img__wrapper {
-  background-color: lightslategray;
   height: 100%;
+  overflow: hidden;
 }
 
 .home__portfolio__grid .home__portfolio__item__img figure {
@@ -986,6 +992,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .home__portfolio__grid .home__portfolio__item__text a span {
@@ -1004,8 +1013,6 @@ img {
           justify-content: center;
   border: 1px solid var(--light-grey);
   border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
 }
 
 .home__portfolio__grid .home__portfolio__item__text a .arrow svg {
@@ -1289,10 +1296,20 @@ img {
 }
 
 .footer {
-  min-height: 100vh;
+  min-height: 60rem;
   background-color: var(--blue);
   color: var(--white);
   padding: 8rem 8rem 4rem 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer .footer__cta {
@@ -1397,6 +1414,10 @@ img {
   margin: 0 0.5rem;
 }
 
+.footer .footer__details .footer__furniture p span:first-of-type {
+  margin-left: 0;
+}
+
 @media only screen and (max-width: 1200px) {
   .footer .footer__cta {
     padding-top: 0;
@@ -1449,6 +1470,9 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .footer .footer__details .footer__furniture p span:first-of-type {
+    margin-left: 0.5rem;
   }
 }
 
