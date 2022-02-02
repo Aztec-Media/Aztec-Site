@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
-
+import { useSnapshot } from 'valtio';
+import { navState } from '../../utils/navState';
 import NavbarLeft from './nav/NavbarLeft';
 import NavbarRight from './nav/NavbarRight';
-
 import gsap from 'gsap';
 
-export default function Navbar({ navbarOpen }) {
+export default function Navbar() {
+  const navStateSnapshot = useSnapshot(navState);
+
   useEffect(() => {
     gsap.set(
       ['.navbar', '.navbar__right', '.navbar__left', '.navbar .nav--anim'],
@@ -21,7 +23,7 @@ export default function Navbar({ navbarOpen }) {
       defaults: { duration: 0.6, ease: 'power1.inOut' },
     });
 
-    if (navbarOpen) {
+    if (navStateSnapshot.open) {
       introTl
         .to(
           ['.navbar', '.navbar__right', '.navbar__left', '.navbar .nav--anim'],
@@ -50,7 +52,7 @@ export default function Navbar({ navbarOpen }) {
           '-=0.6'
         );
     }
-  }, [navbarOpen]);
+  }, [navStateSnapshot.open]);
 
   return (
     <nav className='navbar'>

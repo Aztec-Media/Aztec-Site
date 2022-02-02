@@ -25,7 +25,7 @@ export default function HomePortfolioItemText() {
         stagger: 0.15,
         scrollTrigger: {
           trigger: textRef.current,
-          start: 'top center',
+          start: 'top 70%',
         },
       }
     );

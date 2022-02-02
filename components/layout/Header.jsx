@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import gsap from 'gsap';
-
+import { useSnapshot } from 'valtio';
+import { navState } from '../../utils/navState';
 import Navbar from './Navbar';
 import Logo from '../vectors/Logo';
 import LogoText from '../vectors/LogoText';
@@ -8,6 +9,8 @@ import Link from 'next/link';
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const navStateSnapshot = useSnapshot(navState);
 
   return (
     <header className='header'>
@@ -19,7 +22,7 @@ export default function Header() {
       </Link>
       <button
         type='button'
-        className={`burger ${navbarOpen ? 'nav--open' : ''}`}
+        className={`burger ${navStateSnapshot.open ? 'nav--open' : ''}`}
         title='Toggle Navigation Menu'
         aria-label='Toggle Navigation Menu'
         onClick={() => {
@@ -31,7 +34,7 @@ export default function Header() {
               '.navbar__left .nav--anim',
             ])
           ) {
-            setNavbarOpen(!navbarOpen);
+            navState.open = !navState.open;
           }
         }}
       >

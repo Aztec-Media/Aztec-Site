@@ -22,7 +22,7 @@ export default function HomePortfolioItemImg() {
         stagger: 0.1,
         scrollTrigger: {
           trigger: imageRef.current,
-          start: 'top center',
+          start: 'top 70%',
         },
       }
     );

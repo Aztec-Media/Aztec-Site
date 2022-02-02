@@ -1,7 +1,9 @@
 // import { useEffect, useState } from 'react';
 
+import { useEffect } from 'react';
 import { useSnapshot } from 'valtio';
 import { colourState } from '../../utils/colourState';
+import { navState } from '../../utils/navState';
 
 export default function Layout({ children }) {
   // const [x, setX] = useState(0);
@@ -16,9 +18,12 @@ export default function Layout({ children }) {
 
   const colourStateSnapshot = useSnapshot(colourState);
 
+  useEffect(() => {
+    navState.open = false;
+  }, [children]);
+
   return (
     <>
-      {/* <Cursor /> */}
       {/* <div id='cursor' style={{ left: x, top: y }}></div> */}
       <div className={`wrapper ${colourStateSnapshot.bgColour}`}>
         {children}
