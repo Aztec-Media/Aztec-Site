@@ -6,36 +6,77 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePortfolioItemImg({ image }) {
-  // console.log(image);
-
   const imageRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      [
-        imageRef.current.querySelector('figure'),
-        imageRef.current.querySelector('img'),
-      ],
-      { xPercent: -102 },
-      {
-        xPercent: 0,
+    ScrollTrigger.matchMedia({
+      '(min-width: 900px)': function () {
+        gsap.fromTo(
+          imageRef.current,
+          { y: 0 },
+          {
+            y: -450,
+            duration: 1,
+            ease: 'power1.inOut',
+            stagger: 0.1,
+            scrollTrigger: {
+              scrub: 1,
+              trigger: imageRef.current,
+              start: 'top bottom',
+            },
+          }
+        );
 
-        duration: 1,
-        ease: 'power1.inOut',
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: imageRef.current,
-          start: 'top 70%',
-        },
-      }
-    );
-    gsap.to(imageRef.current, {
-      boxShadow: '0px 5px 50px rgba(0,0,0,0.2)',
-      duration: 0.6,
-      delay: 1,
-      scrollTrigger: {
-        trigger: imageRef.current,
-        start: 'top 70%',
+        gsap.fromTo(
+          imageRef.current.querySelector('figure'),
+          { yPercent: -10, scale: 1 },
+          {
+            yPercent: 0,
+            scale: 1.2,
+            duration: 1,
+            ease: 'power1.inOut',
+            stagger: 0.1,
+            scrollTrigger: {
+              scrub: 1,
+              trigger: imageRef.current,
+              start: 'top bottom',
+            },
+          }
+        );
+      },
+      '(max-width: 899px)': function () {
+        gsap.fromTo(
+          imageRef.current,
+          { y: 0 },
+          {
+            y: -75,
+            duration: 1,
+            ease: 'power1.inOut',
+            stagger: 0.1,
+            scrollTrigger: {
+              scrub: 1,
+              trigger: imageRef.current,
+              start: 'top bottom',
+            },
+          }
+        );
+
+        gsap.fromTo(
+          imageRef.current.querySelector('figure'),
+          { yPercent: -10, scale: 1 },
+          {
+            yPercent: 0,
+            scale: 1.2,
+            duration: 1,
+            ease: 'power1.inOut',
+            stagger: 0.1,
+            scrollTrigger: {
+              scrub: 1,
+              trigger: imageRef.current,
+              start: 'top bottom',
+            },
+          }
+        );
       },
     });
   }, [imageRef]);

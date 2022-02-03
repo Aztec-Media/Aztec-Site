@@ -17,6 +17,7 @@ export default function Layout({ children }) {
   // });
 
   const colourStateSnapshot = useSnapshot(colourState);
+  const navStateSnapshot = useSnapshot(navState);
 
   useEffect(() => {
     navState.open = false;
@@ -25,7 +26,11 @@ export default function Layout({ children }) {
   return (
     <>
       {/* <div id='cursor' style={{ left: x, top: y }}></div> */}
-      <div className={`wrapper ${colourStateSnapshot.bgColour}`}>
+      <div
+        className={`wrapper ${colourStateSnapshot.bgColour} ${
+          navState.open ? 'nav--open' : ''
+        }`}
+      >
         {children}
       </div>
     </>

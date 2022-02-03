@@ -5,10 +5,33 @@ import HomeHero from '../components/sections/HomeHero';
 import HomePortfolio from '../components/sections/HomePortfolio';
 import HomeServices from '../components/sections/HomeServices';
 import MeetTheTeam from '../components/sections/MeetTheTeam';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useEffect } from 'react';
+import { colourState } from '../utils/colourState';
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home({ data }) {
+  useEffect(() => {
+    colourState.bgColour = 'orange';
+
+    ScrollTrigger.create({
+      trigger: '.home .home__services__header',
+      start: 'top 20%',
+      onEnter: () => (colourState.bgColour = 'blue'),
+      onLeaveBack: () => (colourState.bgColour = 'orange'),
+    });
+
+    ScrollTrigger.create({
+      trigger: '.home .view__all__work',
+      start: 'top bottom+=500px',
+      onEnter: () => (colourState.bgColour = 'grey'),
+      onLeaveBack: () => (colourState.bgColour = 'blue'),
+    });
+  }, []);
+
   return (
-    <main>
+    <main className='home'>
       <Seo title='Home' />
       <HomeHero />
       <HomeServices />

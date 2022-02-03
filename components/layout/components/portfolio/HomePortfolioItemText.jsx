@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function HomePortfolioItemText() {
+export default function HomePortfolioItemText({ item }) {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -34,13 +34,10 @@ export default function HomePortfolioItemText() {
   return (
     <article className='home__portfolio__item__text' ref={textRef}>
       <h3>
-        Bute Motorsport
+        {item.Title}
         <span className='underline'></span>
       </h3>
-      <p>
-        Revenue-driven, customer-centric, creating strategic solutions based in
-        technology, we help brands.
-      </p>
+      <p>{item.Summary}</p>
       <Btn href='/' text='Case Study' />
     </article>
   );
