@@ -147,6 +147,17 @@ img {
   --bg-colour: #f3f3f3;
 }
 
+main {
+  background-color: var(--bg-colour);
+  position: relative;
+  z-index: 1;
+  -webkit-transition: var(--mid-speed);
+  transition: var(--mid-speed);
+  -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+  margin-bottom: 100vh;
+}
+
 #cursor {
   width: 5px;
   height: 5px;
@@ -177,6 +188,11 @@ img {
           justify-content: space-between;
   position: relative;
   height: 6rem;
+  position: relative;
+  z-index: 2;
+  background-color: var(--bg-colour);
+  -webkit-transition: var(--mid-speed);
+  transition: var(--mid-speed);
 }
 
 .header .burger {
@@ -1319,8 +1335,35 @@ img {
   font-weight: var(--font-bold);
 }
 
+@media only screen and (max-width: 700px) {
+  .meet__the__team .team__splide .splide__slide {
+    height: 20rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .meet__the__team .team__splide .splide__slide {
+    height: 18rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .meet__the__team .team__splide .splide__slide .slide__content .img {
+    width: 65%;
+    left: 17.5%;
+  }
+  .meet__the__team .team__splide .splide__slide .slide__content .overlay {
+    width: 65%;
+    left: 17.5%;
+  }
+}
+
 .footer {
-  min-height: 60rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
   background-color: var(--blue);
   color: var(--white);
   padding: 8rem 8rem 4rem 8rem;
@@ -1334,10 +1377,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.footer .footer__cta {
-  padding: 4rem 0;
+  z-index: 0;
 }
 
 .footer .footer__cta h5 {
@@ -1443,9 +1483,6 @@ img {
 }
 
 @media only screen and (max-width: 1200px) {
-  .footer .footer__cta {
-    padding-top: 0;
-  }
   .footer .footer__cta h5 {
     font-size: 3rem;
   }
@@ -1524,6 +1561,30 @@ img {
   }
   .footer .footer__details .footer__furniture {
     padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .footer {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+  .footer .footer__cta h5 {
+    font-size: 1.5rem;
+  }
+  .footer .footer__details {
+    padding-top: 0rem;
+  }
+  .footer .footer__details .footer__contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer__details .footer__contact ul {
+    padding: 0 0 2rem 0;
+  }
+  .footer .footer__details .footer__furniture {
+    padding-top: 0rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

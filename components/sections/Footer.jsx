@@ -1,27 +1,51 @@
 import Btn from '../layout/components/Btn';
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
+  useEffect(() => {
+    console.log('footer');
+
+    gsap.fromTo(
+      '.footer--anim',
+      { autoAlpha: 0, y: 25 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power2.inOut',
+        stagger: 0.125,
+        scrollTrigger: {
+          trigger: 'main',
+          start: 'bottom 50%',
+        },
+      }
+    );
+  }, []);
+
   return (
     <footer className='footer'>
       <section className='footer__cta'>
-        <h5>
+        <h5 className='footer--anim'>
           Starting a <span>new project</span> or <br />
           want to collaborate with us?
         </h5>
-        <Btn href='/' text={`Let's talk`} />
+        <Btn href='/' text={`Let's talk`} className='footer--anim' />
       </section>
       <section className='footer__details'>
         <address className='footer__contact'>
           <ul>
-            <li>Aztec Media</li>
-            <li>8 Buckland Road</li>
-            <li>Pen Mill Trading Estate</li>
-            <li>Yeovil</li>
-            <li>Somerset</li>
-            <li>BA21 5EA</li>
+            <li className='footer--anim'>Aztec Media</li>
+            <li className='footer--anim'>8 Buckland Road</li>
+            <li className='footer--anim'>Pen Mill Trading Estate</li>
+            <li className='footer--anim'>Yeovil</li>
+            <li className='footer--anim'>Somerset</li>
+            <li className='footer--anim'>BA21 5EA</li>
           </ul>
           <div>
-            <a href='tel:01935477073'>
+            <a href='tel:01935477073' className='footer--anim'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='16'
@@ -33,7 +57,7 @@ export default function Footer() {
               </svg>
               <span>01935 477073</span>
             </a>
-            <a href='mailto:hello@aztec.media'>
+            <a href='mailto:hello@aztec.media' className='footer--anim'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='16'
@@ -52,21 +76,24 @@ export default function Footer() {
           </div>
         </address>
         <div className='footer__furniture'>
-          <h6>Expert Website Designers Somerset</h6>
-          <h6>
+          <h6 className='footer--anim'>Expert Website Designers Somerset</h6>
+          <h6 className='footer--anim'>
             Part of{' '}
             <a href='https://yeomedia.group' rel='noreferrer' target='_blank'>
               The Yeomedia Group
             </a>
           </h6>
-          <p>Copyright &copy; 1993 - {new Date().getFullYear()} Aztec Media</p>
+          <p className='footer--anim'>
+            Copyright &copy; 1993 - {new Date().getFullYear()} Aztec Media
+          </p>
           <p>
-            <span>All Rights Reserved</span>/
-            <span>
+            <span className='footer--anim'>All Rights Reserved</span>
+            <span className='footer--anim'>/</span>
+            <span className='footer--anim'>
               <a>Terms &amp; Conditions</a>
             </span>
-            /
-            <span>
+            <span className='footer--anim'>/</span>
+            <span className='footer--anim'>
               <a>Privacy Notice</a>
             </span>
           </p>

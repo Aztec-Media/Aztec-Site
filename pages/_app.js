@@ -4,6 +4,7 @@ import '../styles/style.css';
 
 import Layout from '../components/layout/Layout';
 import Header from '../components/layout/Header';
+import Footer from '../components/sections/Footer';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,6 +12,8 @@ function MyApp({ Component, pageProps }) {
       <Header />
 
       <Component {...pageProps} />
+
+      <Footer />
     </Layout>
   );
 }

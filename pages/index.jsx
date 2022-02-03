@@ -38,7 +38,6 @@ export default function Home({ data }) {
       <HomePortfolio portfolioData={data.portfolio} />
       <ViewALlWork />
       <MeetTheTeam teamData={data.team} />
-      <Footer />
     </main>
   );
 }

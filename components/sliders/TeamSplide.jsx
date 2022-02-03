@@ -27,7 +27,7 @@ export default function TeamSplide({ direction, teamData }) {
           750: {
             perPage: 2,
           },
-          525: {
+          400: {
             perPage: 1,
             gap: '6rem',
           },

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import gsap from 'gsap';
 import { useSnapshot } from 'valtio';
 import { navState } from '../../utils/navState';
@@ -8,8 +7,6 @@ import LogoText from '../vectors/LogoText';
 import Link from 'next/link';
 
 export default function Header() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
-
   const navStateSnapshot = useSnapshot(navState);
 
   return (
@@ -42,7 +39,7 @@ export default function Header() {
         <div className='line line2'></div>
         <div className='line line3'></div>
       </button>
-      <Navbar navbarOpen={navbarOpen} />
+      <Navbar />
     </header>
   );
 }
