@@ -1674,6 +1674,10 @@ main {
         .details {
           justify-content: flex-end;
         }
+
+        .hobbies__text {
+          margin-left: auto;
+        }
       }
     }
 
@@ -1756,6 +1760,10 @@ main {
       .hobbies {
         font-weight: var(--font-bold);
         padding-bottom: 0.25rem;
+      }
+
+      .hobbies__text {
+        width: 40rem;
       }
     }
   }

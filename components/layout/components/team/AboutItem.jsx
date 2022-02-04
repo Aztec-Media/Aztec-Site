@@ -91,7 +91,7 @@ export default function AboutItem({ item }) {
           </p>
         </div>
         <p className='hobbies'>Hobbies</p>
-        <p>{item.attributes.Hobbies}</p>
+        <p className='hobbies__text'>{item.attributes.Hobbies}</p>
       </div>
     </div>
   );

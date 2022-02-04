@@ -1680,6 +1680,10 @@ main {
           justify-content: flex-end;
 }
 
+.about__grid .about__item:nth-of-type(even) .about__item__text .hobbies__text {
+  margin-left: auto;
+}
+
 .about__grid .about__item .about__item__img {
   height: 32rem;
   width: 25rem;
@@ -1770,5 +1774,9 @@ main {
 .about__grid .about__item .about__item__text .hobbies {
   font-weight: var(--font-bold);
   padding-bottom: 0.25rem;
+}
+
+.about__grid .about__item .about__item__text .hobbies__text {
+  width: 40rem;
 }
 /*# sourceMappingURL=style.css.map */
