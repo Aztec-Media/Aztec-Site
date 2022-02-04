@@ -7,6 +7,7 @@ export default function Work({ data }) {
   useEffect(() => {
     colourState.bgColour = 'orange';
   }, []);
+
   return (
     <main className='work'>
       <Seo title='Our Work' />

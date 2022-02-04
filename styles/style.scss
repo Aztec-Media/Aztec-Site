@@ -1649,7 +1649,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
 
     &:nth-of-type(even) {
       justify-content: flex-end;
@@ -1683,6 +1683,7 @@ main {
 
       figure {
         box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+        transform-origin: left;
 
         .img__cover {
           background-color: var(--blue);
@@ -1691,6 +1692,8 @@ main {
           height: 100%;
           top: 0;
           left: 0;
+          z-index: 2;
+          transform-origin: right;
         }
       }
     }

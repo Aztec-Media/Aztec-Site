@@ -1645,7 +1645,7 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-bottom: 8rem;
+  margin-bottom: 12rem;
 }
 
 .about__grid .about__item:nth-of-type(even) {
@@ -1688,6 +1688,8 @@ main {
 .about__grid .about__item .about__item__img figure {
   -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .about__grid .about__item .about__item__img figure .img__cover {
@@ -1697,6 +1699,9 @@ main {
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 2;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .about__grid .about__item .about__item__text {
