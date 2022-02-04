@@ -1,4 +1,4 @@
-import Btn from '../layout/components/Btn';
+import Btn from './components/Btn';
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -6,8 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
   useEffect(() => {
-    console.log('footer');
-
     gsap.fromTo(
       '.footer--anim',
       { autoAlpha: 0, y: 25 },

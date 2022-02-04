@@ -2,8 +2,15 @@
   // colours
 
   // fonts
-  --body-font: 'Space Grotesk', sans-serif;
-  --title-font: neue-haas-unica, sans-serif;
+  --body-font: 'Chillax', sans-serif;
+  // --title-font: 'neue-haas-unica', sans-serif;
+  --title-font: 'Recia', sans-serif;
+
+  //   font-family: 'Satoshi', sans-serif;
+  // font-family: 'General Sans', sans-serif;
+  // font-family: 'Recia', serif;
+  // font-family: 'Zodiak', serif;
+  // font-family: 'Gambetta', serif;
 
   // font-weights
   --font-xlight: 300;
@@ -46,7 +53,7 @@ button {
   font-family: var(--body-font);
   font-weight: 300;
   font-size: 1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   line-height: 1.5;
   overflow-x: hidden;
   text-align: center;
@@ -59,7 +66,7 @@ select {
   font-size: 1rem;
   font-weight: var(--font-med);
   font-family: var(--body-font);
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   line-height: 1.5;
   color: var(--blue);
 }
@@ -67,7 +74,7 @@ select {
 body {
   font-family: var(--body-font);
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   line-height: 1.5;
   overflow-x: hidden;
 }
@@ -575,27 +582,27 @@ main {
   }
 }
 
-// home hero
-.home__hero {
+// large hero
+.large__hero {
   height: calc(100vh - 6rem);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 
-  .home__hero__text {
+  .large__hero__text {
     align-self: end;
     padding-bottom: 8rem;
 
-    h2 {
+    h1 {
       color: var(--white);
       font-size: 1.25rem;
       text-transform: uppercase;
       padding-bottom: 0.25rem;
     }
 
-    h3 {
+    h2 {
       font-size: 5.5rem;
-      font-weight: var(--font-bold);
+      font-weight: var(--font-xbold);
       font-family: var(--title-font);
       line-height: 1.25;
 
@@ -607,15 +614,15 @@ main {
 }
 
 @media only screen and (max-width: 1200px) {
-  .home__hero {
+  .large__hero {
     grid-template-columns: 1fr;
     grid-auto-rows: calc(50vh - 3rem);
 
-    .home__hero__text {
+    .large__hero__text {
       padding: 8rem;
       align-self: center;
 
-      h3 {
+      h2 {
         span {
           display: inline;
         }
@@ -625,21 +632,21 @@ main {
 }
 
 @media only screen and (max-width: 950px) {
-  .home__hero {
-    .home__hero__text {
+  .large__hero {
+    .large__hero__text {
       padding: 4rem;
     }
   }
 }
 
 @media only screen and (max-width: 625px) {
-  .home__hero {
-    .home__hero__text {
-      h2 {
+  .large__hero {
+    .large__hero__text {
+      h1 {
         font-size: 1.15rem;
       }
 
-      h3 {
+      h2 {
         font-size: 4rem;
       }
     }
@@ -647,15 +654,15 @@ main {
 }
 
 @media only screen and (max-width: 500px) {
-  .home__hero {
+  .large__hero {
     display: flex;
     flex-direction: column;
 
-    .home__hero__img {
+    .large__hero__img {
       position: absolute;
     }
 
-    .home__hero__text {
+    .large__hero__text {
       margin-top: auto;
       padding: 4rem 2rem;
     }
@@ -663,13 +670,13 @@ main {
 }
 
 @media only screen and (max-width: 400px) {
-  .home__hero {
-    .home__hero__text {
-      h2 {
+  .large__hero {
+    .large__hero__text {
+      h1 {
         font-size: 1rem;
       }
 
-      h3 {
+      h2 {
         font-size: 3rem;
       }
     }
@@ -1592,6 +1599,160 @@ main {
 
       .footer__furniture {
         padding-top: 0rem;
+      }
+    }
+  }
+}
+
+// about section
+.about__section {
+  .about__section__header {
+    padding: 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .text {
+      color: var(--white);
+
+      h2 {
+        font-size: 5rem;
+        font-family: var(--title-font);
+        font-weight: var(--font-xbold);
+      }
+
+      p {
+        font-size: 1.25rem;
+        width: 45rem;
+      }
+    }
+
+    .btns {
+      display: flex;
+      align-items: center;
+
+      .btn {
+        &:first-of-type {
+          margin-right: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.about__grid {
+  padding: 0 8rem 8rem 8rem;
+  max-width: 1800px;
+  margin: 0 auto;
+
+  .about__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8rem;
+
+    &:nth-of-type(even) {
+      justify-content: flex-end;
+
+      .about__item__img {
+        order: 1;
+      }
+
+      .about__item__text {
+        padding-right: 10rem;
+        padding-left: 0;
+        text-align: right;
+
+        h3 {
+          margin-left: auto;
+        }
+
+        .summary {
+          margin-left: auto;
+        }
+
+        .details {
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .about__item__img {
+      height: 32rem;
+      width: 25rem;
+
+      figure {
+        box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+
+        .img__cover {
+          background-color: var(--blue);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    .about__item__text {
+      padding-left: 10rem;
+      font-size: 1.1rem;
+
+      h3 {
+        font-size: 4rem;
+        font-family: var(--title-font);
+        font-weight: var(--font-xbold);
+        position: relative;
+        z-index: 2;
+        width: max-content;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+
+        .underline {
+          position: absolute;
+          width: 150%;
+          height: 12px;
+          opacity: 0.5;
+          bottom: 0;
+          left: 0;
+          transform: rotate(-8deg) translateY(-1.5rem) translateX(-2.5rem);
+          background-color: var(--light-grey);
+          z-index: -1;
+        }
+      }
+
+      .summary {
+        padding-bottom: 1.5rem;
+        width: 45rem;
+      }
+
+      .details {
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 2rem;
+
+        .skill {
+          margin-right: 4rem;
+
+          span {
+            font-weight: var(--font-bold);
+          }
+        }
+
+        .colour {
+          border-bottom: 2px solid transparent;
+          padding-bottom: 0.25rem;
+
+          span {
+            font-weight: var(--font-bold);
+          }
+        }
+      }
+
+      .hobbies {
+        font-weight: var(--font-bold);
+        padding-bottom: 0.25rem;
       }
     }
   }

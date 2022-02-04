@@ -1,7 +1,6 @@
 import ViewALlWork from '../components/layout/components/portfolio/ViewAllWork';
 import Seo from '../components/layout/Seo';
-import Footer from '../components/sections/Footer';
-import HomeHero from '../components/sections/HomeHero';
+import LargeHero from '../components/sections/LargeHero';
 import HomePortfolio from '../components/sections/HomePortfolio';
 import HomeServices from '../components/sections/HomeServices';
 import MeetTheTeam from '../components/sections/MeetTheTeam';
@@ -33,7 +32,7 @@ export default function Home({ data }) {
   return (
     <main className='home'>
       <Seo title='Home' />
-      <HomeHero />
+      <LargeHero />
       <HomeServices />
       <HomePortfolio portfolioData={data.portfolio} />
       <ViewALlWork />
