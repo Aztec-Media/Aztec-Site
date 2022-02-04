@@ -1358,14 +1358,21 @@ main {
   }
 }
 
+main {
+  margin-bottom: 0;
+}
+
 .footer {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
   background-color: var(--blue);
   color: var(--white);
+  z-index: 0;
+}
+
+.footer .footer__wrapper {
   padding: 8rem 8rem 4rem 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1377,7 +1384,8 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 0;
+  min-height: 100vh;
+  position: relative;
 }
 
 .footer .footer__cta h5 {

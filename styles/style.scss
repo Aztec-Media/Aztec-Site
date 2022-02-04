@@ -1347,21 +1347,28 @@ main {
   }
 }
 
+main {
+  margin-bottom: 0;
+}
+
 // footer
 .footer {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
   background-color: var(--blue);
   color: var(--white);
-  padding: 8rem 8rem 4rem 8rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   z-index: 0;
-  // display: none;
+
+  .footer__wrapper {
+    padding: 8rem 8rem 4rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: relative;
+  }
 
   .footer__cta {
     h5 {
