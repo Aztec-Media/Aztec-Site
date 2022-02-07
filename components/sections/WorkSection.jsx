@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import WorkCircles from '../layout/components/work/WorkCircles';
+
+import gsap from 'gsap';
 
 export default function WorkSection({ portfolioData }) {
   const [pageX, setPageX] = useState(0);
@@ -9,8 +11,14 @@ export default function WorkSection({ portfolioData }) {
     <section
       className='work__section'
       onMouseMove={(e) => {
-        setPageX(e.pageX / 100);
-        setPageY(e.pageY / 100);
+        const { offsetX, offsetY } = e.nativeEvent;
+        const { clientWidth, clientHeight } = e.target;
+
+        const xPos = offsetX / clientWidth - 0.5;
+        const yPos = offsetY / clientHeight - 0.5;
+
+        setPageX(xPos);
+        setPageY(yPos);
       }}
     >
       <div className='work__header'>

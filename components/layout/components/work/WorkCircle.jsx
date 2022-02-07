@@ -1,13 +1,22 @@
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function WorkCircle({ item, pageY, pageX, index }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <article
       className='work__circle'
-      style={{
-        transform: `translate(-${pageX * (index + 1)}px, -${
-          pageY * (index + 1)
-        }px)`,
+      // style={{
+      //   transform: `translate(-${pageX * (index + 1)}px, -${
+      //     pageY * (index + 1)
+      //   }px)`,
+      // }}
+      onMouseOver={({ target }) => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
       }}
     >
       <div className='wrapper'>
@@ -20,8 +29,8 @@ export default function WorkCircle({ item, pageY, pageX, index }) {
             />
           </figure>
         </div>
-        <div className='hover__circle'>
-          <p>{item.attributes.Title}</p>
+        <h4 className='title'>{item.attributes.Title}</h4>
+        <div className={`hover__circle ${isHovered ? 'show' : ''}`} style={{}}>
           <p>Discover</p>
         </div>
       </div>
