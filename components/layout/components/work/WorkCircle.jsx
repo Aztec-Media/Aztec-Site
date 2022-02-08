@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function WorkCircle({ item, pageY, pageX, index }) {
@@ -19,21 +20,28 @@ export default function WorkCircle({ item, pageY, pageX, index }) {
         setIsHovered(false);
       }}
     >
-      <div className='wrapper'>
-        <div className='img'>
-          <figure>
-            <Image
-              src={`http://localhost:1337${item.attributes.MainImage.data.attributes.url}`}
-              layout='fill'
-              alt={`Aztec Media Our Work ${item.attributes.Title}`}
-            />
-          </figure>
-        </div>
-        <h4 className='title'>{item.attributes.Title}</h4>
-        <div className={`hover__circle ${isHovered ? 'show' : ''}`} style={{}}>
-          <p>Discover</p>
-        </div>
-      </div>
+      <Link href={`/work/${item.attributes.alias}`}>
+        <a>
+          <div className='wrapper'>
+            <div className='img'>
+              <figure>
+                <Image
+                  src={`http://localhost:1337${item.attributes.MainImage.data.attributes.url}`}
+                  layout='fill'
+                  alt={`Aztec Media Our Work ${item.attributes.Title}`}
+                />
+              </figure>
+            </div>
+            <h4 className='title'>{item.attributes.Title}</h4>
+            <div
+              className={`hover__circle ${isHovered ? 'show' : ''}`}
+              style={{}}
+            >
+              <p>Discover</p>
+            </div>
+          </div>
+        </a>
+      </Link>
     </article>
   );
 }
