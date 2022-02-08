@@ -18,8 +18,8 @@ export default function InnerPortfolioHeader() {
 
     tl.fromTo(
       imageRef.current.querySelector('figure'),
-      { yPercent: -15 },
-      { yPercent: 0, ease: 'power1.inOut' }
+      { yPercent: -7.5 },
+      { yPercent: 7.5, ease: 'power1.inOut' }
     );
   }, []);
 

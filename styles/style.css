@@ -2000,7 +2000,7 @@ main {
 
 .inner__portfolio__header .intro h1 .line {
   width: 3rem;
-  background-color: var(--white);
+  background-color: var(--orange);
   height: 2px;
   margin-right: 2rem;
 }
@@ -2080,7 +2080,6 @@ main {
 .inner__portfolio__detail.inner__portfolio__detail--img-right .text {
   -webkit-transform: translateX(30%);
           transform: translateX(30%);
-  text-align: right;
 }
 
 .inner__portfolio__detail .img {
@@ -2108,7 +2107,7 @@ main {
   font-size: 4rem;
   font-family: var(--title-font);
   font-weight: var(--font-xbold);
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -2121,17 +2120,14 @@ main {
 .inner__portfolio__detail .text h2 .underline {
   display: block;
   position: absolute;
-  width: 105%;
   background-color: var(--orange);
-  height: 0.75rem;
-  opacity: 0.5;
-  bottom: 1.25rem;
+  height: 2px;
+  bottom: 0;
   left: -2.5%;
   z-index: -1;
   -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
-  -webkit-transform: rotate(-4deg);
-          transform: rotate(-4deg);
+  width: 50%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -2156,7 +2152,6 @@ main {
   .inner__portfolio__detail.inner__portfolio__detail--img-right .text {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    text-align: center;
   }
   .inner__portfolio__detail .text {
     padding-top: 0;
@@ -2175,7 +2170,9 @@ main {
     margin: 0 auto;
   }
   .inner__portfolio__detail .text h2 .underline {
-    height: 0.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .inner__portfolio__detail .img {
     height: 30rem;
@@ -2187,11 +2184,6 @@ main {
     width: unset;
     display: inline;
     font-size: 2.25rem;
-  }
-  .inner__portfolio__detail .text h2 .underline {
-    height: 0.4rem;
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
   }
 }
 
@@ -2284,7 +2276,7 @@ main {
   font-family: var(--title-font);
   font-weight: var(--font-xbold);
   font-size: 4rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   z-index: 2;
   position: relative;
@@ -2293,17 +2285,16 @@ main {
 .inner__portfolio__detail__text .heading .underline {
   display: block;
   position: absolute;
-  width: 105%;
+  width: 50%;
   background-color: var(--orange);
-  height: 0.75rem;
-  opacity: 0.5;
-  bottom: 1.25rem;
-  left: -2.5%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: -1;
   -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg);
 }
 
 .inner__portfolio__detail__text .list {

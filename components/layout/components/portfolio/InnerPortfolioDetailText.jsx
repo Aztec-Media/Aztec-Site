@@ -28,7 +28,7 @@ export default function InnerPortfolioDetailText() {
   return (
     <section className='inner__portfolio__detail__text' ref={textRef}>
       <h4 className='heading'>
-        Bute MotorSport <span className='underline'></span>
+        Bute Motorsport <span className='underline'></span>
       </h4>
       <ul className='list'>
         <li>
