@@ -1,16 +1,10 @@
 import Image from 'next/image';
 import WorkCircle from './WorkCircle';
 
-export default function WorkCircles({ portfolioData, pageY, pageX }) {
+export default function WorkCircles({ portfolioData }) {
   return (
     <section className='work__circles'>
-      <div className='.work__navigation'>
-        <ul>
-          <li>Recent Work</li>
-          <li>Design</li>
-          <li>Ecommerce</li>
-        </ul>
-      </div>
+      <div className='.work__navigation'></div>
       {portfolioData.map((item, index) =>
         index > 7 ? (
           ''
@@ -18,9 +12,7 @@ export default function WorkCircles({ portfolioData, pageY, pageX }) {
           <WorkCircle
             key={item.id}
             item={item}
-            pageY={pageY}
-            pageX={pageX}
-            index={index}
+            index={portfolioData.length - index}
           />
         )
       )}

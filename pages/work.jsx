@@ -5,7 +5,7 @@ import WorkSection from '../components/sections/WorkSection';
 
 export default function Work({ data }) {
   useEffect(() => {
-    colourState.bgColour = 'orange';
+    colourState.bgColour = 'blue';
   }, []);
 
   return (
