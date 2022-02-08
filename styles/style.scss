@@ -17,7 +17,7 @@
   --font-light: 400;
   --font-med: 500;
   --font-bold: 600;
-  --font-xbold: 600;
+  --font-xbold: 700;
 
   // transitions
   --fast-speed: all 0.3s ease;
@@ -163,6 +163,37 @@ main {
   z-index: 1;
   transition: var(--mid-speed);
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.section__404 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-family: var(--title-font);
+    font-weight: var(--font-xbold);
+    font-size: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    svg {
+      height: 10rem;
+      width: 10rem;
+    }
+
+    span {
+      margin: 0 1rem;
+    }
+  }
+
+  p {
+    padding-bottom: 1rem;
+  }
 }
 
 // cursor

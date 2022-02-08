@@ -5,7 +5,7 @@
   --font-light: 400;
   --font-med: 500;
   --font-bold: 600;
-  --font-xbold: 600;
+  --font-xbold: 700;
   --fast-speed: all 0.3s ease;
   --mid-speed: all 0.7s ease;
   --slow-speed: all 1s ease;
@@ -157,6 +157,52 @@ main {
   transition: var(--mid-speed);
   -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.section__404 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section__404 h1 {
+  font-family: var(--title-font);
+  font-weight: var(--font-xbold);
+  font-size: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.section__404 h1 svg {
+  height: 10rem;
+  width: 10rem;
+}
+
+.section__404 h1 span {
+  margin: 0 1rem;
+}
+
+.section__404 p {
+  padding-bottom: 1rem;
 }
 
 #cursor {

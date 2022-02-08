@@ -14,19 +14,19 @@ export default function Home({ data }) {
   useEffect(() => {
     colourState.bgColour = 'orange';
 
-    ScrollTrigger.create({
-      trigger: '.home .home__services__header',
-      start: 'top 20%',
-      onEnter: () => (colourState.bgColour = 'blue'),
-      onLeaveBack: () => (colourState.bgColour = 'orange'),
-    });
+    // ScrollTrigger.create({
+    //   trigger: '.home .home__services__header',
+    //   start: 'top 20%',
+    //   onEnter: () => (colourState.bgColour = 'blue'),
+    //   onLeaveBack: () => (colourState.bgColour = 'orange'),
+    // });
 
-    ScrollTrigger.create({
-      trigger: '.home .view__all__work',
-      start: 'top bottom+=500px',
-      onEnter: () => (colourState.bgColour = 'grey'),
-      onLeaveBack: () => (colourState.bgColour = 'blue'),
-    });
+    // ScrollTrigger.create({
+    //   trigger: '.home .view__all__work',
+    //   start: 'top bottom+=500px',
+    //   onEnter: () => (colourState.bgColour = 'grey'),
+    //   onLeaveBack: () => (colourState.bgColour = 'blue'),
+    // });
   }, []);
 
   return (
