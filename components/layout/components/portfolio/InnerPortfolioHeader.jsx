@@ -18,13 +18,14 @@ export default function InnerPortfolioHeader() {
 
     tl.fromTo(
       imageRef.current.querySelector('figure'),
-      { yPercent: -7.5 },
-      { yPercent: 7.5, ease: 'power1.inOut' }
+      { yPercent: -15 },
+      { yPercent: 0, ease: 'power1.inOut' }
     );
   }, []);
 
   return (
     <section className='inner__portfolio__header'>
+      <div className='overlay'></div>
       <div className='img' ref={imageRef}>
         <figure>
           <Image src={'/img.jpg'} layout='fill' alt='#' priority='true' />

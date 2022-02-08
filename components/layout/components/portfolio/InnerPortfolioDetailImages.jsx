@@ -20,8 +20,8 @@ export default function InnerPortfolioDetailImages() {
 
     fullTl.fromTo(
       fullImageRef.current.querySelector('figure'),
-      { yPercent: -7.5 },
-      { yPercent: 7.5, ease: 'power1.inOut' }
+      { yPercent: -15 },
+      { yPercent: 0, ease: 'power1.inOut' }
     );
 
     const gridTl = gsap.timeline({
@@ -37,8 +37,8 @@ export default function InnerPortfolioDetailImages() {
         imageGridRef.current.querySelector('.fig1'),
         imageGridRef.current.querySelector('.fig2'),
       ],
-      { yPercent: -7.5 },
-      { yPercent: 7.5, ease: 'power1.inOut' }
+      { yPercent: -15 },
+      { yPercent: 0, ease: 'power1.inOut' }
     );
   }, []);
 

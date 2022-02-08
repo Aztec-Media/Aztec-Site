@@ -1973,6 +1973,11 @@ main {
   height: 115%;
 }
 
+.inner__portfolio__header .overlay {
+  position: absolute;
+  display: none;
+}
+
 .inner__portfolio__header .intro {
   margin-top: auto;
   color: var(--white);
@@ -1989,6 +1994,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  line-height: 1.25;
+  padding-bottom: 0.75rem;
 }
 
 .inner__portfolio__header .intro h1 .line {
@@ -1996,6 +2003,62 @@ main {
   background-color: var(--white);
   height: 2px;
   margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .inner__portfolio__header .intro {
+    padding: 0 3rem 8rem 3rem;
+  }
+  .inner__portfolio__header .intro h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .inner__portfolio__header {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
+  .inner__portfolio__header .overlay {
+    display: block;
+    width: 100%;
+    height: 75%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(var(--blue)));
+    background: linear-gradient(rgba(0, 0, 0, 0), var(--blue));
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+  }
+  .inner__portfolio__header .intro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    padding-right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inner__portfolio__header .intro {
+    padding: 0 2rem 8rem 2rem;
+  }
+  .inner__portfolio__header .intro h1 {
+    font-size: 3rem;
+  }
+  .inner__portfolio__header .intro h1 .line {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .inner__portfolio__header .intro {
+    padding: 0 2rem 5rem 2rem;
+    text-align: center;
+  }
+  .inner__portfolio__header .intro h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .inner__portfolio__detail {
@@ -2017,6 +2080,7 @@ main {
 .inner__portfolio__detail.inner__portfolio__detail--img-right .text {
   -webkit-transform: translateX(30%);
           transform: translateX(30%);
+  text-align: right;
 }
 
 .inner__portfolio__detail .img {
@@ -2034,9 +2098,7 @@ main {
 
 .inner__portfolio__detail .text {
   color: var(--white);
-  width: 28rem;
   padding-top: 8rem;
-  padding-left: 4rem;
   -webkit-transform: translateX(-30%);
           transform: translateX(-30%);
   z-index: 2;
@@ -2051,7 +2113,8 @@ main {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.35;
   z-index: 2;
 }
 
@@ -2069,6 +2132,67 @@ main {
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
   -webkit-transform: rotate(-4deg);
           transform: rotate(-4deg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .inner__portfolio__detail .text h2 {
+    width: unset;
+  }
+  .inner__portfolio__detail .text p {
+    margin-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .inner__portfolio__detail {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-bottom: 8rem;
+  }
+  .inner__portfolio__detail.inner__portfolio__detail--img-right {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .inner__portfolio__detail.inner__portfolio__detail--img-right .text {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    text-align: center;
+  }
+  .inner__portfolio__detail .text {
+    padding-top: 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    text-align: center;
+  }
+  .inner__portfolio__detail .text h2 {
+    font-size: 3rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+  }
+  .inner__portfolio__detail .text h2 .underline {
+    height: 0.5rem;
+  }
+  .inner__portfolio__detail .img {
+    height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .inner__portfolio__detail .text h2 {
+    width: unset;
+    display: inline;
+    font-size: 2.25rem;
+  }
+  .inner__portfolio__detail .text h2 .underline {
+    height: 0.4rem;
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
 }
 
 .inner__portfolio__detail__images {
@@ -2096,11 +2220,11 @@ main {
   gap: 8rem;
   max-width: 1366px;
   margin: 0 auto;
-  padding: 12rem 8rem 8rem 8rem;
+  padding: 12rem 2rem 8rem 2rem;
 }
 
 .inner__portfolio__detail__images .img__grid .img {
-  height: 40rem;
+  height: 44rem;
   overflow: hidden;
   -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
@@ -2109,6 +2233,36 @@ main {
 .inner__portfolio__detail__images .img__grid .img figure {
   width: 115%;
   height: 115%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .inner__portfolio__detail__images .full__img {
+    min-height: 30rem;
+  }
+  .inner__portfolio__detail__images .img__grid {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .inner__portfolio__detail__images .img__grid {
+    gap: 2rem;
+    padding-top: 8rem;
+  }
+  .inner__portfolio__detail__images .img__grid .img {
+    height: 32rem;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .inner__portfolio__detail__images .img__grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-top: 4rem;
+  }
+  .inner__portfolio__detail__images .img__grid .img {
+    height: 20rem;
+  }
 }
 
 .inner__portfolio__detail__text {
@@ -2177,5 +2331,49 @@ main {
   height: 1px;
   background-color: var(--white);
   margin-right: 0.75rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .inner__portfolio__detail__text .heading {
+    font-size: 3.5rem;
+  }
+  .inner__portfolio__detail__text .list {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .inner__portfolio__detail__text {
+    padding: 6rem 2rem 0 2rem;
+  }
+  .inner__portfolio__detail__text .heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .inner__portfolio__detail__text .heading .underline {
+    height: 0.5rem;
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  .inner__portfolio__detail__text .list {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .inner__portfolio__detail__text .heading {
+    font-size: 2.5rem;
+  }
+  .inner__portfolio__detail__text .list {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+  }
+  .inner__portfolio__detail__text .list li {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
