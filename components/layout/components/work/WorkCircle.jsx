@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function WorkCircle({ item, index }) {
   const articleRef = useRef(null);
+  const titleRef = useRef(null);
 
   useEffect(() => {
     let amount = (index / 2) * 50;
@@ -25,7 +26,11 @@ export default function WorkCircle({ item, index }) {
   }, [articleRef, index]);
 
   return (
-    <article className='work__circle' ref={articleRef}>
+    <article
+      className='work__circle'
+      ref={articleRef}
+      onMouseLeave={() => titleRef.current.classList.add('animate-out')}
+    >
       <Link href={`/work/${item.id}`}>
         <a>
           <div className='logo__bg'>
@@ -41,7 +46,15 @@ export default function WorkCircle({ item, index }) {
             </figure>
             <LogoFillClip />
           </div>
-          <h4 className='title'>{item.attributes.Title}</h4>
+          <h4
+            ref={titleRef}
+            className='title'
+            onTransitionEnd={() =>
+              titleRef.current.classList.remove('animate-out')
+            }
+          >
+            {item.attributes.Title}
+          </h4>
         </a>
       </Link>
     </article>

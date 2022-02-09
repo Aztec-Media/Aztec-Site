@@ -4,6 +4,7 @@ import InnerPortfolioDetail from '../../components/layout/components/portfolio/I
 import Seo from '../../components/layout/Seo';
 import { colourState } from '../../utils/colourState';
 import InnerPortfolioDetailImages from '../../components/layout/components/portfolio/InnerPortfolioDetailImages';
+import InnerPortfolioOtherWork from '../../components/layout/components/portfolio/InnerPortfolioOtherWork';
 
 export default function WorkPage({ data }) {
   useEffect(() => {
@@ -17,6 +18,7 @@ export default function WorkPage({ data }) {
       <InnerPortfolioDetail order={0} data={data.portfolio} />
       <InnerPortfolioDetail order={1} data={data.portfolio} />
       <InnerPortfolioDetailImages data={data.portfolio} />
+      <InnerPortfolioOtherWork data={data} />
     </main>
   );
 }
@@ -27,8 +29,14 @@ export async function getStaticProps({ params }) {
   );
   const portfolioData = await portfolioRes.json();
 
+  const portfoliosRes = await fetch(
+    `${process.env.ADMIN_URL}/api/portfolios?populate=*`
+  );
+  const portfoliosData = await portfoliosRes.json();
+
   const data = {
     portfolio: portfolioData.data,
+    portfolios: portfoliosData.data,
   };
 
   return {

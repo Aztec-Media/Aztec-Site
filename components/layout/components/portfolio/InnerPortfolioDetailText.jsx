@@ -29,7 +29,7 @@ export default function InnerPortfolioDetailText({ data }) {
   return (
     <section className='inner__portfolio__detail__text' ref={textRef}>
       <h4 className='heading'>
-        Bute Motorsport <span className='underline'></span>
+        {data.attributes.Block2Heading} <span className='underline'></span>
       </h4>
       <ReactMarkdown>{data.attributes.DetailsFigures}</ReactMarkdown>
     </section>
