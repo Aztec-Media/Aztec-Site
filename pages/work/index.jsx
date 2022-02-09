@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { colourState } from '../utils/colourState';
-import Seo from '../components/layout/Seo';
-import WorkSection from '../components/sections/WorkSection';
+import { colourState } from '../../utils/colourState';
+import Seo from '../../components/layout/Seo';
+import WorkSection from '../../components/sections/WorkSection';
 
 export default function Work({ data }) {
   useEffect(() => {

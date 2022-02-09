@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import InnerPortfolioDetailText from './InnerPortfolioDetailText';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function InnerPortfolioDetailImages() {
+export default function InnerPortfolioDetailImages({ data }) {
   const fullImageRef = useRef(null);
   const imageGridRef = useRef(null);
 
@@ -46,7 +46,11 @@ export default function InnerPortfolioDetailImages() {
     <section className='inner__portfolio__detail__images'>
       <div className='full__img' ref={fullImageRef}>
         <figure>
-          <Image src='/img.jpg' alt='#' layout='fill' />
+          <Image
+            src={`http://localhost:1337${data.attributes.FullImage.data.attributes.url}`}
+            alt='#'
+            layout='fill'
+          />
         </figure>
       </div>
       <InnerPortfolioDetailText />

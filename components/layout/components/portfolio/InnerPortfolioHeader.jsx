@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function InnerPortfolioHeader() {
+export default function InnerPortfolioHeader({ data }) {
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -28,20 +28,20 @@ export default function InnerPortfolioHeader() {
       <div className='overlay'></div>
       <div className='img' ref={imageRef}>
         <figure>
-          <Image src={'/img.jpg'} layout='fill' alt='#' priority='true' />
+          <Image
+            src={`http://localhost:1337${data.attributes.MainImage.data.attributes.url}`}
+            layout='fill'
+            alt={data.attributes.Title}
+            priority='true'
+          />
         </figure>
       </div>
       <div className='intro'>
         <h1>
           <div className='line'></div>
-          Bute Motorsport
+          {data.attributes.Title}
         </h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. A mollitia,
-          ullam deleniti odio iure optio dolores consectetur iste neque
-          perferendis ratione aut voluptatem molestias, deserunt inventore qui
-          quas nam nisi.
-        </p>
+        <p>{data.attributes.Summary}</p>
       </div>
     </section>
   );

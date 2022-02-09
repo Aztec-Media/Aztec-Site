@@ -26,7 +26,7 @@ export default function WorkCircle({ item, index }) {
 
   return (
     <article className='work__circle' ref={articleRef}>
-      <Link href={`/work/${item.attributes.alias}`}>
+      <Link href={`/work/${item.id}`}>
         <a>
           <div className='logo__bg'>
             <LogoFill fill='#f69321' />

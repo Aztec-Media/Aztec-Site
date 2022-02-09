@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import WorkCircle from './WorkCircle';
 
 export default function WorkCircles({ portfolioData }) {

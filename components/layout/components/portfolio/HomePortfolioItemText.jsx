@@ -38,7 +38,7 @@ export default function HomePortfolioItemText({ item }) {
         <span className='underline'></span>
       </h3>
       <p>{item.Summary}</p>
-      <Btn href='/' text='Case Study' />
+      <Btn href={`/work/${item.id}`} text='Case Study' />
     </article>
   );
 }

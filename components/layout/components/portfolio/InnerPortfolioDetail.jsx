@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function InnerPortfolioDetail({ order }) {
+export default function InnerPortfolioDetail({ order, data }) {
   const imageRef = useRef(null);
   const textRef = useRef(null);
 
@@ -102,7 +102,11 @@ export default function InnerPortfolioDetail({ order }) {
       <section className='inner__portfolio__detail' ref={imageRef}>
         <div className='img'>
           <figure>
-            <Image src={'/img.jpg'} layout='fill' alt='#' />
+            <Image
+              src={`http://localhost:1337${data.attributes.FirstBlockImage.data.attributes.url}`}
+              layout='fill'
+              alt='#'
+            />
           </figure>
         </div>
         <div className='text' ref={textRef}>
@@ -133,7 +137,11 @@ export default function InnerPortfolioDetail({ order }) {
         </div>
         <div className='img'>
           <figure>
-            <Image src={'/img.jpg'} layout='fill' alt='#' />
+            <Image
+              src={`http://localhost:1337${data.attributes.SecondBlockImage.data.attributes.url}`}
+              layout='fill'
+              alt='#'
+            />
           </figure>
         </div>
       </section>
