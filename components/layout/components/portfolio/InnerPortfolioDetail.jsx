@@ -111,12 +111,9 @@ export default function InnerPortfolioDetail({ order, data }) {
         </div>
         <div className='text' ref={textRef}>
           <h2>
-            Custom Graphics <span className='underline'></span>
+            {data.attributes.Block1Heading} <span className='underline'></span>
           </h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam,
-            accusantium assumenda. Nemo quo vitae magni.
-          </p>
+          <p>{data.attributes.Block1Text}</p>
         </div>
       </section>
     );
@@ -128,12 +125,9 @@ export default function InnerPortfolioDetail({ order, data }) {
       >
         <div className='text' ref={textRef}>
           <h2>
-            Bespoke Website <span className='underline'></span>
+            {data.attributes.Block2Heading} <span className='underline'></span>
           </h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam,
-            accusantium assumenda. Nemo quo vitae magni.
-          </p>
+          <p>{data.attributes.Block2Text}</p>
         </div>
         <div className='img'>
           <figure>

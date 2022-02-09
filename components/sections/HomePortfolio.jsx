@@ -7,7 +7,11 @@ export default function HomePortfolio({ portfolioData }) {
         index > 3 ? (
           ''
         ) : (
-          <HomePortfolioItem key={item.id} item={item.attributes} />
+          <HomePortfolioItem
+            key={item.id}
+            item={item.attributes}
+            id={item.id}
+          />
         )
       )}
     </section>

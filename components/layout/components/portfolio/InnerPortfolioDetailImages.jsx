@@ -48,21 +48,29 @@ export default function InnerPortfolioDetailImages({ data }) {
         <figure>
           <Image
             src={`http://localhost:1337${data.attributes.FullImage.data.attributes.url}`}
-            alt='#'
+            alt={data.attributes.Title}
             layout='fill'
           />
         </figure>
       </div>
-      <InnerPortfolioDetailText />
+      <InnerPortfolioDetailText data={data} />
       <div className='img__grid' ref={imageGridRef}>
         <div className='img'>
           <figure className='fig1'>
-            <Image src='/img.jpg' alt='#' layout='fill' />
+            <Image
+              src={`http://localhost:1337${data.attributes.BottomImageLeft.data.attributes.url}`}
+              alt={data.attributes.Title}
+              layout='fill'
+            />
           </figure>
         </div>
         <div className='img'>
           <figure className='fig2'>
-            <Image src='/img.jpg' alt='#' layout='fill' />
+            <Image
+              src={`http://localhost:1337${data.attributes.BottomImageRight.data.attributes.url}`}
+              alt={data.attributes.Title}
+              layout='fill'
+            />
           </figure>
         </div>
       </div>

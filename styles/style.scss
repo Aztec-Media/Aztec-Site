@@ -1414,10 +1414,9 @@ main {
           display: block;
           position: absolute;
           width: 105%;
-          background-color: #fff;
-          height: 1rem;
-          opacity: 0.35;
-          bottom: 0.45rem;
+          background-color: var(--orange);
+          height: 2px;
+          bottom: 0;
           left: -2.5%;
           z-index: 1;
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
@@ -2287,7 +2286,7 @@ main {
     }
   }
 
-  .list {
+  ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;

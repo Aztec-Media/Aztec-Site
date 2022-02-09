@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function InnerPortfolioDetailText() {
+export default function InnerPortfolioDetailText({ data }) {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -30,27 +31,7 @@ export default function InnerPortfolioDetailText() {
       <h4 className='heading'>
         Bute Motorsport <span className='underline'></span>
       </h4>
-      <ul className='list'>
-        <li>
-          <span></span>4 Years
-        </li>
-        <li>
-          <span></span>
-          27 Race Meetings
-        </li>
-        <li>
-          <span></span>
-          450 Graphics
-        </li>
-        <li>
-          <span></span>
-          32 Banners
-        </li>
-        <li>
-          <span></span>
-          21 Champions
-        </li>
-      </ul>
+      <ReactMarkdown>{data.attributes.DetailsFigures}</ReactMarkdown>
     </section>
   );
 }
