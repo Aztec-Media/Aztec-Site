@@ -20,7 +20,7 @@ export default function Navbar() {
       defaults: { duration: 0.6, ease: 'expo.inOut' },
     });
     const introTl = gsap.timeline({
-      defaults: { duration: 0.6, ease: 'power1.inOut' },
+      defaults: { duration: 0.3, ease: 'power1.inOut' },
     });
 
     if (navStateSnapshot.open) {
