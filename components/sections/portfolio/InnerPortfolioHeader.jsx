@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-import Btn from '../Btn';
+import Btn from '../../general/Btn';
 
 export default function InnerPortfolioHeader({ imageSrc, imageAlt, title }) {
   const imageRef = useRef(null);

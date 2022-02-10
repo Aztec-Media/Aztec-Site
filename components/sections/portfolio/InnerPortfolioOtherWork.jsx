@@ -1,4 +1,4 @@
-import OtherWork from '../../../sliders/OtherWork';
+import OtherWork from '../sliders/OtherWork';
 
 export default function InnerPortfolioOtherWork({ data }) {
   return (

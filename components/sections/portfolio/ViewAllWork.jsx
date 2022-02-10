@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Btn from '../Btn';
+import Btn from '../../general/Btn';
 
 export default function ViewALlWork() {
   return (

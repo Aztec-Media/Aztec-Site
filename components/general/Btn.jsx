@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Arrow from '../../vectors/Arrow';
+import Arrow from '../vectors/Arrow';
 
 export default function Btn({ href, text, className }) {
   return (

@@ -1,4 +1,4 @@
-import HomePortfolioItem from '../layout/components/portfolio/HomePortfolioItem';
+import HomePortfolioItem from '../portfolio/HomePortfolioItem';
 
 export default function HomePortfolio({ portfolioData }) {
   return (

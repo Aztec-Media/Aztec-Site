@@ -1,9 +1,8 @@
 import Seo from '../components/layout/Seo';
 import LogoFill from '../components/vectors/LogoFill';
-import Btn from '../components/layout/components/Btn';
+import Btn from '../components/general/Btn';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
-import Header from '../components/layout/Header';
 
 export default function Custom404() {
   return (

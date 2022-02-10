@@ -1,6 +1,6 @@
-import Btn from '../layout/components/Btn';
+import Btn from '../../general/Btn';
 
-import { colourState } from '../../utils/colourState';
+import { colourState } from '../../../utils/colourState';
 import ServicesSplide from '../sliders/ServicesSplide';
 
 import { useEffect } from 'react';

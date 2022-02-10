@@ -1,13 +1,12 @@
 import Seo from '../components/layout/Seo';
-import LargeHero from '../components/sections/LargeHero';
+import LargeHero from '../components/general/LargeHero';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useEffect } from 'react';
 import { colourState } from '../utils/colourState';
-import AboutSection from '../components/sections/AboutSection';
+import AboutSection from '../components/sections/about/AboutSection';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
-import Header from '../components/layout/Header';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About({ data }) {

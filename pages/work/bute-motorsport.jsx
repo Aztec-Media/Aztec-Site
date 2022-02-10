@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
-import InnerPortfolioHeader from '../../components/layout/components/portfolio/InnerPortfolioHeader';
-import InnerPortfolioDetail from '../../components/layout/components/portfolio/InnerPortfolioDetail';
+import InnerPortfolioHeader from '../../components/sections/portfolio/InnerPortfolioHeader';
+import InnerPortfolioDetail from '../../components/sections/portfolio//InnerPortfolioDetail';
 import Seo from '../../components/layout/Seo';
-import InnerPortfolioDetailImages from '../../components/layout/components/portfolio/InnerPortfolioDetailImages';
-import InnerPortfolioOtherWork from '../../components/layout/components/portfolio/InnerPortfolioOtherWork';
+import InnerPortfolioDetailImages from '../../components/sections/portfolio//InnerPortfolioDetailImages';
+import InnerPortfolioOtherWork from '../../components/sections/portfolio//InnerPortfolioOtherWork';
 import Layout from '../../components/layout/Layout';
-import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 
 export default function ButeMotorsport() {

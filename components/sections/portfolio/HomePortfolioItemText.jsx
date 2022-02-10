@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 
-import Btn from '../Btn';
+import Btn from '../../general/Btn';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';

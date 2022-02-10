@@ -1,8 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Arrow from '../vectors/Arrow';
-import Link from 'next/link';
+import Arrow from '../../vectors/Arrow';
 
 export default function ServicesSplide({ services }) {
   return (

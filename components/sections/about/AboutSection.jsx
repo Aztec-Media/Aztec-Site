@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import Btn from '../layout/components/Btn';
-import AboutGrid from '../layout/components/team/AboutGrid';
+import Btn from '../../general/Btn';
+import AboutGrid from './AboutGrid';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/dist/SplitText';
 gsap.registerPlugin(SplitText);

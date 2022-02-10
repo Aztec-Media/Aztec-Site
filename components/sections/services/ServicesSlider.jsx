@@ -1,4 +1,4 @@
-import ServicesSplide from '../../../sliders/ServicesSplide';
+import ServicesSplide from '../sliders/ServicesSplide';
 
 const services = [
   {

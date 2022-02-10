@@ -1,16 +1,15 @@
-import ViewALlWork from '../components/layout/components/portfolio/ViewAllWork';
+import ViewAllWork from '../components/sections/portfolio/ViewAllWork';
 import Seo from '../components/layout/Seo';
-import LargeHero from '../components/sections/LargeHero';
-import HomePortfolio from '../components/sections/HomePortfolio';
-import HomeServices from '../components/sections/HomeServices';
-import MeetTheTeam from '../components/sections/MeetTheTeam';
+import LargeHero from '../components/general/LargeHero';
+import HomePortfolio from '../components/sections/home/HomePortfolio';
+import HomeServices from '../components/sections//home/HomeServices';
+import MeetTheTeam from '../components/general/MeetTheTeam';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useEffect } from 'react';
 import { colourState } from '../utils/colourState';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
-import Header from '../components/layout/Header';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home({ data }) {
@@ -39,7 +38,7 @@ export default function Home({ data }) {
         <LargeHero />
         <HomeServices />
         <HomePortfolio portfolioData={data.portfolio} />
-        <ViewALlWork />
+        <ViewAllWork />
         <MeetTheTeam teamData={data.team} />
       </main>
       <Footer />

@@ -1,4 +1,4 @@
-import Btn from './components/Btn';
+import Btn from '../general/Btn';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';

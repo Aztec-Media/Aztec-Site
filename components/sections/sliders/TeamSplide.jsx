@@ -1,9 +1,8 @@
 import Image from 'next/image';
-
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-import Arrow from '../vectors/Arrow';
 import { Fragment } from 'react';
+import Arrow from '../../vectors/Arrow';
 
 export default function TeamSplide({ direction, teamData }) {
   return (

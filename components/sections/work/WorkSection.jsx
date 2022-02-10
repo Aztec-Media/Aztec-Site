@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import WorkCircles from '../layout/components/work/WorkCircles';
+import WorkCircles from '../work/WorkCircles';
 
 import gsap from 'gsap';
 
