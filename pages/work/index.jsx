@@ -13,9 +13,8 @@ export default function Work({ data }) {
 
   return (
     <Layout>
-      <Header />
+      <Seo title='Our Work' />
       <main className='work'>
-        <Seo title='Our Work' />
         <WorkSection portfolioData={data.portfolio} />
       </main>
       <Footer />

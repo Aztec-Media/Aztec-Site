@@ -34,9 +34,8 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <Header />
+      <Seo title='Home' />
       <main className='home'>
-        <Seo title='Home' />
         <LargeHero />
         <HomeServices />
         <HomePortfolio portfolioData={data.portfolio} />

@@ -234,7 +234,7 @@ main {
       height: 1px;
       width: 2rem;
       margin: 6px 0 6px auto;
-      background-color: var(--white);
+      background-color: #fff;
       transition: var(--fast-speed);
 
       &.line2 {
@@ -292,8 +292,8 @@ main {
     transform-origin: right;
 
     .navbar__left {
-      background-color: var(--light-grey);
-      color: var(--blue);
+      background-color: #f3f3f3;
+      color: #38505d;
       position: relative;
       transform-origin: right;
 
@@ -340,7 +340,7 @@ main {
             display: flex;
 
             span {
-              color: var(--blue);
+              color: #38505d;
               font-size: 0.7rem;
               margin-right: 1.5rem;
               margin-top: 1rem;
@@ -381,10 +381,10 @@ main {
     }
 
     .navbar__right {
-      background-color: var(--orange);
-      border-left: 2px solid var(--light-grey);
+      background-color: #f69321;
+      border-left: 2px solid #f3f3f3;
       position: relative;
-      color: var(--white);
+      color: #fff;
       padding: 12rem 0 4rem 4rem;
       display: flex;
       flex-direction: column;
@@ -413,7 +413,7 @@ main {
             align-items: center;
             justify-content: center;
             margin-right: 0.5rem;
-            color: var(--blue);
+            color: #38505d;
           }
         }
       }
@@ -430,7 +430,7 @@ main {
             display: flex;
 
             span {
-              color: var(--blue);
+              color: #38505d;
               font-size: 0.7rem;
               margin-right: 1.5rem;
               margin-top: 1rem;
@@ -441,7 +441,7 @@ main {
       }
 
       .navbar__right__details {
-        color: var(--blue);
+        color: #38505d;
         font-weight: var(--font-light);
 
         h5 {
@@ -450,7 +450,7 @@ main {
           font-family: var(--title-font);
 
           a {
-            border-bottom: 1px solid var(--blue);
+            border-bottom: 1px solid #38505d;
           }
         }
 
@@ -459,9 +459,9 @@ main {
         }
 
         .directions {
-          color: var(--white);
+          color: #fff;
           font-weight: var(--font-bold);
-          border-bottom: 1px solid var(--white);
+          border-bottom: 1px solid #fff;
           width: max-content;
           font-family: var(--title-font);
         }

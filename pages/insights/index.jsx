@@ -17,9 +17,8 @@ export default function Insights({ data }) {
 
   return (
     <Layout>
-      <Header />
+      <Seo title='Insights' />
       <main className='insights'>
-        <Seo title='Insights' />
         <LargeHero />
         <InsightsGrid />
       </main>

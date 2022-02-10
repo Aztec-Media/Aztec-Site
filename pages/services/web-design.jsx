@@ -8,9 +8,8 @@ import ServicesSlider from '../../components/layout/components/services/Services
 export default function WebDesign() {
   return (
     <Layout>
-      <Header />
+      <Seo title={'Web Design'} />
       <main className='Web Design'>
-        <Seo title={'Web Design'} />
         <ServicesHeader title='Web Design' />
         <ServicesSlider />
       </main>

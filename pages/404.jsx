@@ -8,9 +8,8 @@ import Header from '../components/layout/Header';
 export default function Custom404() {
   return (
     <Layout>
-      <Header />
+      <Seo title='404 - Page Not Found' />
       <main className='404'>
-        <Seo title='404 - Page Not Found' />
         <section className='section__404'>
           <h1>
             <span>4</span>

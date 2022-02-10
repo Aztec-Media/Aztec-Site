@@ -11,9 +11,8 @@ import Footer from '../../components/layout/Footer';
 export default function ButeMotorsport() {
   return (
     <Layout>
-      <Header />
+      <Seo title={'Bute Motorsport'} />
       <main className='work'>
-        <Seo title={'Bute Motorsport'} />
         <InnerPortfolioHeader
           imageSrc='/bute.jpg'
           imageAlt='bute'
