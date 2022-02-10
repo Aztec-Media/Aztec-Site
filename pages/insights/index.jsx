@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { colourState } from '../../utils/colourState';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
+import InsightsFeature from '../../components/sections/insights/InsightsFeature';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Insights({ data }) {
@@ -19,6 +20,7 @@ export default function Insights({ data }) {
       <Seo title='Insights' />
       <main className='insights'>
         <LargeHero />
+        <InsightsFeature />
         <InsightsGrid />
       </main>
       <Footer />
