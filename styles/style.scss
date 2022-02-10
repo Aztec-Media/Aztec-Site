@@ -110,9 +110,6 @@ body {
     }
   }
 
-  &:hover {
-  }
-
   &:focus {
     outline: 1px solid var(--blue);
   }
@@ -338,6 +335,33 @@ main {
 
           a {
             display: flex;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transform: translateX(-101%);
+              height: 1px;
+              background-color: #38505d;
+              width: 100%;
+            }
+
+            &.animate-out {
+              &::after {
+                transform: translateX(101%);
+                transition: all 0.3s ease-out;
+              }
+            }
+
+            &:hover {
+              &::after {
+                transition: var(--fast-speed);
+                transform: translateX(0%);
+              }
+            }
 
             span {
               color: #38505d;
@@ -403,9 +427,36 @@ main {
           align-items: center;
           justify-content: center;
           font-size: 0.9rem;
+          position: relative;
+          overflow: hidden;
 
           &.email {
             margin-right: 2rem;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateX(-101%);
+            height: 1px;
+            background-color: #fff;
+            width: 100%;
+          }
+
+          &.animate-out {
+            &::after {
+              transform: translateX(101%);
+              transition: all 0.3s ease-out;
+            }
+          }
+
+          &:hover {
+            &:after {
+              transition: var(--fast-speed);
+              transform: translateX(0%);
+            }
           }
 
           span {
@@ -428,6 +479,34 @@ main {
 
           a {
             display: flex;
+            position: relative;
+            overflow: hidden;
+            width: max-content;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transform: translateX(-101%);
+              height: 1px;
+              background-color: #fff;
+              width: 100%;
+            }
+
+            &.animate-out {
+              &::after {
+                transform: translateX(101%);
+                transition: all 0.3s ease-out;
+              }
+            }
+
+            &:hover {
+              &:after {
+                transition: var(--fast-speed);
+                transform: translateX(0%);
+              }
+            }
 
             span {
               color: #38505d;

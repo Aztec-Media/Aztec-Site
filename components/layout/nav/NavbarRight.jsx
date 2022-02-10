@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavItem from './NavItem';
 
 export default function NavbarRight() {
   return (
@@ -35,44 +36,19 @@ export default function NavbarRight() {
       </div>
       <ul className='navbar__right__menu'>
         <li className='navbar__right__menu__item nav--anim'>
-          <Link href='/about'>
-            <a>
-              <span>06</span>
-              Who we are
-            </a>
-          </Link>
+          <NavItem href='/about' text='Who we are' number='06' />
         </li>
         <li className='navbar__right__menu__item nav--anim'>
-          <Link href='/work'>
-            <a>
-              <span>07</span>
-              Our work
-            </a>
-          </Link>
+          <NavItem href='/work' text='Our work' number='07' />
         </li>
         <li className='navbar__right__menu__item nav--anim'>
-          <Link href='/insights'>
-            <a>
-              <span>08</span>
-              Insights
-            </a>
-          </Link>
+          <NavItem href='/insights' text='Insights' number='08' />
         </li>
         <li className='navbar__right__menu__item nav--anim'>
-          <Link href='/contact'>
-            <a>
-              <span>09</span>
-              Get in touch
-            </a>
-          </Link>
+          <NavItem href='/contact' text='Get in touch' number='09' />
         </li>
         <li className='navbar__right__menu__item nav--anim'>
-          <Link href='/careers'>
-            <a>
-              <span>10</span>
-              Careers
-            </a>
-          </Link>
+          <NavItem href='/careers' text='Careers' number='10' />
         </li>
       </ul>
       <div className='navbar__right__details'>

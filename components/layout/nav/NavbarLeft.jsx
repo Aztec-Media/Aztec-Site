@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import Logo from '../../vectors/Logo';
 import Line from '../../vectors/Line';
+import NavItem from './NavItem';
 
 export default function NavbarLeft() {
   return (
@@ -16,44 +17,35 @@ export default function NavbarLeft() {
       <div className='navbar__left__content'>
         <ul className='navbar__left__menu'>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/services/web-design'>
-              <a>
-                <span>01</span>
-                Web design
-              </a>
-            </Link>
+            <NavItem
+              href='/services/web-design'
+              text='Web design'
+              number='01'
+            />
           </li>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/services/branding'>
-              <a>
-                <span>02</span>
-                Branding
-              </a>
-            </Link>
+            <NavItem href='/services/branding' text='Branding' number='02' />
           </li>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/services/print-design'>
-              <a>
-                <span>03</span>
-                Print design
-              </a>
-            </Link>
+            <NavItem
+              href='/services/print-design'
+              text='Print Design'
+              number='03'
+            />
           </li>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/services/photography'>
-              <a>
-                <span>04</span>
-                Photography
-              </a>
-            </Link>
+            <NavItem
+              href='/services/photography'
+              text='Photography'
+              number='04'
+            />
           </li>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/services/social-media'>
-              <a>
-                <span>05</span>
-                Social media
-              </a>
-            </Link>
+            <NavItem
+              href='/services/social-media'
+              text='Social media'
+              number='05'
+            />
           </li>
         </ul>
         <div className='navbar__left__sectors'>
