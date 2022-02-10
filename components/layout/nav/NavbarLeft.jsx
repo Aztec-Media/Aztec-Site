@@ -16,7 +16,7 @@ export default function NavbarLeft() {
       <div className='navbar__left__content'>
         <ul className='navbar__left__menu'>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/'>
+            <Link href='/services/web-design'>
               <a>
                 <span>01</span>
                 Web design
@@ -24,7 +24,7 @@ export default function NavbarLeft() {
             </Link>
           </li>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/'>
+            <Link href='/services/branding'>
               <a>
                 <span>02</span>
                 Branding
@@ -32,7 +32,7 @@ export default function NavbarLeft() {
             </Link>
           </li>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/'>
+            <Link href='/services/print-design'>
               <a>
                 <span>03</span>
                 Print design
@@ -40,7 +40,7 @@ export default function NavbarLeft() {
             </Link>
           </li>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/'>
+            <Link href='/services/photography'>
               <a>
                 <span>04</span>
                 Photography
@@ -48,7 +48,7 @@ export default function NavbarLeft() {
             </Link>
           </li>
           <li className='navbar__left__menu__item nav--anim'>
-            <Link href='/'>
+            <Link href='/services/social-media'>
               <a>
                 <span>05</span>
                 Social media

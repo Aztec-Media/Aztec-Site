@@ -4,7 +4,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Arrow from '../vectors/Arrow';
 import Link from 'next/link';
 
-export default function ServicesSplide() {
+export default function ServicesSplide({ services }) {
   return (
     <Splide
       options={{
@@ -36,116 +36,34 @@ export default function ServicesSplide() {
           },
         },
       }}
-      className='home__services__splide'
+      className='services__splide'
     >
-      <SplideSlide>
-        <div className='img'>
-          <figure>
-            <Image src='/img.jpg' layout='fill' alt='Aztec Media' />
-          </figure>
-        </div>
-        <div className='content'>
-          <Link href='/'>
-            <a>
-              <h3>
-                <span className='number'>01</span>
-                <span className='text'>
-                  Website + Digital
-                  <div className='underline'></div>
-                </span>
-                <span className='arrow'>
-                  <Arrow />
-                </span>
-              </h3>
-            </a>
-          </Link>
-          <p>
-            Revenue-driven, customer-centric, creating strategic solutions based
-            in technology, we help brands.
-          </p>
-        </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div className='img'>
-          <figure>
-            <Image src='/img.jpg' layout='fill' alt='Aztec Media' />
-          </figure>
-        </div>
-        <div className='content'>
-          <Link href='/'>
-            <a>
-              <h3>
-                <span className='number'>01</span>
-                <span className='text'>
-                  Website + Digital
-                  <div className='underline'></div>
-                </span>
-                <span className='arrow'>
-                  <Arrow />
-                </span>
-              </h3>
-            </a>
-          </Link>
-          <p>
-            Revenue-driven, customer-centric, creating strategic solutions based
-            in technology, we help brands.
-          </p>
-        </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div className='img'>
-          <figure>
-            <Image src='/img.jpg' layout='fill' alt='Aztec Media' />
-          </figure>
-        </div>
-        <div className='content'>
-          <Link href='/'>
-            <a>
-              <h3>
-                <span className='number'>01</span>
-                <span className='text'>
-                  Website + Digital
-                  <div className='underline'></div>
-                </span>
-                <span className='arrow'>
-                  <Arrow />
-                </span>
-              </h3>
-            </a>
-          </Link>
-          <p>
-            Revenue-driven, customer-centric, creating strategic solutions based
-            in technology, we help brands.
-          </p>
-        </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div className='img'>
-          <figure>
-            <Image src='/img.jpg' layout='fill' alt='Aztec Media' />
-          </figure>
-        </div>
-        <div className='content'>
-          <Link href='/'>
-            <a>
-              <h3>
-                <span className='number'>01</span>
-                <span className='text'>
-                  Website + Digital
-                  <div className='underline'></div>
-                </span>
-                <span className='arrow'>
-                  <Arrow />
-                </span>
-              </h3>
-            </a>
-          </Link>
-          <p>
-            Revenue-driven, customer-centric, creating strategic solutions based
-            in technology, we help brands.
-          </p>
-        </div>
-      </SplideSlide>
+      {services.map((service) => (
+        <SplideSlide key={service.number}>
+          <div className='img'>
+            <figure>
+              <Image src={service.imgSrc} layout='fill' alt='Aztec Media' />
+            </figure>
+          </div>
+          <div className='content'>
+            <Link href={service.link}>
+              <a>
+                <h3>
+                  <span className='number'>{service.number}</span>
+                  <span className='text'>
+                    {service.title}
+                    <div className='underline'></div>
+                  </span>
+                  <span className='arrow'>
+                    <Arrow />
+                  </span>
+                </h3>
+              </a>
+            </Link>
+            <p>{service.text}</p>
+          </div>
+        </SplideSlide>
+      ))}
     </Splide>
   );
 }

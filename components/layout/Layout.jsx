@@ -75,6 +75,10 @@ export default function Layout({ children }) {
   //   }
   // }, [children, setChildrenToDisplay, childrenToDisplay]);
 
+  useEffect(() => {
+    navState.open = false;
+  }, [children]);
+
   return (
     <>
       {/* <div id='cursor' style={{ left: x, top: y }}></div> */}

@@ -7,6 +7,37 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
+const services = [
+  {
+    number: '01',
+    title: 'Website + Digital',
+    link: '/',
+    imgSrc: '/img.jpg',
+    text: 'Revenue-driven, customer-centric, creating strategic solutions based in technology, we help brands.',
+  },
+  {
+    number: '02',
+    title: 'Website + Digital',
+    link: '/',
+    imgSrc: '/img.jpg',
+    text: 'Revenue-driven, customer-centric, creating strategic solutions based in technology, we help brands.',
+  },
+  {
+    number: '03',
+    title: 'Website + Digital',
+    link: '/',
+    imgSrc: '/img.jpg',
+    text: 'Revenue-driven, customer-centric, creating strategic solutions based in technology, we help brands.',
+  },
+  {
+    number: '04',
+    title: 'Website + Digital',
+    link: '/',
+    imgSrc: '/img.jpg',
+    text: 'Revenue-driven, customer-centric, creating strategic solutions based in technology, we help brands.',
+  },
+];
+
 export default function HomeServices() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -38,7 +69,7 @@ export default function HomeServices() {
         </div>
       </div>
       <div className='home__services__slider'>
-        <ServicesSplide />
+        <ServicesSplide services={services} />
       </div>
     </section>
   );

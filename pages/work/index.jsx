@@ -2,6 +2,9 @@ import { useEffect } from 'react';
 import { colourState } from '../../utils/colourState';
 import Seo from '../../components/layout/Seo';
 import WorkSection from '../../components/sections/WorkSection';
+import Layout from '../../components/layout/Layout';
+import Footer from '../../components/layout/Footer';
+import Header from '../../components/layout/Header';
 
 export default function Work({ data }) {
   useEffect(() => {
@@ -9,10 +12,14 @@ export default function Work({ data }) {
   }, []);
 
   return (
-    <main className='work'>
-      <Seo title='Our Work' />
-      <WorkSection portfolioData={data.portfolio} />
-    </main>
+    <Layout>
+      <Header />
+      <main className='work'>
+        <Seo title='Our Work' />
+        <WorkSection portfolioData={data.portfolio} />
+      </main>
+      <Footer />
+    </Layout>
   );
 }
 

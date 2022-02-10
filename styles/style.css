@@ -858,15 +858,15 @@ main {
   padding-bottom: 8rem;
 }
 
-.home__services__slider .home__services__splide .splide__slide .img {
+.services__splide .splide__slide .img {
   margin-bottom: 1.5rem;
 }
 
-.home__services__slider .home__services__splide .splide__slide .img figure {
+.services__splide .splide__slide .img figure {
   height: 20rem;
 }
 
-.home__services__slider .home__services__splide .splide__slide .content h3 {
+.services__splide .splide__slide .content h3 {
   padding-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -879,11 +879,11 @@ main {
   font-size: 2rem;
 }
 
-.home__services__slider .home__services__splide .splide__slide .content h3 .text {
+.services__splide .splide__slide .content h3 .text {
   position: relative;
 }
 
-.home__services__slider .home__services__splide .splide__slide .content h3 .underline {
+.services__splide .splide__slide .content h3 .underline {
   display: block;
   position: absolute;
   width: 105%;
@@ -897,14 +897,14 @@ main {
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
 }
 
-.home__services__slider .home__services__splide .splide__slide .content h3 .number {
+.services__splide .splide__slide .content h3 .number {
   font-weight: var(--font-light);
   font-size: 1rem;
   color: var(--white);
   margin-right: 2rem;
 }
 
-.home__services__slider .home__services__splide .splide__slide .content h3 .arrow {
+.services__splide .splide__slide .content h3 .arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -918,16 +918,16 @@ main {
   margin-left: 2rem;
 }
 
-.home__services__slider .home__services__splide .splide__slide .content h3 .arrow svg {
+.services__splide .splide__slide .content h3 .arrow svg {
   height: 100%;
   width: 100%;
 }
 
-.home__services__slider .home__services__splide .splide__slide .content h3 .arrow svg path {
+.services__splide .splide__slide .content h3 .arrow svg path {
   fill: var(--white);
 }
 
-.home__services__slider .home__services__splide .splide__slide .content p {
+.services__splide .splide__slide .content p {
   font-size: 1rem;
   padding: 0 10rem 0 3.25rem;
   color: var(--white);
@@ -935,7 +935,7 @@ main {
 }
 
 @media only screen and (max-width: 1600px) {
-  .home__services__slider .home__services__splide .splide__slide .content p {
+  .services__splide .splide__slide .content p {
     padding: 0 4rem 0 3.25rem;
   }
 }
@@ -944,31 +944,31 @@ main {
   .home__services__slider {
     padding-bottom: 4rem;
   }
-  .home__services__slider .home__services__splide .splide__slide .content h3 {
+  .services__splide .splide__slide .content h3 {
     font-size: 1.75rem;
   }
-  .home__services__slider .home__services__splide .splide__slide .content h3 .underline {
+  .services__splide .splide__slide .content h3 .underline {
     height: 0.75rem;
   }
-  .home__services__slider .home__services__splide .splide__slide .content p {
+  .services__splide .splide__slide .content p {
     padding: 0 0.5rem 0 3.25rem;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .home__services__slider .home__services__splide .splide__slide .img figure {
+  .services__splide .splide__slide .img figure {
     height: 14rem;
   }
-  .home__services__slider .home__services__splide .splide__slide .content h3 {
+  .services__splide .splide__slide .content h3 {
     font-size: 1.5rem;
   }
-  .home__services__slider .home__services__splide .splide__slide .content h3 .underline {
+  .services__splide .splide__slide .content h3 .underline {
     height: 0.5rem;
   }
-  .home__services__slider .home__services__splide .splide__slide .content h3 .number {
+  .services__splide .splide__slide .content h3 .number {
     display: none;
   }
-  .home__services__slider .home__services__splide .splide__slide .content p {
+  .services__splide .splide__slide .content p {
     padding: 0 1rem 0 0;
   }
 }
@@ -2454,5 +2454,28 @@ main {
   z-index: 1;
   position: relative;
   color: var(--white);
+}
+
+.services__header {
+  padding: 12rem 8rem;
+}
+
+.services__header h1 {
+  font-size: 11rem;
+  font-family: var(--title-font);
+  padding-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.services__header p {
+  width: 50%;
+}
+
+.services__slider {
+  padding-bottom: 8rem;
 }
 /*# sourceMappingURL=style.css.map */
