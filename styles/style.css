@@ -2778,4 +2778,113 @@ main {
   -o-object-position: center;
      object-position: center;
 }
+
+.yarcombe__details {
+  padding: 8rem 2rem;
+  background-color: #2b4934;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.yarcombe__details .grid {
+  max-width: 1850px;
+  margin: 0 auto;
+}
+
+.yarcombe__details .grid img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.yarcombe__details .grid .brochure {
+  height: 80rem;
+  position: relative;
+}
+
+.yarcombe__details .grid .brochure .img {
+  width: 100%;
+  position: absolute;
+  max-width: 70vw;
+}
+
+.yarcombe__details .grid .brochure .img:nth-of-type(1) {
+  height: 40rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.yarcombe__details .grid .brochure .img:nth-of-type(2) {
+  height: 40rem;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.yarcombe__details .grid .brochure .img:nth-of-type(3) {
+  height: 40rem;
+  top: 20rem;
+  left: 5%;
+  z-index: 2;
+}
+
+.yarcombe__details .grid .brochure .img:nth-of-type(4) {
+  height: 40rem;
+  top: 30rem;
+  right: 5%;
+  z-index: 3;
+}
+
+.yarcombe__details .grid .poster {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 40rem;
+  position: relative;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  z-index: 2;
+}
+
+.yarcombe__details .grid .poster .img {
+  position: relative;
+}
+
+.yarcombe__details .grid .poster .img:nth-of-type(1) {
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+
+.yarcombe__details .grid .poster .img:nth-of-type(2) {
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+.yarcombe__details .grid .cards {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 24rem;
+  position: relative;
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+  z-index: 3;
+}
+
+.yarcombe__details .grid .laptop .screen {
+  position: relative;
+  height: 90vh;
+  z-index: 2;
+  background: url("/premier/laptop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -o-object-position: center;
+     object-position: center;
+}
 /*# sourceMappingURL=style.css.map */

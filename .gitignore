@@ -36,4 +36,5 @@ yarn-error.log*
 .env
 .gsap-bonus.tgz
 
+public
 /public
