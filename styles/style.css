@@ -2556,10 +2556,14 @@ main {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .services__header p {
   width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .services__slider {

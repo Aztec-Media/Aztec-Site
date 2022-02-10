@@ -4,12 +4,12 @@ import Seo from '../../components/layout/Seo';
 import ServicesHeader from '../../components/layout/components/services/ServicesHeader';
 import ServicesSlider from '../../components/layout/components/services/ServicesSlider';
 
-export default function WebDesign() {
+export default function PrintDesign() {
   return (
     <Layout>
-      <Seo title={'Web Design'} />
-      <main className='web-design'>
-        <ServicesHeader title='Web Design' />
+      <Seo title={'Print Design'} />
+      <main className='print-design'>
+        <ServicesHeader title='Print Design' />
         <ServicesSlider />
       </main>
       <Footer />

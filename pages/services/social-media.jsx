@@ -4,12 +4,12 @@ import Seo from '../../components/layout/Seo';
 import ServicesHeader from '../../components/layout/components/services/ServicesHeader';
 import ServicesSlider from '../../components/layout/components/services/ServicesSlider';
 
-export default function WebDesign() {
+export default function SocialMedia() {
   return (
     <Layout>
-      <Seo title={'Web Design'} />
-      <main className='web-design'>
-        <ServicesHeader title='Web Design' />
+      <Seo title={'Social Media'} />
+      <main className='social-media'>
+        <ServicesHeader title='Social Media' />
         <ServicesSlider />
       </main>
       <Footer />
