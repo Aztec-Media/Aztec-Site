@@ -4,10 +4,10 @@ import Head from 'next/head';
 export default function Seo({ title, description }) {
   return (
     <Head>
-      <title>{title ? `${title} | Aztec Media` : 'Aztec Media'}</title>
+      <title>{title ? `${title}` : 'Aztec Media'}</title>
       <meta
         name='description'
-        content={description ? `${description} | Aztec Media` : 'Aztec Media'}
+        content={description ? `${description}` : 'Aztec Media'}
       />
       <link rel='stylesheet' href='https://use.typekit.net/cwc2amm.css' />
       <link

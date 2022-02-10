@@ -15,13 +15,14 @@ export default function InnerPortfolioDetailImages({ data }) {
         scrub: true,
         trigger: fullImageRef.current,
         start: 'top bottom',
+        end: 'bottom top',
       },
     });
 
     fullTl.fromTo(
       fullImageRef.current.querySelector('figure'),
-      { yPercent: -15 },
-      { yPercent: 0, ease: 'power1.inOut' }
+      { yPercent: -25 },
+      { yPercent: 25, ease: 'power1.inOut' }
     );
 
     const gridTl = gsap.timeline({
@@ -29,6 +30,7 @@ export default function InnerPortfolioDetailImages({ data }) {
         scrub: true,
         trigger: imageGridRef.current.querySelector('.img'),
         start: 'top bottom',
+        end: 'bottom top',
       },
     });
 
