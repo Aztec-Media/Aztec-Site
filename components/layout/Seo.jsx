@@ -9,7 +9,6 @@ export default function Seo({ title, description }) {
         name='description'
         content={description ? `${description}` : 'Aztec Media'}
       />
-      <link rel='stylesheet' href='https://use.typekit.net/cwc2amm.css' />
       <link
         href='https://api.fontshare.com/css?f[]=chillax@1&f[]=recia@1&display=swap'
         rel='stylesheet'
@@ -21,7 +20,7 @@ export default function Seo({ title, description }) {
         crossOrigin='true'
       />
       <link
-        href='https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300@400@500;700&display=swap'
+        href='https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap'
         rel='stylesheet'
       />
     </Head>

@@ -8,22 +8,22 @@ import Btn from '../../general/Btn';
 export default function InnerPortfolioHeader({ imageSrc, imageAlt, title }) {
   const imageRef = useRef(null);
 
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       scrub: true,
-  //       trigger: imageRef.current,
-  //       start: 'top bottom',
-  //       end: 'bottom top',
-  //     },
-  //   });
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        scrub: true,
+        trigger: imageRef.current,
+        start: 'top center',
+        end: 'bottom top',
+      },
+    });
 
-  //   tl.fromTo(
-  //     imageRef.current.querySelector('figure'),
-  //     { yPercent: -7.5 },
-  //     { yPercent: 7.5, ease: 'power1.inOut' }
-  //   );
-  // }, []);
+    tl.fromTo(
+      imageRef.current.querySelector('figure'),
+      { yPercent: 0 },
+      { yPercent: 15, ease: 'power1.inOut' }
+    );
+  }, []);
 
   return (
     <section className='inner__portfolio__header'>

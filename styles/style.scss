@@ -6,12 +6,6 @@
   // --title-font: 'neue-haas-unica', sans-serif;
   --title-font: 'Roboto Slab', serif;
 
-  //   font-family: 'Satoshi', sans-serif;
-  // font-family: 'General Sans', sans-serif;
-  // font-family: 'Recia', serif;
-  // font-family: 'Zodiak', serif;
-  // font-family: 'Gambetta', serif;
-
   // font-weights
   --font-xlight: 300;
   --font-light: 400;
@@ -1885,14 +1879,18 @@ main {
     color: var(--white);
 
     h1 {
-      font-size: 8rem;
+      font-size: 18rem;
       font-family: var(--title-font);
-      font-weight: var(--font-xbold);
+      font-weight: var(--font-med);
+      text-align: center;
+      line-height: 1.25;
     }
 
     p {
       width: 35rem;
+      margin: 0 auto;
       font-size: 1.15rem;
+      text-align: center;
     }
   }
 }
@@ -2632,6 +2630,99 @@ main {
       .arrow {
         width: 3rem;
         height: 3rem;
+      }
+    }
+  }
+}
+
+// premier traffic
+.premier__details {
+  padding: 8rem 2rem;
+  background-color: #f9e01d;
+  background-image: url('/premier/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .grid {
+    max-width: 1850px;
+    margin: 0 auto;
+
+    img {
+      object-fit: contain;
+      width: max-content;
+    }
+
+    .brochure {
+      height: 80rem;
+      position: relative;
+
+      .img {
+        width: 100%;
+        position: absolute;
+        max-width: 70vw;
+
+        &:nth-of-type(1) {
+          height: 40rem;
+          top: 0;
+          left: 10%;
+          z-index: 3;
+        }
+
+        &:nth-of-type(2) {
+          height: 40rem;
+          top: 14rem;
+          left: 20%;
+          z-index: 2;
+        }
+
+        &:nth-of-type(3) {
+          height: 40rem;
+          top: 40rem;
+          left: 16%;
+          z-index: 1;
+        }
+      }
+    }
+
+    .poster {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 40rem;
+      position: relative;
+      transform: translateY(-30%);
+      z-index: 2;
+
+      .img {
+        position: relative;
+
+        &:nth-of-type(1) {
+          transform: translateX(20%);
+        }
+        &:nth-of-type(2) {
+          transform: translateX(-20%);
+        }
+      }
+    }
+
+    .cards {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 24rem;
+      position: relative;
+      transform: translateY(-110%);
+      z-index: 3;
+    }
+
+    .laptop {
+      .screen {
+        position: relative;
+        height: 90vh;
+        z-index: 2;
+        background: url('/premier/laptop.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        object-position: center;
       }
     }
   }
