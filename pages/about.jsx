@@ -18,7 +18,7 @@ export default function About({ data }) {
     <Layout>
       <Seo title='About Us' />
       <main className='about'>
-        <LargeHero />
+        {/* <LargeHero /> */}
         <AboutSection teamData={data.team} />
       </main>
       <Footer />

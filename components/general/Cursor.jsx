@@ -51,8 +51,8 @@ export default function Cursor() {
         positionRef.current.destinationX = mouseX;
         positionRef.current.destinationY = mouseY;
       } else {
-        positionRef.current.distX = (mouseX - destinationX) * 0.1;
-        positionRef.current.distY = (mouseY - destinationY) * 0.1;
+        positionRef.current.distX = (mouseX - destinationX) * 0.075;
+        positionRef.current.distY = (mouseY - destinationY) * 0.075;
 
         if (
           Math.abs(positionRef.current.distX) +
