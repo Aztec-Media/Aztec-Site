@@ -32,7 +32,6 @@ export default function Cursor() {
       `;
 
       if (target.classList.contains('large__hero__img')) {
-        // console.log(event.target.nodeName);
         setCursorText('Discover');
       } else {
         setCursorText('');
