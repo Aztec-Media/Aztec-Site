@@ -193,12 +193,23 @@ main {
   height: 5px;
   border: 2px solid white;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: all 0.2s ease-in-out;
   transition-property: background, width, height;
   background: #000;
+  z-index: 1000;
+  display: none;
+}
+#cursor2 {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   z-index: 1000;
 }
 
@@ -713,6 +724,7 @@ main {
 
       span {
         display: block;
+        pointer-events: none;
       }
     }
   }

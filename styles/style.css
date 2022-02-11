@@ -210,7 +210,7 @@ main {
   height: 5px;
   border: 2px solid white;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
@@ -219,6 +219,19 @@ main {
   -webkit-transition-property: background, width, height;
   transition-property: background, width, height;
   background: #000;
+  z-index: 1000;
+  display: none;
+}
+
+#cursor2 {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
   z-index: 1000;
 }
 
@@ -781,6 +794,7 @@ main {
 
 .large__hero .large__hero__text h2 span {
   display: block;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 1200px) {
