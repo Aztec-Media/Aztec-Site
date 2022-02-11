@@ -1,90 +1,90 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
-
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePortfolioItemImg({ image }) {
-  const imageRef = useRef(null);
+  const portfolioImageRef = useRef(null);
 
   useEffect(() => {
+    const introTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: portfolioImageRef.current,
+        start: 'top 70%',
+      },
+      defaults: {
+        ease: 'power2.inOut',
+        duration: 1,
+      },
+    });
+
+    const slideTl = gsap.timeline({
+      scrollTrigger: {
+        scrub: 1,
+        trigger: portfolioImageRef.current,
+        start: 'top 70%',
+      },
+      defaults: {
+        ease: 'power2.inOut',
+        duration: 1,
+      },
+    });
+
+    introTl
+      .fromTo(
+        portfolioImageRef.current.querySelector('figure'),
+        { scaleX: 0 },
+        { scaleX: 1 }
+      )
+      .fromTo(
+        portfolioImageRef.current.querySelector('.img__cover'),
+        { scaleX: 1 },
+        {
+          scaleX: 0,
+        },
+        '-=0.6'
+      )
+      .fromTo(
+        portfolioImageRef.current.querySelector('img'),
+        { scale: 1.2 },
+        { scale: 1 },
+        '-=0.9'
+      );
+
     ScrollTrigger.matchMedia({
       '(min-width: 900px)': function () {
-        gsap.fromTo(
-          imageRef.current,
+        slideTl.fromTo(
+          portfolioImageRef.current,
           { y: 0 },
           {
             y: -450,
             duration: 1,
             ease: 'power1.inOut',
             stagger: 0.1,
-            scrollTrigger: {
-              scrub: 1,
-              trigger: imageRef.current,
-              start: 'top bottom',
-            },
-          }
-        );
-
-        gsap.fromTo(
-          imageRef.current.querySelector('figure'),
-          { yPercent: -10, scale: 1 },
-          {
-            yPercent: 0,
-            scale: 1.2,
-            duration: 1,
-            ease: 'power1.inOut',
-            stagger: 0.1,
-            scrollTrigger: {
-              scrub: 1,
-              trigger: imageRef.current,
-              start: 'top bottom',
-            },
           }
         );
       },
       '(max-width: 899px)': function () {
-        gsap.fromTo(
-          imageRef.current,
+        slideTl.fromTo(
+          portfolioImageRef.current,
           { y: 0 },
           {
-            y: -75,
+            y: -200,
             duration: 1,
             ease: 'power1.inOut',
             stagger: 0.1,
-            scrollTrigger: {
-              scrub: 1,
-              trigger: imageRef.current,
-              start: 'top bottom',
-            },
-          }
-        );
-
-        gsap.fromTo(
-          imageRef.current.querySelector('figure'),
-          { yPercent: -10, scale: 1 },
-          {
-            yPercent: 0,
-            scale: 1.2,
-            duration: 1,
-            ease: 'power1.inOut',
-            stagger: 0.1,
-            scrollTrigger: {
-              scrub: 1,
-              trigger: imageRef.current,
-              start: 'top bottom',
-            },
           }
         );
       },
     });
-  }, [imageRef]);
+  }, [portfolioImageRef]);
 
   return (
-    <div className='home__portfolio__item__img' ref={imageRef}>
+    <div className='home__portfolio__item__img' ref={portfolioImageRef}>
       <div className='img__wrapper'>
         <figure>
+          <div className='img__cover'></div>
           <Image
             src={`http://localhost:1337${image.url}`}
             layout='fill'
