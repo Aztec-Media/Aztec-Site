@@ -2898,6 +2898,66 @@ main {
   height: 3rem;
 }
 
+.insights__inner__section {
+  padding: 20rem 8rem 8rem 8rem;
+  max-width: 1750px;
+  margin: 0 auto;
+}
+
+.insights__inner__section .insights__inner__section__header {
+  padding-bottom: 4rem;
+}
+
+.insights__inner__section .insights__inner__section__header .date {
+  color: var(--blue);
+}
+
+.insights__inner__section .insights__inner__section__header .title {
+  font-size: 8rem;
+  font-family: var(--title-font);
+  font-weight: var(--font-med);
+  color: #fff;
+  line-height: 1.25;
+}
+
+.insights__inner__section .insights__inner__section__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 8rem;
+  font-size: 1.25rem;
+}
+
+.insights__inner__section .insights__inner__section__content .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.insights__inner__section .insights__inner__section__content .images .img {
+  width: 100%;
+  height: 34rem;
+}
+
+.insights__inner__section .insights__inner__section__content .content p {
+  padding-bottom: 1rem;
+}
+
+.insights__inner__section .insights__inner__section__content .content p.quote {
+  font-family: var(--title-font);
+  font-style: italic;
+  font-size: 2.5rem;
+  padding: 1rem 0 2rem 0;
+}
+
 .contact__header {
   padding: 12rem 8rem 4rem 8rem;
   color: var(--white);
@@ -3056,63 +3116,44 @@ main {
           transform: translateX(0%);
 }
 
-.insights__inner__section {
-  padding: 20rem 8rem 8rem 8rem;
-  max-width: 1750px;
+.careers__grid {
+  padding: 8rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.insights__inner__section .insights__inner__section__header {
-  padding-bottom: 4rem;
-}
-
-.insights__inner__section .insights__inner__section__header .date {
-  color: var(--blue);
-}
-
-.insights__inner__section .insights__inner__section__header .title {
-  font-size: 8rem;
-  font-family: var(--title-font);
-  font-weight: var(--font-med);
+.careers__grid .insights__item {
+  padding: 2rem;
+  border-bottom: 1px solid var(--blue);
+  margin-bottom: 2rem;
   color: #fff;
-  line-height: 1.25;
 }
 
-.insights__inner__section .insights__inner__section__content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  gap: 8rem;
-  font-size: 1.25rem;
+.careers__grid .insights__item .date {
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+  opacity: 0.7;
 }
 
-.insights__inner__section .insights__inner__section__content .images {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.insights__inner__section .insights__inner__section__content .images .img {
-  width: 100%;
-  height: 34rem;
-}
-
-.insights__inner__section .insights__inner__section__content .content p {
+.careers__grid .insights__item .title {
+  font-size: 2.25rem;
+  font-family: var(--title-font);
   padding-bottom: 1rem;
 }
 
-.insights__inner__section .insights__inner__section__content .content p.quote {
-  font-family: var(--title-font);
-  font-style: italic;
-  font-size: 2.5rem;
-  padding: 1rem 0 2rem 0;
+.careers__grid .insights__item .summary {
+  padding-bottom: 2rem;
+}
+
+.careers__grid .insights__item .btn {
+  font-size: 0.9rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.careers__grid .insights__item .btn .arrow {
+  width: 3rem;
+  height: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

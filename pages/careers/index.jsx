@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { colourState } from '../../utils/colourState';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
+import CareersGrid from '../../components/sections/careers/CareersGrid';
 
 export default function Careers({ data }) {
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function Careers({ data }) {
       <Seo title='Careers' />
       <main className='careers'>
         <LargeHero />
+        <CareersGrid />
       </main>
       <Footer />
     </Layout>
