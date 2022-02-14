@@ -1178,13 +1178,6 @@ main {
     .home__portfolio__item__img {
       grid-row: span 1 / auto;
       height: 30rem;
-
-      &:nth-of-type(odd) {
-        padding-left: 4rem;
-      }
-      &:nth-of-type(even) {
-        padding-right: 4rem;
-      }
     }
 
     .home__portfolio__item__text {
@@ -1193,13 +1186,6 @@ main {
 
       &:last-of-type {
         padding-bottom: 0;
-      }
-
-      &:nth-of-type(odd) {
-        padding-left: 8rem;
-      }
-      &:nth-of-type(even) {
-        padding-right: 8rem;
       }
     }
   }
@@ -1215,13 +1201,6 @@ main {
   .home__portfolio__grid {
     .home__portfolio__item__img {
       height: 20rem;
-
-      &:nth-of-type(odd) {
-        padding-left: 0;
-      }
-      &:nth-of-type(even) {
-        padding-right: 0;
-      }
     }
 
     .home__portfolio__item__text {
@@ -1246,13 +1225,7 @@ main {
         }
       }
 
-      &:nth-of-type(odd) {
-        padding-left: 0;
-      }
-
       &:nth-of-type(even) {
-        padding-right: 0;
-
         p {
           margin: 0;
           text-align: center;
@@ -2790,6 +2763,60 @@ main {
           ~ .slide {
             transform: translateX(0%);
           }
+        }
+      }
+    }
+  }
+}
+
+// insights inner
+.insights__inner__section {
+  padding: 20rem 8rem 8rem 8rem;
+  max-width: 1750px;
+  margin: 0 auto;
+
+  .insights__inner__section__header {
+    padding-bottom: 4rem;
+
+    .date {
+      color: var(--blue);
+    }
+
+    .title {
+      font-size: 8rem;
+      font-family: var(--title-font);
+      font-weight: var(--font-med);
+      color: #fff;
+      line-height: 1.25;
+    }
+  }
+
+  .insights__inner__section__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8rem;
+    font-size: 1.25rem;
+
+    .images {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .img {
+        width: 100%;
+        height: 34rem;
+      }
+    }
+
+    .content {
+      p {
+        padding-bottom: 1rem;
+
+        &.quote {
+          font-family: var(--title-font);
+          font-style: italic;
+          font-size: 2.5rem;
+          padding: 1rem 0 2rem 0;
         }
       }
     }
