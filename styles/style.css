@@ -390,6 +390,72 @@ img {
   --bg-colour: #f3f3f3;
 }
 
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  background-color: lightcoral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#loader .loader__inner {
+  overflow: hidden;
+  position: relative;
+}
+
+#loader .loader__inner .logo {
+  background-color: #38505d;
+  width: 28rem;
+  height: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#loader .loader__inner .logo .logo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10.5rem;
+  width: 26rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#loader .loader__inner .logo .logo__wrapper svg {
+  height: 100%;
+  width: auto;
+  max-width: 24rem;
+}
+
 main {
   background-color: var(--bg-colour);
   position: relative;
@@ -1128,7 +1194,7 @@ main {
 }
 
 .home__services .home__services__header .text p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--white);
   font-weight: var(--font-xlight);
 }
