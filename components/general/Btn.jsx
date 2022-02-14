@@ -9,6 +9,7 @@ export default function Btn({ href, text, className }) {
         <span>{text}</span>
         <div className='arrow'>
           <Arrow />
+          <div className='btn__hover'></div>
         </div>
       </a>
     </Link>

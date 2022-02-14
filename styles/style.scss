@@ -95,13 +95,39 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    transition: var(--fast-speed);
 
     svg {
       width: 40%;
       height: 40%;
+      z-index: 2;
 
       path {
         fill: var(--white);
+      }
+    }
+
+    .btn__hover {
+      position: absolute;
+      background-color: var(--blue);
+      width: 6rem;
+      height: 6rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      z-index: 1;
+      transition: var(--fast-speed);
+      transition-timing-function: ease-in-out;
+    }
+  }
+
+  &:hover {
+    .arrow {
+      border-color: transparent;
+
+      .btn__hover {
+        transform: translate(-50%, -50%) scale(1);
       }
     }
   }
@@ -1499,6 +1525,21 @@ main {
         svg {
           path {
             fill: var(--orange);
+            transition: var(--fast-speed);
+          }
+        }
+
+        .btn__hover {
+          background-color: var(--orange);
+        }
+      }
+
+      &:hover {
+        .arrow {
+          svg {
+            path {
+              fill: #fff;
+            }
           }
         }
       }
