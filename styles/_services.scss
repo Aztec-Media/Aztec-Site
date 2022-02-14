@@ -1,0 +1,27 @@
+// services
+.services__header {
+  padding: 28rem 8rem 8rem 8rem;
+  color: var(--white);
+
+  h1 {
+    font-size: 11rem;
+    font-family: var(--title-font);
+    font-weight: var(--font-med);
+    padding-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  p {
+    width: 52.5%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.15rem;
+  }
+}
+
+.services__slider {
+  padding-bottom: 8rem;
+}
