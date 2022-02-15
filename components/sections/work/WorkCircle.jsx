@@ -31,7 +31,7 @@ export default function WorkCircle({ item, index }) {
       ref={articleRef}
       onMouseLeave={() => titleRef.current.classList.add('animate-out')}
     >
-      <Link href={`/work/${item.id}`}>
+      <Link href={`${item.link}`}>
         <a>
           <div className='logo__bg'>
             <LogoFill fill='#f69321' />
