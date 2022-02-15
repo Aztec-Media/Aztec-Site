@@ -11,6 +11,48 @@
   --slow-speed: all 1s ease;
 }
 
+.inner__portfolio__person {
+  padding: 8rem;
+}
+
+.inner__portfolio__person .person__img {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  margin: 0 auto 1rem auto;
+}
+
+.inner__portfolio__person .person__img .img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  -webkit-clip-path: url(#logoClip);
+          clip-path: url(#logoClip);
+  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.inner__portfolio__person .text {
+  text-align: center;
+}
+
+.inner__portfolio__person .text h6 {
+  font-size: 3rem;
+  font-family: var(--title-font);
+  font-weight: var(--font-bold);
+  padding-bottom: 1rem;
+}
+
+.inner__portfolio__person .text p {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
 .premier__details {
   padding: 8rem 2rem;
   background-color: #f9e01d;
