@@ -28,8 +28,8 @@ export default function InnerPortfolioPerson() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero totam
           quo non eveniet eos sint?
         </p>
+        <Btn href='/contact' text='Plan your project' />
       </div>
-      <Btn href='/contact' text='Plan your project' />
     </section>
   );
 }
