@@ -42,7 +42,12 @@ export default function ServicesSplide({ services }) {
         <SplideSlide key={service.number}>
           <div className='img'>
             <figure>
-              <Image src={service.imgSrc} layout='fill' alt='Aztec Media' />
+              <Image
+                src={service.imgSrc}
+                layout='fill'
+                alt='Aztec Media'
+                priority='true'
+              />
             </figure>
           </div>
           <div className='content'>
@@ -60,7 +65,7 @@ export default function ServicesSplide({ services }) {
                 </h3>
               </a>
             </Link>
-            <p>{service.text}</p>
+            <p>{service.summary}</p>
           </div>
         </SplideSlide>
       ))}

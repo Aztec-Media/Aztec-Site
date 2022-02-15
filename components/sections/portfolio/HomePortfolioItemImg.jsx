@@ -73,11 +73,7 @@ export default function HomePortfolioItemImg({ image }) {
       <div className='img__wrapper'>
         <figure>
           <div className='img__cover'></div>
-          <Image
-            src={`http://localhost:1337${image.url}`}
-            layout='fill'
-            alt='#'
-          />
+          <Image src={image} layout='fill' alt='#' />
         </figure>
       </div>
     </div>

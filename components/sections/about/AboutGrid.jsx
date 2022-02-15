@@ -1,10 +1,11 @@
 import AboutItem from './AboutItem';
+import teamData from '../../../data/teamData.json';
 
-export default function AboutGrid({ teamData }) {
+export default function AboutGrid() {
   return (
     <section className='about__grid'>
-      {teamData.map((item) => (
-        <AboutItem key={item.id} item={item} />
+      {teamData.map((item, index) => (
+        <AboutItem key={index} item={item} />
       ))}
     </section>
   );

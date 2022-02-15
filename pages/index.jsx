@@ -15,20 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home({ data }) {
   useEffect(() => {
     colourState.bgColour = 'orange';
-
-    // ScrollTrigger.create({
-    //   trigger: '.home .home__services__header',
-    //   start: 'top 20%',
-    //   onEnter: () => (colourState.bgColour = 'blue'),
-    //   onLeaveBack: () => (colourState.bgColour = 'orange'),
-    // });
-
-    // ScrollTrigger.create({
-    //   trigger: '.home .view__all__work',
-    //   start: 'top bottom+=500px',
-    //   onEnter: () => (colourState.bgColour = 'grey'),
-    //   onLeaveBack: () => (colourState.bgColour = 'blue'),
-    // });
   }, []);
 
   return (
@@ -37,30 +23,11 @@ export default function Home({ data }) {
       <main className='home'>
         <LargeHero />
         <HomeServices />
-        <HomePortfolio portfolioData={data.portfolio} />
+        <HomePortfolio />
         <ViewAllWork />
-        <MeetTheTeam teamData={data.team} />
+        <MeetTheTeam />
       </main>
       <Footer />
     </Layout>
   );
-}
-
-export async function getStaticProps(context) {
-  const portfolioRes = await fetch(
-    `${process.env.ADMIN_URL}/api/portfolios?populate=*`
-  );
-  const portfolioData = await portfolioRes.json();
-
-  const teamRes = await fetch(`${process.env.ADMIN_URL}/api/teams?populate=*`);
-  const teamData = await teamRes.json();
-
-  const data = {
-    portfolio: portfolioData.data,
-    team: teamData.data,
-  };
-
-  return {
-    props: { data },
-  };
 }

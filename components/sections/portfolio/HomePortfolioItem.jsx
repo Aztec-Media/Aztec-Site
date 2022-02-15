@@ -4,8 +4,8 @@ import HomePortfolioItemText from './HomePortfolioItemText';
 export default function HomePortfolioItem({ item, id }) {
   return (
     <>
-      <HomePortfolioItemImg image={item.MainImage.data.attributes} />
-      <HomePortfolioItemText item={item} id={id} />
+      <HomePortfolioItemImg image={item.imgSrc} />
+      <HomePortfolioItemText item={item} />
     </>
   );
 }

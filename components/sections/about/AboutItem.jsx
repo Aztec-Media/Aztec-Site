@@ -81,27 +81,27 @@ export default function AboutItem({ item }) {
         <figure>
           <div className='img__cover'></div>
           <Image
-            src={`http://localhost:1337${item.attributes.Image.data.attributes.url}`}
+            src={item.imgSrc}
             layout='fill'
-            alt='#'
+            alt='Aztec Media team members'
           />
         </figure>
       </div>
       <div className='about__item__text'>
         <h3>
-          {item.attributes.Name} <span className='underline'></span>
+          {item.name} <span className='underline'></span>
         </h3>
-        <p className='summary'>{item.attributes.Summary}</p>
+        <p className='summary'>{item.summary}</p>
         <div className='details'>
           <p className='skill'>
-            <span> Skill:</span> {item.attributes.Title}
+            <span> Skill:</span> {item.title}
           </p>
           <p className='colour' style={{ borderColor: 'lightcoral' }}>
-            <span>Favourite Colour:</span> {item.attributes.Colour}
+            <span>Favourite Colour:</span> {item.Colour}
           </p>
         </div>
         <p className='hobbies'>Hobbies</p>
-        <p className='hobbies__text'>{item.attributes.Hobbies}</p>
+        <p className='hobbies__text'>{item.hobbies}</p>
       </div>
     </div>
   );

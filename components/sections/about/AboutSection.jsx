@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { SplitText } from 'gsap/dist/SplitText';
 gsap.registerPlugin(SplitText);
 
-export default function AboutSection({ teamData }) {
+export default function AboutSection() {
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function AboutSection({ teamData }) {
           <Btn href='/' text='Recent Work' />
         </div>
       </div>
-      <AboutGrid teamData={teamData} />
+      <AboutGrid />
     </section>
   );
 }

@@ -7,51 +7,11 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-const services = [
-  {
-    number: '01',
-    title: 'Website + Digital',
-    link: '/',
-    imgSrc: '/img.jpg',
-    text: 'Revenue-driven, customer-centric, creating strategic solutions based in technology, we help brands.',
-  },
-  {
-    number: '02',
-    title: 'Website + Digital',
-    link: '/',
-    imgSrc: '/img.jpg',
-    text: 'Revenue-driven, customer-centric, creating strategic solutions based in technology, we help brands.',
-  },
-  {
-    number: '03',
-    title: 'Website + Digital',
-    link: '/',
-    imgSrc: '/img.jpg',
-    text: 'Revenue-driven, customer-centric, creating strategic solutions based in technology, we help brands.',
-  },
-  {
-    number: '04',
-    title: 'Website + Digital',
-    link: '/',
-    imgSrc: '/img.jpg',
-    text: 'Revenue-driven, customer-centric, creating strategic solutions based in technology, we help brands.',
-  },
-];
+import services from '../../../data/servicesData.json';
 
 export default function HomeServices() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    ScrollTrigger.create({
-      trigger: '.home__services',
-      start: 'top 80%',
-      onEnter: () => {
-        // colourState.bgColour = 'blue';
-      },
-      onLeaveBack: () => {
-        // colourState.bgColour = '';
-      },
-    });
   }, []);
 
   return (

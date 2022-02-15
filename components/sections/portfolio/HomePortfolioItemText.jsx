@@ -34,11 +34,11 @@ export default function HomePortfolioItemText({ item, id }) {
   return (
     <article className='home__portfolio__item__text' ref={textRef}>
       <h3>
-        {item.Title}
+        {item.title}
         <span className='underline'></span>
       </h3>
-      <p>{item.Summary}</p>
-      <Btn href={`/work/${id}`} text='Case Study' />
+      <p>{item.summary}</p>
+      <Btn href={item.link} text='Case Study' />
     </article>
   );
 }

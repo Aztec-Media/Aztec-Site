@@ -37,23 +37,23 @@ export default function TeamSplide({ direction, teamData }) {
       }}
       Extensions={{ AutoScroll }}
     >
-      {teamData.map((item) => (
-        <Fragment key={item.id}>
+      {teamData.map((item, index) => (
+        <Fragment key={index}>
           <SplideSlide>
             <div className='slide__content'>
               <div className='overlay'></div>
               <div className='img'>
                 <figure>
                   <Image
-                    src={`http://localhost:1337${item.attributes.Image.data.attributes.url}`}
+                    src={item.imgSrc}
                     layout='fill'
                     alt='Aztec Media Team Members'
                   />
                 </figure>
               </div>
               <div className='text'>
-                <h4>{item.attributes.Name}</h4>
-                <p>{item.attributes.Title}</p>
+                <h4>{item.name}</h4>
+                <p>{item.title}</p>
               </div>
             </div>
           </SplideSlide>
