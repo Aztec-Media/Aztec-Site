@@ -1,6 +1,7 @@
 import WorkCircle from './WorkCircle';
+import portfolioData from '../../../data/portfolioData.json';
 
-export default function WorkCircles({ portfolioData }) {
+export default function WorkCircles() {
   return (
     <section className='work__circles'>
       <div className='.work__navigation'></div>
@@ -9,7 +10,7 @@ export default function WorkCircles({ portfolioData }) {
           ''
         ) : (
           <WorkCircle
-            key={item.id}
+            key={index}
             item={item}
             index={portfolioData.length - index}
           />

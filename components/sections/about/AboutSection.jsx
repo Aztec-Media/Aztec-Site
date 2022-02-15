@@ -2,8 +2,6 @@ import { useEffect, useRef } from 'react';
 import Btn from '../../general/Btn';
 import AboutGrid from './AboutGrid';
 import gsap from 'gsap';
-import { SplitText } from 'gsap/dist/SplitText';
-gsap.registerPlugin(SplitText);
 
 export default function AboutSection() {
   const headerRef = useRef(null);

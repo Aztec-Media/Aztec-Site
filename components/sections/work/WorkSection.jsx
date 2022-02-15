@@ -1,9 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
 import WorkCircles from '../work/WorkCircles';
 
-import gsap from 'gsap';
-
-export default function WorkSection({ portfolioData }) {
+export default function WorkSection() {
   return (
     <section className='work__section'>
       <div className='work__header'>
@@ -13,7 +10,7 @@ export default function WorkSection({ portfolioData }) {
           in technology, we help brands.
         </p>
       </div>
-      <WorkCircles portfolioData={portfolioData} />
+      <WorkCircles />
     </section>
   );
 }

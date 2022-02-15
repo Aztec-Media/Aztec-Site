@@ -39,11 +39,11 @@ export default function WorkCircle({ item, index }) {
           <div className='img'>
             <figure>
               <Image
-                src={`http://localhost:1337${item.attributes.MainImage.data.attributes.url}`}
+                src={item.imgSrc}
                 layout='fill'
-                alt={`Aztec Media Our Work ${item.attributes.Title}`}
+                alt={`Aztec Media Our Work ${item.title}`}
                 className='work__circle__img'
-                data-itemname={item.attributes.Title}
+                data-itemname={item.title}
               />
             </figure>
             <LogoFillClip />
@@ -55,7 +55,7 @@ export default function WorkCircle({ item, index }) {
               titleRef.current.classList.remove('animate-out')
             }
           >
-            {item.attributes.Title}
+            {item.title}
           </h4>
         </a>
       </Link>

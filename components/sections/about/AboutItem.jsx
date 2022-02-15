@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
+import LogoFillClip from '../../vectors/LogoFillClip';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -86,6 +87,16 @@ export default function AboutItem({ item }) {
             alt='Aztec Media team members'
           />
         </figure>
+        <div className='hover__img'>
+          <figure>
+            <Image
+              src={item.gifImgSrc}
+              layout='fill'
+              alt='Aztec Media team members'
+            />
+            <LogoFillClip />
+          </figure>
+        </div>
       </div>
       <div className='about__item__text'>
         <h3>

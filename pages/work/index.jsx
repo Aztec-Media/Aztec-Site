@@ -14,24 +14,9 @@ export default function Work({ data }) {
     <Layout>
       <Seo title='Our Work' />
       <main className='work'>
-        <WorkSection portfolioData={data.portfolio} />
+        <WorkSection />
       </main>
       <Footer />
     </Layout>
   );
-}
-
-export async function getStaticProps(context) {
-  const portfolioRes = await fetch(
-    `${process.env.ADMIN_URL}/api/portfolios?populate=*`
-  );
-  const portfolioData = await portfolioRes.json();
-
-  const data = {
-    portfolio: portfolioData.data,
-  };
-
-  return {
-    props: { data },
-  };
 }
