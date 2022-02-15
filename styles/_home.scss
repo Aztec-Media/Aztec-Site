@@ -397,6 +397,24 @@
   .team__splide {
     padding: 2rem 0;
 
+    &.rtl {
+      .splide__slide {
+        .slide__spacer {
+          .arrows {
+            svg {
+              &:first-of-type {
+                transform: rotate(0deg);
+              }
+
+              &:last-of-type {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+
     .splide__slide {
       height: 26rem;
 
@@ -503,13 +521,22 @@
 @media only screen and (max-width: 400px) {
   .meet__the__team {
     .team__splide {
+      &.rtl {
+        .splide__slide {
+          .slide__content {
+            .text {
+              left: unset;
+              right: 17.5%;
+            }
+          }
+        }
+      }
+
       .splide__slide {
         .slide__content {
-          .img {
-            width: 65%;
-            left: 17.5%;
-          }
-          .overlay {
+          .img,
+          .overlay,
+          .text {
             width: 65%;
             left: 17.5%;
           }

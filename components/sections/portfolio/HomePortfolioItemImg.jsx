@@ -65,18 +65,6 @@ export default function HomePortfolioItemImg({ image }) {
           }
         );
       },
-      '(max-width: 899px)': function () {
-        slideTl.fromTo(
-          portfolioImageRef.current,
-          { y: 0 },
-          {
-            y: -200,
-            duration: 1,
-            ease: 'power1.inOut',
-            stagger: 0.1,
-          }
-        );
-      },
     });
   }, [portfolioImageRef]);
 

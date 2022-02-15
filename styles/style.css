@@ -1425,7 +1425,7 @@ main {
   margin-left: 0;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   .footer .footer__cta h5 {
     font-size: 3rem;
   }
@@ -1441,7 +1441,7 @@ main {
 }
 
 @media only screen and (max-width: 1024px) {
-  .footer {
+  .footer .footer__wrapper {
     padding: 8rem 4rem 4rem 4rem;
   }
 }
@@ -1458,12 +1458,18 @@ main {
 @media only screen and (max-width: 725px) {
   .footer {
     text-align: center;
+  }
+  .footer .footer__wrapper {
     padding: 6rem 2rem 2rem 2rem;
   }
   .footer .footer__cta .btn {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0 auto;
+  }
+  .footer .footer__cta h5 br {
+    display: none;
   }
   .footer .footer__details .footer__contact {
     -webkit-box-pack: center;
@@ -1508,7 +1514,7 @@ main {
 }
 
 @media only screen and (max-width: 400px) {
-  .footer {
+  .footer .footer__wrapper {
     padding: 4rem 1rem 1rem 1rem;
   }
   .footer .footer__cta h5 {
@@ -1946,6 +1952,16 @@ main {
   padding: 2rem 0;
 }
 
+.meet__the__team .team__splide.rtl .splide__slide .slide__spacer .arrows svg:first-of-type {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.meet__the__team .team__splide.rtl .splide__slide .slide__spacer .arrows svg:last-of-type {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .meet__the__team .team__splide .splide__slide {
   height: 26rem;
 }
@@ -2054,11 +2070,13 @@ main {
 }
 
 @media only screen and (max-width: 400px) {
-  .meet__the__team .team__splide .splide__slide .slide__content .img {
-    width: 65%;
-    left: 17.5%;
+  .meet__the__team .team__splide.rtl .splide__slide .slide__content .text {
+    left: unset;
+    right: 17.5%;
   }
-  .meet__the__team .team__splide .splide__slide .slide__content .overlay {
+  .meet__the__team .team__splide .splide__slide .slide__content .img,
+  .meet__the__team .team__splide .splide__slide .slide__content .overlay,
+  .meet__the__team .team__splide .splide__slide .slide__content .text {
     width: 65%;
     left: 17.5%;
   }
@@ -2084,7 +2102,7 @@ main {
   padding-bottom: 4rem;
 }
 
-.about__section .about__section__header .text h2 {
+.about__section .about__section__header .text h1 {
   font-size: 10rem;
   font-family: var(--title-font);
   font-weight: var(--font-med);
@@ -2108,6 +2126,72 @@ main {
 
 .about__section .about__section__header .btns .btn:first-of-type {
   margin-right: 4rem;
+}
+
+@media only screen and (max-width: 1360px) {
+  .about__section .about__section__header {
+    padding: 24rem 4rem 10rem 4rem;
+  }
+  .about__section .about__section__header .text h1 {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .about__section .about__section__header {
+    padding: 24rem 2rem 8rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about__section .about__section__header .text h1 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about__section .about__section__header {
+    padding: 18rem 1rem 6rem 1rem;
+  }
+  .about__section .about__section__header .text h1 {
+    font-size: 4.5rem;
+  }
+  .about__section .about__section__header .text p {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .about__section .about__section__header .text {
+    padding-bottom: 2rem;
+  }
+  .about__section .about__section__header .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__section .about__section__header .btns .btn:first-of-type {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .about__section .about__section__header .text h1 {
+    font-size: 3.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .about__section .about__section__header .text p {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about__section .about__section__header .text h1 {
+    font-size: 2.75rem;
+  }
 }
 
 .about__grid {
@@ -2222,7 +2306,7 @@ main {
 
 .about__grid .about__item .about__item__text .summary {
   padding-bottom: 1.5rem;
-  width: 45rem;
+  max-width: 45rem;
 }
 
 .about__grid .about__item .about__item__text .details {
@@ -2258,7 +2342,124 @@ main {
 }
 
 .about__grid .about__item .about__item__text .hobbies__text {
-  width: 40rem;
+  max-width: 40rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about__grid {
+    padding: 0 4rem 4rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .about__grid .about__item:nth-of-type(even) .about__item__text {
+    padding-right: 6rem;
+  }
+  .about__grid .about__item .about__item__text {
+    padding-left: 6rem;
+  }
+  .about__grid .about__item .about__item__text h3 {
+    font-size: 6rem;
+  }
+  .about__grid .about__item .about__item__img {
+    height: 26rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .about__grid .about__item:nth-of-type(even) .about__item__text {
+    padding-right: 4rem;
+  }
+  .about__grid .about__item .about__item__text {
+    padding-left: 4rem;
+  }
+  .about__grid .about__item .about__item__text h3 {
+    font-size: 4.5rem;
+  }
+  .about__grid .about__item .about__item__text h3 .underline {
+    -webkit-transform: rotate(-4deg) translateX(-10%) translateY(-1rem);
+            transform: rotate(-4deg) translateX(-10%) translateY(-1rem);
+    width: 120%;
+    height: 10px;
+  }
+  .about__grid .about__item .about__item__img {
+    height: 22rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about__grid .about__item {
+    display: block;
+    margin-bottom: 8rem;
+  }
+  .about__grid .about__item:nth-of-type(even) .about__item__text {
+    padding: 0 2rem;
+    text-align: center;
+  }
+  .about__grid .about__item:nth-of-type(even) .about__item__text h3 {
+    margin: 0 auto 1rem auto;
+  }
+  .about__grid .about__item:nth-of-type(even) .about__item__text .details {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__grid .about__item:nth-of-type(even) .about__item__text .details .skill {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .about__grid .about__item .about__item__text {
+    padding: 0 2rem;
+    text-align: center;
+  }
+  .about__grid .about__item .about__item__text h3 {
+    font-size: 4.5rem;
+    margin: 0 auto 1rem auto;
+  }
+  .about__grid .about__item .about__item__text h3 .underline {
+    -webkit-transform: rotate(-4deg) translateX(-10%) translateY(-1rem);
+            transform: rotate(-4deg) translateX(-10%) translateY(-1rem);
+    width: 120%;
+    height: 10px;
+  }
+  .about__grid .about__item .about__item__img {
+    height: 22rem;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about__grid {
+    padding: 0 2rem 4rem 2rem;
+  }
+  .about__grid .about__item:nth-of-type(even) .about__item__text {
+    padding: 0 1rem;
+  }
+  .about__grid .about__item .about__item__text {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .about__grid .about__item .about__item__img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about__grid {
+    padding: 0 1.5rem 4rem 1.5rem;
+  }
+  .about__grid .about__item .about__item__text h3 {
+    font-size: 3.5rem;
+  }
 }
 
 .work__section .work__header {
@@ -2910,10 +3111,60 @@ main {
 }
 
 .services__header p {
-  width: 52.5%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.15rem;
+}
+
+@media only screen and (max-width: 1360px) {
+  .services__header {
+    padding: 24rem 4rem 10rem 4rem;
+  }
+  .services__header h1 {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .services__header {
+    padding: 24rem 2rem 8rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .services__header h1 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .services__header {
+    padding: 18rem 1rem 6rem 1rem;
+  }
+  .services__header h1 {
+    font-size: 4.5rem;
+  }
+  .services__header p {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .services__header h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .services__header {
+    padding: 18rem 1rem 6rem 1rem;
+  }
+  .services__header h1 {
+    font-size: 2.75rem;
+  }
 }
 
 .services__slider {
@@ -3083,7 +3334,7 @@ main {
 }
 
 .contact__header {
-  padding: 28rem 8rem 4rem 8rem;
+  padding: 28rem 4rem 4rem 4rem;
   color: var(--white);
 }
 
@@ -3105,9 +3356,58 @@ main {
   font-size: 1.15rem;
 }
 
+@media only screen and (max-width: 1360px) {
+  .contact__header {
+    padding: 24rem 4rem 10rem 4rem;
+  }
+  .contact__header h1 {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .contact__header {
+    padding: 24rem 2rem 8rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contact__header h1 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .contact__header {
+    padding: 18rem 1rem 6rem 1rem;
+  }
+  .contact__header h1 {
+    font-size: 4.5rem;
+  }
+  .contact__header p {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .contact__header h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact__header {
+    padding: 18rem 1rem 6rem 1rem;
+  }
+  .contact__header h1 {
+    font-size: 2.75rem;
+  }
+}
+
 .contact__form .form {
   color: #fff;
-  padding: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3131,6 +3431,8 @@ main {
   visibility: hidden;
   -webkit-transition: var(--mid-speed);
   transition: var(--mid-speed);
+  width: 100%;
+  padding: 4rem;
 }
 
 .contact__form .form .part.selected {
@@ -3148,7 +3450,6 @@ main {
 .contact__form .form .row {
   max-width: 1200px;
   margin: 0 auto 4rem auto;
-  height: 8rem;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -3177,19 +3478,30 @@ main {
   outline: none;
   color: #fff;
   width: 100%;
-  height: 100%;
   padding: 1rem;
   font-size: 2rem;
-  overflow: hidden;
   font-family: var(--title-font);
   font-weight: var(--font-light);
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.contact__form .form .row .btn:hover .arrow svg path {
+  fill: var(--white);
+}
+
+.contact__form .form .row .btn .arrow .btn__hover {
+  background-color: var(--orange);
 }
 
 .contact__form .form .row .btn .arrow svg path {
   fill: var(--orange);
+  -webkit-transition: var(--fast-speed);
+  transition: var(--fast-speed);
 }
 
 .contact__form .form .row input {
@@ -3238,6 +3550,64 @@ main {
 .contact__form .form .row input:focus ~ .slide {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+@media only screen and (max-width: 850px) {
+  .contact__form .form .row {
+    margin-bottom: 2rem;
+  }
+  .contact__form .form .row input {
+    font-size: 2rem;
+  }
+  .contact__form .form .row input::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
+  .contact__form .form .row input:-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  .contact__form .form .row input::-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  .contact__form .form .row input::placeholder {
+    font-size: 2rem;
+  }
+  .contact__form .form .row .btn {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .contact__form .form .part {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .contact__form .form .row {
+    margin-bottom: 1.25rem;
+  }
+  .contact__form .form .row input {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+  }
+  .contact__form .form .row input::-webkit-input-placeholder {
+    font-size: 1.25rem;
+  }
+  .contact__form .form .row input:-ms-input-placeholder {
+    font-size: 1.25rem;
+  }
+  .contact__form .form .row input::-ms-input-placeholder {
+    font-size: 1.25rem;
+  }
+  .contact__form .form .row input::placeholder {
+    font-size: 1.25rem;
+  }
+  .contact__form .form .row .btn {
+    padding: 0.5rem;
+    height: 7rem;
+    font-size: 1.25rem;
+    width: 100%;
+  }
 }
 
 .careers__grid {

@@ -49,20 +49,20 @@ export default function AboutItem({ item }) {
         },
       }
     );
-    gsap.fromTo(
-      imageRef.current,
-      { y: 0 },
-      {
-        y: -150,
-        duration: 1,
-        ease: 'power2.inOut',
-        scrollTrigger: {
-          scrub: 1,
-          trigger: imageRef.current,
-          start: 'top 70%',
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   imageRef.current,
+    //   { y: 0 },
+    //   {
+    //     y: -150,
+    //     duration: 1,
+    //     ease: 'power2.inOut',
+    //     scrollTrigger: {
+    //       scrub: 1,
+    //       trigger: imageRef.current,
+    //       start: 'top 70%',
+    //     },
+    //   }
+    // );
   }, []);
 
   return (

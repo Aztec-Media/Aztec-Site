@@ -11,7 +11,7 @@ export default function AboutSection({ teamData }) {
   useEffect(() => {
     gsap.fromTo(
       [
-        headerRef.current.querySelector('h2'),
+        headerRef.current.querySelector('h1'),
         headerRef.current.querySelector('p'),
         headerRef.current.querySelectorAll('.btn'),
       ],
@@ -34,7 +34,7 @@ export default function AboutSection({ teamData }) {
     <section className='about__section' ref={headerRef}>
       <div className='about__section__header'>
         <div className='text'>
-          <h2>Creative bunch.</h2>
+          <h1>Creative bunch.</h1>
           <p>
             Revenue-driven, customer-centric, creating strategic solutions based
             in technology, we help brands.

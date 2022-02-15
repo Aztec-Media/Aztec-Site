@@ -7,19 +7,22 @@ import Arrow from '../../vectors/Arrow';
 export default function TeamSplide({ direction, teamData }) {
   return (
     <Splide
-      className='team__splide'
+      className={`team__splide ${direction}`}
       options={{
         arrows: false,
         type: 'loop',
         drag: 'free',
         focus: 'center',
-        perPage: 4,
+        perPage: 5,
         gap: '2rem',
         autoScroll: {
           speed: 2,
         },
         direction,
         breakpoints: {
+          1800: {
+            perPage: 4,
+          },
           1100: {
             perPage: 3,
           },

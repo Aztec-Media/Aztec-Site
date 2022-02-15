@@ -70,7 +70,7 @@ export default function ContactForm() {
             selectedPart === 3 ? 'selected' : 'removed'
           }`}
         >
-          <div className='page'>02</div>
+          <div className='page'>03</div>
           <div className='row'>
             <label htmlFor='name'>Details</label>
             <input type='text' name='name' id='name' placeholder='Details' />
@@ -86,6 +86,7 @@ export default function ContactForm() {
               <span>Send Enquiry</span>
               <div className='arrow'>
                 <Arrow />
+                <div className='btn__hover'></div>
               </div>
             </button>
           </div>
