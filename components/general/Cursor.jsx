@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function Cursor() {
   const [cursorText, setCursorText] = useState('');
+  const [cursorClass, setCursorClass] = useState('');
 
   const cursorRef = useRef(null);
   const cursor2Ref = useRef(null);
@@ -31,9 +32,10 @@ export default function Cursor() {
         ${mouseY - cursorRef.current.clientHeight * 0.01}px, 0)
       `;
 
-      if (target.classList.contains('large__hero__img')) {
-        setCursorText('Discover');
+      if (target.classList.contains('work__circle__img')) {
+        setCursorText(target.dataset.itemname);
       } else {
+        setCursorClass('');
         setCursorText('');
       }
     });
@@ -80,8 +82,10 @@ export default function Cursor() {
   return (
     <>
       <div id='cursor' ref={cursorRef}></div>
-      <div id='cursor2' ref={cursor2Ref}>
-        {cursorText}
+      <div id='cursor2' ref={cursor2Ref} className={cursorClass}>
+        <div className={`cursor__text ${cursorText === '' ? '' : 'active'}`}>
+          {cursorText}
+        </div>
       </div>
     </>
   );

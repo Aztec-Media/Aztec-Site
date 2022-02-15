@@ -42,6 +42,8 @@ export default function WorkCircle({ item, index }) {
                 src={`http://localhost:1337${item.attributes.MainImage.data.attributes.url}`}
                 layout='fill'
                 alt={`Aztec Media Our Work ${item.attributes.Title}`}
+                className='work__circle__img'
+                data-itemname={item.attributes.Title}
               />
             </figure>
             <LogoFillClip />

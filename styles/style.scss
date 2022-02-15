@@ -284,14 +284,33 @@ main {
   display: none;
 }
 #cursor2 {
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 8px;
   border: 2px solid white;
+  background-color: #fff;
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1000;
+
+  .cursor__text {
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    font-family: var(--title-font);
+    font-size: 6rem;
+    font-weight: var(--font-med);
+    color: #fff;
+    transition: var(--fast-speed);
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+  }
 }
 
 // header
