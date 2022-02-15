@@ -2293,7 +2293,7 @@ main {
 
 .about__grid .about__item .about__item__text h3 .underline {
   position: absolute;
-  width: 150%;
+  width: 125%;
   height: 12px;
   opacity: 0.5;
   bottom: 0;
