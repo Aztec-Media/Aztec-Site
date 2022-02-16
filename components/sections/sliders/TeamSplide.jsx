@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import { Fragment } from 'react';
-import Arrow from '../../vectors/Arrow';
+import DualArrow from '../../vectors/DualArrow';
 
 export default function TeamSplide({ direction, teamData }) {
   return (
@@ -50,6 +50,13 @@ export default function TeamSplide({ direction, teamData }) {
                     alt='Aztec Media Team Members'
                   />
                 </figure>
+                <figure className='hover__img'>
+                  <Image
+                    src={item.gifImgSrc}
+                    layout='fill'
+                    alt='Aztec Media Team Members'
+                  />
+                </figure>
               </div>
               <div className='text'>
                 <h4>{item.name}</h4>
@@ -61,8 +68,7 @@ export default function TeamSplide({ direction, teamData }) {
             <div className='slide__spacer'>
               <p>The Team</p>
               <div className='arrows'>
-                <Arrow />
-                <Arrow />
+                <DualArrow />
               </div>
             </div>
           </SplideSlide>

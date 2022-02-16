@@ -10,7 +10,6 @@ export default function InsightsGrid({ data }) {
             <a>
               <div className='date'>{item.date}</div>
               <div className='title'>{item.title}</div>
-              <div className='summary'>{item.summary}</div>
               <BtnNoLink text='Read on' />
             </a>
           </Link>

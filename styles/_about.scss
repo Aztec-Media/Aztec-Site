@@ -238,11 +238,11 @@
         .underline {
           position: absolute;
           width: 125%;
-          height: 12px;
+          height: 14px;
           opacity: 0.5;
           bottom: 0;
           left: 0;
-          transform: rotate(-4deg) translateY(-2.5rem) translateX(-2.5rem);
+          transform: translateY(-2.9rem) translateX(-2.5rem);
           background-color: var(--light-grey);
           z-index: -1;
         }
@@ -334,7 +334,7 @@
           font-size: 4.5rem;
 
           .underline {
-            transform: rotate(-4deg) translateX(-10%) translateY(-1rem);
+            transform: translateX(-10%) translateY(-1rem);
             width: 120%;
             height: 10px;
           }
@@ -385,7 +385,7 @@
           margin: 0 auto 1rem auto;
 
           .underline {
-            transform: rotate(-4deg) translateX(-10%) translateY(-1rem);
+            transform: translateX(-10%) translateY(-1rem);
             width: 120%;
             height: 10px;
           }

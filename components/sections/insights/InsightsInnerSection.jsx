@@ -59,7 +59,7 @@ export default function InsightsInnerSection({ data }) {
       </div>
       <div className='insights__inner__section__content'>
         <ReactMarkdown>{data.content}</ReactMarkdown>
-        <Btn href='/insights' text='View all insights' />
+        <Btn href='/insights' text='More news' />
       </div>
       <section className='insights__feature'>
         <div className='img' ref={featureImageRef}>

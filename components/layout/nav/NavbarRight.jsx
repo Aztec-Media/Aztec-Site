@@ -1,11 +1,19 @@
-import Link from 'next/link';
 import NavItem from './NavItem';
+import { useState } from 'react';
 
 export default function NavbarRight() {
+  const [emailAnimateOut, setEmailAnimateOut] = useState(false);
+  const [phoneAnimateOut, setPhoneAnimateOut] = useState(false);
+
   return (
     <section className='navbar__right'>
       <div className='navbar__right__contact'>
-        <a href='mailto:hello@aztec.media' className='email nav--anim'>
+        <a
+          href='mailto:hello@aztec.media'
+          className={`email nav--anim ${emailAnimateOut ? 'animate-out' : ''}`}
+          onMouseLeave={() => setEmailAnimateOut(true)}
+          onTransitionEnd={() => setEmailAnimateOut(false)}
+        >
           <span>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -19,7 +27,12 @@ export default function NavbarRight() {
           </span>
           hello@aztec.media
         </a>
-        <a href='tel:01935477073' className='phone nav--anim'>
+        <a
+          href='tel:01935477073'
+          className={`phone nav--anim ${phoneAnimateOut ? 'animate-out' : ''}`}
+          onMouseLeave={() => setPhoneAnimateOut(true)}
+          onTransitionEnd={() => setPhoneAnimateOut(false)}
+        >
           <span>
             <svg
               xmlns='http://www.w3.org/2000/svg'

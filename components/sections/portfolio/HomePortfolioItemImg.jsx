@@ -58,7 +58,7 @@ export default function HomePortfolioItemImg({ image }) {
           portfolioImageRef.current,
           { y: 0 },
           {
-            y: -450,
+            y: -350,
             duration: 1,
             ease: 'power1.inOut',
             stagger: 0.1,

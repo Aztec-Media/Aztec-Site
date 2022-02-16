@@ -1,10 +1,13 @@
 import Btn from '../general/Btn';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
+  const [emailAnimateOut, setEmailAnimateOut] = useState(false);
+  const [phoneAnimateOut, setPhoneAnimateOut] = useState(false);
+
   const footerRef = useRef(null);
 
   useEffect(() => {
@@ -23,30 +26,54 @@ export default function Footer() {
         },
       }
     );
+
+    if (!!footerRef.current.querySelector('h5 span')) {
+      ScrollTrigger.create({
+        trigger: footerRef.current,
+        start: 'top 20%',
+        onEnter: () =>
+          footerRef.current
+            .querySelector('h5 span')
+            .classList.add('animate--line'),
+        onLeaveBack: () =>
+          footerRef.current
+            .querySelector('h5 span')
+            .classList.remove('animate--line'),
+      });
+    }
   }, [footerRef]);
 
   return (
     <footer className='footer'>
       <div className='footer__wrapper' ref={footerRef}>
         <section className='footer__cta'>
-          <h5 className='footer--anim'>
-            Starting a <span>new project</span> or <br />
+          <h5>
+            Starting a{' '}
+            <span>
+              <span className='underline'></span>new project
+            </span>{' '}
+            or <br />
             want to collaborate with us?
           </h5>
-          <Btn href='/' text={`Let's talk`} className='footer--anim' />
+          <Btn href='/' text={`Let's talk`} />
         </section>
         <section className='footer__details'>
           <address className='footer__contact'>
             <ul>
-              <li className='footer--anim'>Aztec Media</li>
-              <li className='footer--anim'>8 Buckland Road</li>
-              <li className='footer--anim'>Pen Mill Trading Estate</li>
-              <li className='footer--anim'>Yeovil</li>
-              <li className='footer--anim'>Somerset</li>
-              <li className='footer--anim'>BA21 5EA</li>
+              <li>Aztec Media</li>
+              <li>8 Buckland Road</li>
+              <li>Pen Mill Trading Estate</li>
+              <li>Yeovil</li>
+              <li>Somerset</li>
+              <li>BA21 5EA</li>
             </ul>
             <div>
-              <a href='tel:01935477073' className='footer--anim'>
+              <a
+                href='tel:01935477073'
+                className={phoneAnimateOut ? 'animate-out' : ''}
+                onMouseLeave={() => setPhoneAnimateOut(true)}
+                onTransitionEnd={() => setPhoneAnimateOut(false)}
+              >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='16'
@@ -58,7 +85,12 @@ export default function Footer() {
                 </svg>
                 <span>01935 477073</span>
               </a>
-              <a href='mailto:hello@aztec.media' className='footer--anim'>
+              <a
+                href='mailto:hello@aztec.media'
+                className={emailAnimateOut ? 'animate-out' : ''}
+                onMouseLeave={() => setEmailAnimateOut(true)}
+                onTransitionEnd={() => setEmailAnimateOut(false)}
+              >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='16'
@@ -77,24 +109,24 @@ export default function Footer() {
             </div>
           </address>
           <div className='footer__furniture'>
-            <h6 className='footer--anim'>Expert Website Designers Somerset</h6>
-            <h6 className='footer--anim'>
+            <h6>Expert Website Designers Somerset</h6>
+            <h6>
               Part of{' '}
               <a href='https://yeomedia.group' rel='noreferrer' target='_blank'>
                 The Yeomedia Group
               </a>
             </h6>
-            <p className='footer--anim'>
+            <p>
               Copyright &copy; 1993 - {new Date().getFullYear()} Aztec Media
             </p>
             <p>
-              <span className='footer--anim'>All Rights Reserved</span>
-              <span className='footer--anim'>/</span>
-              <span className='footer--anim'>
+              <span>All Rights Reserved</span>
+              <span>/</span>
+              <span>
                 <a>Terms &amp; Conditions</a>
               </span>
-              <span className='footer--anim'>/</span>
-              <span className='footer--anim'>
+              <span>/</span>
+              <span>
                 <a>Privacy Notice</a>
               </span>
             </p>

@@ -29,8 +29,7 @@ export default function InnerPortfolioHeader({ imageSrc, imageAlt, title }) {
     <section className='inner__portfolio__header'>
       <div className='overlay'></div>
       <div className='intro'>
-        {/* <p>{data.attributes.Summary}</p> */}
-        <Btn href='/' text='Project Planner' />
+        <Btn href='/' text='Start new project' />
         <h1>{title}</h1>
       </div>
       <div className='img' ref={imageRef}>

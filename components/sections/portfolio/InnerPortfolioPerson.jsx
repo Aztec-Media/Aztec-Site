@@ -7,9 +7,6 @@ export default function InnerPortfolioPerson() {
   return (
     <section className='inner__portfolio__person'>
       <div className='person__img'>
-        <div className='logo__bg'>
-          <LogoFill fill='#f69321' />
-        </div>
         <div className='img'>
           <figure>
             <Image
