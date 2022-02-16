@@ -3,21 +3,21 @@ import { colourState } from '../utils/colourState';
 import Seo from '../components/layout/Seo';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
-import ContactSection from '../components/sections/contact/ContactSection';
+import PlannerForm from '../components/sections/contact/PlannerForm';
 
-export default function Contact() {
+export default function ProjectPlanner() {
   return (
     <Layout>
-      <Seo title='Contact Us' />
-      <main className='contact'>
+      <Seo title='Project Planner' />
+      <main className='project-planner'>
         <section className='contact__header'>
-          <h1>Get In Touch</h1>
+          <h1>Plan your project</h1>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
             inventore vitae ex porro aspernatur quo numquam, a animi earum quis!
           </p>
         </section>
-        <ContactSection />
+        <PlannerForm />
       </main>
       <Footer />
     </Layout>

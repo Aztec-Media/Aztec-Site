@@ -80,14 +80,14 @@
   }
 }
 
-.contact__form {
+.planner__form {
   .form {
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    height: 48rem;
+    height: 52rem;
 
     .part {
       position: absolute;
@@ -98,6 +98,8 @@
       transition: var(--mid-speed);
       width: 100%;
       padding: 4rem;
+      max-width: 1024px;
+      margin: 0 auto;
 
       &.selected {
         transform: translateX(0%);
@@ -105,10 +107,39 @@
         pointer-events: all;
         visibility: visible;
       }
-    }
 
-    .next {
-      cursor: pointer;
+      .btns {
+        display: flex;
+        justify-content: space-between;
+
+        .next {
+          cursor: pointer;
+          width: max-content;
+          margin-left: auto;
+        }
+
+        .prev {
+          cursor: pointer;
+
+          .span {
+            margin-right: 0;
+          }
+
+          .arrow {
+            margin-right: 2rem;
+
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .submit {
+          color: #fff;
+          cursor: pointer;
+          width: max-content;
+        }
+      }
     }
 
     .row {
@@ -125,50 +156,12 @@
       .slide {
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 3px;
         background-color: #fff;
         bottom: 0;
         left: 0;
         transform: translateX(-101%);
         transition: var(--fast-speed);
-      }
-
-      .btn {
-        border: none;
-        background: none;
-        outline: none;
-        color: #fff;
-        width: 100%;
-        padding: 1rem;
-        font-size: 2rem;
-        font-family: var(--title-font);
-        font-weight: var(--font-light);
-        justify-content: flex-start;
-        width: max-content;
-
-        &:hover {
-          .arrow {
-            svg {
-              path {
-                fill: var(--white);
-              }
-            }
-          }
-        }
-
-        .arrow {
-          .btn__hover {
-            background-color: var(--orange);
-          }
-
-          svg {
-            path {
-              fill: var(--orange);
-
-              transition: var(--fast-speed);
-            }
-          }
-        }
       }
 
       input {
@@ -203,7 +196,7 @@
 }
 
 @media only screen and (max-width: 850px) {
-  .contact__form {
+  .planner__form {
     .form {
       .row {
         margin-bottom: 2rem;
@@ -215,27 +208,47 @@
             font-size: 2rem;
           }
         }
-
-        .btn {
-          font-size: 2rem;
-        }
       }
     }
   }
 }
 
 @media only screen and (max-width: 625px) {
-  .contact__form {
+  .planner__form {
     .form {
       .part {
-        padding: 2rem;
+        padding: 2rem 1rem;
+
+        .btns {
+          flex-direction: column;
+          padding-top: 1rem;
+
+          .btn {
+            justify-content: start;
+          }
+
+          .next {
+            margin-left: 0;
+          }
+
+          .prev {
+            order: 1;
+            margin-top: 2.5rem;
+          }
+        }
+      }
+
+      .row {
+        .slide {
+          height: 2px;
+        }
       }
     }
   }
 }
 
 @media only screen and (max-width: 525px) {
-  .contact__form {
+  .planner__form {
     .form {
       .row {
         margin-bottom: 1.25rem;
@@ -248,12 +261,71 @@
             font-size: 1.25rem;
           }
         }
+      }
+    }
+  }
+}
 
-        .btn {
-          padding: 0.5rem;
-          height: 7rem;
-          font-size: 1.25rem;
-          width: 100%;
+.contact__section {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 2rem 8rem 2rem;
+  gap: 4rem;
+  align-items: center;
+
+  .contact__details {
+    color: #fff;
+    text-align: center;
+
+    h5 {
+      font-size: 2rem;
+      font-family: var(--title-font);
+      font-weight: var(--font-med);
+      padding-bottom: 0.5rem;
+    }
+
+    address {
+      ul {
+        font-size: 1.25rem;
+        padding-bottom: 2rem;
+
+        li {
+          padding-bottom: 0.15rem;
+        }
+      }
+    }
+  }
+
+  .contact__form {
+    .form {
+      .row {
+        margin-bottom: 1rem;
+
+        label {
+          display: none;
+        }
+
+        input,
+        textarea {
+          box-sizing: border-box;
+          width: 80%;
+          height: 100%;
+          border: none;
+          outline: none;
+          background: 0;
+          border-bottom: 1px solid #fff;
+          color: #fff;
+          font-size: 1.5rem;
+          padding: 1rem 0.5rem;
+          font-family: var(--title-font);
+          font-weight: var(--font-med);
+
+          &::placeholder {
+            color: #fff;
+            opacity: 0.5;
+          }
         }
       }
     }

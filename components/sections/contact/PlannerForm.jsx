@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Arrow from '../../vectors/Arrow';
+import BtnNoLink from '../../general/BtnNoLink';
 
 export default function ContactForm() {
   const [selectedPart, setSelectedPart] = useState(1);
   return (
-    <section className='contact__form'>
+    <section className='planner__form'>
       <form className='form'>
         <div className={`part part1 ${selectedPart === 1 ? 'selected' : ''}`}>
-          <div className='page'>01</div>
           <div className='row'>
             <label htmlFor='name'>Name</label>
             <input type='text' name='name' id='name' placeholder='Your name' />
@@ -33,8 +33,16 @@ export default function ContactForm() {
             />
             <div className='slide'></div>
           </div>
-          <div className='next' onClick={() => setSelectedPart(2)}>
-            Next
+          <div className='btns'>
+            <div className='next' onClick={() => setSelectedPart(2)}>
+              <div className='btn'>
+                <span>Next</span>
+                <div className='arrow'>
+                  <Arrow />
+                  <div className='btn__hover'></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -42,7 +50,6 @@ export default function ContactForm() {
             selectedPart === 2 ? 'selected' : 'removed'
           }`}
         >
-          <div className='page'>02</div>
           <div className='row'>
             <label htmlFor='name'>Company</label>
             <input type='text' name='name' id='name' placeholder='Company' />
@@ -58,11 +65,25 @@ export default function ContactForm() {
             <input type='text' name='phone' id='phone' placeholder='Date' />
             <div className='slide'></div>
           </div>
-          <div className='next' onClick={() => setSelectedPart(3)}>
-            Next
-          </div>
-          <div className='prev' onClick={() => setSelectedPart(1)}>
-            Prev
+          <div className='btns'>
+            <div className='prev' onClick={() => setSelectedPart(1)}>
+              <div className='btn'>
+                <div className='arrow'>
+                  <Arrow />
+                  <div className='btn__hover'></div>
+                </div>
+                <span>Previous</span>
+              </div>
+            </div>
+            <div className='next' onClick={() => setSelectedPart(3)}>
+              <div className='btn'>
+                <span>Next</span>
+                <div className='arrow'>
+                  <Arrow />
+                  <div className='btn__hover'></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -70,7 +91,6 @@ export default function ContactForm() {
             selectedPart === 3 ? 'selected' : 'removed'
           }`}
         >
-          <div className='page'>03</div>
           <div className='row'>
             <label htmlFor='name'>Details</label>
             <input type='text' name='name' id='name' placeholder='Details' />
@@ -81,17 +101,23 @@ export default function ContactForm() {
             <input type='email' name='email' id='email' placeholder='More' />
             <div className='slide'></div>
           </div>
-          <div className='row submit'>
-            <button type='submit' className='btn'>
+          <div className='btns'>
+            <div className='prev' onClick={() => setSelectedPart(2)}>
+              <div className='btn'>
+                <div className='arrow'>
+                  <Arrow />
+                  <div className='btn__hover'></div>
+                </div>
+                <span>Previous</span>
+              </div>
+            </div>
+            <button type='submit' className='btn submit'>
               <span>Send Enquiry</span>
               <div className='arrow'>
                 <Arrow />
                 <div className='btn__hover'></div>
               </div>
             </button>
-          </div>
-          <div className='prev' onClick={() => setSelectedPart(2)}>
-            Prev
           </div>
         </div>
       </form>
