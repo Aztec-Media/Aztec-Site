@@ -7,6 +7,8 @@ import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
 import InsightsFeature from '../../components/sections/insights/InsightsFeature';
 
+import insightsData from '../../data/insightsData.json';
+
 export default function Insights({ data }) {
   useEffect(() => {
     colourState.bgColour = 'orange';
@@ -17,10 +19,18 @@ export default function Insights({ data }) {
       <Seo title='Insights' />
       <main className='insights'>
         <LargeHero />
-        <InsightsFeature />
-        <InsightsGrid />
+        <InsightsFeature data={data} />
+        <InsightsGrid data={data} />
       </main>
       <Footer />
     </Layout>
   );
+}
+
+export function getStaticProps() {
+  const data = insightsData;
+
+  return {
+    props: { data },
+  };
 }
