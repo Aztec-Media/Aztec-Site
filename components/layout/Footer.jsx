@@ -11,7 +11,7 @@ export default function Footer() {
   const footerRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
+    const footerAnim = gsap.fromTo(
       footerRef.current,
       { yPercent: -30 },
       {
@@ -26,6 +26,8 @@ export default function Footer() {
         },
       }
     );
+
+    return () => footerAnim.kill();
   }, [footerRef]);
 
   return (

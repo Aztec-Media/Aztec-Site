@@ -1,28 +1,10 @@
 import Btn from '../../general/Btn';
-import { colourState } from '../../../utils/colourState';
 import ServicesSplide from '../sliders/ServicesSplide';
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import services from '../../../data/servicesData.json';
-gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeServices() {
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    const changeColour = ScrollTrigger.create({
-      trigger: scrollRef.current,
-      start: 'top 30%',
-      onEnter: () => (colourState.bgColour = 'grey'),
-      onLeaveBack: () => (colourState.bgColour = 'orange'),
-    });
-
-    return () => changeColour.kill();
-  }, []);
-
   return (
-    <section className='home__services' ref={scrollRef}>
+    <section className='home__services'>
       <div className='home__services__header'>
         <div className='text'>
           <h2>Website + Digital</h2>

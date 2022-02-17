@@ -1,17 +1,23 @@
 export default function Arrow() {
   return (
     <svg
-      width='102'
-      height='58'
-      viewBox='0 0 102 58'
+      width='32'
+      height='18'
+      viewBox='0 0 32 18'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <path d='M94.2975 26.3437H0V31.6583H94.2975V26.3437Z' fill='#F67D10' />
-      <path
-        d='M79.3472 0C85.9856 11.2111 91.0044 22.1493 101.993 29C90.8955 35.7468 86.3126 47.0082 79.3472 58H72.7124C79.6708 47.3445 82.7353 35.9639 93.0699 29C82.7353 21.9307 79.3461 10.4415 72.6039 0H79.3472Z'
-        fill='#F67D10'
-      />
+      <g clipPath='url(#clip0_808_4)'>
+        <path
+          d='M21.259 0V6.0305H0V11.9713H21.259V18.0018L32.0036 9L21.259 0Z'
+          fill='#F69321'
+        />
+      </g>
+      <defs>
+        <clipPath id='clip0_808_4'>
+          <rect width='32' height='18' fill='white' />
+        </clipPath>
+      </defs>
     </svg>
   );
 }

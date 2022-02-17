@@ -2,7 +2,7 @@
   // colours
 
   // fonts
-  --body-font: 'Chillax', sans-serif;
+  --body-font: 'Space Grotesk', sans-serif;
   // --title-font: 'neue-haas-unica', sans-serif;
   --title-font: 'Roboto Slab', serif;
 
@@ -79,7 +79,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: var(--font-med);
   letter-spacing: 1px;
 
   span {
@@ -98,13 +97,9 @@ body {
     transition: var(--fast-speed);
 
     svg {
-      width: 40%;
-      height: 40%;
+      width: 1rem;
+      height: 1rem;
       z-index: 2;
-
-      path {
-        fill: var(--white);
-      }
     }
 
     .btn__hover {
@@ -362,18 +357,6 @@ main {
       }
     }
 
-    &:hover {
-      .line1 {
-        animation: lineAnim1 0.5s ease-in-out;
-      }
-      .line2 {
-        animation: lineAnim2 0.5s ease-in-out;
-      }
-      .line3 {
-        animation: lineAnim3 0.5s ease-in-out;
-      }
-    }
-
     &.nav--open {
       .line1 {
         transform: rotate(45deg) translateY(9.5px);
@@ -389,40 +372,6 @@ main {
         transform: rotate(-45deg) translateY(-9.5px);
       }
     }
-
-    @keyframes lineAnim1 {
-      0% {
-        width: 2rem;
-      }
-      50% {
-        width: 3rem;
-      }
-      100% {
-        width: 2rem;
-      }
-    }
-    @keyframes lineAnim2 {
-      0% {
-        width: 1.5rem;
-      }
-      50% {
-        width: 3rem;
-      }
-      100% {
-        width: 1.5rem;
-      }
-    }
-    @keyframes lineAnim3 {
-      0% {
-        width: 1rem;
-      }
-      50% {
-        width: 3rem;
-      }
-      100% {
-        width: 1rem;
-      }
-    }
   }
 
   .header__logo {
@@ -436,15 +385,8 @@ main {
     &:hover {
       svg {
         &:first-of-type {
-          transition: var(--fast-speed);
+          transition: var(--mid-speed);
           transform: rotate(360deg);
-        }
-
-        &:last-of-type {
-          // transform: skew(-20deg);
-
-          path {
-          }
         }
       }
     }
@@ -1016,7 +958,7 @@ main {
         display: flex;
         align-items: center;
         font-family: var(--title-font);
-        font-weight: var(--font-xbold);
+        font-weight: var(--font-med);
         font-size: 2rem;
 
         .text {
@@ -1027,19 +969,20 @@ main {
           display: block;
           position: absolute;
           width: 105%;
-          background-color: var(--light-grey);
-          height: 1rem;
-          opacity: 0.5;
+          background-color: var(--orange);
+          height: 12px;
+          opacity: 0.25;
           bottom: 0.25rem;
           left: -2.5%;
           z-index: -1;
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+          transition: var(--fast-speed);
         }
 
         .number {
           font-weight: var(--font-light);
           font-size: 1rem;
-          color: var(--white);
+          color: var(--blue);
           margin-right: 2rem;
         }
 
@@ -1051,12 +994,8 @@ main {
           margin-left: 2rem;
 
           svg {
-            height: 100%;
-            width: 100%;
-
-            path {
-              fill: var(--white);
-            }
+            height: 1rem;
+            width: 1rem;
           }
         }
       }
@@ -1064,7 +1003,7 @@ main {
       p {
         font-size: 1rem;
         padding: 0 10rem 0 3.25rem;
-        color: var(--white);
+        color: var(--blue);
         font-weight: var(--font-xlight);
       }
     }
@@ -1091,7 +1030,7 @@ main {
           font-size: 1.75rem;
 
           .underline {
-            height: 0.75rem;
+            height: 10px;
           }
         }
 
@@ -1117,7 +1056,7 @@ main {
           font-size: 1.5rem;
 
           .underline {
-            height: 0.5rem;
+            height: 8px;
           }
 
           .number {
@@ -1156,31 +1095,23 @@ main {
     h5 {
       font-size: 3.75rem;
       font-family: var(--title-font);
-      font-weight: var(--font-xbold);
+      font-weight: var(--font-med);
       padding-bottom: 2rem;
 
       span {
         position: relative;
         z-index: 10;
-        overflow: hidden;
-
-        &.animate--line {
-          &::after {
-            transform: translateX(0%);
-          }
-        }
 
         &::after {
           content: '';
           display: block;
           position: absolute;
           width: 105%;
-          background-color: var(--orange);
+          background-color: rgba(255, 255, 255, 0.25);
           height: 20px;
           bottom: 0.5rem;
           left: -2.5%;
           z-index: -1;
-          transform: translateX(-100%);
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
           transition: var(--mid-speed);
         }
@@ -1217,7 +1148,8 @@ main {
   }
 
   .footer__details {
-    padding-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     font-weight: var(--font-xlight);
     display: flex;
     justify-content: space-between;
@@ -1477,15 +1409,15 @@ main {
 @import 'careers';
 
 .dot__logo {
-  position: fixed;
-  top: 50%;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50rem;
-  height: 50rem;
+  transform: translateX(-50%);
+  width: 90vh;
+  height: 90vh;
   clip-path: url(#logoClip);
-  opacity: 0.1;
+  opacity: 0.05;
   z-index: -1;
+  pointer-events: none;
 
   svg {
     width: 100%;
