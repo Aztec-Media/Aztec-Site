@@ -2,6 +2,7 @@
 .work__header {
   padding: 28rem 8rem 4rem 8rem;
   color: var(--white);
+  background-color: var(--blue);
 
   h1 {
     font-size: 10rem;
@@ -83,6 +84,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6rem;
   color: var(--white);
+  background-color: var(--blue);
 
   .work__plan__btn {
     display: flex;

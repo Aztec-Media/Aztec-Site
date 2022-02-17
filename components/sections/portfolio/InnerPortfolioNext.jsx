@@ -10,16 +10,25 @@ export default function InnerPortfolioNext() {
           <Image src='/img.jpg' layout='fill' alt='#' />
         </figure>
         <div className='overlay'></div>
+        <div className='hover__overlay'></div>
       </div>
-      <Link href='/work'>
-        <a className='text'>
-          <p className='next'>Next Project</p>
-          <div className='arrow'>
+      <div className='prev'>
+        <Link href='/work'>
+          <a>
             <Arrow />
-            <div className='arrow__hover'></div>
-          </div>
-        </a>
-      </Link>
+            <p>Previous</p>
+          </a>
+        </Link>
+      </div>
+      <div className='text'>Work</div>
+      <div className='next'>
+        <Link href='/work'>
+          <a>
+            <p>Next</p>
+            <Arrow />
+          </a>
+        </Link>
+      </div>
     </section>
   );
 }

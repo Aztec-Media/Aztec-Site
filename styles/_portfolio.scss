@@ -45,6 +45,66 @@
 .inner__portfolio__next {
   height: 24rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0 8rem;
+
+  .prev {
+    z-index: 1;
+
+    &:hover {
+      a {
+        svg {
+          transform: rotate(-180deg) translateX(1rem);
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      svg {
+        width: 1rem;
+        transform: rotate(-180deg);
+        margin-right: 1rem;
+        transition: var(--fast-speed);
+      }
+    }
+  }
+
+  .text {
+    z-index: 1;
+    font-family: var(--title-font);
+    font-size: 4rem;
+  }
+
+  .next {
+    z-index: 1;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      svg {
+        width: 1rem;
+        margin-left: 1rem;
+        transition: var(--fast-speed);
+      }
+    }
+
+    &:hover {
+      a {
+        svg {
+          transform: translateX(1rem);
+        }
+      }
+    }
+  }
 
   .img {
     position: absolute;
@@ -53,6 +113,7 @@
     top: 0;
     left: 0;
     z-index: 0;
+    overflow: hidden;
 
     .overlay {
       position: absolute;
@@ -64,65 +125,25 @@
       opacity: 0.7;
       z-index: 1;
     }
+
+    .hover__overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: var(--blue);
+      opacity: 0.4;
+      transform: translateY(100%);
+      transition: var(--mid-speed);
+    }
   }
 
-  .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    flex-direction: column;
-
-    .next {
-      font-family: var(--title-font);
-      font-size: 4rem;
-      font-weight: var(--font-med);
-      color: #fff;
-      padding-bottom: 1rem;
-    }
-
-    .arrow {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      border: 1px solid #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-
-      .arrow__hover {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        background-color: var(--blue);
-        width: 5.5rem;
-        height: 5.5rem;
-        border-radius: 50%;
-        transition: var(--fast-speed);
-      }
-
-      svg {
-        width: 50%;
-        height: 50%;
-        position: relative;
-        z-index: 2;
-
-        path {
-          fill: #fff;
-        }
-      }
-    }
-
-    &:hover {
-      .arrow {
-        .arrow__hover {
-          transform: translate(-50%, -50%) scale(1);
-        }
+  &:hover {
+    .img {
+      .hover__overlay {
+        // animation: imgHover 0.8s ease-in-out forwards;
+        transform: translateY(0%);
       }
     }
   }
