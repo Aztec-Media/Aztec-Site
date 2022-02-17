@@ -47,6 +47,7 @@ export default function ServicesSplide({ services }) {
                 layout='fill'
                 alt='Aztec Media'
                 priority='true'
+                className='services__slider__img'
               />
             </figure>
           </div>

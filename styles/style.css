@@ -684,10 +684,14 @@ main {
   background-color: var(--white);
   border-radius: 50%;
   position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1000;
+}
+
+#cursor2.drag {
+  width: 6rem;
+  height: 6rem;
+  background-color: transparent;
 }
 
 #cursor2 .cursor__text {
@@ -695,22 +699,22 @@ main {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  max-width: 100vw;
   left: 50%;
-  top: 100%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-family: var(--title-font);
   font-size: 6rem;
-  font-weight: var(--font-med);
+  font-weight: var(--font-light);
   color: var(--white);
   -webkit-transition: var(--fast-speed);
   transition: var(--fast-speed);
   opacity: 0;
 }
 
-#cursor2 .cursor__text.active {
+#cursor2 .cursor__text.drag {
   opacity: 1;
+  font-size: 1rem;
 }
 
 .header {
@@ -1418,6 +1422,11 @@ main {
   }
 }
 
+.services__splide {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
 .services__splide .splide__slide .img {
   margin-bottom: 1.5rem;
 }
@@ -1552,6 +1561,65 @@ main {
           justify-content: space-between;
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
+}
+
+.footer .back__top__top {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30rem;
+  height: 4rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.footer .back__top__top:hover p {
+  opacity: 1;
+}
+
+.footer .back__top__top:hover svg {
+  height: 4rem;
+}
+
+.footer .back__top__top p {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: var(--font-xlight);
+  opacity: 0;
+  -webkit-transition: var(--fast-speed);
+  transition: var(--fast-speed);
+}
+
+.footer .back__top__top svg {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  -webkit-transition: var(--fast-speed);
+  transition: var(--fast-speed);
+}
+
+.footer .footer__yeo__logo {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16rem;
+  height: 10rem;
+  border-top-left-radius: 100%;
+}
+
+.footer .footer__yeo__logo svg {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 8rem;
 }
 
 .footer .footer__cta h5 {
@@ -1607,7 +1675,7 @@ main {
 }
 
 .footer .footer__details {
-  padding-top: 2rem;
+  padding: 6rem 0;
   font-weight: var(--font-xlight);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2531,7 +2599,7 @@ main {
 }
 
 .about__grid .grid__wrapper {
-  padding: 0 8rem 8rem 8rem;
+  padding: 8rem 8rem 8rem 8rem;
   max-width: 1800px;
   margin: 0 auto;
 }

@@ -2,6 +2,8 @@ import Btn from '../general/Btn';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import BackToTop from '../general/BackToTop';
+import FooterLogo from '../general/FooterLogo';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
@@ -11,21 +13,26 @@ export default function Footer() {
   const footerRef = useRef(null);
 
   useEffect(() => {
-    const footerAnim = gsap.fromTo(
-      footerRef.current,
-      { yPercent: -30 },
-      {
-        yPercent: 0,
-        duration: 1,
-        ease: 'none',
+    const footerAnim = gsap
+      .timeline({
         scrollTrigger: {
           scrub: true,
           trigger: 'main',
           start: 'bottom bottom',
           end: 'bottom top',
         },
-      }
-    );
+        defaults: {
+          duration: 1,
+          ease: 'none',
+        },
+      })
+      .fromTo(
+        footerRef.current,
+        { yPercent: -30 },
+        {
+          yPercent: 0,
+        }
+      );
 
     return () => footerAnim.kill();
   }, [footerRef]);
@@ -33,6 +40,8 @@ export default function Footer() {
   return (
     <footer className='footer'>
       <div className='footer__wrapper' ref={footerRef}>
+        <BackToTop />
+        <FooterLogo />
         <section className='footer__cta'>
           <h5>
             Starting a{' '}

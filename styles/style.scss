@@ -275,26 +275,31 @@ main {
   background-color: var(--white);
   border-radius: 50%;
   position: fixed;
-  transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1000;
+
+  &.drag {
+    width: 6rem;
+    height: 6rem;
+    background-color: transparent;
+  }
 
   .cursor__text {
     position: absolute;
     width: max-content;
-    max-width: 100vw;
     left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-family: var(--title-font);
     font-size: 6rem;
-    font-weight: var(--font-med);
+    font-weight: var(--font-light);
     color: var(--white);
     transition: var(--fast-speed);
     opacity: 0;
 
-    &.active {
+    &.drag {
       opacity: 1;
+      font-size: 1rem;
     }
   }
 }
@@ -957,6 +962,8 @@ main {
 
 // services slider
 .services__splide {
+  cursor: grab;
+
   .splide__slide {
     .img {
       margin-bottom: 1.5rem;
@@ -1103,6 +1110,64 @@ main {
     justify-content: space-between;
     min-height: 100vh;
     position: relative;
+    overflow: hidden;
+  }
+
+  .back__top__top {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30rem;
+    height: 4rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      p {
+        opacity: 1;
+      }
+
+      svg {
+        height: 4rem;
+      }
+    }
+
+    p {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      font-weight: var(--font-xlight);
+      opacity: 0;
+      transition: var(--fast-speed);
+    }
+
+    svg {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2rem;
+      transition: var(--fast-speed);
+    }
+  }
+
+  .footer__yeo__logo {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16rem;
+    height: 10rem;
+    border-top-left-radius: 100%;
+
+    svg {
+      position: absolute;
+      right: 2rem;
+      bottom: 2rem;
+      width: 8rem;
+    }
   }
 
   .footer__cta {
@@ -1163,7 +1228,7 @@ main {
   }
 
   .footer__details {
-    padding-top: 2rem;
+    padding: 6rem 0;
     font-weight: var(--font-xlight);
     display: flex;
     justify-content: space-between;
