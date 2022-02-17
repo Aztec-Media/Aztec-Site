@@ -26,21 +26,6 @@ export default function Footer() {
         },
       }
     );
-
-    if (!!footerRef.current.querySelector('h5 span')) {
-      ScrollTrigger.create({
-        trigger: footerRef.current,
-        start: 'top 20%',
-        onEnter: () =>
-          footerRef.current
-            .querySelector('h5 span')
-            .classList.add('animate--line'),
-        onLeaveBack: () =>
-          footerRef.current
-            .querySelector('h5 span')
-            .classList.remove('animate--line'),
-      });
-    }
   }, [footerRef]);
 
   return (

@@ -45,7 +45,7 @@ export default function CareersItem() {
           amet consectetur adipisicing elit. Odio, quisquam. Maiores accusamus
           nihil harum, ducimus tenetur optio voluptas quas eveniet!
         </div>
-        <Btn href='/' text='Apply here' />
+        <Btn href='mailto:hello@aztec.media' text='Apply here' />
       </div>
     </article>
   );

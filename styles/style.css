@@ -2532,7 +2532,7 @@ main {
 }
 
 .about__grid .about__item .about__item__text h3 {
-  font-size: 8rem;
+  font-size: 4rem;
   font-family: var(--title-font);
   font-weight: var(--font-xbold);
   position: relative;
@@ -2611,9 +2611,6 @@ main {
   .about__grid .about__item .about__item__text {
     padding-left: 6rem;
   }
-  .about__grid .about__item .about__item__text h3 {
-    font-size: 6rem;
-  }
   .about__grid .about__item .about__item__img {
     height: 26rem;
   }
@@ -2625,9 +2622,6 @@ main {
   }
   .about__grid .about__item .about__item__text {
     padding-left: 4rem;
-  }
-  .about__grid .about__item .about__item__text h3 {
-    font-size: 4.5rem;
   }
   .about__grid .about__item .about__item__text h3 .underline {
     -webkit-transform: translateX(-10%) translateY(-1rem);
@@ -2701,6 +2695,9 @@ main {
     font-size: 1rem;
     padding: 0 1rem;
   }
+  .about__grid .about__item .about__item__text h3 {
+    font-size: 3rem;
+  }
   .about__grid .about__item .about__item__img {
     width: 80%;
   }
@@ -2711,7 +2708,7 @@ main {
     padding: 0 1.5rem 4rem 1.5rem;
   }
   .about__grid .about__item .about__item__text h3 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 

@@ -226,7 +226,7 @@
       font-size: 1.1rem;
 
       h3 {
-        font-size: 8rem;
+        font-size: 4rem;
         font-family: var(--title-font);
         font-weight: var(--font-xbold);
         position: relative;
@@ -305,10 +305,6 @@
 
       .about__item__text {
         padding-left: 6rem;
-
-        h3 {
-          font-size: 6rem;
-        }
       }
 
       .about__item__img {
@@ -331,8 +327,6 @@
         padding-left: 4rem;
 
         h3 {
-          font-size: 4.5rem;
-
           .underline {
             transform: translateX(-10%) translateY(-1rem);
             width: 120%;
@@ -416,6 +410,10 @@
       .about__item__text {
         font-size: 1rem;
         padding: 0 1rem;
+
+        h3 {
+          font-size: 3rem;
+        }
       }
 
       .about__item__img {
@@ -432,7 +430,7 @@
     .about__item {
       .about__item__text {
         h3 {
-          font-size: 3.5rem;
+          font-size: 2.5rem;
         }
       }
     }
