@@ -111,8 +111,6 @@ export default function AboutItem({ item }) {
             <span>Favourite Colour:</span> {item.Colour}
           </p>
         </div>
-        <p className='hobbies'>Hobbies</p>
-        <p className='hobbies__text'>{item.hobbies}</p>
       </div>
     </div>
   );

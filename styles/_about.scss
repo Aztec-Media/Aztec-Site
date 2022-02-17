@@ -1,7 +1,7 @@
 // about section
 .about__section {
   .about__section__header {
-    padding: 28rem 4rem 12rem 4rem;
+    padding: 28rem 4rem 8rem 4rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -41,7 +41,7 @@
 @media only screen and (max-width: 1360px) {
   .about__section {
     .about__section__header {
-      padding: 24rem 4rem 10rem 4rem;
+      padding: 24rem 4rem 8rem 4rem;
 
       .text {
         h1 {
@@ -114,6 +114,8 @@
 @media only screen and (max-width: 525px) {
   .about__section {
     .about__section__header {
+      padding: 18rem 1rem 4rem 1rem;
+
       .text {
         h1 {
           font-size: 3.5rem;
@@ -150,7 +152,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 12rem;
 
     &:nth-of-type(even) {
       justify-content: flex-end;
@@ -250,7 +251,7 @@
 
       .summary {
         padding-bottom: 1.5rem;
-        max-width: 45rem;
+        max-width: 40rem;
       }
 
       .details {
@@ -274,15 +275,6 @@
             font-weight: var(--font-bold);
           }
         }
-      }
-
-      .hobbies {
-        font-weight: var(--font-bold);
-        padding-bottom: 0.25rem;
-      }
-
-      .hobbies__text {
-        max-width: 40rem;
       }
     }
   }

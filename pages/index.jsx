@@ -10,6 +10,8 @@ import { useEffect } from 'react';
 import { colourState } from '../utils/colourState';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
+import DotLogo from '../components/vectors/DotLogo';
+import LogoFillClip from '../components/vectors/LogoFillClip';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home({ data }) {
@@ -21,6 +23,10 @@ export default function Home({ data }) {
     <Layout>
       <Seo title='Home' />
       <main className='home'>
+        <section className='dot__logo'>
+          <DotLogo />
+          <LogoFillClip />
+        </section>
         <LargeHero />
         <HomeServices />
         <HomePortfolio />

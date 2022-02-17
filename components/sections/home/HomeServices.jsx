@@ -1,29 +1,29 @@
 import Btn from '../../general/Btn';
 import { colourState } from '../../../utils/colourState';
 import ServicesSplide from '../sliders/ServicesSplide';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import services from '../../../data/servicesData.json';
-import { useInView } from 'react-intersection-observer';
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeServices() {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    // threshold: 0,
-  });
+  const scrollRef = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const changeColour = ScrollTrigger.create({
+      trigger: scrollRef.current,
+      start: 'top 30%',
+      onEnter: () => (colourState.bgColour = 'grey'),
+      onLeaveBack: () => (colourState.bgColour = 'orange'),
+    });
 
-    if (inView) {
-      console.log('yes');
-    }
-  }, [inView]);
+    return () => changeColour.kill();
+  }, []);
 
   return (
-    <section className='home__services'>
-      <div className='home__services__header' ref={ref}>
+    <section className='home__services' ref={scrollRef}>
+      <div className='home__services__header'>
         <div className='text'>
           <h2>Website + Digital</h2>
           <p>
