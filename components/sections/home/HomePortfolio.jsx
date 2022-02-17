@@ -4,9 +4,11 @@ import portfolioData from '../../../data/portfolioData.json';
 export default function HomePortfolio() {
   return (
     <section className='home__portfolio__grid'>
-      {portfolioData.map((item, index) =>
-        index > 3 ? '' : <HomePortfolioItem key={index} item={item} />
-      )}
+      <div className='grid__wrapper'>
+        {portfolioData.map((item, index) =>
+          index > 3 ? '' : <HomePortfolioItem key={index} item={item} />
+        )}
+      </div>
     </section>
   );
 }

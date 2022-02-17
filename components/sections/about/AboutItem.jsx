@@ -94,11 +94,12 @@ export default function AboutItem({ item }) {
               layout='fill'
               alt='Aztec Media team members'
             />
-            <LogoFillClip />
           </figure>
         </div>
+        <LogoFillClip />
       </div>
       <div className='about__item__text'>
+        <p className='title'>Designer</p>
         <h3>
           {item.name} <span className='underline'></span>
         </h3>

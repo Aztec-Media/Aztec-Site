@@ -526,7 +526,7 @@ img {
 .wrapper {
   --orange: #f69321;
   --blue: #38505d;
-  --light-grey: #f3f3f3;
+  --light-grey: #bec9d6;
   --white: #fff;
   --bg-colour: #f69321;
   background-color: var(--bg-colour);
@@ -1520,8 +1520,9 @@ main {
 .footer .footer__cta h5 {
   font-size: 3.75rem;
   font-family: var(--title-font);
-  font-weight: var(--font-med);
+  font-weight: var(--font-light);
   padding-bottom: 2rem;
+  line-height: 1.4;
 }
 
 .footer .footer__cta h5 span {
@@ -1534,13 +1535,13 @@ main {
   display: block;
   position: absolute;
   width: 105%;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
   height: 20px;
   bottom: 0.5rem;
   left: -2.5%;
   z-index: -1;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
   -webkit-transition: var(--mid-speed);
   transition: var(--mid-speed);
 }
@@ -1570,7 +1571,6 @@ main {
 
 .footer .footer__details {
   padding-top: 2rem;
-  padding-bottom: 2rem;
   font-weight: var(--font-xlight);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1904,6 +1904,10 @@ main {
 }
 
 .home__portfolio__grid {
+  background-color: var(--white);
+}
+
+.home__portfolio__grid .grid__wrapper {
   padding: 10rem;
   max-width: 1800px;
   margin: 0 auto;
@@ -1914,7 +1918,6 @@ main {
   -webkit-column-gap: 12rem;
           column-gap: 12rem;
   grid-auto-rows: 16rem;
-  background-color: var(--white);
 }
 
 .home__portfolio__grid .home__portfolio__item__img {
@@ -2215,6 +2218,7 @@ main {
 .meet__the__team {
   padding: 6rem 0;
   background-color: var(--light-grey);
+  background: radial-gradient(var(--light-grey), #fff, #fff);
 }
 
 .meet__the__team .team__splide {
@@ -2412,6 +2416,10 @@ main {
   margin-right: 4rem;
 }
 
+.about__section .about__section__header .btns .btn .arrow svg path {
+  fill: #fff;
+}
+
 @media only screen and (max-width: 1360px) {
   .about__section .about__section__header {
     padding: 24rem 4rem 8rem 4rem;
@@ -2482,6 +2490,10 @@ main {
 }
 
 .about__grid {
+  background-color: #fff;
+}
+
+.about__grid .grid__wrapper {
   padding: 0 8rem 8rem 8rem;
   max-width: 1800px;
   margin: 0 auto;
@@ -2536,9 +2548,11 @@ main {
 }
 
 .about__grid .about__item .about__item__img {
-  height: 32rem;
-  width: 25rem;
+  height: 30rem;
+  width: 30rem;
   position: relative;
+  -webkit-clip-path: url(#logoClip);
+          clip-path: url(#logoClip);
 }
 
 .about__grid .about__item .about__item__img figure {
@@ -2585,7 +2599,7 @@ main {
 .about__grid .about__item .about__item__text h3 {
   font-size: 4rem;
   font-family: var(--title-font);
-  font-weight: var(--font-xbold);
+  font-weight: var(--font-med);
   position: relative;
   z-index: 2;
   width: -webkit-max-content;
@@ -2597,15 +2611,19 @@ main {
 
 .about__grid .about__item .about__item__text h3 .underline {
   position: absolute;
-  width: 125%;
+  width: 110%;
   height: 14px;
-  opacity: 0.5;
+  opacity: 0.25;
   bottom: 0;
   left: 0;
-  -webkit-transform: translateY(-2.9rem) translateX(-2.5rem);
-          transform: translateY(-2.9rem) translateX(-2.5rem);
+  -webkit-transform: translateY(-1.5rem) translateX(-5%);
+          transform: translateY(-1.5rem) translateX(-5%);
   background-color: var(--light-grey);
   z-index: -1;
+}
+
+.about__grid .about__item .about__item__text .title {
+  color: var(--light-grey);
 }
 
 .about__grid .about__item .about__item__text .summary {
@@ -4455,14 +4473,13 @@ main {
 
 .dot__logo {
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  right: 0;
+  top: 2rem;
   width: 90vh;
   height: 90vh;
   -webkit-clip-path: url(#logoClip);
           clip-path: url(#logoClip);
-  opacity: 0.05;
+  opacity: 0.2;
   z-index: -1;
   pointer-events: none;
 }

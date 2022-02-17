@@ -117,14 +117,17 @@
 
 // home portfolio
 .home__portfolio__grid {
-  padding: 10rem;
-  max-width: 1800px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 12rem;
-  grid-auto-rows: 16rem;
   background-color: var(--white);
+
+  .grid__wrapper {
+    padding: 10rem;
+    max-width: 1800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12rem;
+    grid-auto-rows: 16rem;
+  }
 
   .home__portfolio__item__img {
     overflow: hidden;
@@ -417,6 +420,7 @@
 .meet__the__team {
   padding: 6rem 0;
   background-color: var(--light-grey);
+  background: radial-gradient(var(--light-grey), #fff, #fff);
 
   .team__splide {
     padding: 2rem 0;
