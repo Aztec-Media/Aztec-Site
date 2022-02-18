@@ -4219,7 +4219,6 @@ main {
           transform: translateX(20%);
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
   -webkit-transition: var(--mid-speed);
   transition: var(--mid-speed);
   width: 100%;
@@ -4284,6 +4283,11 @@ main {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  overflow: unset;
+}
+
+.planner__form .form .part .btns .submit svg path {
+  fill: #fff;
 }
 
 .planner__form .form .row {
@@ -4309,6 +4313,13 @@ main {
           transform: translateX(-101%);
   -webkit-transition: var(--fast-speed);
   transition: var(--fast-speed);
+}
+
+.planner__form .form .row .error {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  color: var(--blue);
 }
 
 .planner__form .form .row input {
