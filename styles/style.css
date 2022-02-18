@@ -4253,6 +4253,10 @@ main {
   margin-left: auto;
 }
 
+.planner__form .form .part .btns .next .arrow svg path {
+  fill: #fff;
+}
+
 .planner__form .form .part .btns .prev {
   cursor: pointer;
 }
@@ -4268,6 +4272,10 @@ main {
 .planner__form .form .part .btns .prev .arrow svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.planner__form .form .part .btns .prev .arrow svg path {
+  fill: #fff;
 }
 
 .planner__form .form .part .btns .submit {
@@ -4315,32 +4323,32 @@ main {
   font-size: 4rem;
   vertical-align: bottom;
   font-family: var(--title-font);
-  font-weight: var(--font-light);
+  font-weight: #fff;
 }
 
 .planner__form .form .row input::-webkit-input-placeholder {
-  color: var(--light-grey);
+  color: #fff;
   opacity: 0.45;
   font-size: 4rem;
   vertical-align: bottom;
 }
 
 .planner__form .form .row input:-ms-input-placeholder {
-  color: var(--light-grey);
+  color: #fff;
   opacity: 0.45;
   font-size: 4rem;
   vertical-align: bottom;
 }
 
 .planner__form .form .row input::-ms-input-placeholder {
-  color: var(--light-grey);
+  color: #fff;
   opacity: 0.45;
   font-size: 4rem;
   vertical-align: bottom;
 }
 
 .planner__form .form .row input::placeholder {
-  color: var(--light-grey);
+  color: #fff;
   opacity: 0.45;
   font-size: 4rem;
   vertical-align: bottom;

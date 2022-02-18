@@ -116,6 +116,14 @@
           cursor: pointer;
           width: max-content;
           margin-left: auto;
+
+          .arrow {
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+          }
         }
 
         .prev {
@@ -130,6 +138,10 @@
 
             svg {
               transform: rotate(180deg);
+
+              path {
+                fill: #fff;
+              }
             }
           }
         }
@@ -176,10 +188,10 @@
         font-size: 4rem;
         vertical-align: bottom;
         font-family: var(--title-font);
-        font-weight: var(--font-light);
+        font-weight: #fff;
 
         &::placeholder {
-          color: var(--light-grey);
+          color: #fff;
           opacity: 0.45;
           font-size: 4rem;
           vertical-align: bottom;

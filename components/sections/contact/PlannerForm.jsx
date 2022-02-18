@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Arrow from '../../vectors/Arrow';
-import BtnNoLink from '../../general/BtnNoLink';
 
-export default function ContactForm() {
+export default function PlannerForm() {
   const [selectedPart, setSelectedPart] = useState(1);
+
   return (
     <section className='planner__form'>
       <form className='form'>

@@ -6,17 +6,11 @@ import HomeServices from '../components/sections//home/HomeServices';
 import MeetTheTeam from '../components/general/MeetTheTeam';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useEffect } from 'react';
-import { colourState } from '../utils/colourState';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home({ data }) {
-  useEffect(() => {
-    colourState.bgColour = 'orange';
-  }, []);
-
   return (
     <Layout>
       <Seo title='Home' />

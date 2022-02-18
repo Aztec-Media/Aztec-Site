@@ -1,8 +1,6 @@
 import Seo from '../../components/layout/Seo';
 import LargeHero from '../../components/general/LargeHero';
 import InsightsGrid from '../../components/sections/insights/InsightsGrid';
-import { useEffect } from 'react';
-import { colourState } from '../../utils/colourState';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
 import InsightsFeature from '../../components/sections/insights/InsightsFeature';
@@ -10,10 +8,6 @@ import InsightsFeature from '../../components/sections/insights/InsightsFeature'
 import insightsData from '../../data/insightsData.json';
 
 export default function Insights({ data }) {
-  useEffect(() => {
-    colourState.bgColour = 'orange';
-  }, []);
-
   return (
     <Layout>
       <Seo title='Insights' />

@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { colourState } from '../utils/colourState';
 import Seo from '../components/layout/Seo';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
