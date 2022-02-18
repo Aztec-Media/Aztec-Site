@@ -1,9 +1,13 @@
-import NavItem from './NavItem';
-import { useState } from 'react';
+import NavItem, { NavItemNoLink } from './NavItem';
+import { useEffect, useState, useRef } from 'react';
+import Arrow from '../../vectors/Arrow';
+import gsap from 'gsap';
 
 export default function NavbarRight() {
   const [emailAnimateOut, setEmailAnimateOut] = useState(false);
   const [phoneAnimateOut, setPhoneAnimateOut] = useState(false);
+
+  const [innerMenuOpen, setInnerMenuOpen] = useState(false);
 
   return (
     <section className='navbar__right'>
@@ -63,7 +67,21 @@ export default function NavbarRight() {
         <li className='navbar__right__menu__item nav--anim'>
           <NavItem href='/careers' text='Careers' number='10' />
         </li>
+        <li
+          className='navbar__right__menu__item nav--anim mobile__services'
+          onClick={() => {
+            if (!gsap.isTweening('.navbar__right .inner__menu')) {
+              setInnerMenuOpen(true);
+            }
+          }}
+        >
+          <NavItemNoLink text='Services' />
+        </li>
       </ul>
+      <InnerMenu
+        innerMenuOpen={innerMenuOpen}
+        setInnerMenuOpen={setInnerMenuOpen}
+      />
       <div className='navbar__right__details'>
         <h5 className='nav--anim'>
           Part of the{' '}
@@ -79,5 +97,76 @@ export default function NavbarRight() {
         <p className='directions nav--anim'>Get Directions</p>
       </div>
     </section>
+  );
+}
+
+export function InnerMenu({ innerMenuOpen, setInnerMenuOpen }) {
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const introTl = gsap.timeline({
+      defaults: { duration: 0.6, ease: 'power2.inOut' },
+    });
+    const outroTl = gsap.timeline({
+      defaults: { duration: 0.4, ease: 'power2.inOut' },
+    });
+
+    if (innerMenuOpen) {
+      introTl
+        .fromTo(menuRef.current, { scaleX: 0 }, { scaleX: 1 })
+        .fromTo(
+          [
+            menuRef.current.querySelectorAll('li'),
+            menuRef.current.querySelector('.back'),
+          ],
+          { autoAlpha: 0, y: -15 },
+          { autoAlpha: 1, y: 0, stagger: 0.05 }
+        );
+    } else {
+      outroTl
+        .fromTo(
+          [
+            menuRef.current.querySelectorAll('li'),
+            menuRef.current.querySelector('.back'),
+          ],
+          { autoAlpha: 1, y: 0 },
+          { autoAlpha: 0, y: 15, stagger: 0.025 }
+        )
+        .fromTo(menuRef.current, { scaleX: 1 }, { scaleX: 0 });
+    }
+  }, [innerMenuOpen]);
+
+  return (
+    <ul
+      className={`inner__menu ${innerMenuOpen ? 'active' : ''}`}
+      ref={menuRef}
+    >
+      <div
+        className='back'
+        onClick={() => {
+          if (!gsap.isTweening('.navbar__right .inner__menu')) {
+            setInnerMenuOpen(false);
+          }
+        }}
+      >
+        <Arrow />
+        <div className='hover__circle'></div>
+      </div>
+      <li className='inner__menu__item'>
+        <NavItem href='/services/web-design' text='Web Design' />
+      </li>
+      <li className='inner__menu__item'>
+        <NavItem href='/services/branding' text='Branding' />
+      </li>
+      <li className='inner__menu__item'>
+        <NavItem href='/services/print-design' text='Print Design' />
+      </li>
+      <li className='inner__menu__item'>
+        <NavItem href='/services/photography' text='Photography' />
+      </li>
+      <li className='inner__menu__item'>
+        <NavItem href='/services/social-media' text='Social Media' />
+      </li>
+    </ul>
   );
 }

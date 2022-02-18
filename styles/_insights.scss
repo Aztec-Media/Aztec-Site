@@ -48,6 +48,7 @@
       font-size: 0.9rem;
       justify-content: flex-start;
       color: rgb(105, 105, 105);
+      width: max-content;
 
       .arrow {
         width: 3rem;
@@ -144,6 +145,12 @@
       .arrow {
         width: 3rem;
         height: 3rem;
+
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
       }
     }
   }

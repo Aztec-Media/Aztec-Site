@@ -17,3 +17,17 @@ export default function NavItem({ href, text, number }) {
     </Link>
   );
 }
+
+export function NavItemNoLink({ text }) {
+  const [animateOut, setAnimateOut] = useState(false);
+
+  return (
+    <div
+      className={`${animateOut ? 'animate-out' : ''}`}
+      onMouseLeave={() => setAnimateOut(true)}
+      onTransitionEnd={() => setAnimateOut(false)}
+    >
+      {text}
+    </div>
+  );
+}
