@@ -4080,7 +4080,7 @@ main {
 }
 
 .insights__feature .img figure {
-  height: 115%;
+  height: 120%;
 }
 
 .insights__feature .img .overlay {
@@ -4126,11 +4126,6 @@ main {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-
-.insights__feature .text .btn .arrow {
-  width: 3rem;
-  height: 3rem;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -4219,10 +4214,6 @@ main {
   height: 3rem;
 }
 
-.insights__grid .insights__item .btn .arrow svg path {
-  fill: #fff;
-}
-
 @media only screen and (max-width: 1200px) {
   .insights__grid {
     padding: 8rem 4rem;
@@ -4274,7 +4265,7 @@ main {
 
 .insights__inner__section .insights__inner__section__img {
   height: 40rem;
-  margin-bottom: 8rem;
+  background-color: #fff;
 }
 
 .insights__inner__section .insights__inner__section__img .img {
@@ -4283,20 +4274,27 @@ main {
   height: 100%;
 }
 
+.insights__inner__section .insights__feature {
+  background-color: #fff;
+}
+
 .insights__inner__section .insights__inner__section__content {
-  padding: 0 2rem 12rem 2rem;
+  background-color: #fff;
+  color: var(--blue);
+}
+
+.insights__inner__section .insights__inner__section__content .content__wrapper {
+  padding: 8rem 2rem 12rem 2rem;
   font-size: 1.25rem;
   max-width: 825px;
   margin: 0 auto;
 }
 
-.insights__inner__section .insights__inner__section__content p {
-  color: #fff;
+.insights__inner__section .insights__inner__section__content .content__wrapper p {
   padding-bottom: 1rem;
 }
 
-.insights__inner__section .insights__inner__section__content .btn {
-  color: #fff;
+.insights__inner__section .insights__inner__section__content .content__wrapper .btn {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -4304,6 +4302,14 @@ main {
   width: -moz-max-content;
   width: max-content;
   margin-top: 4rem;
+}
+
+.insights__inner__section .insights__inner__section__content .content__wrapper .btn .arrow {
+  border-color: var(--blue);
+}
+
+.insights__inner__section .insights__inner__section__content .content__wrapper .btn .arrow svg path {
+  fill: var(--orange);
 }
 
 @media only screen and (max-width: 1360px) {

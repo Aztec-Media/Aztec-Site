@@ -24,8 +24,8 @@ export default function InsightsInnerSection({ data }) {
 
     tl.fromTo(
       imageRef.current.querySelector('figure'),
-      { yPercent: -15 },
-      { yPercent: 15, ease: 'power1.inOut' }
+      { yPercent: -20 },
+      { yPercent: 0, ease: 'power1.inOut' }
     );
 
     const featureTl = gsap.timeline({
@@ -58,8 +58,10 @@ export default function InsightsInnerSection({ data }) {
         </div>
       </div>
       <div className='insights__inner__section__content'>
-        <ReactMarkdown>{data.content}</ReactMarkdown>
-        <Btn href='/insights' text='More news' />
+        <div className='content__wrapper'>
+          <ReactMarkdown>{data.content}</ReactMarkdown>
+          <Btn href='/insights' text='More news' />
+        </div>
       </div>
       <section className='insights__feature'>
         <div className='img' ref={featureImageRef}>
