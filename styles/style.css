@@ -2077,6 +2077,15 @@ main {
   .footer .footer__wrapper {
     padding: 6rem 2rem 2rem 2rem;
   }
+  .footer .footer__yeo__logo {
+    width: 12rem;
+    height: 8rem;
+  }
+  .footer .footer__yeo__logo svg {
+    width: 6rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
   .footer .footer__cta .btn {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2085,6 +2094,9 @@ main {
   }
   .footer .footer__cta h5 br {
     display: none;
+  }
+  .footer .footer__details {
+    padding-bottom: 8rem;
   }
   .footer .footer__details .footer__contact {
     -webkit-box-pack: center;
@@ -2109,6 +2121,9 @@ main {
     display: inline;
   }
   .footer .footer__cta h5 span::after {
+    display: none;
+  }
+  .footer .back__top__top {
     display: none;
   }
   .footer .footer__details {

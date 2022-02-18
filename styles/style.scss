@@ -1615,6 +1615,17 @@ main {
       padding: 6rem 2rem 2rem 2rem;
     }
 
+    .footer__yeo__logo {
+      width: 12rem;
+      height: 8rem;
+
+      svg {
+        width: 6rem;
+        right: 1rem;
+        bottom: 1rem;
+      }
+    }
+
     .footer__cta {
       .btn {
         justify-content: center;
@@ -1629,6 +1640,8 @@ main {
     }
 
     .footer__details {
+      padding-bottom: 8rem;
+
       .footer__contact {
         justify-content: center;
 
@@ -1666,6 +1679,10 @@ main {
           }
         }
       }
+    }
+
+    .back__top__top {
+      display: none;
     }
 
     .footer__details {
