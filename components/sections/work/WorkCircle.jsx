@@ -5,6 +5,7 @@ import LogoFill from '../../vectors/LogoFill';
 import LogoFillClip from '../../vectors/LogoFillClip';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Arrow from '../../vectors/Arrow';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function WorkCircle({ item, index }) {
@@ -59,6 +60,13 @@ export default function WorkCircle({ item, index }) {
           </h4>
         </a>
       </Link>
+      <div className='hover__circle'>
+        <h4>Bute Motorsport</h4>
+        <div className='discover'>
+          <p>Discover</p>
+          <Arrow />
+        </div>
+      </div>
     </article>
   );
 }

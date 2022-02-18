@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
-
 import Btn from '../../general/Btn';
-
+import DotLogo from '../../vectors/DotLogo';
+import LogoFillClip from '../../vectors/LogoFillClip';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +33,10 @@ export default function HomePortfolioItemText({ item, id }) {
 
   return (
     <article className='home__portfolio__item__text' ref={textRef}>
+      <section className='dot__logo'>
+        <DotLogo />
+        <LogoFillClip />
+      </section>
       <h3>
         {item.title}
         <span className='underline'></span>

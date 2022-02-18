@@ -109,9 +109,15 @@
   padding-bottom: 8rem;
 }
 
-@media only screen and (max-width: 875px) {
+@media only screen and (max-width: 1200px) {
   .home__services__slider {
     padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .home__services__slider {
+    padding-bottom: 0;
   }
 }
 
@@ -132,6 +138,27 @@
   .home__portfolio__item__img {
     overflow: hidden;
     grid-row: span 3 / auto;
+
+    .dot__logo {
+      position: absolute;
+      left: -10%;
+      top: -10%;
+      width: 50vh;
+      height: 50vh;
+      clip-path: url(#logoClip);
+      opacity: 0.2;
+      z-index: 0;
+      pointer-events: none;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      path {
+        fill: #38505d;
+      }
+    }
 
     .img__wrapper {
       height: 100%;
@@ -163,6 +190,28 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    position: relative;
+
+    .dot__logo {
+      position: absolute;
+      left: -160%;
+      top: -50%;
+      width: 50vh;
+      height: 50vh;
+      clip-path: url(#logoClip);
+      opacity: 0.2;
+      z-index: 0;
+      pointer-events: none;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      path {
+        fill: #38505d;
+      }
+    }
 
     &:nth-of-type(even) {
       text-align: right;
@@ -182,6 +231,12 @@
 
       .btn {
         margin-left: auto;
+      }
+
+      .dot__logo {
+        left: unset;
+        right: -160%;
+        top: -80%;
       }
     }
 
@@ -237,23 +292,29 @@
 
 @media only screen and (max-width: 1440px) {
   .home__portfolio__grid {
-    padding: 10rem 4rem;
+    .grid__wrapper {
+      padding: 10rem 4rem;
+    }
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .home__portfolio__grid {
-    padding: 10rem 2rem;
-    column-gap: 4rem;
+    .grid__wrapper {
+      padding: 10rem 2rem;
+      column-gap: 4rem;
+    }
   }
 }
 
 @media only screen and (max-width: 900px) {
   .home__portfolio__grid {
-    padding: 10rem 4rem;
-    gap: 2rem;
-    grid-auto-rows: unset;
-    grid-template-columns: 1fr;
+    .grid__wrapper {
+      padding: 10rem 4rem;
+      gap: 2rem;
+      grid-auto-rows: unset;
+      grid-template-columns: 1fr;
+    }
 
     .home__portfolio__item__img {
       grid-row: span 1 / auto;
@@ -264,6 +325,10 @@
       grid-row: span 1 / auto;
       padding-bottom: 4rem;
 
+      .dot__logo {
+        display: none;
+      }
+
       &:last-of-type {
         padding-bottom: 0;
       }
@@ -273,12 +338,18 @@
 
 @media only screen and (max-width: 768px) {
   .home__portfolio__grid {
-    padding: 10rem 2rem;
+    .grid__wrapper {
+      padding: 10rem 2rem;
+    }
   }
 }
 
 @media only screen and (max-width: 650px) {
   .home__portfolio__grid {
+    .grid__wrapper {
+      padding: 4rem 2rem;
+    }
+
     .home__portfolio__item__img {
       height: 20rem;
     }
@@ -319,6 +390,10 @@
           margin: 0;
           text-align: center;
         }
+
+        .btn {
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -326,8 +401,6 @@
 
 @media only screen and (max-width: 450px) {
   .home__portfolio__grid {
-    padding: 6rem 2rem;
-
     .home__portfolio__item__img {
       height: 16rem;
     }
