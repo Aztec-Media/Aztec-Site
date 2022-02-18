@@ -10,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function WorkCircle({ item, index }) {
   const articleRef = useRef(null);
-  const titleRef = useRef(null);
 
   useEffect(() => {
     let amount = (index / 2) * 50;
@@ -27,16 +26,10 @@ export default function WorkCircle({ item, index }) {
   }, [articleRef, index]);
 
   return (
-    <article
-      className='work__circle'
-      ref={articleRef}
-      onMouseLeave={() => titleRef.current.classList.add('animate-out')}
-    >
-      <Link href={`${item.link}`}>
+    <article className='work__circle' ref={articleRef}>
+      <Link href={item.link}>
         <a>
-          <div className='logo__bg'>
-            <LogoFill fill='#f69321' />
-          </div>
+          <div className='logo__bg'></div>
           <div className='img'>
             <figure>
               <Image
@@ -49,24 +42,19 @@ export default function WorkCircle({ item, index }) {
             </figure>
             <LogoFillClip />
           </div>
-          <h4
-            ref={titleRef}
-            className='title'
-            onTransitionEnd={() =>
-              titleRef.current.classList.remove('animate-out')
-            }
-          >
-            {item.title}
-          </h4>
         </a>
       </Link>
-      <div className='hover__circle'>
-        <h4>Bute Motorsport</h4>
-        <div className='discover'>
-          <p>Discover</p>
-          <Arrow />
-        </div>
-      </div>
+      <Link href={item.link}>
+        <a>
+          <div className='hover__circle'>
+            <h4>{item.title}</h4>
+            <div className='discover'>
+              <p>Discover</p>
+              <Arrow />
+            </div>
+          </div>
+        </a>
+      </Link>
     </article>
   );
 }

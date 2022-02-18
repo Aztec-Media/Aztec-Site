@@ -79,12 +79,12 @@
 }
 
 .work__circles {
+  color: var(--white);
+  background-color: var(--blue);
   padding: 4rem 2rem 12rem 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6rem;
-  color: var(--white);
-  background-color: var(--blue);
 
   .work__plan__btn {
     display: flex;
@@ -149,6 +149,7 @@
       padding: 4rem;
       opacity: 0;
       transition: var(--mid-speed);
+      box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
 
       h4 {
         font-size: 2rem;
@@ -237,6 +238,12 @@
   }
 }
 
+@media only screen and (max-width: 1360px) {
+  .work__circles {
+    padding-top: 0;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .work__circles {
     grid-template-columns: 1fr 1fr;
@@ -262,40 +269,60 @@
 
 @media only screen and (max-width: 800px) {
   .work__circles {
-    gap: 2rem;
+    display: block;
+    padding: 0 4rem 4rem 4rem;
 
     .work__circle {
-      .title {
-        font-size: 2.5rem;
+      margin-bottom: 4rem;
+
+      .img {
+        clip-path: unset;
+        width: 100%;
+        height: 100%;
       }
 
       .logo__bg {
-        width: calc((100vw - 4rem - 2rem - 1rem) / 2);
-        height: calc((100vw - 4rem - 2rem - 1rem) / 2);
+        width: 100%;
+        height: 26rem;
+      }
+
+      .hover__circle {
+        border-radius: 0;
+        opacity: 1;
+        top: unset;
+        right: unset;
+        left: -2rem;
+        bottom: -2rem;
+        width: 65%;
+        height: 50%;
+        padding: 1rem 2rem;
+        text-align: left;
+
+        .discover {
+          justify-content: flex-start;
+        }
       }
     }
   }
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 550px) {
   .work__circles {
-    .work__circle {
-      .title {
-        font-size: 2rem;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 475px) {
-  .work__circles {
-    grid-template-columns: 1fr;
-    gap: 4rem;
+    padding: 0 2rem 4rem 2rem;
 
     .work__circle {
       .logo__bg {
-        width: calc(100vw - 4rem - 1rem);
-        height: calc(100vw - 4rem - 1rem);
+        height: 18rem;
+      }
+
+      .hover__circle {
+        width: 80%;
+        height: 8rem;
+        left: -1rem;
+
+        h4 {
+          font-size: 1.5rem;
+        }
       }
     }
   }
