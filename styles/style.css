@@ -1732,6 +1732,15 @@ main {
   transition: var(--fast-speed);
 }
 
+.services__splide .splide__slide .content h3:hover .underline {
+  height: 100%;
+}
+
+.services__splide .splide__slide .content h3:hover .arrow {
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+
 .services__splide .splide__slide .content h3 .number {
   font-weight: var(--font-light);
   font-size: 1rem;
@@ -1751,6 +1760,8 @@ main {
           justify-content: center;
   height: 1rem;
   margin-left: 2rem;
+  -webkit-transition: var(--fast-speed);
+  transition: var(--fast-speed);
 }
 
 .services__splide .splide__slide .content h3 .arrow svg {
@@ -4192,7 +4203,7 @@ main {
 }
 
 .insights__grid .insights__item {
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   border-bottom: 1px solid var(--blue);
   margin-bottom: 2rem;
   color: #fff;
@@ -4224,9 +4235,8 @@ main {
   width: max-content;
 }
 
-.insights__grid .insights__item .btn .arrow {
-  width: 3rem;
-  height: 3rem;
+.insights__grid .insights__item .btn .arrow svg path {
+  fill: #fff;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -4296,11 +4306,11 @@ main {
 .insights__inner__section .insights__inner__section__content {
   background-color: #fff;
   color: var(--blue);
+  font-size: 1.25rem;
 }
 
 .insights__inner__section .insights__inner__section__content .content__wrapper {
   padding: 8rem 2rem 12rem 2rem;
-  font-size: 1.25rem;
   max-width: 825px;
   margin: 0 auto;
 }
@@ -4381,8 +4391,8 @@ main {
   .insights__inner__section .insights__inner__section__header .title {
     font-size: 3rem;
   }
-  .insights__inner__section .insights__inner__section__content {
-    padding: 0 1rem 8rem 1rem;
+  .insights__inner__section .insights__inner__section__content .content__wrapper {
+    padding: 0 1.75rem 8rem 1.75rem;
   }
 }
 

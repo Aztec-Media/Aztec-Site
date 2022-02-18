@@ -1237,6 +1237,16 @@ main {
           transition: var(--fast-speed);
         }
 
+        &:hover {
+          .underline {
+            height: 100%;
+          }
+
+          .arrow {
+            transform: translateX(1rem);
+          }
+        }
+
         .number {
           font-weight: var(--font-light);
           font-size: 1rem;
@@ -1250,6 +1260,7 @@ main {
           justify-content: center;
           height: 1rem;
           margin-left: 2rem;
+          transition: var(--fast-speed);
 
           svg {
             height: 1rem;
