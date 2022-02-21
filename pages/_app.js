@@ -5,12 +5,26 @@ import '../styles/style.css';
 import Header from '../components/layout/Header';
 import Cursor from '../components/general/Cursor';
 
-function MyApp({ Component, pageProps }) {
+import { m, AnimatePresence, LazyMotion, domAnimation } from 'framer-motion';
+
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
-      <Header />
       <Cursor />
-      <Component {...pageProps} />
+      <Header />
+      <LazyMotion features={domAnimation}>
+        <AnimatePresence exitBeforeEnter>
+          <m.div
+            key={router.route}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Component {...pageProps} />
+          </m.div>
+        </AnimatePresence>
+      </LazyMotion>
     </>
   );
 }

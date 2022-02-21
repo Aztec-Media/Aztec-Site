@@ -33,9 +33,7 @@ export default function Cursor() {
         ${mouseY - cursorRef.current.clientHeight * 0.01}px, 0)
       `;
 
-      if (target.classList.contains('work__circle__img')) {
-        setCursorText(target.dataset.itemname);
-      } else if (target.classList.contains('services__slider__img')) {
+      if (target.classList.contains('services__slider__img')) {
         setCursorClass('drag');
         setCursorText('Drag');
         setInnerCursorClass('drag');
