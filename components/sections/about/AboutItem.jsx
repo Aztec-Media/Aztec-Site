@@ -60,20 +60,24 @@ export default function AboutItem({ item }) {
         '-=0.8'
       );
 
-    slideTl.fromTo(
-      imageRef.current,
-      { y: 0 },
-      {
-        y: -150,
-        duration: 1,
-        ease: 'power2.inOut',
-        scrollTrigger: {
-          scrub: 1,
-          trigger: imageRef.current,
-          start: 'top 70%',
-        },
-      }
-    );
+    ScrollTrigger.matchMedia({
+      '(min-width: 774px)': function () {
+        slideTl.fromTo(
+          imageRef.current,
+          { y: 0 },
+          {
+            y: -150,
+            duration: 1,
+            ease: 'power2.inOut',
+            scrollTrigger: {
+              scrub: 1,
+              trigger: imageRef.current,
+              start: 'top 70%',
+            },
+          }
+        );
+      },
+    });
   }, []);
 
   return (

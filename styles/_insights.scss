@@ -280,7 +280,6 @@
 
     .insights__inner__section__img {
       height: 40rem;
-      margin-bottom: 6rem;
     }
 
     .insights__inner__section__content {
@@ -293,6 +292,12 @@
   .insights__inner__section {
     .insights__inner__section__header {
       padding: 18rem 2rem 6rem 2rem;
+    }
+
+    .insights__inner__section__content {
+      .content__wrapper {
+        padding: 6rem 2rem 8rem 2rem;
+      }
     }
   }
 }
@@ -309,7 +314,6 @@
 
     .insights__inner__section__img {
       height: 30rem;
-      margin-bottom: 4rem;
     }
 
     .insights__inner__section__content {
@@ -328,7 +332,7 @@
 
     .insights__inner__section__content {
       .content__wrapper {
-        padding: 0 1.75rem 8rem 1.75rem;
+        padding: 4rem 1.75rem 8rem 1.75rem;
       }
     }
   }
