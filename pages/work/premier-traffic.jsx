@@ -15,6 +15,7 @@ export default function PremierTraffic() {
           imageSrc='/img.jpg'
           imageAlt='premier'
           title='Premier Traffic'
+          bgColour='#1d1d1b'
         />
         <section className='premier__details'>
           <div className='grid'>
@@ -63,11 +64,25 @@ export default function PremierTraffic() {
                 </figure>
               </div>
             </div>
-            <div className='logo'></div>
-            <div className='laptop'>
-              <div className='screen'>
+            <div className='logo'>
+              <figure>
+                <Image src='/premier/website.jpg' layout='fill' alt='#' />
+              </figure>
+            </div>
+            <div className='site__layout'>
+              <div className='phone'>
                 <figure>
-                  <div className='img'></div>
+                  <Image src='/premier/phone.png' layout='fill' alt='#' />
+                </figure>
+              </div>
+              <div className='full'>
+                <figure>
+                  <Image
+                    src='/premier/website.jpg'
+                    width='1920'
+                    height='4736'
+                    alt='#'
+                  />
                 </figure>
               </div>
             </div>

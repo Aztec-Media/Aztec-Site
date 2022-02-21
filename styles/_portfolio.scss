@@ -1,3 +1,114 @@
+// inner portfolio
+.inner__portfolio__header {
+  position: relative;
+
+  .img {
+    width: 100%;
+    height: 60rem;
+    margin: 0 auto;
+    position: relative;
+    order: 1;
+
+    overflow: hidden;
+
+    figure {
+      width: 115%;
+      height: 115%;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    display: none;
+  }
+
+  .intro {
+    color: var(--white);
+    padding: 18rem 1rem 2rem 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: max-content;
+    margin: 0 auto;
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 11rem;
+      font-family: var(--title-font);
+      font-weight: var(--font-bold);
+      line-height: 1.25;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .inner__portfolio__header {
+    .intro {
+      padding: 0 3rem 8rem 3rem;
+
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .inner__portfolio__header {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+
+    .overlay {
+      display: block;
+      width: 100%;
+      height: 75%;
+      background: linear-gradient(rgba(0, 0, 0, 0), var(--blue));
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+    }
+
+    .intro {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      padding-right: 5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inner__portfolio__header {
+    .intro {
+      padding: 0 2rem 8rem 2rem;
+
+      h1 {
+        font-size: 3rem;
+
+        .line {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .inner__portfolio__header {
+    .intro {
+      padding: 0 2rem 5rem 2rem;
+      text-align: center;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
 .inner__portfolio__person {
   padding: 8rem;
 
@@ -38,12 +149,20 @@
     .btn {
       width: max-content;
       margin: 0 auto;
+
+      .arrow {
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
     }
   }
 }
 
 .inner__portfolio__next {
-  height: 24rem;
+  height: 40rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -154,7 +273,7 @@
   padding: 8rem 2rem;
   background-color: #f9e01d;
   background-image: url('/premier/background.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 
   .grid {
@@ -163,36 +282,32 @@
 
     img {
       object-fit: contain;
+      object-position: center;
       width: max-content;
     }
 
     .brochure {
-      height: 80rem;
+      height: 100vh;
       position: relative;
 
       .img {
         width: 100%;
         position: absolute;
-        max-width: 70vw;
+        height: 50vh;
+        min-height: 10rem;
 
         &:nth-of-type(1) {
-          height: 40rem;
           top: 0;
-          left: 10%;
           z-index: 3;
         }
 
         &:nth-of-type(2) {
-          height: 40rem;
-          top: 14rem;
-          left: 20%;
+          top: 20vh;
           z-index: 2;
         }
 
         &:nth-of-type(3) {
-          height: 40rem;
-          top: 40rem;
-          left: 16%;
+          top: 42.5vh;
           z-index: 1;
         }
       }
@@ -201,9 +316,10 @@
     .poster {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      height: 40rem;
+      height: 50vh;
+      min-height: 10rem;
       position: relative;
-      transform: translateY(-30%);
+      transform: translateY(-30vh);
       z-index: 2;
 
       .img {
@@ -222,21 +338,38 @@
       position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      height: 24rem;
+      height: 30vh;
       position: relative;
-      transform: translateY(-110%);
+      transform: translateY(-50vh);
       z-index: 3;
     }
 
-    .laptop {
-      .screen {
-        position: relative;
-        height: 90vh;
-        z-index: 2;
-        background: url('/premier/laptop.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        object-position: center;
+    .logo {
+      position: relative;
+
+      figure {
+        position: absolute;
+        top: -30vh;
+        height: 10rem;
+      }
+    }
+
+    .site__layout {
+      position: relative;
+
+      .full {
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+      }
+
+      .phone {
+        position: absolute;
+        top: 8rem;
+        right: 0;
+        height: 38rem;
+        width: 20rem;
+        z-index: 1;
       }
     }
   }

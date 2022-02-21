@@ -5,7 +5,12 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import Btn from '../../general/Btn';
 
-export default function InnerPortfolioHeader({ imageSrc, imageAlt, title }) {
+export default function InnerPortfolioHeader({
+  imageSrc,
+  imageAlt,
+  title,
+  bgColour,
+}) {
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -26,7 +31,10 @@ export default function InnerPortfolioHeader({ imageSrc, imageAlt, title }) {
   }, []);
 
   return (
-    <section className='inner__portfolio__header'>
+    <section
+      className='inner__portfolio__header'
+      style={{ backgroundColor: bgColour ? bgColour : 'var(--orange)' }}
+    >
       <div className='overlay'></div>
       <div className='intro'>
         <Btn href='/' text='Start new project' />
