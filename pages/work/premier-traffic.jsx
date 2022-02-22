@@ -88,7 +88,7 @@ export default function PremierTraffic() {
             </div>
           </div>
         </section>
-        <InnerPortfolioPerson />
+        <InnerPortfolioPerson bgColour='#f9e01d' />
         <InnerPortfolioNext />
       </main>
       <Footer />

@@ -3,9 +3,15 @@ import LogoFill from '../../vectors/LogoFill';
 import LogoFillClip from '../../vectors/LogoFillClip';
 import Image from 'next/image';
 
-export default function InnerPortfolioPerson() {
+export default function InnerPortfolioPerson({ bgColour, colour }) {
   return (
-    <section className='inner__portfolio__person'>
+    <section
+      className='inner__portfolio__person'
+      style={{
+        backgroundColor: bgColour ? bgColour : '',
+        color: colour ? colour : 'var(--blue)',
+      }}
+    >
       <div className='person__img'>
         <div className='img'>
           <figure>

@@ -473,6 +473,62 @@
 }
 
 .yarcombe__details .grid .social {
+  padding-top: 10rem;
+}
+
+.nuova__details {
+  padding: 8rem 2rem;
+  background-color: #d9d9d9;
+  background-size: 50%;
+  background-position: right;
+  background-image: url("/nuova/background.jpg");
+  background-repeat: no-repeat;
+}
+
+.nuova__details .grid {
+  max-width: 1850px;
+  margin: 0 auto;
+}
+
+.nuova__details .grid img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.nuova__details .grid .brochure {
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.nuova__details .grid .brochure .img {
+  width: 100%;
+  position: relative;
+}
+
+.nuova__details .grid .site__layout {
+  position: relative;
+}
+
+.nuova__details .grid .site__layout .full {
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+}
+
+.nuova__details .grid .site__layout .phone {
+  position: absolute;
+  top: 8rem;
+  right: 4rem;
+  height: 38rem;
+  width: 20rem;
+  z-index: 1;
+}
+
+.nuova__details .grid .social {
   padding-top: 16rem;
 }
 

@@ -1,31 +1,31 @@
 import InnerPortfolioHeader from '../../components/sections/portfolio/InnerPortfolioHeader';
+import InnerPortfolioPerson from '../../components/sections/portfolio/InnerPortfolioPerson';
+import InnerPortfolioNext from '../../components/sections/portfolio/InnerPortfolioNext';
 import Seo from '../../components/layout/Seo';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
 import Image from 'next/image';
-import InnerPortfolioPerson from '../../components/sections/portfolio/InnerPortfolioPerson';
-import InnerPortfolioNext from '../../components/sections/portfolio/InnerPortfolioNext';
 
-export default function YarcombeWoodlandProducts() {
+export default function NuovaItalia() {
   return (
     <Layout>
-      <Seo title={'Yarcombe Woodland Products'} />
+      <Seo title={'Nuova Italia'} />
       <main className='work'>
         <InnerPortfolioHeader
           imageSrc='/img.jpg'
-          imageAlt='yarcombe'
-          title='Yarcombe Woodland Products'
-          bgColour='#2b4934'
+          imageAlt='Nuova Italia'
+          title='Nuova Italia'
+          bgColour='#aeab06'
         />
-        <section className='yarcombe__details'>
+        <section className='nuova__details'>
           <div className='grid'>
             <div className='brochure'>
               <div className='img'>
                 <figure>
                   <Image
-                    src='/yarcombe/brochures.png'
-                    width='2800'
-                    height='2900'
+                    src='/nuova/brochures.png'
+                    width='1892'
+                    height='1970'
                     alt='#'
                   />
                 </figure>
@@ -34,33 +34,23 @@ export default function YarcombeWoodlandProducts() {
             <div className='site__layout'>
               <div className='phone'>
                 <figure>
-                  <Image src='/yarcombe/phone.png' layout='fill' alt='#' />
+                  <Image src='/nuova/phone.png' layout='fill' alt='#' />
                 </figure>
               </div>
               <div className='full'>
                 <figure>
                   <Image
-                    src='/yarcombe/website.jpg'
-                    width='1932'
-                    height='6507'
+                    src='/nuova/website.jpg'
+                    width='1977'
+                    height='4128'
                     alt='#'
                   />
                 </figure>
               </div>
             </div>
-            <div className='social'>
-              <figure>
-                <Image
-                  src='/yarcombe/social.png'
-                  width='3422'
-                  height='1565'
-                  alt='#'
-                />
-              </figure>
-            </div>
           </div>
         </section>
-        <InnerPortfolioPerson bgColour='#2b4934' colour='#fff' />
+        <InnerPortfolioPerson bgColour='#d9d9d9' />
         <InnerPortfolioNext />
       </main>
       <Footer />
