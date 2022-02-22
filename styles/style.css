@@ -305,7 +305,6 @@
 }
 
 .portfolio__details {
-  background-color: blue;
   padding: 8rem 2rem;
 }
 
@@ -389,6 +388,10 @@
 
 .king__details {
   background-color: #044c7e;
+}
+
+.profit__details {
+  background-color: #fff;
 }
 
 html {

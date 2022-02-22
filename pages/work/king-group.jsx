@@ -27,6 +27,7 @@ export default function KingGroup() {
                     width='2372'
                     height='3256'
                     alt='#'
+                    layout='responsive'
                   />
                 </figure>
               </div>
@@ -44,6 +45,7 @@ export default function KingGroup() {
                     width='1932'
                     height='6507'
                     alt='#'
+                    layout='responsive'
                   />
                 </figure>
               </div>

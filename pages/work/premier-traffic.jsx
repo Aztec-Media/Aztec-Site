@@ -27,6 +27,7 @@ export default function PremierTraffic() {
                     width='2267'
                     height='1970'
                     alt='#'
+                    layout='responsive'
                   />
                 </figure>
               </div>
@@ -39,6 +40,7 @@ export default function PremierTraffic() {
                     width='2445'
                     height='1456'
                     alt='#'
+                    layout='responsive'
                   />
                 </figure>
               </div>
@@ -51,6 +53,7 @@ export default function PremierTraffic() {
                     width='2525'
                     height='1298'
                     alt='#'
+                    layout='responsive'
                   />
                 </figure>
               </div>
@@ -73,6 +76,7 @@ export default function PremierTraffic() {
                     width='1920'
                     height='4736'
                     alt='#'
+                    layout='responsive'
                   />
                 </figure>
               </div>

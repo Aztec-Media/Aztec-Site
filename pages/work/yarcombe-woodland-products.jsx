@@ -27,6 +27,7 @@ export default function YarcombeWoodlandProducts() {
                     width='2800'
                     height='2900'
                     alt='#'
+                    layout='responsive'
                   />
                 </figure>
               </div>
@@ -44,6 +45,7 @@ export default function YarcombeWoodlandProducts() {
                     width='1932'
                     height='6507'
                     alt='#'
+                    layout='responsive'
                   />
                 </figure>
               </div>
@@ -55,6 +57,7 @@ export default function YarcombeWoodlandProducts() {
                   width='3422'
                   height='1565'
                   alt='#'
+                  layout='responsive'
                 />
               </figure>
             </div>
