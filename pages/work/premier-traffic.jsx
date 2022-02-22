@@ -22,31 +22,22 @@ export default function PremierTraffic() {
             <div className='brochure'>
               <div className='img'>
                 <figure>
-                  <Image src='/premier/brochure-1.png' layout='fill' alt='#' />
-                </figure>
-              </div>
-              <div className='img'>
-                <figure>
-                  <Image src='/premier/brochure-2.png' layout='fill' alt='#' />
-                </figure>
-              </div>
-              <div className='img'>
-                <figure>
-                  <Image src='/premier/brochure-3.png' layout='fill' alt='#' />
+                  <Image
+                    src='/premier/brochures.png'
+                    width='2267'
+                    height='1970'
+                    alt='#'
+                  />
                 </figure>
               </div>
             </div>
-            <div className='poster'>
-              <div className='img'>
-                <figure>
-                  <Image src='/premier/poster-left.png' layout='fill' alt='#' />
-                </figure>
-              </div>
+            <div className='posters'>
               <div className='img'>
                 <figure>
                   <Image
-                    src='/premier/poster-right.png'
-                    layout='fill'
+                    src='/premier/posters.png'
+                    width='2445'
+                    height='1456'
                     alt='#'
                   />
                 </figure>
@@ -55,12 +46,12 @@ export default function PremierTraffic() {
             <div className='cards'>
               <div className='img'>
                 <figure>
-                  <Image src='/premier/cards-left.png' layout='fill' alt='#' />
-                </figure>
-              </div>
-              <div className='img'>
-                <figure>
-                  <Image src='/premier/cards-right.png' layout='fill' alt='#' />
+                  <Image
+                    src='/premier/cards.png'
+                    width='2525'
+                    height='1298'
+                    alt='#'
+                  />
                 </figure>
               </div>
             </div>

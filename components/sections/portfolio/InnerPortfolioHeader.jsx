@@ -37,7 +37,7 @@ export default function InnerPortfolioHeader({
     >
       <div className='overlay'></div>
       <div className='intro'>
-        <Btn href='/' text='Start new project' />
+        <Btn href='/project-planner' text='Start new project' />
         <h1>{title}</h1>
       </div>
       <div className='img' ref={imageRef}>
