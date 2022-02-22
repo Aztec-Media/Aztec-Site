@@ -370,8 +370,6 @@
 .yarcombe__details {
   padding: 8rem 2rem;
   background-color: #2b4934;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .yarcombe__details .grid {
@@ -474,6 +472,58 @@
 }
 
 .nuova__details .grid .social {
+  padding-top: 16rem;
+}
+
+.king__details {
+  padding: 8rem 2rem;
+  background-color: #044c7e;
+}
+
+.king__details .grid {
+  max-width: 1850px;
+  margin: 0 auto;
+}
+
+.king__details .grid img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.king__details .grid .brochure {
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.king__details .grid .brochure .img {
+  width: 100%;
+  position: relative;
+}
+
+.king__details .grid .site__layout {
+  position: relative;
+}
+
+.king__details .grid .site__layout .full {
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+}
+
+.king__details .grid .site__layout .phone {
+  position: absolute;
+  top: 8rem;
+  right: 4rem;
+  height: 38rem;
+  width: 20rem;
+  z-index: 1;
+}
+
+.king__details .grid .social {
   padding-top: 16rem;
 }
 
