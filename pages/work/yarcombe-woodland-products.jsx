@@ -13,28 +13,46 @@ export default function YarcombeWoodlandProducts() {
           imageSrc='/img.jpg'
           imageAlt='yarcombe'
           title='Yarcombe Woodland Products'
+          bgColour='#2b4934'
         />
         <section className='yarcombe__details'>
           <div className='grid'>
             <div className='brochure'>
               <div className='img'>
                 <figure>
-                  <Image src='/yarcombe/brochure-1.png' layout='fill' alt='#' />
+                  <Image
+                    src='/yarcombe/brochures.png'
+                    width='2800'
+                    height='2900'
+                    alt='#'
+                  />
                 </figure>
               </div>
-              <div className='img'>
-                <figure>
-                  <Image src='/yarcombe/brochure-2.png' layout='fill' alt='#' />
-                </figure>
+              <div className='site__layout'>
+                <div className='phone'>
+                  <figure>
+                    <Image src='/yarcombe/phone.png' layout='fill' alt='#' />
+                  </figure>
+                </div>
+                <div className='full'>
+                  <figure>
+                    <Image
+                      src='/yarcombe/website.jpg'
+                      width='1932'
+                      height='6507'
+                      alt='#'
+                    />
+                  </figure>
+                </div>
               </div>
-              <div className='img'>
+              <div className='social'>
                 <figure>
-                  <Image src='/yarcombe/brochure-3.png' layout='fill' alt='#' />
-                </figure>
-              </div>
-              <div className='img'>
-                <figure>
-                  <Image src='/yarcombe/brochure-4.png' layout='fill' alt='#' />
+                  <Image
+                    src='/yarcombe/social.png'
+                    width='3422'
+                    height='1565'
+                    alt='#'
+                  />
                 </figure>
               </div>
             </div>

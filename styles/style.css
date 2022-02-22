@@ -64,6 +64,10 @@
   margin: 0 auto;
 }
 
+.inner__portfolio__header .intro .btn .arrow svg path {
+  fill: #fff;
+}
+
 .inner__portfolio__header .intro h1 {
   margin-top: 2rem;
   font-size: 11rem;
@@ -335,6 +339,7 @@
 .premier__details .grid .brochure .img:nth-of-type(1) {
   top: 0;
   z-index: 3;
+  position: relative;
 }
 
 .premier__details .grid .brochure .img:nth-of-type(2) {
@@ -411,7 +416,7 @@
 .premier__details .grid .site__layout .phone {
   position: absolute;
   top: 8rem;
-  right: 0;
+  right: 4rem;
   height: 38rem;
   width: 20rem;
   z-index: 1;
@@ -438,92 +443,37 @@
 }
 
 .yarcombe__details .grid .brochure {
-  height: 80rem;
   position: relative;
+  padding-bottom: 8rem;
 }
 
 .yarcombe__details .grid .brochure .img {
   width: 100%;
-  position: absolute;
-  max-width: 70vw;
+  position: relative;
 }
 
-.yarcombe__details .grid .brochure .img:nth-of-type(1) {
-  height: 40rem;
-  top: 0;
-  left: 0;
+.yarcombe__details .grid .site__layout {
+  position: relative;
+}
+
+.yarcombe__details .grid .site__layout .full {
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+}
+
+.yarcombe__details .grid .site__layout .phone {
+  position: absolute;
+  top: 8rem;
+  right: 4rem;
+  height: 38rem;
+  width: 20rem;
   z-index: 1;
 }
 
-.yarcombe__details .grid .brochure .img:nth-of-type(2) {
-  height: 40rem;
-  top: 0;
-  right: 0;
-  z-index: 4;
-}
-
-.yarcombe__details .grid .brochure .img:nth-of-type(3) {
-  height: 40rem;
-  top: 20rem;
-  left: 5%;
-  z-index: 2;
-}
-
-.yarcombe__details .grid .brochure .img:nth-of-type(4) {
-  height: 40rem;
-  top: 30rem;
-  right: 5%;
-  z-index: 3;
-}
-
-.yarcombe__details .grid .poster {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  height: 40rem;
-  position: relative;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
-  z-index: 2;
-}
-
-.yarcombe__details .grid .poster .img {
-  position: relative;
-}
-
-.yarcombe__details .grid .poster .img:nth-of-type(1) {
-  -webkit-transform: translateX(20%);
-          transform: translateX(20%);
-}
-
-.yarcombe__details .grid .poster .img:nth-of-type(2) {
-  -webkit-transform: translateX(-20%);
-          transform: translateX(-20%);
-}
-
-.yarcombe__details .grid .cards {
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  height: 24rem;
-  position: relative;
-  -webkit-transform: translateY(-110%);
-          transform: translateY(-110%);
-  z-index: 3;
-}
-
-.yarcombe__details .grid .laptop .screen {
-  position: relative;
-  height: 90vh;
-  z-index: 2;
-  background: url("/premier/laptop.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  -o-object-position: center;
-     object-position: center;
+.yarcombe__details .grid .social {
+  padding-top: 16rem;
 }
 
 html {
