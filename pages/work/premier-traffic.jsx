@@ -17,7 +17,7 @@ export default function PremierTraffic() {
           title='Premier Traffic'
           bgColour='#1d1d1b'
         />
-        <section className='premier__details'>
+        <section className='premier__details portfolio__details'>
           <div className='grid'>
             <div className='brochure'>
               <div className='img'>

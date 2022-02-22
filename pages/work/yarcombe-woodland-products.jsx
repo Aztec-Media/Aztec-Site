@@ -17,7 +17,7 @@ export default function YarcombeWoodlandProducts() {
           title='Yarcombe Woodland Products'
           bgColour='#2b4934'
         />
-        <section className='yarcombe__details'>
+        <section className='yarcombe__details portfolio__details'>
           <div className='grid'>
             <div className='brochure'>
               <div className='img'>

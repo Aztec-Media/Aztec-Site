@@ -17,7 +17,7 @@ export default function NuovaItalia() {
           title='Nuova Italia'
           bgColour='#aeab06'
         />
-        <section className='nuova__details'>
+        <section className='nuova__details portfolio__details'>
           <div className='grid'>
             <div className='brochure'>
               <div className='img'>

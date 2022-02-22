@@ -17,7 +17,7 @@ export default function KingGroup() {
           title='King Group'
           bgColour='#044c7e'
         />
-        <section className='king__details'>
+        <section className='king__details portfolio__details'>
           <div className='grid'>
             <div className='brochure'>
               <div className='img'>
