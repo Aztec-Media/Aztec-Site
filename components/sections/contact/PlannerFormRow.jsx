@@ -4,16 +4,6 @@ export default forwardRef(function FormRow(
   { label, type, name, id, placeholder },
   ref
 ) {
-  const [inputError, setInputError] = useState('');
-
-  function handleInputChange(e) {
-    if (e.target.value === '') {
-      setInputError('Please fill out this field');
-    } else {
-      setInputError('');
-    }
-  }
-
   return (
     <div className='row'>
       <label htmlFor={id}>{label}</label>
@@ -23,11 +13,8 @@ export default forwardRef(function FormRow(
         id={id}
         placeholder={placeholder}
         ref={ref}
-        onChange={handleInputChange}
-        onFocus={handleInputChange}
       />
       <div className='slide'></div>
-      <div className='error'>{inputError}</div>
     </div>
   );
 });

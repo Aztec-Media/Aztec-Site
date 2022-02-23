@@ -5,8 +5,6 @@ import PlannerFormRow from './PlannerFormRow';
 export default function PlannerForm() {
   const [selectedPart, setSelectedPart] = useState(1);
 
-  const [formFilledOut, setFormFilledOut] = useState(false);
-
   const formRef = useRef(null);
 
   const nameRef = useRef(null);
@@ -17,23 +15,6 @@ export default function PlannerForm() {
   const dateRef = useRef(null);
   const detailsRef = useRef(null);
   const moreRef = useRef(null);
-
-  function handleFormChange() {
-    if (
-      nameRef.current.value === '' ||
-      emailRef.current.value === '' ||
-      phoneRef.current.value === '' ||
-      companyRef.current.value === '' ||
-      serviceRef.current.value === '' ||
-      dateRef.current.value === '' ||
-      detailsRef.current.value === '' ||
-      moreRef.current.value === ''
-    ) {
-      setFormFilledOut(false);
-    } else {
-      setFormFilledOut(true);
-    }
-  }
 
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -68,15 +49,9 @@ export default function PlannerForm() {
 
   return (
     <section className='planner__form'>
-      <form
-        className='form'
-        onSubmit={handleFormSubmit}
-        onChange={handleFormChange}
-        ref={formRef}
-      >
+      <form className='form' onSubmit={handleFormSubmit} ref={formRef}>
         <div className={`part part1 ${selectedPart === 1 ? 'selected' : ''}`}>
           <PlannerFormRow
-            setFormFilledOut={setFormFilledOut}
             label='name'
             type='text'
             name='name'
@@ -85,7 +60,6 @@ export default function PlannerForm() {
             ref={nameRef}
           />
           <PlannerFormRow
-            setFormFilledOut={setFormFilledOut}
             label='email'
             type='text'
             name='email'
@@ -94,7 +68,6 @@ export default function PlannerForm() {
             ref={emailRef}
           />
           <PlannerFormRow
-            setFormFilledOut={setFormFilledOut}
             label='phone'
             type='text'
             name='phone'
@@ -116,7 +89,6 @@ export default function PlannerForm() {
         </div>
         <div className={`part part2 ${selectedPart === 2 ? 'selected' : ''}`}>
           <PlannerFormRow
-            setFormFilledOut={setFormFilledOut}
             label='company'
             type='text'
             name='company'
@@ -125,7 +97,6 @@ export default function PlannerForm() {
             ref={companyRef}
           />
           <PlannerFormRow
-            setFormFilledOut={setFormFilledOut}
             label='service'
             type='text'
             name='service'
@@ -134,7 +105,6 @@ export default function PlannerForm() {
             ref={serviceRef}
           />
           <PlannerFormRow
-            setFormFilledOut={setFormFilledOut}
             label='date'
             type='text'
             name='date'
@@ -165,7 +135,6 @@ export default function PlannerForm() {
         </div>
         <div className={`part part3 ${selectedPart === 3 ? 'selected' : ''}`}>
           <PlannerFormRow
-            setFormFilledOut={setFormFilledOut}
             label='details'
             type='text'
             name='details'
@@ -174,7 +143,6 @@ export default function PlannerForm() {
             ref={detailsRef}
           />
           <PlannerFormRow
-            setFormFilledOut={setFormFilledOut}
             label='more'
             type='text'
             name='more'
@@ -192,24 +160,13 @@ export default function PlannerForm() {
                 <span>Previous</span>
               </div>
             </div>
-            {formFilledOut ? (
-              <button type='submit' className='btn submit'>
-                <span>Send Enquiry</span>
-                <div className='arrow'>
-                  <Arrow />
-                  <div className='btn__hover'></div>
-                </div>
-              </button>
-            ) : (
-              <button
-                type='submit'
-                className='btn submit'
-                disabled
-                style={{ opacity: 0.4 }}
-              >
-                Please fill out all form fields
-              </button>
-            )}
+            <button type='submit' className='btn submit'>
+              <span>Send Enquiry</span>
+              <div className='arrow'>
+                <Arrow />
+                <div className='btn__hover'></div>
+              </div>
+            </button>
           </div>
         </div>
       </form>

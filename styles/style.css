@@ -394,6 +394,10 @@
   background-color: #fff;
 }
 
+.fans__details {
+  background-color: #00467e;
+}
+
 html {
   scroll-behavior: smooth;
 }
