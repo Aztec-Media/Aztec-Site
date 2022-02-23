@@ -322,6 +322,16 @@
         }
       }
     }
+
+    .btn {
+      .arrow {
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
   }
 
   .contact__form {
@@ -351,6 +361,24 @@
           &::placeholder {
             color: #fff;
             opacity: 0.5;
+          }
+        }
+
+        &.submit {
+          .btn {
+            font-weight: var(--font-bold);
+            color: #fff;
+            overflow: unset;
+            font-size: 1.25rem;
+            font-family: var(--title-font);
+
+            .arrow {
+              svg {
+                path {
+                  fill: #fff;
+                }
+              }
+            }
           }
         }
       }

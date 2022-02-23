@@ -1,4 +1,5 @@
 import Btn from '../../general/Btn';
+import ContactForm from './ContactForm';
 
 export default function ContactSection() {
   return (
@@ -18,30 +19,7 @@ export default function ContactSection() {
           </div>
         </address>
       </div>
-      <div className='contact__form'>
-        <form className='form'>
-          <div className='row'>
-            <label htmlFor='name'>Name</label>
-            <input type='text' name='name' id='name' placeholder='Name' />
-          </div>
-          <div className='row'>
-            <label htmlFor='email'>Email</label>
-            <input type='email' name='email' id='email' placeholder='Email' />
-          </div>
-          <div className='row'>
-            <label htmlFor='phone'>Phone</label>
-            <input type='text' name='phone' id='phone' placeholder='Phone' />
-          </div>
-          <div className='row'>
-            <label htmlFor='message'>Message</label>
-            <textarea
-              name='message'
-              id='message'
-              placeholder='Message'
-            ></textarea>
-          </div>
-        </form>
-      </div>
+      <ContactForm />
     </section>
   );
 }

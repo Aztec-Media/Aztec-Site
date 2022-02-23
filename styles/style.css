@@ -4336,6 +4336,10 @@ main {
   padding-bottom: 0.15rem;
 }
 
+.contact__section .contact__details .btn .arrow svg path {
+  fill: #fff;
+}
+
 .contact__section .contact__form .form .row {
   margin-bottom: 1rem;
 }
@@ -4383,6 +4387,18 @@ main {
 .contact__section .contact__form .form .row textarea::placeholder {
   color: #fff;
   opacity: 0.5;
+}
+
+.contact__section .contact__form .form .row.submit .btn {
+  font-weight: var(--font-bold);
+  color: #fff;
+  overflow: unset;
+  font-size: 1.25rem;
+  font-family: var(--title-font);
+}
+
+.contact__section .contact__form .form .row.submit .btn .arrow svg path {
+  fill: #fff;
 }
 
 .careers__section .careers__section__header {
