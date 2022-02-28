@@ -38,7 +38,7 @@ export default function PlannerForm() {
 
   return (
     <section className='contact__form'>
-      <form className='form' onSubmit={handleFormSubmit}>
+      <form className='form' action='/api/forms/contact'>
         <div className='row'>
           <label htmlFor='name'>Name</label>
           <input
