@@ -49,7 +49,7 @@ export default function PlannerForm() {
 
   return (
     <section className='planner__form'>
-      <form className='form' onSubmit={handleFormSubmit} ref={formRef}>
+      <form className='form' action='/api/forms/planner' ref={formRef}>
         <div className={`part part1 ${selectedPart === 1 ? 'selected' : ''}`}>
           <PlannerFormRow
             label='name'
