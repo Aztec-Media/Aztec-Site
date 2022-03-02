@@ -67,6 +67,12 @@
   }
 }
 
+.contact {
+  .contact__header {
+    background-color: var(--orange);
+  }
+}
+
 // contact
 .contact__header {
   padding: 28rem 4rem 4rem 4rem;
@@ -400,10 +406,61 @@
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 4rem 2rem 8rem 2rem;
   gap: 4rem;
   align-items: center;
+
+  .contact__form {
+    .form {
+      .form__details {
+        font-size: 4rem;
+        padding-bottom: 4rem;
+        color: #fff;
+
+        span {
+          display: inline;
+          line-height: 2;
+        }
+
+        input {
+          display: inline;
+          font-size: 4rem;
+          background: none;
+          border: none;
+          outline: none;
+          color: var(--blue);
+          border-bottom: 2px solid var(--blue);
+          text-align: center;
+          max-width: 100%;
+
+          &::placeholder {
+            opacity: 0.2;
+          }
+        }
+      }
+
+      .btn {
+        &.submit {
+          overflow: unset;
+          font-weight: var(--font-bold);
+          color: #fff;
+
+          .arrow {
+            .btn__hover {
+              background-color: var(--blue);
+            }
+
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
   .contact__details {
     color: #fff;
@@ -432,57 +489,6 @@
         svg {
           path {
             fill: #fff;
-          }
-        }
-      }
-    }
-  }
-
-  .contact__form {
-    .form {
-      .row {
-        margin-bottom: 1rem;
-
-        label {
-          display: none;
-        }
-
-        input,
-        textarea {
-          box-sizing: border-box;
-          width: 80%;
-          height: 100%;
-          border: none;
-          outline: none;
-          background: 0;
-          border-bottom: 1px solid #fff;
-          color: #fff;
-          font-size: 1.5rem;
-          padding: 1rem 0.5rem;
-          font-family: var(--title-font);
-          font-weight: var(--font-med);
-
-          &::placeholder {
-            color: #fff;
-            opacity: 0.5;
-          }
-        }
-
-        &.submit {
-          .btn {
-            font-weight: var(--font-bold);
-            color: #fff;
-            overflow: unset;
-            font-size: 1.25rem;
-            font-family: var(--title-font);
-
-            .arrow {
-              svg {
-                path {
-                  fill: #fff;
-                }
-              }
-            }
           }
         }
       }

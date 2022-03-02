@@ -1,92 +1,35 @@
-import { useRef, useState } from 'react';
 import Arrow from '../../vectors/Arrow';
 
 export default function PlannerForm() {
-  const formRef = useRef(null);
-
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-  const phoneRef = useRef(null);
-  const messageRef = useRef(null);
-
-  function handleFormSubmit(e) {
-    e.preventDefault();
-
-    console.log('form submitted');
-
-    let details = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      phone: phoneRef.current.value,
-      message: messageRef.current.value,
-    };
-
-    async function sendData() {
-      const res = await fetch('/api/forms/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(details),
-      });
-
-      const data = await res.json();
-
-      console.log(data);
-    }
-
-    // sendData();
-  }
-
   return (
     <section className='contact__form'>
       <form className='form' action='/api/forms/contact'>
-        <div className='row'>
-          <label htmlFor='name'>Name</label>
+        <div className='form__details'>
+          <span>Hello, my name is &nbsp;</span>
+          <input type='text' name='name' id='name' placeholder='Type here' />
+          <span>&nbsp; and I&apos;m looking for &nbsp;</span>
           <input
             type='text'
-            name='name'
-            id='name'
-            placeholder='Name'
-            ref={nameRef}
+            name='service'
+            id='service'
+            placeholder='Ecommerce website'
           />
-        </div>
-        <div className='row'>
-          <label htmlFor='email'>Email</label>
+          <span>. &nbsp;You can contact me on &nbsp;</span>
           <input
-            type='email'
+            type='text'
             name='email'
             id='email'
-            placeholder='Email'
-            ref={emailRef}
+            placeholder='hello@aztec.media'
           />
+          <span>.</span>
         </div>
-        <div className='row'>
-          <label htmlFor='phone'>Phone</label>
-          <input
-            type='text'
-            name='phone'
-            id='phone'
-            placeholder='Phone'
-            ref={phoneRef}
-          />
-        </div>
-        <div className='row'>
-          <label htmlFor='message'>Message</label>
-          <textarea
-            name='message'
-            id='message'
-            placeholder='Message'
-            ref={messageRef}
-          ></textarea>
-        </div>
-        <div className='row submit'>
-          <button type='submit' className='btn submit'>
-            <span>Send Enquiry</span>
-            <div className='arrow'>
-              <Arrow />
-              <div className='btn__hover'></div>
-            </div>
-          </button>
-        </div>
+        <button type='submit' className='btn submit'>
+          <span>Send Enquiry</span>
+          <div className='arrow'>
+            <Arrow />
+            <div className='btn__hover'></div>
+          </div>
+        </button>
       </form>
     </section>
   );

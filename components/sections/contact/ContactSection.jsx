@@ -4,6 +4,7 @@ import ContactForm from './ContactForm';
 export default function ContactSection() {
   return (
     <section className='contact__section'>
+      <ContactForm />
       <div className='contact__details'>
         <h5>Aztec Media</h5>
         <address>
@@ -19,7 +20,6 @@ export default function ContactSection() {
           </div>
         </address>
       </div>
-      <ContactForm />
     </section>
   );
 }

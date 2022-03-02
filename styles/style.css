@@ -4044,6 +4044,10 @@ main {
   }
 }
 
+.contact .contact__header {
+  background-color: var(--orange);
+}
+
 .contact__header {
   padding: 28rem 4rem 4rem 4rem;
   color: var(--white);
@@ -4418,13 +4422,66 @@ main {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   padding: 4rem 2rem 8rem 2rem;
   gap: 4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contact__section .contact__form .form .form__details {
+  font-size: 4rem;
+  padding-bottom: 4rem;
+  color: #fff;
+}
+
+.contact__section .contact__form .form .form__details span {
+  display: inline;
+  line-height: 2;
+}
+
+.contact__section .contact__form .form .form__details input {
+  display: inline;
+  font-size: 4rem;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+  text-align: center;
+  max-width: 100%;
+}
+
+.contact__section .contact__form .form .form__details input::-webkit-input-placeholder {
+  opacity: 0.2;
+}
+
+.contact__section .contact__form .form .form__details input:-ms-input-placeholder {
+  opacity: 0.2;
+}
+
+.contact__section .contact__form .form .form__details input::-ms-input-placeholder {
+  opacity: 0.2;
+}
+
+.contact__section .contact__form .form .form__details input::placeholder {
+  opacity: 0.2;
+}
+
+.contact__section .contact__form .form .btn.submit {
+  overflow: unset;
+  font-weight: var(--font-bold);
+  color: #fff;
+}
+
+.contact__section .contact__form .form .btn.submit .arrow .btn__hover {
+  background-color: var(--blue);
+}
+
+.contact__section .contact__form .form .btn.submit .arrow svg path {
+  fill: #fff;
 }
 
 .contact__section .contact__details {
@@ -4449,67 +4506,6 @@ main {
 }
 
 .contact__section .contact__details .btn .arrow svg path {
-  fill: #fff;
-}
-
-.contact__section .contact__form .form .row {
-  margin-bottom: 1rem;
-}
-
-.contact__section .contact__form .form .row label {
-  display: none;
-}
-
-.contact__section .contact__form .form .row input,
-.contact__section .contact__form .form .row textarea {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 80%;
-  height: 100%;
-  border: none;
-  outline: none;
-  background: 0;
-  border-bottom: 1px solid #fff;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 1rem 0.5rem;
-  font-family: var(--title-font);
-  font-weight: var(--font-med);
-}
-
-.contact__section .contact__form .form .row input::-webkit-input-placeholder,
-.contact__section .contact__form .form .row textarea::-webkit-input-placeholder {
-  color: #fff;
-  opacity: 0.5;
-}
-
-.contact__section .contact__form .form .row input:-ms-input-placeholder,
-.contact__section .contact__form .form .row textarea:-ms-input-placeholder {
-  color: #fff;
-  opacity: 0.5;
-}
-
-.contact__section .contact__form .form .row input::-ms-input-placeholder,
-.contact__section .contact__form .form .row textarea::-ms-input-placeholder {
-  color: #fff;
-  opacity: 0.5;
-}
-
-.contact__section .contact__form .form .row input::placeholder,
-.contact__section .contact__form .form .row textarea::placeholder {
-  color: #fff;
-  opacity: 0.5;
-}
-
-.contact__section .contact__form .form .row.submit .btn {
-  font-weight: var(--font-bold);
-  color: #fff;
-  overflow: unset;
-  font-size: 1.25rem;
-  font-family: var(--title-font);
-}
-
-.contact__section .contact__form .form .row.submit .btn .arrow svg path {
   fill: #fff;
 }
 
