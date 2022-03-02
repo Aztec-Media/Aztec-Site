@@ -1,55 +1,13 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Arrow from '../../vectors/Arrow';
 import PlannerFormRow from './PlannerFormRow';
 
 export default function PlannerForm() {
   const [selectedPart, setSelectedPart] = useState(1);
 
-  const formRef = useRef(null);
-
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-  const phoneRef = useRef(null);
-  const companyRef = useRef(null);
-  const serviceRef = useRef(null);
-  const dateRef = useRef(null);
-  const detailsRef = useRef(null);
-  const moreRef = useRef(null);
-
-  function handleFormSubmit(e) {
-    e.preventDefault();
-
-    console.log('form submitted');
-
-    let details = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      phone: phoneRef.current.value,
-      company: companyRef.current.value,
-      service: serviceRef.current.value,
-      date: dateRef.current.value,
-      details: detailsRef.current.value,
-      more: moreRef.current.value,
-    };
-
-    async function sendData() {
-      const res = await fetch('/api/forms/planner', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(details),
-      });
-
-      const data = await res.json();
-
-      console.log(data);
-    }
-
-    // sendData();
-  }
-
   return (
     <section className='planner__form'>
-      <form className='form' action='/api/forms/planner' ref={formRef}>
+      <form className='form' action='/api/forms/planner'>
         <div className={`part part1 ${selectedPart === 1 ? 'selected' : ''}`}>
           <PlannerFormRow
             label='name'
@@ -57,7 +15,6 @@ export default function PlannerForm() {
             name='name'
             id='name'
             placeholder='Your Name'
-            ref={nameRef}
           />
           <PlannerFormRow
             label='email'
@@ -65,7 +22,6 @@ export default function PlannerForm() {
             name='email'
             id='email'
             placeholder='Email Address'
-            ref={emailRef}
           />
           <PlannerFormRow
             label='phone'
@@ -73,7 +29,6 @@ export default function PlannerForm() {
             name='phone'
             id='phone'
             placeholder='Telephone'
-            ref={phoneRef}
           />
           <div className='btns'>
             <div className='next' onClick={() => setSelectedPart(2)}>
@@ -93,24 +48,21 @@ export default function PlannerForm() {
             type='text'
             name='company'
             id='company'
-            placeholder='Company'
-            ref={companyRef}
+            placeholder='Your Company'
           />
           <PlannerFormRow
             label='service'
             type='text'
             name='service'
             id='service'
-            placeholder='Service'
-            ref={serviceRef}
+            placeholder='Services Required'
           />
           <PlannerFormRow
-            label='date'
+            label='budget'
             type='text'
-            name='date'
-            id='date'
-            placeholder='Date required'
-            ref={dateRef}
+            name='budget'
+            id='budget'
+            placeholder='Budget'
           />
           <div className='btns'>
             <div className='prev' onClick={() => setSelectedPart(1)}>
@@ -134,22 +86,16 @@ export default function PlannerForm() {
           </div>
         </div>
         <div className={`part part3 ${selectedPart === 3 ? 'selected' : ''}`}>
-          <PlannerFormRow
-            label='details'
-            type='text'
-            name='details'
-            id='details'
-            placeholder='Details'
-            ref={detailsRef}
-          />
-          <PlannerFormRow
-            label='more'
-            type='text'
-            name='more'
-            id='more'
-            placeholder='More'
-            ref={moreRef}
-          />
+          <div className='row'>
+            <label htmlFor='details'>Details</label>
+            <textarea
+              type='text'
+              name='details'
+              id='details'
+              placeholder='Tell us about your project'
+            ></textarea>
+            <div className='slide'></div>
+          </div>
           <div className='btns'>
             <div className='prev' onClick={() => setSelectedPart(2)}>
               <div className='btn'>

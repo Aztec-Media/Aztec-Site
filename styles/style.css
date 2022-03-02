@@ -3982,9 +3982,72 @@ main {
   }
 }
 
+.project-planner {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-planner .dot__logo {
+  position: absolute;
+  right: -25%;
+  bottom: -10%;
+  width: 90vh;
+  height: 90vh;
+  -webkit-clip-path: url(#logoClip);
+          clip-path: url(#logoClip);
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.project-planner .dot__logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.project-planner .dot__logo path {
+  fill: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .project-planner .dot__logo {
+    right: -35%;
+    bottom: -10%;
+    width: 70vh;
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .project-planner .dot__logo {
+    bottom: -5%;
+    width: 55vh;
+    height: 55vh;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .project-planner .dot__logo {
+    right: -50%;
+    bottom: -5%;
+    width: 45vh;
+    height: 45vh;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .project-planner .dot__logo {
+    right: -30%;
+    bottom: 0;
+    width: 30vh;
+    height: 30vh;
+  }
+}
+
 .contact__header {
   padding: 28rem 4rem 4rem 4rem;
   color: var(--white);
+  background-color: var(--blue);
 }
 
 .contact__header h1 {
@@ -4055,6 +4118,10 @@ main {
   }
 }
 
+.planner__form {
+  background-color: var(--blue);
+}
+
 .planner__form .form {
   color: #fff;
   display: -webkit-box;
@@ -4081,7 +4148,7 @@ main {
   transition: var(--mid-speed);
   width: 100%;
   padding: 4rem;
-  max-width: 1024px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -4110,6 +4177,10 @@ main {
   margin-left: auto;
 }
 
+.planner__form .form .part .btns .next .arrow .btn__hover {
+  background-color: var(--orange);
+}
+
 .planner__form .form .part .btns .next .arrow svg path {
   fill: #fff;
 }
@@ -4124,6 +4195,10 @@ main {
 
 .planner__form .form .part .btns .prev .arrow {
   margin-right: 2rem;
+}
+
+.planner__form .form .part .btns .prev .arrow .btn__hover {
+  background-color: var(--orange);
 }
 
 .planner__form .form .part .btns .prev .arrow svg {
@@ -4144,12 +4219,16 @@ main {
   overflow: unset;
 }
 
+.planner__form .form .part .btns .submit .btn__hover {
+  background-color: var(--orange);
+}
+
 .planner__form .form .part .btns .submit svg path {
   fill: #fff;
 }
 
 .planner__form .form .row {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto 4rem auto;
   width: 100%;
   position: relative;
@@ -4163,7 +4242,7 @@ main {
 .planner__form .form .row .slide {
   position: absolute;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background-color: #fff;
   bottom: 0;
   left: 0;
@@ -4180,6 +4259,7 @@ main {
   color: var(--blue);
 }
 
+.planner__form .form .row textarea,
 .planner__form .form .row input {
   border: none;
   background: none;
@@ -4192,60 +4272,81 @@ main {
   font-size: 4rem;
   vertical-align: bottom;
   font-family: var(--title-font);
+  font-weight: var(--font-light);
   font-weight: #fff;
 }
 
+.planner__form .form .row textarea::-webkit-input-placeholder,
 .planner__form .form .row input::-webkit-input-placeholder {
   color: #fff;
-  opacity: 0.45;
+  opacity: 0.35;
   font-size: 4rem;
   vertical-align: bottom;
 }
 
+.planner__form .form .row textarea:-ms-input-placeholder,
 .planner__form .form .row input:-ms-input-placeholder {
   color: #fff;
-  opacity: 0.45;
+  opacity: 0.35;
   font-size: 4rem;
   vertical-align: bottom;
 }
 
+.planner__form .form .row textarea::-ms-input-placeholder,
 .planner__form .form .row input::-ms-input-placeholder {
   color: #fff;
-  opacity: 0.45;
+  opacity: 0.35;
   font-size: 4rem;
   vertical-align: bottom;
 }
 
+.planner__form .form .row textarea::placeholder,
 .planner__form .form .row input::placeholder {
   color: #fff;
-  opacity: 0.45;
+  opacity: 0.35;
   font-size: 4rem;
   vertical-align: bottom;
 }
 
+.planner__form .form .row textarea:focus ~ .slide,
 .planner__form .form .row input:focus ~ .slide {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
 
+.planner__form .form .row textarea {
+  height: 24rem;
+}
+
 @media only screen and (max-width: 850px) {
+  .planner__form .form {
+    height: 36rem;
+  }
   .planner__form .form .row {
     margin-bottom: 2rem;
   }
+  .planner__form .form .row textarea,
   .planner__form .form .row input {
     font-size: 2rem;
   }
+  .planner__form .form .row textarea::-webkit-input-placeholder,
   .planner__form .form .row input::-webkit-input-placeholder {
     font-size: 2rem;
   }
+  .planner__form .form .row textarea:-ms-input-placeholder,
   .planner__form .form .row input:-ms-input-placeholder {
     font-size: 2rem;
   }
+  .planner__form .form .row textarea::-ms-input-placeholder,
   .planner__form .form .row input::-ms-input-placeholder {
     font-size: 2rem;
   }
+  .planner__form .form .row textarea::placeholder,
   .planner__form .form .row input::placeholder {
     font-size: 2rem;
+  }
+  .planner__form .form .row textarea {
+    height: 16rem;
   }
 }
 
@@ -4279,25 +4380,36 @@ main {
   }
 }
 
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 400px) {
+  .planner__form .form {
+    height: 24rem;
+  }
   .planner__form .form .row {
     margin-bottom: 1.25rem;
   }
+  .planner__form .form .row textarea,
   .planner__form .form .row input {
     font-size: 1.25rem;
     padding: 0.5rem;
   }
+  .planner__form .form .row textarea::-webkit-input-placeholder,
   .planner__form .form .row input::-webkit-input-placeholder {
     font-size: 1.25rem;
   }
+  .planner__form .form .row textarea:-ms-input-placeholder,
   .planner__form .form .row input:-ms-input-placeholder {
     font-size: 1.25rem;
   }
+  .planner__form .form .row textarea::-ms-input-placeholder,
   .planner__form .form .row input::-ms-input-placeholder {
     font-size: 1.25rem;
   }
+  .planner__form .form .row textarea::placeholder,
   .planner__form .form .row input::placeholder {
     font-size: 1.25rem;
+  }
+  .planner__form .form .row textarea {
+    height: 8rem;
   }
 }
 

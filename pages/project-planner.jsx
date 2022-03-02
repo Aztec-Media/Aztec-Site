@@ -2,12 +2,18 @@ import Seo from '../components/layout/Seo';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
 import PlannerForm from '../components/sections/contact/PlannerForm';
+import DotLogo from '../components/vectors/DotLogo';
+import LogoFillClip from '../components/vectors/LogoFillClip';
 
 export default function ProjectPlanner() {
   return (
     <Layout>
       <Seo title='Project Planner' />
       <main className='project-planner'>
+        <section className='dot__logo'>
+          <DotLogo />
+          <LogoFillClip />
+        </section>
         <section className='contact__header'>
           <h1>Plan your project</h1>
           <p>
