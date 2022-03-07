@@ -286,7 +286,7 @@
   position: absolute;
   width: 150%;
   height: 150%;
-  background: var(--orange);
+  background: var(--blue);
   opacity: 0.4;
   top: -25%;
   left: -25%;
@@ -305,7 +305,7 @@
 }
 
 .portfolio__details {
-  padding: 8rem 2rem;
+  padding: 8rem 2rem 0 2rem;
 }
 
 .portfolio__details .grid {
@@ -322,12 +322,13 @@
 
 .portfolio__details .grid .brochure {
   position: relative;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
 }
 
 .portfolio__details .grid .brochure .img {
-  width: 100%;
+  width: 55%;
   position: relative;
+  margin: 0 auto;
 }
 
 .portfolio__details .grid .site__layout {
@@ -335,7 +336,7 @@
 }
 
 .portfolio__details .grid .site__layout .full {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
@@ -344,26 +345,34 @@
 .portfolio__details .grid .site__layout .phone {
   position: absolute;
   top: 8rem;
-  right: 4rem;
-  height: 38rem;
-  width: 20rem;
+  right: 12rem;
+  height: 30rem;
+  width: 14rem;
   z-index: 1;
 }
 
 .premier__details {
-  background-color: #f9e01d;
+  background-color: #fcfae1;
   background-image: url("/premier/background.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+.premier__details .grid .brochure {
+  padding-bottom: 0;
+}
+
 .premier__details .grid .posters {
   position: relative;
+  width: 55%;
+  margin: 0 auto;
 }
 
 .premier__details .grid .cards {
   position: relative;
   z-index: 3;
+  width: 55%;
+  margin: 0 auto;
 }
 
 .premier__details .grid .logo {
@@ -2078,6 +2087,9 @@ main {
 }
 
 @media only screen and (max-width: 850px) {
+  .footer .footer__yeo__logo {
+    display: none;
+  }
   .footer .footer__cta h5 {
     font-size: 2.5rem;
   }
@@ -2126,6 +2138,12 @@ main {
   }
   .footer .footer__details .footer__furniture p span:first-of-type {
     margin-left: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .footer .footer__details .footer__furniture p .dash {
+    display: none;
   }
 }
 
@@ -2528,18 +2546,18 @@ main {
 @media only screen and (max-width: 900px) {
   .home__portfolio__grid .grid__wrapper {
     padding: 10rem 4rem;
-    gap: 2rem;
-    grid-auto-rows: unset;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    display: block;
   }
   .home__portfolio__grid .home__portfolio__item__img {
     grid-row: span 1 / auto;
     height: 30rem;
+    margin-bottom: 2rem;
   }
   .home__portfolio__grid .home__portfolio__item__text {
     grid-row: span 1 / auto;
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
   }
   .home__portfolio__grid .home__portfolio__item__text .dot__logo {
     display: none;
@@ -3982,12 +4000,14 @@ main {
   }
 }
 
-.project-planner {
+.project-planner,
+.contact {
   position: relative;
   overflow: hidden;
 }
 
-.project-planner .dot__logo {
+.project-planner .dot__logo,
+.contact .dot__logo {
   position: absolute;
   right: -25%;
   bottom: -10%;
@@ -4000,17 +4020,20 @@ main {
   pointer-events: none;
 }
 
-.project-planner .dot__logo svg {
+.project-planner .dot__logo svg,
+.contact .dot__logo svg {
   width: 100%;
   height: 100%;
 }
 
-.project-planner .dot__logo path {
+.project-planner .dot__logo path,
+.contact .dot__logo path {
   fill: #fff;
 }
 
 @media only screen and (max-width: 1200px) {
-  .project-planner .dot__logo {
+  .project-planner .dot__logo,
+  .contact .dot__logo {
     right: -35%;
     bottom: -10%;
     width: 70vh;
@@ -4019,7 +4042,8 @@ main {
 }
 
 @media only screen and (max-width: 1024px) {
-  .project-planner .dot__logo {
+  .project-planner .dot__logo,
+  .contact .dot__logo {
     bottom: -5%;
     width: 55vh;
     height: 55vh;
@@ -4027,7 +4051,8 @@ main {
 }
 
 @media only screen and (max-width: 700px) {
-  .project-planner .dot__logo {
+  .project-planner .dot__logo,
+  .contact .dot__logo {
     right: -50%;
     bottom: -5%;
     width: 45vh;
@@ -4036,7 +4061,8 @@ main {
 }
 
 @media only screen and (max-width: 475px) {
-  .project-planner .dot__logo {
+  .project-planner .dot__logo,
+  .contact .dot__logo {
     right: -30%;
     bottom: 0;
     width: 30vh;
@@ -4432,7 +4458,7 @@ main {
 }
 
 .contact__section .contact__form .form .form__details {
-  font-size: 4rem;
+  font-size: 3rem;
   padding-bottom: 4rem;
   color: #fff;
 }
@@ -4444,7 +4470,7 @@ main {
 
 .contact__section .contact__form .form .form__details input {
   display: inline;
-  font-size: 4rem;
+  font-size: 3rem;
   background: none;
   border: none;
   outline: none;
@@ -4452,6 +4478,7 @@ main {
   border-bottom: 2px solid var(--blue);
   text-align: center;
   max-width: 100%;
+  width: 34rem;
 }
 
 .contact__section .contact__form .form .form__details input::-webkit-input-placeholder {

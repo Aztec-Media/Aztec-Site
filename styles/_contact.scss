@@ -1,4 +1,5 @@
-.project-planner {
+.project-planner,
+.contact {
   position: relative;
   overflow: hidden;
 
@@ -25,7 +26,8 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .project-planner {
+  .project-planner,
+  .contact {
     .dot__logo {
       right: -35%;
       bottom: -10%;
@@ -36,7 +38,8 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .project-planner {
+  .project-planner,
+  .contact {
     .dot__logo {
       bottom: -5%;
       width: 55vh;
@@ -46,7 +49,8 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .project-planner {
+  .project-planner,
+  .contact {
     .dot__logo {
       right: -50%;
       bottom: -5%;
@@ -57,7 +61,8 @@
 }
 
 @media only screen and (max-width: 475px) {
-  .project-planner {
+  .project-planner,
+  .contact {
     .dot__logo {
       right: -30%;
       bottom: 0;
@@ -414,7 +419,7 @@
   .contact__form {
     .form {
       .form__details {
-        font-size: 4rem;
+        font-size: 3rem;
         padding-bottom: 4rem;
         color: #fff;
 
@@ -425,7 +430,7 @@
 
         input {
           display: inline;
-          font-size: 4rem;
+          font-size: 3rem;
           background: none;
           border: none;
           outline: none;
@@ -433,6 +438,7 @@
           border-bottom: 2px solid var(--blue);
           text-align: center;
           max-width: 100%;
+          width: 34rem;
 
           &::placeholder {
             opacity: 0.2;

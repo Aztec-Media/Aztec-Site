@@ -117,11 +117,11 @@ export default function Footer() {
             </p>
             <p>
               <span>All Rights Reserved</span>
-              <span>/</span>
+              <span className='dash'>/</span>
               <span>
                 <a>Terms &amp; Conditions</a>
               </span>
-              <span>/</span>
+              <span className='dash'>/</span>
               <span>
                 <a>Privacy Notice</a>
               </span>

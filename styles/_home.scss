@@ -311,19 +311,20 @@
   .home__portfolio__grid {
     .grid__wrapper {
       padding: 10rem 4rem;
-      gap: 2rem;
-      grid-auto-rows: unset;
-      grid-template-columns: 1fr;
+      display: block;
     }
 
     .home__portfolio__item__img {
       grid-row: span 1 / auto;
       height: 30rem;
+      margin-bottom: 2rem;
     }
 
     .home__portfolio__item__text {
       grid-row: span 1 / auto;
-      padding-bottom: 4rem;
+      padding-bottom: 6rem;
+      padding-top: 1rem;
+      margin-bottom: 2rem;
 
       .dot__logo {
         display: none;

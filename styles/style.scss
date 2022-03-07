@@ -1604,6 +1604,10 @@ main {
 
 @media only screen and (max-width: 850px) {
   .footer {
+    .footer__yeo__logo {
+      display: none;
+    }
+
     .footer__cta {
       h5 {
         font-size: 2.5rem;
@@ -1669,6 +1673,20 @@ main {
             &:first-of-type {
               margin-left: 0.5rem;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .footer {
+    .footer__details {
+      .footer__furniture {
+        p {
+          .dash {
+            display: none;
           }
         }
       }
