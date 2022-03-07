@@ -5,7 +5,7 @@ export default function ContactSection() {
   return (
     <section className='contact__section'>
       <ContactForm />
-      <div className='contact__details'>
+      {/* <div className='contact__details'>
         <h5>Aztec Media</h5>
         <address>
           <ul>
@@ -19,7 +19,7 @@ export default function ContactSection() {
             <Btn href='/' text='View Map' />
           </div>
         </address>
-      </div>
+      </div> */}
     </section>
   );
 }

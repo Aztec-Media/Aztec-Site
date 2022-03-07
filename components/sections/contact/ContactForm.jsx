@@ -5,16 +5,20 @@ export default function PlannerForm() {
     <section className='contact__form'>
       <form className='form' action='/api/forms/contact'>
         <div className='form__details'>
-          <span>Hello, my name is &nbsp;</span>
+          <span className='text'>Hello, my name is &nbsp;</span>
           <input type='text' name='name' id='name' placeholder='Type here' />
-          <span>&nbsp; and I&apos;m looking for &nbsp;</span>
+          <span>,</span>
+          <br />
+          <span className='text'>and I&apos;m looking for &nbsp;</span>
           <input
             type='text'
             name='service'
             id='service'
             placeholder='Ecommerce website'
           />
-          <span>. &nbsp;You can contact me on &nbsp;</span>
+          <span>.</span>
+          <br />
+          <span className='text'>You can contact me on &nbsp;</span>
           <input
             type='text'
             name='email'

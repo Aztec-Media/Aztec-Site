@@ -304,6 +304,13 @@ main {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #cursor,
+  #cursor2 {
+    display: none;
+  }
+}
+
 // header
 .header {
   padding: 2rem;
@@ -616,6 +623,10 @@ main {
       transform-origin: right;
       color: #fff;
 
+      .mob__logo {
+        display: none;
+      }
+
       .inner__menu {
         display: none;
       }
@@ -864,6 +875,10 @@ main {
         justify-content: center;
         align-items: center;
 
+        .mob__logo {
+          display: block;
+        }
+
         .navbar__right__details {
           display: none;
         }
@@ -1078,6 +1093,45 @@ main {
         .navbar__right {
           .navbar__right__contact {
             display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-height: 1000px) {
+    .header {
+      .navbar {
+        .navbar__right {
+          .navbar__right__contact {
+            padding-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-height: 650px) {
+    .header {
+      .navbar {
+        .navbar__right {
+          .mob__logo {
+            width: 3rem;
+            height: 3rem;
+
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .navbar__right__menu {
+            margin-top: 1rem;
+
+            li {
+              font-size: 1.75rem;
+              margin: 1rem 0;
+            }
           }
         }
       }

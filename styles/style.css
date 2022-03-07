@@ -747,6 +747,13 @@ main {
   font-size: 1rem;
 }
 
+@media only screen and (max-width: 600px) {
+  #cursor,
+  #cursor2 {
+    display: none;
+  }
+}
+
 .header {
   padding: 2rem;
   display: -webkit-box;
@@ -1126,6 +1133,10 @@ main {
   color: #fff;
 }
 
+.header .navbar .navbar__right .mob__logo {
+  display: none;
+}
+
 .header .navbar .navbar__right .inner__menu {
   display: none;
 }
@@ -1386,6 +1397,9 @@ main {
         -ms-flex-align: center;
             align-items: center;
   }
+  .header .navbar .navbar__right .mob__logo {
+    display: block;
+  }
   .header .navbar .navbar__right .navbar__right__details {
     display: none;
   }
@@ -1596,6 +1610,30 @@ main {
 @media only screen and (max-width: 600px) and (max-height: 800px) {
   .header .navbar .navbar__right .navbar__right__contact {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) and (max-height: 1000px) {
+  .header .navbar .navbar__right .navbar__right__contact {
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) and (max-height: 650px) {
+  .header .navbar .navbar__right .mob__logo {
+    width: 3rem;
+    height: 3rem;
+  }
+  .header .navbar .navbar__right .mob__logo svg {
+    width: 100%;
+    height: 100%;
+  }
+  .header .navbar .navbar__right .navbar__right__menu {
+    margin-top: 1rem;
+  }
+  .header .navbar .navbar__right .navbar__right__menu li {
+    font-size: 1.75rem;
+    margin: 1rem 0;
   }
 }
 
@@ -4450,7 +4488,7 @@ main {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  padding: 4rem 2rem 8rem 2rem;
+  padding: 0 2rem 8rem 2rem;
   gap: 4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -4461,6 +4499,7 @@ main {
   font-size: 3rem;
   padding-bottom: 4rem;
   color: #fff;
+  text-align: center;
 }
 
 .contact__section .contact__form .form .form__details span {
@@ -4534,6 +4573,66 @@ main {
 
 .contact__section .contact__details .btn .arrow svg path {
   fill: #fff;
+}
+
+@media only screen and (max-width: 1225px) {
+  .contact__section .contact__form .form .form__details .text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .contact__section .contact__form .form .form__details {
+    font-size: 2rem;
+  }
+  .contact__section .contact__form .form .form__details input {
+    font-size: 2rem;
+    border-width: 1px;
+    margin-bottom: 1rem;
+    width: unset;
+  }
+  .contact__section .contact__form .form .form__details .text {
+    width: unset;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact__section {
+    padding: 0 1rem 8rem 1rem;
+  }
+  .contact__section .contact__form .form .form__details {
+    font-size: 1.5rem;
+  }
+  .contact__section .contact__form .form .form__details input {
+    font-size: 1.5rem;
+    width: unset;
+  }
+  .contact__section .contact__form .form .form__details .text {
+    width: unset;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact__section .contact__form .form .form__details span {
+    display: none;
+  }
+  .contact__section .contact__form .form .form__details .text {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .contact__section .contact__form .form .form__details {
+    padding-bottom: 2rem;
+  }
+  .contact__section .contact__form .form .form__details input,
+  .contact__section .contact__form .form .form__details .text {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+  }
 }
 
 .careers__section .careers__section__header {

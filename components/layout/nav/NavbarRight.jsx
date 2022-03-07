@@ -1,6 +1,7 @@
 import NavItem, { NavItemNoLink } from './NavItem';
 import { useEffect, useState, useRef } from 'react';
 import Arrow from '../../vectors/Arrow';
+import Logo from '../../vectors/Logo';
 import gsap from 'gsap';
 
 export default function NavbarRight() {
@@ -11,6 +12,9 @@ export default function NavbarRight() {
 
   return (
     <section className='navbar__right'>
+      <div className='mob__logo'>
+        <Logo />
+      </div>
       <div className='navbar__right__contact'>
         <a
           href='mailto:hello@aztec.media'

@@ -412,7 +412,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 4rem 2rem 8rem 2rem;
+  padding: 0 2rem 8rem 2rem;
   gap: 4rem;
   align-items: center;
 
@@ -422,6 +422,7 @@
         font-size: 3rem;
         padding-bottom: 4rem;
         color: #fff;
+        text-align: center;
 
         span {
           display: inline;
@@ -495,6 +496,104 @@
         svg {
           path {
             fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  .contact__section {
+    .contact__form {
+      .form {
+        .form__details {
+          .text {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .contact__section {
+    .contact__form {
+      .form {
+        .form__details {
+          font-size: 2rem;
+
+          input {
+            font-size: 2rem;
+            border-width: 1px;
+            margin-bottom: 1rem;
+            width: unset;
+          }
+
+          .text {
+            width: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact__section {
+    padding: 0 1rem 8rem 1rem;
+    .contact__form {
+      .form {
+        .form__details {
+          font-size: 1.5rem;
+
+          input {
+            font-size: 1.5rem;
+            width: unset;
+          }
+
+          .text {
+            width: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact__section {
+    .contact__form {
+      .form {
+        .form__details {
+          span {
+            display: none;
+          }
+
+          .text {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .contact__section {
+    .contact__form {
+      .form {
+        .form__details {
+          padding-bottom: 2rem;
+
+          input,
+          .text {
+            display: block;
+            margin: 0 auto;
+            width: 250px;
           }
         }
       }
