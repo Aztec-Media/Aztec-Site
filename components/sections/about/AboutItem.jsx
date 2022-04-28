@@ -86,7 +86,7 @@ export default function AboutItem({ item }) {
         <figure>
           <div className='img__cover'></div>
           <Image
-            src={item.imgSrc}
+            src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
             layout='fill'
             alt='Aztec Media team members'
           />
@@ -94,7 +94,7 @@ export default function AboutItem({ item }) {
         <div className='hover__img'>
           <figure>
             <Image
-              src={item.gifImgSrc}
+              src={`http://localhost:1337${item.attributes.gif.data.attributes.url}`}
               layout='fill'
               alt='Aztec Media team members'
             />
@@ -105,15 +105,15 @@ export default function AboutItem({ item }) {
       <div className='about__item__text'>
         <p className='title'>Designer</p>
         <h3>
-          {item.name} <span className='underline'></span>
+          {item.attributes.name} <span className='underline'></span>
         </h3>
-        <p className='summary'>{item.summary}</p>
+        <p className='summary'>{item.attributes.summary}</p>
         <div className='details'>
           <p className='skill'>
-            <span> Skill:</span> {item.title}
+            <span> Skill:</span> {item.attributes.title}
           </p>
           <p className='colour' style={{ borderColor: 'lightcoral' }}>
-            <span>Favourite Colour:</span> {item.Colour}
+            <span>Favourite Colour:</span> {item.attributes.colour}
           </p>
         </div>
       </div>

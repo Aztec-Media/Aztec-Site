@@ -3,7 +3,7 @@ import Btn from '../../general/Btn';
 import AboutGrid from './AboutGrid';
 import gsap from 'gsap';
 
-export default function AboutSection() {
+export default function AboutSection({ team }) {
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function AboutSection() {
           <Btn href='/' text='Recent Work' />
         </div>
       </div>
-      <AboutGrid />
+      <AboutGrid team={team} />
     </section>
   );
 }
