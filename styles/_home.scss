@@ -1,6 +1,9 @@
 // home services
 .home__services {
-  background-color: var(--white);
+  background-color: rgba(190, 201, 214, 1);
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
 
   .home__services__header {
     padding: 8rem 4rem;

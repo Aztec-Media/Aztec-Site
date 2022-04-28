@@ -1,6 +1,5 @@
 import Btn from '../../general/Btn';
 import ServicesSplide from '../sliders/ServicesSplide';
-// import services from '../../../data/servicesData.json';
 
 export default function HomeServices({ services }) {
   return (

@@ -1678,7 +1678,7 @@ main {
   position: relative;
   padding-bottom: 8rem;
   padding-left: 50%;
-  background-color: rgba(20, 19, 47, 0.85);
+  background-color: rgba(56, 80, 93, 0.85);
   z-index: 1;
   height: 100%;
   display: -webkit-box;
@@ -1696,7 +1696,7 @@ main {
 }
 
 .large__hero .large__hero__text.playing {
-  background-color: rgba(20, 19, 47, 0.5);
+  background-color: rgba(56, 80, 93, 0.25);
 }
 
 .large__hero .large__hero__text.playing h1 {
@@ -2294,7 +2294,11 @@ main {
 }
 
 .home__services {
-  background-color: var(--white);
+  background-color: #bec9d6;
+  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .home__services .home__services__header {
