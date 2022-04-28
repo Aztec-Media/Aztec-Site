@@ -1,6 +1,6 @@
 import WorkCircles from '../work/WorkCircles';
 
-export default function WorkSection() {
+export default function WorkSection({ portfolio }) {
   return (
     <section className='work__section'>
       <div className='work__header'>
@@ -10,7 +10,7 @@ export default function WorkSection() {
           in technology, we help brands.
         </p>
       </div>
-      <WorkCircles />
+      <WorkCircles portfolio={portfolio} />
     </section>
   );
 }

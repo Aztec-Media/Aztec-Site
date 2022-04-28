@@ -1,15 +1,11 @@
 import WorkCircle from './WorkCircle';
-import portfolioData from '../../../data/portfolioData.json';
+// import portfolioData from '../../../data/portfolioData.json';
 
-export default function WorkCircles() {
+export default function WorkCircles({ portfolio }) {
   return (
     <section className='work__circles'>
-      {portfolioData.map((item, index) => (
-        <WorkCircle
-          key={index}
-          item={item}
-          index={portfolioData.length - index}
-        />
+      {portfolio.map((item, index) => (
+        <WorkCircle key={index} item={item} index={portfolio.length - index} />
       ))}
     </section>
   );

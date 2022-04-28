@@ -26,27 +26,23 @@ export default function WorkCircle({ item, index }) {
 
   return (
     <article className='work__circle' ref={articleRef}>
-      <Link href={item.link}>
+      <Link href={`/work/${item.attributes.alias}`}>
         <a>
           <div className='logo__bg'></div>
           <div className='img'>
             <figure>
               <Image
-                src={item.imgSrc}
+                src={`http://localhost:1337${item.attributes.mainImage.data.attributes.url}`}
                 layout='fill'
-                alt={`Aztec Media Our Work ${item.title}`}
+                alt={`Aztec Media Our Work ${item.attributes.title}`}
                 className='work__circle__img'
-                data-itemname={item.title}
+                data-itemname={item.attributes.title}
               />
             </figure>
             <LogoFillClip />
           </div>
-        </a>
-      </Link>
-      <Link href={item.link}>
-        <a>
           <div className='hover__circle'>
-            <h4>{item.title}</h4>
+            <h4>{item.attributes.title}</h4>
             <div className='discover'>
               <p>Discover</p>
               <Arrow />
