@@ -1,8 +1,8 @@
 import Btn from '../../general/Btn';
 import ServicesSplide from '../sliders/ServicesSplide';
-import services from '../../../data/servicesData.json';
+// import services from '../../../data/servicesData.json';
 
-export default function HomeServices() {
+export default function HomeServices({ services }) {
   return (
     <section className='home__services'>
       <div className='home__services__header'>

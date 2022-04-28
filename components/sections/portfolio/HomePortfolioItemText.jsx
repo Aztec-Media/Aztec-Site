@@ -38,11 +38,11 @@ export default function HomePortfolioItemText({ item, id }) {
         <LogoFillClip />
       </section>
       <h3>
-        {item.title}
+        {item.attributes.title}
         <span className='underline'></span>
       </h3>
-      <p>{item.summary}</p>
-      <Btn href={item.link} text='Case Study' />
+      <p>{item.attributes.summary}</p>
+      <Btn href={`/work/${item.attributes.alias}`} text='Case Study' />
     </article>
   );
 }

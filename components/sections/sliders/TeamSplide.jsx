@@ -35,7 +35,7 @@ export default function TeamSplide({ direction, teamData }) {
           },
         },
       }}
-      Extensions={{ AutoScroll }}
+      extensions={{ AutoScroll }}
     >
       {teamData.map((item, index) => (
         <Fragment key={index}>
@@ -45,14 +45,14 @@ export default function TeamSplide({ direction, teamData }) {
               <div className='img'>
                 <figure>
                   <Image
-                    src={item.imgSrc}
+                    src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
                     layout='fill'
                     alt='Aztec Media Team Members'
                   />
                 </figure>
                 <figure className='hover__img'>
                   <Image
-                    src={item.gifImgSrc}
+                    src={`http://localhost:1337${item.attributes.gif.data.attributes.url}`}
                     layout='fill'
                     alt='Aztec Media Team Members'
                   />
@@ -66,7 +66,7 @@ export default function TeamSplide({ direction, teamData }) {
           </SplideSlide>
           <SplideSlide>
             <div className='slide__spacer'>
-              <p>The Team</p>
+              <p>Our Team</p>
               <div className='arrows'>
                 <DualArrow />
               </div>

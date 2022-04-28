@@ -38,26 +38,26 @@ export default function ServicesSplide({ services }) {
       }}
       className='services__splide'
     >
-      {services.map((service) => (
-        <SplideSlide key={service.number}>
+      {services.map((service, i) => (
+        <SplideSlide key={i}>
           <div className='img'>
             <figure>
               <Image
-                src={service.imgSrc}
+                src={`http://localhost:1337${service.attributes.image.data.attributes.url}`}
                 layout='fill'
-                alt='Aztec Media'
+                alt={service.attributes.title}
                 priority='true'
                 className='services__slider__img'
               />
             </figure>
           </div>
           <div className='content'>
-            <Link href={service.link}>
+            <Link href={`/services/${service.attributes.link}`}>
               <a>
                 <h3>
                   <span className='number'>{service.number}</span>
                   <span className='text'>
-                    {service.title}
+                    {service.attributes.title}
                     <div className='underline'></div>
                   </span>
                   <span className='arrow'>
@@ -66,7 +66,7 @@ export default function ServicesSplide({ services }) {
                 </h3>
               </a>
             </Link>
-            <p>{service.summary}</p>
+            <p>{service.attributes.summary}</p>
           </div>
         </SplideSlide>
       ))}

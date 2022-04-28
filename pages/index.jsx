@@ -8,20 +8,44 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
+import fetch from 'node-fetch';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Home({ data }) {
+export default function Home({ team, services, portfolio }) {
   return (
     <Layout>
       <Seo title='Home' />
       <main className='home'>
         <LargeHero />
-        <HomeServices />
-        <HomePortfolio />
+        <HomeServices services={services} />
+        <HomePortfolio portfolio={portfolio} />
         <ViewAllWork />
-        <MeetTheTeam />
+        <MeetTheTeam team={team} />
       </main>
       <Footer />
     </Layout>
   );
+}
+
+export async function getStaticProps({ params }) {
+  const teamRes = await fetch('http://localhost:1337/api/teams?populate=*');
+  const teamData = await teamRes.json();
+
+  const servicesRes = await fetch(
+    'http://localhost:1337/api/services?populate=*'
+  );
+  const servicesData = await servicesRes.json();
+
+  const portfolioRes = await fetch(
+    'http://localhost:1337/api/portfolios?populate=*'
+  );
+  const portfolioData = await portfolioRes.json();
+
+  return {
+    props: {
+      team: teamData.data,
+      services: servicesData.data,
+      portfolio: portfolioData.data,
+    },
+  };
 }
