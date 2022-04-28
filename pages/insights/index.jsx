@@ -7,24 +7,29 @@ import InsightsFeature from '../../components/sections/insights/InsightsFeature'
 
 import insightsData from '../../data/insightsData.json';
 
-export default function Insights({ data }) {
+export default function Insights({ insights }) {
   return (
     <Layout>
       <Seo title='Insights' />
       <main className='insights'>
         <LargeHero />
-        <InsightsFeature data={data} />
-        <InsightsGrid data={data} />
+        <InsightsFeature insights={insights} />
+        <InsightsGrid insights={insights} />
       </main>
       <Footer />
     </Layout>
   );
 }
 
-export function getStaticProps() {
-  const data = insightsData;
+export async function getStaticProps({ params }) {
+  const insightsRes = await fetch(
+    'http://localhost:1337/api/insights?populate=*'
+  );
+  const insightsData = await insightsRes.json();
 
   return {
-    props: { data },
+    props: {
+      insights: insightsData.data,
+    },
   };
 }

@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function InsightsFeature({ data }) {
+export default function InsightsFeature({ insights }) {
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -35,10 +35,10 @@ export default function InsightsFeature({ data }) {
         </figure>
       </div>
       <article className='text'>
-        <Link href={`/insights/${data[0].alias}`}>
+        <Link href={`/insights/${insights[0].attributes.alias}`}>
           <a>
-            <p className='date'>{data[0].date}</p>
-            <h2>{data[0].title}</h2>
+            <p className='date'>{insights[0].attributes.date}</p>
+            <h2>{insights[0].attributes.title}</h2>
             <BtnNoLink text='Read on' />
           </a>
         </Link>

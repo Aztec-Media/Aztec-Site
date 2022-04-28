@@ -3,42 +3,48 @@ import InsightsInnerSection from '../../components/sections/insights/InsightsInn
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
 
-import insightsData from '../../data/insightsData';
+// import insightsData from '../../data/insightsData';
 
-export default function InsightsInnerPage({ data }) {
+export default function InsightsInnerPage({ insight }) {
   return (
     <Layout>
       <Seo title='Insights Inner' />
       <main className='insights-inner'>
-        <InsightsInnerSection data={data} />
+        <InsightsInnerSection insight={insight} />
       </main>
       <Footer />
     </Layout>
   );
 }
 
-export function getStaticProps({ params }) {
-  const data = insightsData;
+export async function getStaticProps({ params }) {
+  const insightsRes = await fetch(
+    'http://localhost:1337/api/insights?populate=*'
+  );
+  const insightsData = await insightsRes.json();
 
   let insight = {};
 
-  data.forEach((item) => {
-    if (item.alias === params.alias) {
+  insightsData.data.forEach((item) => {
+    if (item.attributes.alias === params.alias) {
       insight = item;
     }
   });
 
   return {
     props: {
-      data: insight,
+      insight,
     },
   };
 }
 
-export function getStaticPaths() {
-  const data = insightsData;
+export async function getStaticPaths() {
+  const insightsRes = await fetch(
+    'http://localhost:1337/api/insights?populate=*'
+  );
+  const insightsData = await insightsRes.json();
 
-  const aliass = data.map((item) => item.alias);
+  const aliass = insightsData.data.map((item) => item.attributes.alias);
   const paths = aliass.map((alias) => ({ params: { alias } }));
 
   return {

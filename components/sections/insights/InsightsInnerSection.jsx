@@ -8,7 +8,7 @@ import BtnNoLink from '../../general/BtnNoLink';
 gsap.registerPlugin(ScrollTrigger);
 import ReactMarkdown from 'react-markdown';
 
-export default function InsightsInnerSection({ data }) {
+export default function InsightsInnerSection({ insight }) {
   const imageRef = useRef(null);
   const featureImageRef = useRef(null);
 
@@ -47,19 +47,23 @@ export default function InsightsInnerSection({ data }) {
   return (
     <section className='insights__inner__section'>
       <div className='insights__inner__section__header'>
-        <div className='date'>{data.date}</div>
-        <h1 className='title'>{data.title}</h1>
+        <div className='date'>{insight.attributes.date}</div>
+        <h1 className='title'>{insight.attributes.title}</h1>
       </div>
       <div className='insights__inner__section__img' ref={imageRef}>
         <div className='img'>
           <figure>
-            <Image src={data.imgSrc} layout='fill' alt={data.title} />
+            <Image
+              src={`http://localhost:1337${insight.attributes.image.data.attributes.url}`}
+              layout='fill'
+              alt={insight.attributes.title}
+            />
           </figure>
         </div>
       </div>
       <div className='insights__inner__section__content'>
         <div className='content__wrapper'>
-          <ReactMarkdown>{data.content}</ReactMarkdown>
+          <ReactMarkdown>{insight.attributes.content}</ReactMarkdown>
           <Btn href='/insights' text='More news' />
         </div>
       </div>
