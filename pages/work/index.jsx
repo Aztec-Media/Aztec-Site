@@ -2,6 +2,7 @@ import Seo from '../../components/layout/Seo';
 import WorkSection from '../../components/sections/work/WorkSection';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
+import fetch from 'node-fetch';
 
 export default function Work({ portfolio }) {
   return (

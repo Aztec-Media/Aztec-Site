@@ -10,7 +10,7 @@ export default function Branding() {
       <Seo title={'Branding'} />
       <main className='branding'>
         <ServicesHeader title='Branding' />
-        <ServicesSlider />
+        {/* <ServicesSlider /> */}
       </main>
       <Footer />
     </Layout>

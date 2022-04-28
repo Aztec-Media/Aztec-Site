@@ -10,7 +10,7 @@ export default function WebDesign() {
       <Seo title={'Web Design'} />
       <main className='web-design'>
         <ServicesHeader title='Web Design' />
-        <ServicesSlider />
+        {/* <ServicesSlider /> */}
       </main>
       <Footer />
     </Layout>

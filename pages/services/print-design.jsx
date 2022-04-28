@@ -10,7 +10,7 @@ export default function PrintDesign() {
       <Seo title={'Print Design'} />
       <main className='print-design'>
         <ServicesHeader title='Print Design' />
-        <ServicesSlider />
+        {/* <ServicesSlider /> */}
       </main>
       <Footer />
     </Layout>

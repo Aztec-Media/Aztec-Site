@@ -1,5 +1,4 @@
 import TeamSplide from '../sections/sliders/TeamSplide';
-import teamData from '../../data/teamData.json';
 
 export default function MeetTheTeam({ team }) {
   return (

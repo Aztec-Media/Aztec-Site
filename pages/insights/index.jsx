@@ -4,8 +4,7 @@ import InsightsGrid from '../../components/sections/insights/InsightsGrid';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
 import InsightsFeature from '../../components/sections/insights/InsightsFeature';
-
-import insightsData from '../../data/insightsData.json';
+import fetch from 'node-fetch';
 
 export default function Insights({ insights }) {
   return (

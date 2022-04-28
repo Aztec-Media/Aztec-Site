@@ -10,7 +10,7 @@ export default function Photography() {
       <Seo title={'Photography'} />
       <main className='photography'>
         <ServicesHeader title='Photography' />
-        <ServicesSlider />
+        {/* <ServicesSlider /> */}
       </main>
       <Footer />
     </Layout>

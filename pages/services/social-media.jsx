@@ -10,7 +10,7 @@ export default function SocialMedia() {
       <Seo title={'Social Media'} />
       <main className='social-media'>
         <ServicesHeader title='Social Media' />
-        <ServicesSlider />
+        {/* <ServicesSlider /> */}
       </main>
       <Footer />
     </Layout>

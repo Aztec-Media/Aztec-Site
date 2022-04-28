@@ -2,8 +2,7 @@ import Seo from '../../components/layout/Seo';
 import InsightsInnerSection from '../../components/sections/insights/InsightsInnerSection';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
-
-// import insightsData from '../../data/insightsData';
+import fetch from 'node-fetch';
 
 export default function InsightsInnerPage({ insight }) {
   return (

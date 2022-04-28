@@ -55,7 +55,7 @@ export default function ServicesSplide({ services }) {
             <Link href={`/services/${service.attributes.link}`}>
               <a>
                 <h3>
-                  <span className='number'>{service.number}</span>
+                  <span className='number'>{service.attributes.number}</span>
                   <span className='text'>
                     {service.attributes.title}
                     <div className='underline'></div>
