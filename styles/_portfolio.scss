@@ -2,395 +2,26 @@
   background-color: rgb(255, 255, 255);
 }
 
-// inner portfolio
-.inner__portfolio__header {
-  position: relative;
+.inner__portfolio__contact {
+  padding: 10rem 0;
 
-  .img {
-    width: 100%;
-    height: 60rem;
+  > div {
+    max-width: 800px;
     margin: 0 auto;
-    position: relative;
-    order: 1;
-
-    overflow: hidden;
-
-    figure {
-      width: 115%;
-      height: 115%;
-    }
-  }
-
-  .overlay {
-    position: absolute;
-    display: none;
-  }
-
-  .intro {
-    color: var(--white);
-    padding: 18rem 1rem 2rem 1rem;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-end;
-    max-width: max-content;
-    margin: 0 auto;
-
-    .btn {
-      .arrow {
-        svg {
-          path {
-            fill: #fff;
-          }
-        }
-      }
-    }
-
-    h1 {
-      margin-top: 2rem;
-      font-size: 11rem;
-      font-family: var(--title-font);
-      font-weight: var(--font-bold);
-      line-height: 1.25;
-    }
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .inner__portfolio__header {
-    .intro {
-      padding: 0 3rem 8rem 3rem;
-
-      h1 {
-        font-size: 3.5rem;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .inner__portfolio__header {
-    grid-template-columns: 1fr;
-    margin-bottom: 0;
-
-    .overlay {
-      display: block;
-      width: 100%;
-      height: 75%;
-      background: linear-gradient(rgba(0, 0, 0, 0), var(--blue));
-      z-index: 1;
-      bottom: 0;
-      left: 0;
-    }
-
-    .intro {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-      padding-right: 5rem;
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .inner__portfolio__header {
-    .intro {
-      padding: 0 2rem 8rem 2rem;
-
-      h1 {
-        font-size: 3rem;
-
-        .line {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .inner__portfolio__header {
-    .intro {
-      padding: 0 2rem 5rem 2rem;
-      text-align: center;
-
-      h1 {
-        font-size: 2.5rem;
-      }
-    }
-  }
-}
-
-.inner__portfolio__person {
-  padding: 8rem;
-
-  .person__img {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-    margin: 0 auto 2rem auto;
-
-    .img {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      bottom: 0;
-      right: 0;
-      clip-path: url(#logoClip);
-      box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
-      transition: all 0.5s ease-out;
-    }
-  }
-
-  .text {
-    text-align: center;
-
-    h6 {
-      font-size: 3rem;
-      font-family: var(--title-font);
-      font-weight: var(--font-bold);
-      padding-bottom: 1rem;
-    }
 
     p {
-      max-width: 30rem;
-      margin: 0 auto;
-      padding-bottom: 4rem;
+      font-size: 2rem;
+      font-weight: var(--font-xbold);
+      margin-bottom: 4rem;
     }
 
     .btn {
-      width: max-content;
-      margin: 0 auto;
-
       .arrow {
-        svg {
-          path {
-            fill: #fff;
-          }
-        }
+        border-color: rgb(19, 19, 19);
       }
     }
   }
-}
-
-.inner__portfolio__next {
-  height: 40rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #fff;
-  padding: 0 8rem;
-
-  .prev {
-    z-index: 1;
-
-    &:hover {
-      a {
-        svg {
-          transform: rotate(-180deg) translateX(1rem);
-        }
-      }
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      padding: 1rem;
-
-      svg {
-        width: 1rem;
-        transform: rotate(-180deg);
-        margin-right: 1rem;
-        transition: var(--fast-speed);
-      }
-    }
-  }
-
-  .text {
-    z-index: 1;
-    font-family: var(--title-font);
-    font-size: 4rem;
-  }
-
-  .next {
-    z-index: 1;
-
-    a {
-      display: flex;
-      align-items: center;
-      padding: 1rem;
-
-      svg {
-        width: 1rem;
-        margin-left: 1rem;
-        transition: var(--fast-speed);
-      }
-    }
-
-    &:hover {
-      a {
-        svg {
-          transform: translateX(1rem);
-        }
-      }
-    }
-  }
-
-  .img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    overflow: hidden;
-
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: #000;
-      opacity: 0.5;
-      z-index: 1;
-    }
-
-    .hover__overlay {
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      background: var(--blue);
-      opacity: 0.4;
-      top: -25%;
-      left: -25%;
-      transform: scale(0);
-      transform-origin: center;
-      border-radius: 50%;
-      transition: var(--mid-speed);
-    }
-  }
-
-  &:hover {
-    .img {
-      .hover__overlay {
-        transform: scale(1);
-      }
-    }
-  }
-}
-
-.portfolio__details {
-  padding: 8rem 2rem 0 2rem;
-
-  .grid {
-    max-width: 1850px;
-    margin: 0 auto;
-
-    img {
-      object-fit: contain;
-      object-position: center;
-    }
-
-    .brochure {
-      position: relative;
-      padding-bottom: 4rem;
-
-      .img {
-        width: 55%;
-        position: relative;
-        margin: 0 auto;
-      }
-    }
-
-    .site__layout {
-      position: relative;
-
-      .full {
-        width: 50%;
-        margin: 0 auto;
-        box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
-      }
-
-      .phone {
-        position: absolute;
-        top: 8rem;
-        right: 12rem;
-        height: 30rem;
-        width: 14rem;
-        z-index: 1;
-      }
-    }
-  }
-}
-
-// premier traffic
-.premier__details {
-  background-color: #fcfae1;
-  background-image: url('/premier/background.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  .grid {
-    .brochure {
-      padding-bottom: 0;
-    }
-
-    .posters {
-      position: relative;
-      width: 55%;
-      margin: 0 auto;
-    }
-
-    .cards {
-      position: relative;
-      z-index: 3;
-      width: 55%;
-      margin: 0 auto;
-    }
-
-    .logo {
-      position: relative;
-    }
-  }
-}
-
-// yarcombe traffic
-.yarcombe__details {
-  background-color: #2b4934;
-
-  .grid {
-    .social {
-      padding-top: 10rem;
-    }
-  }
-}
-
-// nuova details
-.nuova__details {
-  background-color: #d9d9d9;
-  background-size: 50%;
-  background-position: right;
-  background-image: url('/nuova/background.jpg');
-  background-repeat: no-repeat;
-}
-
-// king details
-.king__details {
-  background-color: #044c7e;
-}
-
-// profit details
-.profit__details {
-  background-color: #fff;
-}
-
-// fans details
-.fans__details {
-  background-color: #00467e;
 }
 
 // premier
@@ -474,7 +105,7 @@
   padding: 10rem 4rem;
 
   > div {
-    max-width: 1366px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -535,60 +166,69 @@
 
 .work__image__grid {
   background-color: rgb(19, 19, 19);
-  padding: 10rem 4rem;
+  padding-top: 10rem;
 
   .text__header {
     color: #fff;
-    max-width: 800px;
-    padding: 0 2rem 8rem 2rem;
-    font-size: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem 10rem 2rem;
+    font-size: 4rem;
+    font-weight: var(--font-xbold);
+    text-align: center;
   }
 
   .grid {
-    max-width: 1600px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-
     .img {
       box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
 
       img {
         object-fit: contain;
       }
-
-      &:nth-of-type(1),
-      &:nth-of-type(2) {
-        height: 60rem;
-      }
-
-      &:nth-of-type(3) {
-        height: 65rem;
-        grid-column: span 2 / auto;
-
-        img {
-          object-fit: cover;
-          object-position: top;
-        }
-      }
     }
   }
 }
 
-.more__work__slider {
-  padding: 8rem 0;
+.work__testimonial {
   background-color: rgb(19, 19, 19);
   color: #fff;
+  padding: 10rem 0;
+
+  > div {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      svg {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: var(--font-xbold);
+      text-align: center;
+    }
+  }
+}
+
+.final__img {
+  .img {
+    height: 60rem;
+  }
+}
+
+.more__work__slider {
+  padding-bottom: 12rem;
 
   .services__splide {
     .splide__slide {
-      .content {
-        p {
-          color: #fff;
-        }
-      }
-
       .img {
         figure {
           img {

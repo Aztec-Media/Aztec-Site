@@ -52,7 +52,7 @@ export default function ServicesSplide({ services }) {
             </figure>
           </div>
           <div className='content'>
-            <Link href={`/services/${service.attributes.link}`}>
+            <Link href={`/services/${service.attributes.alias}`}>
               <a>
                 <h3>
                   <span className='number'>{service.attributes.number}</span>
