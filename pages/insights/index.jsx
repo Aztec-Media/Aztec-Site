@@ -12,7 +12,7 @@ export default function Insights({ insights }) {
       <Seo title='Insights' />
       <main className='insights'>
         <LargeHero />
-        <InsightsFeature insights={insights} />
+        <InsightsFeature insight={insights[0]} />
         <InsightsGrid insights={insights} />
       </main>
       <Footer />

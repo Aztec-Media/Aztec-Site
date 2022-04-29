@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function InsightsFeature({ insights }) {
+export default function InsightsFeature({ insight }) {
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -31,14 +31,18 @@ export default function InsightsFeature({ insights }) {
       <div className='img' ref={imageRef}>
         <figure>
           <div className='overlay'></div>
-          <Image src='/img.jpg' layout='fill' alt='#' />
+          <Image
+            src={`http://localhost:1337${insight.attributes.image.data.attributes.url}`}
+            layout='fill'
+            alt={insight.attributes.title}
+          />
         </figure>
       </div>
       <article className='text'>
-        <Link href={`/insights/${insights[0].attributes.alias}`}>
+        <Link href={`/insights/${insight.attributes.alias}`}>
           <a>
-            <p className='date'>{insights[0].attributes.date}</p>
-            <h2>{insights[0].attributes.title}</h2>
+            <p className='date'>{insight.attributes.date}</p>
+            <h2>{insight.attributes.title}</h2>
             <BtnNoLink text='Read on' />
           </a>
         </Link>

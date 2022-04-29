@@ -107,40 +107,44 @@
 
 .insights__grid {
   padding: 8rem;
-  max-width: 1024px;
-  margin: 0 auto;
+  background-color: var(--orange);
 
-  .insights__item {
-    padding: 2rem 1.5rem;
-    border-bottom: 1px solid var(--blue);
-    margin-bottom: 2rem;
-    color: #fff;
+  .grid {
+    max-width: 1024px;
+    margin: 0 auto;
 
-    .date {
-      font-size: 0.9rem;
-      padding-bottom: 1rem;
-      opacity: 0.7;
-    }
+    .insights__item {
+      padding: 2rem 1.5rem;
+      border-bottom: 1px solid var(--blue);
+      margin-bottom: 2rem;
+      color: #fff;
 
-    .title {
-      font-size: 2.25rem;
-      font-family: var(--title-font);
-      padding-bottom: 1rem;
-    }
+      .date {
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+        opacity: 0.7;
+      }
 
-    .summary {
-      padding-bottom: 2rem;
-    }
+      .title {
+        font-size: 2.25rem;
+        font-family: var(--title-font);
+        padding-bottom: 1rem;
+      }
 
-    .btn {
-      font-size: 0.9rem;
-      justify-content: flex-start;
-      width: max-content;
+      .summary {
+        padding-bottom: 2rem;
+      }
 
-      .arrow {
-        svg {
-          path {
-            fill: #fff;
+      .btn {
+        font-size: 0.9rem;
+        justify-content: flex-start;
+        width: max-content;
+
+        .arrow {
+          svg {
+            path {
+              fill: #fff;
+            }
           }
         }
       }
@@ -184,6 +188,8 @@
 
 // insights inner
 .insights__inner__section {
+  background-color: var(--orange);
+
   .insights__inner__section__header {
     padding-bottom: 4rem;
     max-width: 1750px;
