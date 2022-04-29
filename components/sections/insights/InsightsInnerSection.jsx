@@ -38,7 +38,7 @@ export default function InsightsInnerSection({ insight }) {
             <Image
               src={`http://localhost:1337${insight.attributes.image.data.attributes.url}`}
               layout='fill'
-              alt={insight.attributes.title}
+              alt={insight.attributes.image.data.attributes.alternativeText}
             />
           </figure>
         </div>

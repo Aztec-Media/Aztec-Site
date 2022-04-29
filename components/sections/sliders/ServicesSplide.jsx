@@ -45,7 +45,7 @@ export default function ServicesSplide({ services }) {
               <Image
                 src={`http://localhost:1337${service.attributes.image.data.attributes.url}`}
                 layout='fill'
-                alt={service.attributes.title}
+                alt={service.attributes.image.data.attributes.alternativeText}
                 priority='true'
                 className='services__slider__img'
               />

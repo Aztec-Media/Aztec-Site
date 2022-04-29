@@ -45,7 +45,7 @@ export default function PortfolioSplide({ portfolio }) {
               <Image
                 src={`http://localhost:1337${item.attributes.mainImage.data.attributes.url}`}
                 layout='fill'
-                alt={item.attributes.title}
+                alt={item.attributes.mainImage.data.attributes.alternativeText}
                 priority='true'
                 className='services__slider__img'
               />

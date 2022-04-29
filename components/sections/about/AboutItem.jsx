@@ -88,7 +88,7 @@ export default function AboutItem({ item }) {
           <Image
             src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
             layout='fill'
-            alt='Aztec Media team members'
+            alt={item.attributes.image.data.attributes.alternativeText}
           />
         </figure>
         <div className='hover__img'>
@@ -96,7 +96,7 @@ export default function AboutItem({ item }) {
             <Image
               src={`http://localhost:1337${item.attributes.gif.data.attributes.url}`}
               layout='fill'
-              alt='Aztec Media team members'
+              alt={item.attributes.image.data.attributes.alternativeText}
             />
           </figure>
         </div>
