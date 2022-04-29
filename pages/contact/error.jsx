@@ -1,7 +1,6 @@
 import Seo from '../../components/layout/Seo';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
-import ContactSection from '../../components/sections/contact/ContactSection';
 
 export default function Contact() {
   return (

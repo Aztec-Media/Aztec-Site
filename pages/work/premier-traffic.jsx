@@ -1,14 +1,10 @@
-import InnerPortfolioHeader from '../../components/sections/portfolio/InnerPortfolioHeader';
 import InnerPortfolioPerson from '../../components/sections/portfolio/InnerPortfolioPerson';
-import InnerPortfolioNext from '../../components/sections/portfolio/InnerPortfolioNext';
 import Seo from '../../components/layout/Seo';
 import Layout from '../../components/layout/Layout';
 import Footer from '../../components/layout/Footer';
 import Image from 'next/image';
-import Link from 'next/link';
 import Btn from '../../components/general/Btn';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Arrow from '../../components/vectors/Arrow';
 import { Fragment } from 'react';
 import PortfolioSplide from '../../components/sections/sliders/PortfolioSplide';
 
