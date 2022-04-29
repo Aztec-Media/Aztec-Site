@@ -2,39 +2,34 @@ import Arrow from '../../vectors/Arrow';
 
 export default function PlannerForm() {
   return (
-    <section className='contact__form'>
+    <div className='contact__form'>
       <form className='form' action='/api/forms/contact'>
-        <div className='form__details'>
-          <span className='text'>Hello, my name is &nbsp;</span>
-          <input type='text' name='name' id='name' placeholder='Type here' />
-          <span>,</span>
-          <br />
-          <span className='text'>and I&apos;m looking for &nbsp;</span>
-          <input
-            type='text'
-            name='service'
-            id='service'
-            placeholder='Ecommerce website'
-          />
-          <span>.</span>
-          <br />
-          <span className='text'>You can contact me on &nbsp;</span>
-          <input
-            type='text'
-            name='email'
-            id='email'
-            placeholder='hello@aztec.media'
-          />
-          <span>.</span>
+        <div className='row name'>
+          <label htmlFor='name'>Name</label>
+          <input type='text' name='name' id='name' />
         </div>
-        <button type='submit' className='btn submit'>
-          <span>Send Enquiry</span>
-          <div className='arrow'>
-            <Arrow />
-            <div className='btn__hover'></div>
-          </div>
-        </button>
+        <div className='row email'>
+          <label htmlFor='email'>Email</label>
+          <input type='email' name='email' id='email' />
+        </div>
+        <div className='row service'>
+          <label htmlFor='service'>Service</label>
+          <input type='text' name='services' id='service' />
+        </div>
+        <div className='row message'>
+          <label htmlFor='message'>Message</label>
+          <textarea name='message' id='message'></textarea>
+        </div>
+        <div className='row submit'>
+          <button type='submit' className='btn'>
+            <span>Send Enquiry</span>
+            <div className='arrow'>
+              <Arrow />
+              <div className='btn__hover'></div>
+            </div>
+          </button>
+        </div>
       </form>
-    </section>
+    </div>
   );
 }

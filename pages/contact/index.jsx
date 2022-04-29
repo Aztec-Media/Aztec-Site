@@ -4,8 +4,9 @@ import Footer from '../../components/layout/Footer';
 import ContactSection from '../../components/sections/contact/ContactSection';
 import DotLogo from '../../components/vectors/DotLogo';
 import LogoFillClip from '../../components/vectors/LogoFillClip';
+import MeetTheTeam from '../../components/general/MeetTheTeam';
 
-export default function Contact() {
+export default function Contact({ team }) {
   return (
     <Layout>
       <Seo title='Contact Us' />
@@ -14,16 +15,21 @@ export default function Contact() {
           <DotLogo />
           <LogoFillClip />
         </section>
-        <section className='contact__header'>
-          <h1>Get In Touch</h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
-            inventore vitae ex porro aspernatur quo numquam, a animi earum quis!
-          </p>
-        </section>
         <ContactSection />
+        <MeetTheTeam team={team} />
       </main>
       <Footer />
     </Layout>
   );
+}
+
+export async function getStaticProps({ params }) {
+  const teamRes = await fetch('http://localhost:1337/api/teams?populate=*');
+  const teamData = await teamRes.json();
+
+  return {
+    props: {
+      team: teamData.data,
+    },
+  };
 }

@@ -5,6 +5,28 @@ import { Fragment } from 'react';
 import DualArrow from '../../vectors/DualArrow';
 
 export default function TeamSplide({ direction, teamData }) {
+  function shuffle(array) {
+    let currentIndex = array.length,
+      randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  }
+
+  const randomed = shuffle(teamData);
+
   return (
     <Splide
       className={`team__splide ${direction}`}
@@ -15,6 +37,7 @@ export default function TeamSplide({ direction, teamData }) {
         focus: 'center',
         perPage: 5,
         gap: '2rem',
+        pauseOnHover: false,
         autoScroll: {
           speed: 2,
         },
@@ -37,7 +60,7 @@ export default function TeamSplide({ direction, teamData }) {
       }}
       extensions={{ AutoScroll }}
     >
-      {teamData.map((item, index) => (
+      {randomed.map((item, index) => (
         <Fragment key={index}>
           <SplideSlide>
             <div className='slide__content'>
@@ -59,8 +82,8 @@ export default function TeamSplide({ direction, teamData }) {
                 </figure>
               </div>
               <div className='text'>
-                <h4>{item.name}</h4>
-                <p>{item.title}</p>
+                <h4>{item.attributes.name}</h4>
+                <p>{item.attributes.title}</p>
               </div>
             </div>
           </SplideSlide>

@@ -1,5 +1,5 @@
 import InnerPortfolioHeader from '../../components/sections/portfolio/InnerPortfolioHeader';
-import InnerPortfolioPerson from '../../components/sections/portfolio/InnerPortfolioPerson';
+import InnerPortfolioContact from '../../components/sections/portfolio/InnerPortfolioContact';
 import InnerPortfolioNext from '../../components/sections/portfolio/InnerPortfolioNext';
 import Seo from '../../components/layout/Seo';
 import Layout from '../../components/layout/Layout';
