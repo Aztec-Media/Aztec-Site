@@ -64,18 +64,6 @@
   margin: 0 auto;
 }
 
-.work__heading .title ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: var(--font-light);
-  margin-bottom: 1rem;
-}
-
-.work__heading .title ul li {
-  margin-right: 1rem;
-}
-
 .work__heading .title h1 {
   font-family: var(--title-font);
   font-size: 6rem;
