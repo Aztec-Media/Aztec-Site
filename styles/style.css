@@ -4390,6 +4390,7 @@ main {
   display: block;
   margin-bottom: 0.25rem;
   font-size: 1.5rem;
+  display: none;
 }
 
 .contact__section .contact__form .row input,
@@ -4402,9 +4403,30 @@ main {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  font-size: 1.5rem;
   border-bottom: 1px solid #fff;
   padding: 1rem;
   color: #fff;
+}
+
+.contact__section .contact__form .row input::-webkit-input-placeholder,
+.contact__section .contact__form .row textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact__section .contact__form .row input:-ms-input-placeholder,
+.contact__section .contact__form .row textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact__section .contact__form .row input::-ms-input-placeholder,
+.contact__section .contact__form .row textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact__section .contact__form .row input::placeholder,
+.contact__section .contact__form .row textarea::placeholder {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .contact__section .contact__form .row.message textarea {

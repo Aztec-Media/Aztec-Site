@@ -6,19 +6,28 @@ export default function PlannerForm() {
       <form className='form' action='/api/forms/contact'>
         <div className='row name'>
           <label htmlFor='name'>Name</label>
-          <input type='text' name='name' id='name' />
+          <input type='text' name='name' id='name' placeholder='Name' />
         </div>
         <div className='row email'>
           <label htmlFor='email'>Email</label>
-          <input type='email' name='email' id='email' />
+          <input type='email' name='email' id='email' placeholder='Email' />
         </div>
         <div className='row service'>
           <label htmlFor='service'>Service</label>
-          <input type='text' name='services' id='service' />
+          <input
+            type='text'
+            name='services'
+            id='service'
+            placeholder='What service do you require?'
+          />
         </div>
         <div className='row message'>
           <label htmlFor='message'>Message</label>
-          <textarea name='message' id='message'></textarea>
+          <textarea
+            name='message'
+            id='message'
+            placeholder='Message'
+          ></textarea>
         </div>
         <div className='row submit'>
           <button type='submit' className='btn'>
