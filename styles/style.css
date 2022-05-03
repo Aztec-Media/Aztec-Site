@@ -4572,13 +4572,13 @@ main.404 {
 }
 
 .contact__section {
-  background-color: var(--orange);
+  background-color: var(--blue);
   padding: 16rem 4rem 4rem 4rem;
   color: #fff;
 }
 
 .contact__section .grid {
-  max-width: 1600px;
+  max-width: 1440px;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -4607,7 +4607,17 @@ main.404 {
   width: max-content;
 }
 
+.contact__section .grid .contact__text .btn .arrow .btn__hover {
+  background-color: var(--orange);
+}
+
 .contact__section .grid .contact__text .btn .arrow svg path {
+  -webkit-transition: var(--fast-speed);
+  transition: var(--fast-speed);
+  fill: var(--orange);
+}
+
+.contact__section .grid .contact__text .btn:hover .arrow svg path {
   fill: #fff;
 }
 
@@ -4668,8 +4678,57 @@ main.404 {
   overflow: unset;
 }
 
+.contact__section .contact__form .row.submit .btn .arrow .btn__hover {
+  background-color: var(--orange);
+}
+
 .contact__section .contact__form .row.submit .btn .arrow svg path {
+  fill: var(--orange);
+  -webkit-transition: var(--fast-speed);
+  transition: var(--fast-speed);
+}
+
+.contact__section .contact__form .row.submit .btn:hover .arrow svg path {
   fill: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .contact__section {
+    padding: 12rem 2rem 4rem 2rem;
+  }
+  .contact__section .grid {
+    display: block;
+  }
+  .contact__section .grid .contact__text {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  .contact__section .grid .contact__text .btn {
+    display: none;
+  }
+  .contact__section .grid .contact__form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact__section .grid .contact__text h1 {
+    font-size: 2rem;
+  }
+  .contact__section .grid .contact__form .row input,
+  .contact__section .grid .contact__form .row textarea {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .contact__section {
+    padding: 8rem 1rem 4rem 1rem;
+  }
+  .contact__section .grid .contact__text h1 {
+    font-size: 1.5rem;
+  }
 }
 
 .careers__section .careers__section__header {

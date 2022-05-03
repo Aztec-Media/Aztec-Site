@@ -344,12 +344,12 @@
 }
 
 .contact__section {
-  background-color: var(--orange);
+  background-color: var(--blue);
   padding: 16rem 4rem 4rem 4rem;
   color: #fff;
 
   .grid {
-    max-width: 1600px;
+    max-width: 1440px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -370,9 +370,24 @@
         width: max-content;
 
         .arrow {
+          .btn__hover {
+            background-color: var(--orange);
+          }
+
           svg {
             path {
-              fill: #fff;
+              transition: var(--fast-speed);
+              fill: var(--orange);
+            }
+          }
+        }
+
+        &:hover {
+          .arrow {
+            svg {
+              path {
+                fill: #fff;
+              }
             }
           }
         }
@@ -424,12 +439,86 @@
           overflow: unset;
 
           .arrow {
+            .btn__hover {
+              background-color: var(--orange);
+            }
+
             svg {
               path {
-                fill: #fff;
+                fill: var(--orange);
+                transition: var(--fast-speed);
               }
             }
           }
+
+          &:hover {
+            .arrow {
+              svg {
+                path {
+                  fill: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .contact__section {
+    padding: 12rem 2rem 4rem 2rem;
+
+    .grid {
+      display: block;
+
+      .contact__text {
+        margin-bottom: 4rem;
+        text-align: center;
+
+        .btn {
+          display: none;
+        }
+      }
+
+      .contact__form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact__section {
+    .grid {
+      .contact__text {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+
+      .contact__form {
+        .row {
+          input,
+          textarea {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .contact__section {
+    padding: 8rem 1rem 4rem 1rem;
+
+    .grid {
+      .contact__text {
+        h1 {
+          font-size: 1.5rem;
         }
       }
     }
