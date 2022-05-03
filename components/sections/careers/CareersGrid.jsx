@@ -1,11 +1,11 @@
 import CareersItem from './CareersItem';
 
-export default function CareersGrid() {
+export default function CareersGrid({ careers }) {
   return (
     <section className='careers__grid'>
-      <CareersItem />
-      <CareersItem />
-      <CareersItem />
+      {careers.map((item) => (
+        <CareersItem key={item.id} item={item} />
+      ))}
     </section>
   );
 }

@@ -711,7 +711,7 @@ main {
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
 }
 
-main.404 {
+main.careers__section {
   background-color: var(--orange);
 }
 
@@ -4859,6 +4859,7 @@ main.404 {
   margin-bottom: 2rem;
   color: #fff;
   position: relative;
+  cursor: pointer;
 }
 
 .careers__grid .careers__item .more {
@@ -4867,7 +4868,6 @@ main.404 {
   right: 0;
   height: 5rem;
   width: 5rem;
-  cursor: pointer;
   border-radius: 50%;
   border: 1px solid transparent;
   -webkit-transition: var(--fast-speed);
@@ -4904,6 +4904,17 @@ main.404 {
 
 .careers__grid .careers__item .content {
   display: none;
+}
+
+.careers__grid .careers__item .content p,
+.careers__grid .careers__item .content ul {
+  margin-bottom: 1rem;
+}
+
+.careers__grid .careers__item .content li {
+  margin-bottom: 0.25rem;
+  list-style: square;
+  margin-left: 1rem;
 }
 
 .careers__grid .careers__item .content.open {

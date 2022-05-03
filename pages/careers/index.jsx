@@ -4,7 +4,7 @@ import Footer from '../../components/layout/Footer';
 import CareersGrid from '../../components/sections/careers/CareersGrid';
 import Btn from '../../components/general/Btn';
 
-export default function Careers({ data }) {
+export default function Careers({ careers }) {
   return (
     <Layout>
       <Seo title='Careers' />
@@ -22,9 +22,22 @@ export default function Careers({ data }) {
             <Btn href='/' text='Recent Work' />
           </div>
         </div>
-        <CareersGrid />
+        <CareersGrid careers={careers} />
       </main>
       <Footer />
     </Layout>
   );
+}
+
+export async function getStaticProps({ params }) {
+  const careersRes = await fetch(
+    'http://localhost:1337/api/careers?populate=*'
+  );
+  const careersData = await careersRes.json();
+
+  return {
+    props: {
+      careers: careersData.data,
+    },
+  };
 }

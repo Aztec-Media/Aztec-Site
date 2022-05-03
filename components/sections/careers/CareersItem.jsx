@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import Btn from '../../general/Btn';
 
-export default function CareersItem() {
+export default function CareersItem({ item }) {
   const [itemOpen, setItemOpen] = useState(false);
 
   return (
-    <article className='careers__item'>
-      <div className='title'>Web Developer</div>
-      <div className='more' onClick={() => setItemOpen(!itemOpen)}>
+    <article className='careers__item' onClick={() => setItemOpen(!itemOpen)}>
+      <div className='title'>{item.attributes.title}</div>
+      <div className='more'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='16'
@@ -37,13 +38,7 @@ export default function CareersItem() {
       </div>
       <div className={`content ${itemOpen ? 'open' : ''}`}>
         <div className='summary'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-          quisquam. Maiores accusamus nihil harum, ducimus tenetur optio
-          voluptas quas eveniet! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Odio, quisquam. Maiores accusamus nihil harum,
-          ducimus tenetur optio voluptas quas eveniet! Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Odio, quisquam. Maiores accusamus
-          nihil harum, ducimus tenetur optio voluptas quas eveniet!
+          <ReactMarkdown>{item.attributes.content}</ReactMarkdown>
         </div>
         <Btn href='mailto:hello@aztec.media' text='Apply here' />
       </div>
