@@ -4,7 +4,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import { Fragment } from 'react';
 import DualArrow from '../../vectors/DualArrow';
 
-export default function TeamSplide({ direction, teamData }) {
+export default function TeamSplide({ direction, teamData, text }) {
   function shuffle(array) {
     let currentIndex = array.length,
       randomIndex;
@@ -89,7 +89,7 @@ export default function TeamSplide({ direction, teamData }) {
           </SplideSlide>
           <SplideSlide>
             <div className='slide__spacer'>
-              <p>Our Team</p>
+              <p>{text}</p>
               <div className='arrows'>
                 <DualArrow />
               </div>
