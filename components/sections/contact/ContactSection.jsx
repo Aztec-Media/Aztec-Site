@@ -8,7 +8,7 @@ export default function ContactSection() {
       <div className='grid'>
         <div className='contact__text'>
           <h1>
-            Let's build something <br />
+            Let&apos;s build something <br />
             awesome together
           </h1>
           <Btn href='tel:01935477073' text='Give us a call' />

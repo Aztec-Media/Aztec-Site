@@ -46,9 +46,13 @@ export async function getStaticProps({ params }) {
     (item) => item.attributes.title === 'Premier Traffic'
   );
 
+  const portfolios = portfolioData.data.filter(
+    (item) => item.attributes.title !== 'Premier Traffic'
+  );
+
   return {
     props: {
-      portfolios: portfolioData.data,
+      portfolios,
       portfolio: portfolio[0],
     },
   };

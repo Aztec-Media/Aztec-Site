@@ -16,6 +16,16 @@ export default function WorkImageSlider({ portfolio }) {
           focus: 'center',
           gap: '6rem',
           updateOnMove: true,
+          breakpoints: {
+            1200: {
+              gap: '4rem',
+              padding: '6rem',
+            },
+            768: {
+              padding: '3rem',
+              gap: '2rem',
+            },
+          },
         }}
         className='work__img__splide'
       >
@@ -26,7 +36,7 @@ export default function WorkImageSlider({ portfolio }) {
                 <figure>
                   <Image
                     src={`http:localhost:1337${img.attributes.url}`}
-                    alt='#'
+                    alt={img.attributes.alternativeText}
                     layout='fill'
                   />
                 </figure>
