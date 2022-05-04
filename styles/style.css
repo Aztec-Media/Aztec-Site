@@ -47,19 +47,22 @@
   }
 }
 
+.work__main .work__heading .colour {
+  background-color: #131313;
+}
+
 .work__heading {
   padding: 22rem 4rem 0 4rem;
   color: #fff;
   position: relative;
 }
 
-.work__heading .black {
+.work__heading .colour {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 65rem;
-  background-color: #131313;
   z-index: 0;
 }
 
@@ -96,8 +99,23 @@
   margin-top: 4rem;
   height: 60rem;
   position: relative;
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+}
+
+.work__heading .main__img .img__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue);
+  z-index: 10;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.work__heading .main__img figure {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -121,7 +139,7 @@
     width: -moz-max-content;
     width: max-content;
   }
-  .work__heading .black {
+  .work__heading .colour {
     height: 58rem;
   }
   .work__heading .main__img {
@@ -144,7 +162,7 @@
   .work__heading .title .btn {
     display: none;
   }
-  .work__heading .black {
+  .work__heading .colour {
     height: 48rem;
   }
   .work__heading .main__img {
@@ -208,6 +226,23 @@
 
 .showcase__img {
   height: 60rem;
+}
+
+.showcase__img .img__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue);
+  z-index: 10;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.showcase__img figure {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -327,16 +362,31 @@
   padding-bottom: 8rem;
 }
 
-.work__img__slider .splide__progress__bar {
-  background-color: #fff;
-  height: 1rem;
-  width: 100%;
+.work__img__slider .splide__progress {
+  background-color: var(--light-grey);
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 1rem;
+}
+
+.work__img__slider .splide__progress .splide__progress__bar {
+  background-color: var(--orange);
+  height: 4px;
+  border-radius: 1rem;
 }
 
 .work__img__slider .splide__slide .img {
   height: 60rem;
   -webkit-transition: var(--fast-speed);
   transition: var(--fast-speed);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.work__img__slider .splide__slide .img figure,
+.work__img__slider .splide__slide .img img {
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -373,11 +423,27 @@
 }
 
 .work__image__grid .grid .img {
-  -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-.work__image__grid .grid .img img {
+.work__image__grid .grid .img figure {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.work__image__grid .grid .img .img__cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+  z-index: 10;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.work__image__grid .grid img {
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -703,6 +769,7 @@ img {
 }
 
 main {
+  background-color: #fff;
   position: relative;
   z-index: 1;
   -webkit-transition: var(--mid-speed);
@@ -760,6 +827,10 @@ main.careers__section {
 
 .section__404 p {
   padding-bottom: 1rem;
+}
+
+.section__404 .btn .arrow svg path {
+  fill: #fff;
 }
 
 #cursor {
@@ -4259,7 +4330,7 @@ main.careers__section {
 }
 
 .contact__header h1 {
-  font-size: 10rem;
+  font-size: 8rem;
   font-family: var(--title-font);
   font-weight: var(--font-med);
   padding-bottom: 1rem;
@@ -4306,7 +4377,7 @@ main.careers__section {
   transition: var(--mid-speed);
   width: 100%;
   padding: 4rem;
-  max-width: 1440px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -4386,7 +4457,7 @@ main.careers__section {
 }
 
 .planner__form .form .row {
-  max-width: 1440px;
+  max-width: 1024px;
   margin: 0 auto 4rem auto;
   width: 100%;
   position: relative;
@@ -4427,7 +4498,7 @@ main.careers__section {
   width: 100%;
   height: 100%;
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
   vertical-align: bottom;
   font-family: var(--title-font);
   font-weight: var(--font-light);
@@ -4438,7 +4509,7 @@ main.careers__section {
 .planner__form .form .row input::-webkit-input-placeholder {
   color: #fff;
   opacity: 0.35;
-  font-size: 4rem;
+  font-size: 3rem;
   vertical-align: bottom;
 }
 
@@ -4446,7 +4517,7 @@ main.careers__section {
 .planner__form .form .row input:-ms-input-placeholder {
   color: #fff;
   opacity: 0.35;
-  font-size: 4rem;
+  font-size: 3rem;
   vertical-align: bottom;
 }
 
@@ -4454,7 +4525,7 @@ main.careers__section {
 .planner__form .form .row input::-ms-input-placeholder {
   color: #fff;
   opacity: 0.35;
-  font-size: 4rem;
+  font-size: 3rem;
   vertical-align: bottom;
 }
 
@@ -4462,7 +4533,7 @@ main.careers__section {
 .planner__form .form .row input::placeholder {
   color: #fff;
   opacity: 0.35;
-  font-size: 4rem;
+  font-size: 3rem;
   vertical-align: bottom;
 }
 
@@ -4474,6 +4545,28 @@ main.careers__section {
 
 .planner__form .form .row textarea {
   height: 24rem;
+}
+
+@media only screen and (max-width: 1280px) {
+  .contact__header {
+    padding: 24rem 2rem 4rem 2rem;
+  }
+  .contact__header h1 {
+    font-size: 6rem;
+  }
+  .contact__header p {
+    width: 100%;
+    max-width: 650px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact__header {
+    padding: 20rem 1rem 4rem 1rem;
+  }
+  .contact__header h1 {
+    font-size: 5rem;
+  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -4509,6 +4602,15 @@ main.careers__section {
 }
 
 @media only screen and (max-width: 625px) {
+  .contact__header {
+    padding-top: 16rem;
+  }
+  .contact__header h1 {
+    font-size: 4rem;
+  }
+  .contact__header p {
+    font-size: 1rem;
+  }
   .planner__form .form .part {
     padding: 2rem 1rem;
   }

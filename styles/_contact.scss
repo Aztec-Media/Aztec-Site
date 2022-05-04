@@ -79,7 +79,7 @@
   background-color: var(--blue);
 
   h1 {
-    font-size: 10rem;
+    font-size: 8rem;
     font-family: var(--title-font);
     font-weight: var(--font-med);
     padding-bottom: 1rem;
@@ -117,7 +117,7 @@
       transition: var(--mid-speed);
       width: 100%;
       padding: 4rem;
-      max-width: 1440px;
+      max-width: 1024px;
       margin: 0 auto;
 
       &.selected {
@@ -193,7 +193,7 @@
     }
 
     .row {
-      max-width: 1440px;
+      max-width: 1024px;
       margin: 0 auto 4rem auto;
       width: 100%;
       position: relative;
@@ -231,7 +231,7 @@
         width: 100%;
         height: 100%;
         padding: 1rem;
-        font-size: 4rem;
+        font-size: 3rem;
         vertical-align: bottom;
         font-family: var(--title-font);
         font-weight: var(--font-light);
@@ -240,7 +240,7 @@
         &::placeholder {
           color: #fff;
           opacity: 0.35;
-          font-size: 4rem;
+          font-size: 3rem;
           vertical-align: bottom;
         }
 
@@ -254,6 +254,31 @@
       textarea {
         height: 24rem;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .contact__header {
+    padding: 24rem 2rem 4rem 2rem;
+
+    h1 {
+      font-size: 6rem;
+    }
+
+    p {
+      width: 100%;
+      max-width: 650px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact__header {
+    padding: 20rem 1rem 4rem 1rem;
+
+    h1 {
+      font-size: 5rem;
     }
   }
 }
@@ -284,6 +309,18 @@
 }
 
 @media only screen and (max-width: 625px) {
+  .contact__header {
+    padding-top: 16rem;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
   .planner__form {
     .form {
       .part {

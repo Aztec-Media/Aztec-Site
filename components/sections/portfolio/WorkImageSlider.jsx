@@ -1,4 +1,4 @@
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { Fragment } from 'react';
 import Image from 'next/image';
 
@@ -6,12 +6,14 @@ export default function WorkImageSlider({ portfolio }) {
   return (
     <section className='work__img__slider'>
       <Splide
+        hasTrack={false}
         options={{
-          rewind: false,
+          rewind: true,
           arrows: false,
           pagination: false,
           perPage: 1,
           perMove: 1,
+          autoplay: true,
           padding: '10rem',
           focus: 'center',
           gap: '6rem',
@@ -29,10 +31,11 @@ export default function WorkImageSlider({ portfolio }) {
         }}
         className='work__img__splide'
       >
-        {portfolio.attributes.sliderImages.data.map((img) => (
-          <Fragment key={img.id}>
-            <SplideSlide>
-              <div className='img'>
+        <SplideTrack>
+          {portfolio.attributes.sliderImages.data.map((img) => (
+            // <Fragment key={img.id}>
+            <SplideSlide key={img.id}>
+              <div className='img work__slider__img'>
                 <figure>
                   <Image
                     src={`http:localhost:1337${img.attributes.url}`}
@@ -42,8 +45,9 @@ export default function WorkImageSlider({ portfolio }) {
                 </figure>
               </div>
             </SplideSlide>
-          </Fragment>
-        ))}
+            // </Fragment>
+          ))}
+        </SplideTrack>
         <div className='splide__progress'>
           <div className='splide__progress__bar' />
         </div>

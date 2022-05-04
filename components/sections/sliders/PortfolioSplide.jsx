@@ -52,7 +52,7 @@ export default function PortfolioSplide({ portfolio }) {
             </figure>
           </div>
           <div className='content'>
-            <Link href={`/services/${item.attributes.alias}`}>
+            <Link href={`/work/${item.attributes.alias}`}>
               <a>
                 <h3>
                   <span className='number'>{item.attributes.number}</span>

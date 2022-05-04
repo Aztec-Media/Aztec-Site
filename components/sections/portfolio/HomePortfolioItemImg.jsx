@@ -66,6 +66,11 @@ export default function HomePortfolioItemImg({ image }) {
         );
       },
     });
+
+    return () => {
+      introTl.kill();
+      slideTl.kill();
+    };
   }, [portfolioImageRef]);
 
   return (

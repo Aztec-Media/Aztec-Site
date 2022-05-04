@@ -15,8 +15,8 @@ import FinalImage from '../../components/sections/portfolio/FinalImage';
 export default function PremierTraffic({ portfolio, portfolios }) {
   return (
     <Layout>
-      <Seo title={'Premier Traffic'} />
-      <main className='work__main work__main--premier'>
+      <Seo title={'Saucony'} />
+      <main className='work__main work__main--saucony'>
         <WorkHeading portfolio={portfolio} />
         <WorkIntroDetails portfolio={portfolio} />
         <ShowcaseImage portfolio={portfolio} />
@@ -42,11 +42,11 @@ export async function getStaticProps({ params }) {
   const portfolioData = await portfolioRes.json();
 
   const portfolio = portfolioData.data.filter(
-    (item) => item.attributes.title === 'Premier Traffic'
+    (item) => item.attributes.title === 'Saucony'
   );
 
   const portfolios = portfolioData.data.filter(
-    (item) => item.attributes.title !== 'Premier Traffic'
+    (item) => item.attributes.title !== 'Saucony'
   );
 
   return {

@@ -33,7 +33,10 @@ export default function Cursor() {
         ${mouseY - cursorRef.current.clientHeight * 0.01}px, 0)
       `;
 
-      if (target.classList.contains('services__slider__img')) {
+      if (
+        target.classList.contains('services__slider__img') ||
+        target.classList.contains('work__slider__img')
+      ) {
         setCursorClass('drag');
         setCursorText('Drag');
         setInnerCursorClass('drag');

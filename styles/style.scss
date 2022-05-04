@@ -214,7 +214,7 @@ img {
 }
 
 main {
-  // background-color: var(--bg-colour);
+  background-color: #fff;
   position: relative;
   z-index: 1;
   transition: var(--mid-speed);
@@ -254,6 +254,16 @@ main {
 
   p {
     padding-bottom: 1rem;
+  }
+
+  .btn {
+    .arrow {
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
   }
 }
 

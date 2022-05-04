@@ -1,6 +1,35 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 export default function WorkTestimonial({ portfolio }) {
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      defaults: { duration: 0.8, ease: 'power1.inOut' },
+      scrollTrigger: {
+        trigger: textRef.current,
+        start: 'top 70%',
+        toggleActions: 'play none none reverse',
+      },
+    });
+
+    tl.fromTo(
+      [
+        textRef.current.querySelectorAll('.icon'),
+        textRef.current.querySelector('p'),
+      ],
+      { y: 25, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, stagger: 0.4 }
+    );
+
+    return () => tl.kill();
+  }, []);
+
   return (
-    <section className='work__testimonial'>
+    <section className='work__testimonial' ref={textRef}>
       <div>
         <div className='icon'>
           <svg
