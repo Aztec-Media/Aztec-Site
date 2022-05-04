@@ -1,14 +1,14 @@
 // careers
 .careers__section {
   .careers__section__header {
-    padding: 28rem 4rem 12rem 4rem;
+    padding: 20rem 4rem 10rem 4rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
 
     .text {
-      color: var(--white);
+      color: #fff;
       padding-bottom: 4rem;
 
       h1 {
@@ -28,16 +28,32 @@
     .btns {
       display: flex;
       align-items: center;
+      color: #fff;
 
       .btn {
         &:first-of-type {
           margin-right: 4rem;
         }
 
+        &:hover {
+          .arrow {
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+          }
+        }
+
         .arrow {
+          .btn__hover {
+            background-color: var(--orange);
+          }
+
           svg {
             path {
-              fill: #fff;
+              fill: var(--orange);
+              transition: var(--fast-speed);
             }
           }
         }
@@ -49,7 +65,7 @@
 @media only screen and (max-width: 1360px) {
   .careers__section {
     .careers__section__header {
-      padding: 24rem 4rem 10rem 4rem;
+      padding: 18rem 4rem 8rem 4rem;
 
       .text {
         h1 {
@@ -63,7 +79,7 @@
 @media only screen and (max-width: 1200px) {
   .careers__section {
     .careers__section__header {
-      padding: 24rem 2rem 8rem 2rem;
+      padding: 16rem 2rem 6rem 2rem;
     }
   }
 }
@@ -83,7 +99,7 @@
 @media only screen and (max-width: 700px) {
   .careers__section {
     .careers__section__header {
-      padding: 18rem 1rem 6rem 1rem;
+      padding: 12rem 1rem 4rem 1rem;
 
       .text {
         h1 {
@@ -156,7 +172,7 @@
 
   .careers__item {
     padding: 2rem;
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 1px solid var(--orange);
     margin-bottom: 2rem;
     color: #fff;
     position: relative;
@@ -203,6 +219,8 @@
 
     .content {
       display: none;
+      margin: 1rem 0 2rem 0;
+      font-size: 1.15rem;
 
       p,
       ul {
@@ -224,17 +242,32 @@
       }
 
       .btn {
-        font-size: 0.9rem;
+        font-size: 1.15rem;
         justify-content: flex-start;
         width: max-content;
 
         .arrow {
-          width: 3rem;
-          height: 3rem;
+          width: 4rem;
+          height: 4rem;
+
+          .btn__hover {
+            background-color: var(--orange);
+          }
 
           svg {
             path {
-              fill: #fff;
+              fill: var(--orange);
+              transition: var(--fast-speed);
+            }
+          }
+        }
+
+        &:hover {
+          .arrow {
+            svg {
+              path {
+                fill: #fff;
+              }
             }
           }
         }
@@ -272,6 +305,14 @@
     .careers__item {
       .title {
         font-size: 1.5rem;
+      }
+
+      .content {
+        font-size: 1rem;
+
+        .btn {
+          font-size: 1rem;
+        }
       }
 
       .more {

@@ -43,10 +43,12 @@ export default function WorkCircle({ item, index }) {
           </div>
           <div className='hover__circle'>
             <h4>{item.attributes.title}</h4>
-            <div className='discover'>
+            <p>{item.attributes.service1}</p>
+            {/* <div className='discover'>
               <p>Discover</p>
               <Arrow />
-            </div>
+            </div> */}
+            <LogoFillClip />
           </div>
         </a>
       </Link>

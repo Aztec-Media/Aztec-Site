@@ -38,6 +38,7 @@ export default function TeamSplide({ direction, teamData, text }) {
         perPage: 5,
         gap: '2rem',
         pauseOnHover: false,
+        pagination: false,
         autoScroll: {
           speed: 2,
         },

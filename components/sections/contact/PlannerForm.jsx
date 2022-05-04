@@ -1,12 +1,18 @@
 import { useState } from 'react';
 import Arrow from '../../vectors/Arrow';
 import PlannerFormRow from './PlannerFormRow';
+import DotLogo from '../../../components/vectors/DotLogo';
+import LogoFillClip from '../../../components/vectors/LogoFillClip';
 
 export default function PlannerForm() {
   const [selectedPart, setSelectedPart] = useState(1);
 
   return (
     <section className='planner__form'>
+      <section className='dot__logo'>
+        <DotLogo />
+        <LogoFillClip />
+      </section>
       <form className='form' action='/api/forms/planner'>
         <div className={`part part1 ${selectedPart === 1 ? 'selected' : ''}`}>
           <PlannerFormRow

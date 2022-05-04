@@ -98,7 +98,15 @@ export default function NavbarRight() {
           <p className='nav--anim'>Pen Mill Trading Estate, Yeovil</p>
           <p className='nav--anim'>Somerset, BA21 5EA</p>
         </address>
-        <p className='directions nav--anim'>Get Directions</p>
+        <p className='directions nav--anim'>
+          <a
+            href='https://www.google.com/maps/place/AztecMedia/@50.9533822,-2.6086676,14.19z/data=!4m5!3m4!1s0x4872404e06af5321:0xc59416c83f452e37!8m2!3d50.9468842!4d-2.609976'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Get Directions
+          </a>
+        </p>
       </div>
     </section>
   );

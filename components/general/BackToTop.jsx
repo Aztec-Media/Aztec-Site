@@ -37,6 +37,7 @@ export default function BackToTop() {
         viewBox='0 0 505 61'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
+        className='shape'
       >
         <g opacity='0.475'>
           <path
@@ -46,7 +47,22 @@ export default function BackToTop() {
           />
         </g>
       </svg>
-      <p>Back To Top</p>
+      <p>
+        <svg
+          width='32'
+          height='18'
+          viewBox='0 0 32 18'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className='arrow__svg'
+        >
+          <path
+            d='M21.259 0V6.0305H0V11.9713H21.259V18.0018L32.0036 9L21.259 0Z'
+            fill='#F69321'
+          />
+        </svg>
+        <span>Back To Top</span>
+      </p>
     </div>
   );
 }

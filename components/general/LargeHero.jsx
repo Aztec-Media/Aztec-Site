@@ -1,4 +1,5 @@
-import BtnNoLink from './BtnNoLink';
+import Arrow from '../vectors/Arrow';
+import Pause from '../vectors/Pause';
 import { useState, useRef, useEffect } from 'react';
 
 export default function LargeHero() {
@@ -30,10 +31,13 @@ export default function LargeHero() {
             }
           }}
         >
-          <BtnNoLink
-            href='/'
-            text={videoPlaying ? 'Pause showreel' : 'Watch showreel'}
-          />
+          <div className='btn'>
+            <span>{videoPlaying ? 'Pause showreel' : 'Watch showreel'}</span>
+            <div className='arrow'>
+              {videoPlaying ? <Pause /> : <Arrow />}
+              <div className='btn__hover'></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

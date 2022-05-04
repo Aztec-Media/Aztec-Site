@@ -1,6 +1,6 @@
 // work section
 .work__header {
-  padding: 28rem 8rem 4rem 8rem;
+  padding: 20rem 8rem 4rem 8rem;
   color: var(--white);
   background-color: var(--blue);
 
@@ -10,6 +10,7 @@
     font-weight: var(--font-med);
     text-align: center;
     line-height: 1.25;
+    margin-bottom: 1.5rem;
   }
 
   p {
@@ -22,7 +23,7 @@
 
 @media only screen and (max-width: 1360px) {
   .work__header {
-    padding: 24rem 4rem 10rem 4rem;
+    padding: 18rem 4rem 10rem 4rem;
 
     h1 {
       font-size: 8rem;
@@ -32,7 +33,7 @@
 
 @media only screen and (max-width: 1200px) {
   .work__header {
-    padding: 24rem 2rem 8rem 2rem;
+    padding: 16rem 2rem 8rem 2rem;
   }
 }
 
@@ -46,7 +47,7 @@
 
 @media only screen and (max-width: 700px) {
   .work__header {
-    padding: 18rem 1rem 6rem 1rem;
+    padding: 12rem 1rem 6rem 1rem;
 
     h1 {
       font-size: 4.5rem;
@@ -70,7 +71,7 @@
 
 @media only screen and (max-width: 400px) {
   .work__header {
-    padding: 18rem 1rem 6rem 1rem;
+    padding: 10rem 1rem 6rem 1rem;
 
     h1 {
       font-size: 2.75rem;
@@ -134,32 +135,39 @@
     }
 
     .hover__circle {
-      width: 80%;
-      height: 80%;
+      width: 65%;
+      height: 65%;
       background-color: var(--orange);
       z-index: 1;
       position: absolute;
-      top: -10%;
-      right: -10%;
-      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       justify-content: center;
       flex-direction: column;
-      text-align: right;
-      padding: 4rem;
+      text-align: center;
+      padding: 2rem;
       opacity: 0;
       transition: var(--mid-speed);
       box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
+      clip-path: url(#logoClip);
+
+      .clip__svg {
+        position: absolute;
+      }
 
       h4 {
         font-size: 2rem;
-        padding-bottom: 0.5rem;
+        padding-bottom: 1rem;
+        font-family: var(--title-font);
+        font-weight: var(--font-med);
       }
 
       .discover {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
 
         p {
           font-weight: var(--font-light);
@@ -294,9 +302,12 @@
         left: -2rem;
         bottom: -2rem;
         width: 65%;
-        height: 50%;
-        padding: 1rem 2rem;
+        height: auto;
+        padding: 2rem;
         text-align: left;
+        clip-path: none;
+        transform: translate(0, 0);
+        display: block;
 
         .discover {
           justify-content: flex-start;
@@ -317,7 +328,7 @@
 
       .hover__circle {
         width: 80%;
-        height: 8rem;
+        height: auto;
         left: -1rem;
 
         h4 {

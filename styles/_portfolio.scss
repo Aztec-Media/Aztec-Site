@@ -548,6 +548,21 @@
 .final__img {
   .img {
     height: 60rem;
+
+    .img__cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--blue);
+      z-index: 10;
+      transform-origin: top;
+    }
+
+    figure {
+      transform-origin: bottom;
+    }
   }
 }
 

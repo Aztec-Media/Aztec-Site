@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import LogoFillClip from '../../vectors/LogoFillClip';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutItem({ item }) {
@@ -66,7 +67,7 @@ export default function AboutItem({ item }) {
           imageRef.current,
           { y: 0 },
           {
-            y: -150,
+            y: -75,
             duration: 1,
             ease: 'power2.inOut',
             scrollTrigger: {
@@ -105,7 +106,11 @@ export default function AboutItem({ item }) {
       <div className='about__item__text'>
         <p className='title'>Designer</p>
         <h3>
-          {item.attributes.name} <span className='underline'></span>
+          <Link href={`mailto:${item.attributes.email}`}>
+            <a>
+              {item.attributes.name} <span className='underline'></span>
+            </a>
+          </Link>
         </h3>
         <p className='summary'>{item.attributes.summary}</p>
         <div className='details'>

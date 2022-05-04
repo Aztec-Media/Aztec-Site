@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Btn from '../general/Btn';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
@@ -41,13 +42,14 @@ export default function Footer() {
     <footer className='footer'>
       <div className='footer__wrapper' ref={footerRef}>
         <BackToTop />
-        <FooterLogo />
         <section className='footer__cta'>
           <h5>
             Starting a{' '}
-            <span>
-              <span className='underline'></span>new project
-            </span>{' '}
+            <Link href='/project-planner'>
+              <a>
+                <span className='underline'></span>new project
+              </a>
+            </Link>{' '}
             or <br />
             want to collaborate with us?
           </h5>
@@ -105,6 +107,7 @@ export default function Footer() {
             </div>
           </address>
           <div className='footer__furniture'>
+            <FooterLogo />
             <h6>Expert Website Designers Somerset</h6>
             <h6>
               Part of{' '}

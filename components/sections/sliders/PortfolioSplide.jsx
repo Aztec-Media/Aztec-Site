@@ -14,6 +14,7 @@ export default function PortfolioSplide({ portfolio }) {
         gap: '4rem',
         focus: 'center',
         trimSpace: false,
+        pagination: false,
         breakpoints: {
           1440: {
             perPage: 2,
@@ -40,20 +41,22 @@ export default function PortfolioSplide({ portfolio }) {
     >
       {portfolio.map((item, i) => (
         <SplideSlide key={i}>
-          <div className='img'>
-            <figure>
-              <Image
-                src={`http://localhost:1337${item.attributes.mainImage.data.attributes.url}`}
-                layout='fill'
-                alt={item.attributes.mainImage.data.attributes.alternativeText}
-                priority='true'
-                className='services__slider__img'
-              />
-            </figure>
-          </div>
-          <div className='content'>
-            <Link href={`/work/${item.attributes.alias}`}>
-              <a>
+          <Link href={`/work/${item.attributes.alias}`}>
+            <a>
+              <div className='img'>
+                <figure>
+                  <Image
+                    src={`http://localhost:1337${item.attributes.mainImage.data.attributes.url}`}
+                    layout='fill'
+                    alt={
+                      item.attributes.mainImage.data.attributes.alternativeText
+                    }
+                    priority='true'
+                    className='services__slider__img'
+                  />
+                </figure>
+              </div>
+              <div className='content'>
                 <h3>
                   <span className='number'>{item.attributes.number}</span>
                   <span className='text'>
@@ -64,10 +67,11 @@ export default function PortfolioSplide({ portfolio }) {
                     <Arrow />
                   </span>
                 </h3>
-              </a>
-            </Link>
-            <p>{item.attributes.summary}</p>
-          </div>
+
+                <p>{item.attributes.summary}</p>
+              </div>
+            </a>
+          </Link>
         </SplideSlide>
       ))}
     </Splide>

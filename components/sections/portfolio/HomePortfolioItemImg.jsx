@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function HomePortfolioItemImg({ image }) {
+export default function HomePortfolioItemImg({ image, alias }) {
   const portfolioImageRef = useRef(null);
 
   useEffect(() => {
@@ -74,17 +75,19 @@ export default function HomePortfolioItemImg({ image }) {
   }, [portfolioImageRef]);
 
   return (
-    <div className='home__portfolio__item__img' ref={portfolioImageRef}>
-      <div className='img__wrapper'>
-        <figure>
-          <div className='img__cover'></div>
-          <Image
-            src={`http://localhost:1337${image.url}`}
-            layout='fill'
-            alt={image.alternativeText}
-          />
-        </figure>
-      </div>
-    </div>
+    <Link href={`/work/${alias}`}>
+      <a className='home__portfolio__item__img' ref={portfolioImageRef}>
+        <div className='img__wrapper'>
+          <figure>
+            <div className='img__cover'></div>
+            <Image
+              src={`http://localhost:1337${image.url}`}
+              layout='fill'
+              alt={image.alternativeText}
+            />
+          </figure>
+        </div>
+      </a>
+    </Link>
   );
 }

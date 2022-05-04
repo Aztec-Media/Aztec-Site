@@ -1,12 +1,12 @@
 // about section
 .about__section {
   .about__section__header {
-    padding: 28rem 4rem 8rem 4rem;
+    padding: 20rem 4rem 8rem 4rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: var(--orange);
+    background-color: var(--blue);
 
     .text {
       color: var(--white);
@@ -31,14 +31,31 @@
       align-items: center;
 
       .btn {
+        color: #fff;
+
         &:first-of-type {
           margin-right: 4rem;
         }
 
+        &:hover {
+          .arrow {
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+          }
+        }
+
         .arrow {
+          .btn__hover {
+            background-color: var(--orange);
+          }
+
           svg {
             path {
-              fill: #fff;
+              fill: var(--orange);
+              transition: var(--fast-speed);
             }
           }
         }
@@ -50,7 +67,7 @@
 @media only screen and (max-width: 1360px) {
   .about__section {
     .about__section__header {
-      padding: 24rem 4rem 8rem 4rem;
+      padding: 18rem 4rem 8rem 4rem;
 
       .text {
         h1 {
@@ -64,7 +81,7 @@
 @media only screen and (max-width: 1200px) {
   .about__section {
     .about__section__header {
-      padding: 24rem 2rem 8rem 2rem;
+      padding: 16rem 2rem 8rem 2rem;
     }
   }
 }
@@ -84,7 +101,7 @@
 @media only screen and (max-width: 700px) {
   .about__section {
     .about__section__header {
-      padding: 18rem 1rem 6rem 1rem;
+      padding: 12rem 1rem 6rem 1rem;
 
       .text {
         h1 {
@@ -123,7 +140,7 @@
 @media only screen and (max-width: 525px) {
   .about__section {
     .about__section__header {
-      padding: 18rem 1rem 4rem 1rem;
+      padding: 10rem 1rem 4rem 1rem;
 
       .text {
         h1 {
@@ -153,7 +170,7 @@
 }
 
 .about__grid {
-  background-color: #fff;
+  background-color: var(--blue);
 
   .grid__wrapper {
     padding: 8rem 8rem 8rem 8rem;
@@ -165,9 +182,14 @@
     display: grid;
     align-items: center;
     justify-content: flex-start;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    max-width: 1440px;
 
     &:nth-of-type(even) {
+      grid-template-columns: 1fr auto;
+
       .about__item__img {
         order: 1;
       }
@@ -206,7 +228,7 @@
         transform-origin: left;
 
         .img__cover {
-          background-color: var(--blue);
+          background-color: var(--orange);
           position: absolute;
           width: 100%;
           height: 100%;
@@ -238,6 +260,7 @@
     .about__item__text {
       padding-left: 8rem;
       font-size: 1.1rem;
+      color: #fff;
 
       h3 {
         font-size: 4rem;
@@ -257,13 +280,13 @@
           bottom: 0;
           left: 0;
           transform: translateY(-1.5rem) translateX(-5%);
-          background-color: var(--light-grey);
+          background-color: #fff;
           z-index: -1;
         }
       }
 
       .title {
-        color: var(--light-grey);
+        color: #fff;
       }
 
       .summary {
