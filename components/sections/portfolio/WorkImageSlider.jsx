@@ -1,5 +1,4 @@
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
-import { Fragment } from 'react';
 import Image from 'next/image';
 
 export default function WorkImageSlider({ portfolio }) {
@@ -18,6 +17,7 @@ export default function WorkImageSlider({ portfolio }) {
           focus: 'center',
           gap: '6rem',
           updateOnMove: true,
+          resetProgress: false,
           breakpoints: {
             1200: {
               gap: '4rem',
@@ -33,7 +33,6 @@ export default function WorkImageSlider({ portfolio }) {
       >
         <SplideTrack>
           {portfolio.attributes.sliderImages.data.map((img) => (
-            // <Fragment key={img.id}>
             <SplideSlide key={img.id}>
               <div className='img work__slider__img'>
                 <figure>
@@ -45,7 +44,6 @@ export default function WorkImageSlider({ portfolio }) {
                 </figure>
               </div>
             </SplideSlide>
-            // </Fragment>
           ))}
         </SplideTrack>
         <div className='splide__progress'>

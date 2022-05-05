@@ -34,7 +34,7 @@ export default function HomePortfolioItemText({ item, id }) {
   return (
     <article className='home__portfolio__item__text' ref={textRef}>
       <section className='dot__logo'>
-        <DotLogo />
+        <DotLogo img='/dots-blue.png' />
         <LogoFillClip />
       </section>
       <h3>
