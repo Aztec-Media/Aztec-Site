@@ -12,7 +12,7 @@ export default function Contact({ team }) {
       <Seo title='Contact Us' />
       <main className='contact'>
         <section className='dot__logo'>
-          <DotLogo />
+          <DotLogo img='/dots.svg' />
           <LogoFillClip />
         </section>
         <ContactSection />

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import Btn from '../../general/Btn';
 
 export default function Accordion({ item }) {
   const [itemOpen, setItemOpen] = useState(false);
@@ -21,7 +20,7 @@ export default function Accordion({ item }) {
             d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'
           />
         </svg>
-        <p>Text goes here</p>
+        <p>{item.title}</p>
       </div>
       <div className='more'>
         <svg
@@ -53,14 +52,7 @@ export default function Accordion({ item }) {
       </div>
       <div className={`content ${itemOpen ? 'open' : ''}`}>
         <div className='summary'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ex
-            odio minima error sint, ducimus vitae distinctio ad perspiciatis in
-            soluta aperiam aut animi assumenda debitis numquam, unde quod,
-            deleniti quae eum! Recusandae cupiditate doloremque a exercitationem
-            harum nesciunt aperiam culpa veniam tenetur corrupti. Aut, mollitia
-            nam. Quibusdam, earum placeat?
-          </p>
+          <ReactMarkdown>{item.content}</ReactMarkdown>
         </div>
       </div>
     </article>

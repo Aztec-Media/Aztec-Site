@@ -10,7 +10,7 @@ export default function PlannerForm() {
   return (
     <section className='planner__form'>
       <section className='dot__logo'>
-        <DotLogo />
+        <DotLogo img='/dots.svg' />
         <LogoFillClip />
       </section>
       <form className='form' action='/api/forms/planner'>

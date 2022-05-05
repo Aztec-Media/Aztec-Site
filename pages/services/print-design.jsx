@@ -6,15 +6,24 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import Image from 'next/image';
 import ServicesSlider from '../../components/sections/services/ServicesSlider';
 import Accordion from '../../components/sections/services/Accordion';
+import ReactMarkdown from 'react-markdown';
 
-export default function PrintDesign({ services }) {
+export default function PrintDesign({ service, services }) {
+  console.log(service);
+
   return (
     <Layout>
       <Seo title={'Print Design'} />
       <main className='print-design'>
-        <ServicesHeader title='Print Design' colour='#5B7B7A' />
+        <ServicesHeader
+          title='Print Design'
+          colour={service.attributes.colour}
+        />
         <section className='services__page__slider'>
-          <div className='colour' style={{ backgroundColor: '#5B7B7A' }}></div>
+          <div
+            className='colour'
+            style={{ backgroundColor: service.attributes.colour }}
+          ></div>
           <Splide
             hasTrack={false}
             options={{
@@ -47,87 +56,58 @@ export default function PrintDesign({ services }) {
             className='work__img__splide'
           >
             <SplideTrack>
-              <SplideSlide>
-                <div className='overlay'></div>
-                <div className='img'>
-                  <figure>
-                    <Image src='/img.jpg' alt='#' layout='fill' />
-                  </figure>
-                </div>
-                <div className='content'>
-                  <h2>Brochures</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consec adipisicing elit,
-                    ecessitatibus nulla.
-                  </p>
-                </div>
-              </SplideSlide>
-              <SplideSlide>
-                <div className='overlay'></div>
-                <div className='img'>
-                  <figure>
-                    <Image src='/img.jpg' alt='#' layout='fill' />
-                  </figure>
-                </div>
-                <div className='content'>
-                  <h2>Business Cards</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consec adipisicing elit,
-                    ecessitatibus nulla.
-                  </p>
-                </div>
-              </SplideSlide>
-              <SplideSlide>
-                <div className='overlay'></div>
-                <div className='img'>
-                  <figure>
-                    <Image src='/img.jpg' alt='#' layout='fill' />
-                  </figure>
-                </div>
-                <div className='content'>
-                  <h2>Vehicle Wraps</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consec adipisicing elit,
-                    ecessitatibus nulla.
-                  </p>
-                </div>
-              </SplideSlide>
-              <SplideSlide>
-                <div className='overlay'></div>
-                <div className='img'>
-                  <figure>
-                    <Image src='/img.jpg' alt='#' layout='fill' />
-                  </figure>
-                </div>
-                <div className='content'>
-                  <h2>Brochures</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consec adipisicing elit,
-                    ecessitatibus nulla.
-                  </p>
-                </div>
-              </SplideSlide>
+              {service.attributes.servicePageSlider.map((item) => (
+                <SplideSlide key={item.id}>
+                  <div className='overlay'></div>
+                  <div className='img'>
+                    <figure>
+                      <Image
+                        src={`http://localhost:1337${item.image.data.attributes.url}`}
+                        alt='#'
+                        layout='fill'
+                        priority
+                      />
+                    </figure>
+                  </div>
+                  <div className='content'>
+                    <h2>{item.title}</h2>
+                    <p>{item.text}</p>
+                  </div>
+                </SplideSlide>
+              ))}
             </SplideTrack>
           </Splide>
         </section>
-        <section className='services__info__text'>
+        <section className='service__main__details'>
           <div className='img'>
             <figure>
-              <Image src='/phones.jpg' alt='' layout='fill' />
+              <Image
+                src={`http://localhost:1337${service.attributes.fullWidthImage1.data.attributes.url}`}
+                alt='#'
+                layout='fill'
+              />
             </figure>
           </div>
-          <div className='text'>
-            <h3 style={{ color: '#5B7B7A' }}>
-              Some bold text will go in this space here
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              saepe animi excepturi nam eos. Commodi!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-              soluta autem velit ut, cupiditate exercitationem.
-            </p>
+          <div className='content' style={{ backgroundColor: '#5B7B7A' }}>
+            <h3>{service.attributes.servicePageBox.title}</h3>
+            <ul className='grid'>
+              <li>
+                <h4>{service.attributes.servicePageBox.heading1}</h4>
+                <p>{service.attributes.servicePageBox.text1}</p>
+              </li>
+              <li>
+                <h4>{service.attributes.servicePageBox.heading2}</h4>
+                <p>{service.attributes.servicePageBox.text2}</p>
+              </li>
+              <li>
+                <h4>{service.attributes.servicePageBox.heading3}</h4>
+                <p>{service.attributes.servicePageBox.text3}</p>
+              </li>
+              <li>
+                <h4>{service.attributes.servicePageBox.heading4}</h4>
+                <p>{service.attributes.servicePageBox.text4}</p>
+              </li>
+            </ul>
           </div>
         </section>
         <section className='service__intro__details'>
@@ -136,10 +116,9 @@ export default function PrintDesign({ services }) {
             nisi voluptatem nobis mollitia, at magni?
           </p>
           <div className='accordions'>
-            <Accordion />
-            <Accordion />
-            <Accordion />
-            <Accordion />
+            {service.attributes.accordions.map((item) => (
+              <Accordion key={item.id} item={item} />
+            ))}
           </div>
         </section>
         <section className='services__full__img'>
@@ -155,9 +134,26 @@ export default function PrintDesign({ services }) {
             </figure>
           </div>
         </section>
+        <section className='services__info__text'>
+          <div className='img'>
+            <figure>
+              <Image
+                src={`http://localhost:1337${service.attributes.fullWidthImage2.data.attributes.url}`}
+                alt=''
+                layout='fill'
+              />
+            </figure>
+          </div>
+          <div className='text'>
+            <h4 style={{ color: '#5B7B7A' }}>
+              {service.attributes.infoTextTitle}
+            </h4>
+            <ReactMarkdown>{service.attributes.infoText}</ReactMarkdown>
+          </div>
+        </section>
         <section
           className='services__testimonial'
-          style={{ backgroundColor: '#5B7B7A', color: '#fff' }}
+          style={{ backgroundColor: service.attributes.colour, color: '#fff' }}
         >
           <div>
             <div className='icon'>
@@ -171,11 +167,7 @@ export default function PrintDesign({ services }) {
                 <path d='M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z' />
               </svg>
             </div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Architecto, perferendis omnis? Assumenda inventore sapiente
-              repellat ratione perferendis voluptatem, molestiae rem.
-            </p>
+            <p>{service.attributes.testimonialText}</p>
           </div>
         </section>
         <ServicesSlider services={services} bgColour='#5B7B7A' colour='#fff' />
@@ -187,7 +179,7 @@ export default function PrintDesign({ services }) {
 
 export async function getStaticProps({ params }) {
   const servicesRes = await fetch(
-    'http://localhost:1337/api/services?populate=*'
+    'http://localhost:1337/api/services?populate[servicePageSlider][populate]=*&populate[image]=*&populate[fullWidthImage1]=*&populate[fullWidthImage2]=*&populate[textImage]=*&populate[accordions]=*&populate[servicePageBox]=*'
   );
   const servicesData = await servicesRes.json();
 
@@ -195,9 +187,14 @@ export async function getStaticProps({ params }) {
     (item) => item.attributes.title !== 'Print Design'
   );
 
+  const service = servicesData.data.filter(
+    (item) => item.attributes.title === 'Print Design'
+  );
+
   return {
     props: {
       services,
+      service: service[0],
     },
   };
 }

@@ -71,14 +71,14 @@ export default function TeamSplide({ direction, teamData, text }) {
                   <Image
                     src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
                     layout='fill'
-                    alt={item.attributes.image.data.attributes.alternativeText}
+                    alt={`Aztec Media Team ${item.attributes.title}`}
                   />
                 </figure>
                 <figure className='hover__img'>
                   <Image
                     src={`http://localhost:1337${item.attributes.gif.data.attributes.url}`}
                     layout='fill'
-                    alt={item.attributes.image.data.attributes.alternativeText}
+                    alt={`Aztec Media Team ${item.attributes.title}`}
                   />
                 </figure>
               </div>
