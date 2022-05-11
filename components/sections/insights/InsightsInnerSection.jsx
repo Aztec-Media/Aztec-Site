@@ -36,7 +36,7 @@ export default function InsightsInnerSection({ insight }) {
         <div className='img'>
           <figure>
             <Image
-              src={`http://localhost:1337${insight.attributes.image.data.attributes.url}`}
+              src={`https://aztec.yeomedia.dev${insight.attributes.image.data.attributes.url}`}
               layout='fill'
               alt={insight.attributes.image.data.attributes.alternativeText}
             />

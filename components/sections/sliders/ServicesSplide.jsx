@@ -46,7 +46,7 @@ export default function ServicesSplide({ services }) {
               <div className='img'>
                 <figure>
                   <Image
-                    src={`http://localhost:1337${service.attributes.image.data.attributes.url}`}
+                    src={`https://aztec.yeomedia.dev${service.attributes.image.data.attributes.url}`}
                     layout='fill'
                     alt={
                       service.attributes.image.data.attributes.alternativeText

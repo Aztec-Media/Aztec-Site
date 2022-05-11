@@ -28,16 +28,18 @@ export default function Home({ team, services, portfolio }) {
 }
 
 export async function getStaticProps({ params }) {
-  const teamRes = await fetch('http://localhost:1337/api/teams?populate=*');
+  const teamRes = await fetch(
+    'https://aztec.yeomedia.dev/api/teams?populate=*'
+  );
   const teamData = await teamRes.json();
 
   const servicesRes = await fetch(
-    'http://localhost:1337/api/services?populate=*'
+    'https://aztec.yeomedia.dev/api/services?populate=*'
   );
   const servicesData = await servicesRes.json();
 
   const portfolioRes = await fetch(
-    'http://localhost:1337/api/portfolios?populate=*'
+    'https://aztec.yeomedia.dev/api/portfolios?populate=*'
   );
   const portfolioData = await portfolioRes.json();
 

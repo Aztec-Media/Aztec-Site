@@ -18,7 +18,7 @@ export default function Work({ portfolio }) {
 
 export async function getStaticProps({ params }) {
   const portfolioRes = await fetch(
-    'http://localhost:1337/api/portfolios?populate=*'
+    'https://aztec.yeomedia.dev/api/portfolios?populate=*'
   );
   const portfolioData = await portfolioRes.json();
 

@@ -44,7 +44,7 @@ export default function WorkHeading({ portfolio }) {
         <figure>
           <div className='img__cover'></div>
           <Image
-            src={`http://localhost:1337${portfolio.attributes.mainImage.data.attributes.url}`}
+            src={`https://aztec.yeomedia.dev${portfolio.attributes.mainImage.data.attributes.url}`}
             layout='fill'
             alt={portfolio.attributes.mainImage.data.attributes.alternativeText}
             priority='true'

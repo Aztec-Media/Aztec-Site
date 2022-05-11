@@ -1859,6 +1859,7 @@ main.careers__section {
           justify-content: flex-end;
   -webkit-transition: var(--mid-speed);
   transition: var(--mid-speed);
+  width: 100%;
 }
 
 .large__hero .large__hero__text.playing {
@@ -1909,7 +1910,7 @@ main.careers__section {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .large__hero .large__hero__text h2 span {
+  .large__hero .large__hero__text h1 span {
     display: inline;
   }
 }
@@ -1920,12 +1921,12 @@ main.careers__section {
   }
 }
 
-@media only screen and (max-width: 625px) {
-  .large__hero .large__hero__text h1 {
-    font-size: 1.15rem;
+@media only screen and (max-width: 675px) {
+  .large__hero .large__hero__text {
+    padding: 4rem 2rem;
   }
-  .large__hero .large__hero__text h2 {
-    font-size: 4rem;
+  .large__hero .large__hero__text h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -1944,16 +1945,10 @@ main.careers__section {
   }
   .large__hero .large__hero__text {
     margin-top: auto;
-    padding: 4rem 2rem;
+    padding: 4rem 1.5rem;
   }
-}
-
-@media only screen and (max-width: 400px) {
   .large__hero .large__hero__text h1 {
-    font-size: 1rem;
-  }
-  .large__hero .large__hero__text h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 

@@ -1201,6 +1201,7 @@ main {
     flex-direction: column;
     justify-content: flex-end;
     transition: var(--mid-speed);
+    width: 100%;
 
     &.playing {
       background-color: rgba(56, 80, 93, 0.25);
@@ -1248,7 +1249,7 @@ main {
       padding: 8rem;
       align-self: center;
 
-      h2 {
+      h1 {
         span {
           display: inline;
         }
@@ -1265,15 +1266,13 @@ main {
   }
 }
 
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 675px) {
   .large__hero {
     .large__hero__text {
-      h1 {
-        font-size: 1.15rem;
-      }
+      padding: 4rem 2rem;
 
-      h2 {
-        font-size: 4rem;
+      h1 {
+        font-size: 3.5rem;
       }
     }
   }
@@ -1290,20 +1289,10 @@ main {
 
     .large__hero__text {
       margin-top: auto;
-      padding: 4rem 2rem;
-    }
-  }
-}
+      padding: 4rem 1.5rem;
 
-@media only screen and (max-width: 400px) {
-  .large__hero {
-    .large__hero__text {
       h1 {
-        font-size: 1rem;
-      }
-
-      h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
     }
   }

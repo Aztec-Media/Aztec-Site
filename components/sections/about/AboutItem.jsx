@@ -87,7 +87,7 @@ export default function AboutItem({ item }) {
         <figure>
           <div className='img__cover'></div>
           <Image
-            src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
+            src={`https://aztec.yeomedia.dev${item.attributes.image.data.attributes.url}`}
             layout='fill'
             alt={item.attributes.image.data.attributes.alternativeText}
           />
@@ -95,7 +95,7 @@ export default function AboutItem({ item }) {
         <div className='hover__img'>
           <figure>
             <Image
-              src={`http://localhost:1337${item.attributes.gif.data.attributes.url}`}
+              src={`https://aztec.yeomedia.dev${item.attributes.gif.data.attributes.url}`}
               layout='fill'
               alt={item.attributes.image.data.attributes.alternativeText}
             />

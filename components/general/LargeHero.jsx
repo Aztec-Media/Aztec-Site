@@ -15,7 +15,7 @@ export default function LargeHero() {
         </video>
       </div>
       <div className={`large__hero__text ${videoPlaying ? 'playing' : ''}`}>
-        <h1 className='testing'>
+        <h1>
           <span>Building brands </span>
           <span>for the future</span>
         </h1>

@@ -1,5 +1,4 @@
 import WorkCircle from './WorkCircle';
-// import portfolioData from '../../../data/portfolioData.json';
 
 export default function WorkCircles({ portfolio }) {
   return (

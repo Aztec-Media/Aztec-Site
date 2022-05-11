@@ -37,7 +37,7 @@ export default function WorkImageSlider({ portfolio }) {
               <div className='img work__slider__img'>
                 <figure>
                   <Image
-                    src={`http:localhost:1337${img.attributes.url}`}
+                    src={`https://aztec.yeomedia.dev${img.attributes.url}`}
                     alt={img.attributes.alternativeText}
                     layout='fill'
                   />

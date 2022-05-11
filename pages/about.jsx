@@ -20,7 +20,9 @@ export default function About({ team }) {
 }
 
 export async function getStaticProps({ params }) {
-  const teamRes = await fetch('http://localhost:1337/api/teams?populate=*');
+  const teamRes = await fetch(
+    'https://aztec.yeomedia.dev/api/teams?populate=*'
+  );
   const teamData = await teamRes.json();
 
   return {

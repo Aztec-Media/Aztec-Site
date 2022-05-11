@@ -39,6 +39,6 @@ yarn-error.log*
 public
 /public
 data
-/pages/api
+
 upload
 upload.zip

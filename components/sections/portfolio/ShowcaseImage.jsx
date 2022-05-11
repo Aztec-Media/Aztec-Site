@@ -36,7 +36,7 @@ export default function ShowcaseImage({ portfolio }) {
       <figure>
         <div className='img__cover'></div>
         <Image
-          src={`http://localhost:1337${portfolio.attributes.fullWidthImage1.data.attributes.url}`}
+          src={`https://aztec.yeomedia.dev${portfolio.attributes.fullWidthImage1.data.attributes.url}`}
           layout='fill'
           alt={
             portfolio.attributes.fullWidthImage1.data.attributes.alternativeText

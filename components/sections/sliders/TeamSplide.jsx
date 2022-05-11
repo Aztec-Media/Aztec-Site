@@ -1,32 +1,10 @@
 import Image from 'next/image';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import DualArrow from '../../vectors/DualArrow';
 
 export default function TeamSplide({ direction, teamData, text }) {
-  function shuffle(array) {
-    let currentIndex = array.length,
-      randomIndex;
-
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
-    }
-
-    return array;
-  }
-
-  const randomed = shuffle(teamData);
-
   return (
     <Splide
       className={`team__splide ${direction}`}
@@ -61,7 +39,7 @@ export default function TeamSplide({ direction, teamData, text }) {
       }}
       extensions={{ AutoScroll }}
     >
-      {randomed.map((item, index) => (
+      {teamData.map((item, index) => (
         <Fragment key={index}>
           <SplideSlide>
             <div className='slide__content'>
@@ -69,14 +47,14 @@ export default function TeamSplide({ direction, teamData, text }) {
               <div className='img'>
                 <figure>
                   <Image
-                    src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
+                    src={`https://aztec.yeomedia.dev${item.attributes.image.data.attributes.url}`}
                     layout='fill'
                     alt={`Aztec Media Team ${item.attributes.title}`}
                   />
                 </figure>
                 <figure className='hover__img'>
                   <Image
-                    src={`http://localhost:1337${item.attributes.gif.data.attributes.url}`}
+                    src={`https://aztec.yeomedia.dev${item.attributes.gif.data.attributes.url}`}
                     layout='fill'
                     alt={`Aztec Media Team ${item.attributes.title}`}
                   />

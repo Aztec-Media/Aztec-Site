@@ -27,7 +27,7 @@ export default function Insights({ insights }) {
 
 export async function getStaticProps({ params }) {
   const insightsRes = await fetch(
-    'http://localhost:1337/api/insights?populate=*'
+    'https://aztec.yeomedia.dev/api/insights?populate=*'
   );
   const insightsData = await insightsRes.json();
 

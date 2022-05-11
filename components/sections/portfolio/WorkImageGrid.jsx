@@ -41,7 +41,7 @@ export default function WorkImageGrid({ portfolio }) {
           <figure>
             <div className='img__cover'></div>
             <Image
-              src={`http:localhost:1337${portfolio.attributes.fullWidthImage2.data.attributes.url}`}
+              src={`https://aztec.yeomedia.dev${portfolio.attributes.fullWidthImage2.data.attributes.url}`}
               alt={
                 portfolio.attributes.fullWidthImage2.data.attributes
                   .alternativeText

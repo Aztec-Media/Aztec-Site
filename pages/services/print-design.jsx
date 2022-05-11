@@ -9,11 +9,12 @@ import Accordion from '../../components/sections/services/Accordion';
 import ReactMarkdown from 'react-markdown';
 
 export default function PrintDesign({ service, services }) {
-  console.log(service);
-
   return (
     <Layout>
-      <Seo title={'Print Design'} />
+      <Seo
+        title={service.attributes.seoTitle}
+        description={service.attributes.seoDescription}
+      />
       <main className='print-design'>
         <ServicesHeader
           title='Print Design'
@@ -62,7 +63,7 @@ export default function PrintDesign({ service, services }) {
                   <div className='img'>
                     <figure>
                       <Image
-                        src={`http://localhost:1337${item.image.data.attributes.url}`}
+                        src={`https://aztec.yeomedia.dev${item.image.data.attributes.url}`}
                         alt='#'
                         layout='fill'
                         priority
@@ -82,7 +83,7 @@ export default function PrintDesign({ service, services }) {
           <div className='img'>
             <figure>
               <Image
-                src={`http://localhost:1337${service.attributes.fullWidthImage1.data.attributes.url}`}
+                src={`https://aztec.yeomedia.dev${service.attributes.fullWidthImage1.data.attributes.url}`}
                 alt='#'
                 layout='fill'
               />
@@ -138,7 +139,7 @@ export default function PrintDesign({ service, services }) {
           <div className='img'>
             <figure>
               <Image
-                src={`http://localhost:1337${service.attributes.fullWidthImage2.data.attributes.url}`}
+                src={`https://aztec.yeomedia.dev${service.attributes.fullWidthImage2.data.attributes.url}`}
                 alt=''
                 layout='fill'
               />
@@ -179,7 +180,7 @@ export default function PrintDesign({ service, services }) {
 
 export async function getStaticProps({ params }) {
   const servicesRes = await fetch(
-    'http://localhost:1337/api/services?populate[servicePageSlider][populate]=*&populate[image]=*&populate[fullWidthImage1]=*&populate[fullWidthImage2]=*&populate[textImage]=*&populate[accordions]=*&populate[servicePageBox]=*'
+    'https://aztec.yeomedia.dev/api/services?populate[servicePageSlider][populate]=*&populate[image]=*&populate[fullWidthImage1]=*&populate[fullWidthImage2]=*&populate[textImage]=*&populate[accordions]=*&populate[servicePageBox]=*'
   );
   const servicesData = await servicesRes.json();
 

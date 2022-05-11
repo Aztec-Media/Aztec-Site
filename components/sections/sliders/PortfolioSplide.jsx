@@ -46,7 +46,7 @@ export default function PortfolioSplide({ portfolio }) {
               <div className='img'>
                 <figure>
                   <Image
-                    src={`http://localhost:1337${item.attributes.mainImage.data.attributes.url}`}
+                    src={`https://aztec.yeomedia.dev${item.attributes.mainImage.data.attributes.url}`}
                     layout='fill'
                     alt={
                       item.attributes.mainImage.data.attributes.alternativeText

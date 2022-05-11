@@ -46,7 +46,7 @@ export default function ProjectPlanner({ services }) {
 
 export async function getStaticProps({ params }) {
   const servicesRes = await fetch(
-    'http://localhost:1337/api/services?populate=*'
+    'https://aztec.yeomedia.dev/api/services?populate=*'
   );
   const servicesData = await servicesRes.json();
 

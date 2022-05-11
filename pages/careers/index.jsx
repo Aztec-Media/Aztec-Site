@@ -55,12 +55,12 @@ export default function Careers({ careers, services }) {
 
 export async function getStaticProps({ params }) {
   const careersRes = await fetch(
-    'http://localhost:1337/api/careers?populate=*'
+    'https://aztec.yeomedia.dev/api/careers?populate=*'
   );
   const careersData = await careersRes.json();
 
   const servicesRes = await fetch(
-    'http://localhost:1337/api/services?populate=*'
+    'https://aztec.yeomedia.dev/api/services?populate=*'
   );
   const servicesData = await servicesRes.json();
 

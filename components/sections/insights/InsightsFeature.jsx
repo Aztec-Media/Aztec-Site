@@ -32,7 +32,7 @@ export default function InsightsFeature({ insight }) {
         <figure>
           <div className='overlay'></div>
           <Image
-            src={`http://localhost:1337${insight.attributes.image.data.attributes.url}`}
+            src={`https://aztec.yeomedia.dev${insight.attributes.image.data.attributes.url}`}
             layout='fill'
             alt={insight.attributes.image.data.attributes.alternativeText}
           />

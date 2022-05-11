@@ -81,7 +81,7 @@ export default function HomePortfolioItemImg({ image, alias }) {
           <figure>
             <div className='img__cover'></div>
             <Image
-              src={`http://localhost:1337${image.url}`}
+              src={`https://aztec.yeomedia.dev${image.url}`}
               layout='fill'
               alt={image.alternativeText}
             />
